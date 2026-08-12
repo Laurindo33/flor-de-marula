@@ -3,7 +3,12 @@
 .fm-container {
     max-width: var(--fm-container-max);
     margin-inline: auto;
-    padding-inline: var(--fm-gutter-desktop);
+    padding-inline: var(--fm-gutter-mobile);
+}
+@media (min-width: 992px) {
+    .fm-container {
+        padding-inline: var(--fm-gutter-desktop);
+    }
 }
 
 /* Botoes */

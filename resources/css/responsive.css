@@ -1,0 +1,33 @@
+/*
+ * Overrides mobile especificos, extraidos do frame "Home Page - mobile" (id 1:2).
+ * O mobile nao e apenas o desktop "espremido": tipografia, fundos e empilhamento
+ * mudam por seccao conforme o Figma.
+ */
+@media (max-width: 991.98px) {
+    .fm-heading-lg {
+        font-size: 25px;
+    }
+
+    .fm-heading-italiana {
+        font-size: 25px;
+    }
+
+    .fm-guarantee {
+        background: var(--fm-cream);
+    }
+
+    .fm-benefits-dark {
+        background: var(--fm-black);
+    }
+
+    .fm-benefits-strip {
+        padding-block: 20px;
+    }
+    .fm-benefits-strip__item {
+        font-size: 14px;
+    }
+
+    .fm-compare-card__list li {
+        font-size: 16px;
+    }
+}

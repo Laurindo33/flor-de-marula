@@ -8,10 +8,7 @@
 <section class="fm-hero">
     <div class="fm-container">
         <div class="fm-hero__grid row align-items-center gy-5">
-            <div class="col-12 col-lg-6">
-                <img src="{{ asset('images/home/hero-banner.png') }}" alt="Modelo usando cosméticos Flor de Marula" class="fm-hero__image img-fluid">
-            </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-6 fm-hero__col-text">
                 <h1 class="fm-heading-xl fm-hero__title">Cosméticos Naturais{{ "\n" }}Para Todo Tipo de Pele</h1>
                 <p class="fm-body-lg fm-hero__subtitle">O Poder a África Para a sua Pele, Natural e Puro, rico em Antioxidantes, Hidrata e regenera, Feito para pele Africana.</p>
                 <div class="fm-hero__actions">
@@ -19,11 +16,15 @@
                     <a href="#" class="fm-btn fm-btn-outline">Nossa História</a>
                 </div>
             </div>
+            <div class="col-12 col-lg-6 fm-hero__col-image">
+                <img src="{{ asset('images/home/hero-banner.png') }}" alt="Modelo usando cosméticos Flor de Marula" class="fm-hero__image img-fluid">
+            </div>
         </div>
 
         @if ($trendingProducts->isNotEmpty())
             <div class="fm-trend">
-                <p class="fm-trend__title">Produtos{{ "\n" }}Em Alta</p>
+                <p class="fm-trend__title d-none d-lg-flex">Produtos{{ "\n" }}Em Alta</p>
+                <p class="fm-trend__title d-flex d-lg-none">Produtos em Alta</p>
                 <div class="row g-3 flex-grow-1">
                     @foreach ($trendingProducts as $product)
                         <div class="col-12 col-md-6">
