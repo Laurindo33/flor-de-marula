@@ -1,0 +1,3401 @@
+{
+ "id": "214:327",
+ "type": "FRAME",
+ "name": "Loja - mobile",
+ "size": {
+  "w": 402,
+  "h": 5064
+ },
+ "pos": {
+  "x": 12850,
+  "y": 1083
+ },
+ "fills": [
+  {
+   "type": "SOLID",
+   "color": "#ffffff",
+   "opacity": 1
+  }
+ ],
+ "layout": {
+  "mode": "VERTICAL",
+  "padding": [
+   null,
+   null,
+   null,
+   null
+  ]
+ },
+ "children": [
+  {
+   "id": "214:350",
+   "type": "FRAME",
+   "name": "Secçã 2",
+   "size": {
+    "w": 402,
+    "h": 90
+   },
+   "pos": {
+    "x": 12850,
+    "y": 1083
+   },
+   "cornerRadii": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "fills": [
+    {
+     "type": "GRADIENT_RADIAL",
+     "stops": [
+      {
+       "pos": 0,
+       "color": "#ffefe9"
+      },
+      {
+       "pos": 1,
+       "color": "#ffc3aa"
+      }
+     ]
+    }
+   ],
+   "layout": {
+    "mode": "HORIZONTAL",
+    "padding": [
+     null,
+     100,
+     30,
+     null
+    ],
+    "primaryAlign": "CENTER",
+    "primarySizing": "FIXED",
+    "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+   },
+   "children": [
+    {
+     "id": "214:351",
+     "type": "FRAME",
+     "name": "Frame 2",
+     "size": {
+      "w": 191,
+      "h": 30
+     },
+     "pos": {
+      "x": 12447,
+      "y": 1113
+     },
+     "layout": {
+      "mode": "HORIZONTAL",
+      "spacing": 10,
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primaryAlign": "CENTER",
+      "counterAlign": "CENTER",
+      "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+     },
+     "children": [
+      {
+       "id": "214:352",
+       "type": "TEXT",
+       "name": "SEM PARABENHOS",
+       "size": {
+        "w": 191,
+        "h": 30
+       },
+       "pos": {
+        "x": 12447,
+        "y": 1113
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#000000",
+         "opacity": 1
+        }
+       ],
+       "text": "SEM PARABENHOS",
+       "font": "Inter Regular",
+       "fontSize": 18,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      }
+     ]
+    },
+    {
+     "id": "214:353",
+     "type": "FRAME",
+     "name": "Frame 4",
+     "size": {
+      "w": 191,
+      "h": 30
+     },
+     "pos": {
+      "x": 12638,
+      "y": 1113
+     },
+     "layout": {
+      "mode": "HORIZONTAL",
+      "spacing": 10,
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primaryAlign": "CENTER",
+      "counterAlign": "CENTER",
+      "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+     },
+     "children": [
+      {
+       "id": "214:354",
+       "type": "TEXT",
+       "name": "SEM CORANTES",
+       "size": {
+        "w": 191,
+        "h": 30
+       },
+       "pos": {
+        "x": 12638,
+        "y": 1113
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#000000",
+         "opacity": 1
+        }
+       ],
+       "text": "SEM CORANTES",
+       "font": "Inter Regular",
+       "fontSize": 18,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      }
+     ]
+    },
+    {
+     "id": "214:355",
+     "type": "FRAME",
+     "name": "Frame 5",
+     "size": {
+      "w": 265,
+      "h": 30
+     },
+     "pos": {
+      "x": 12829,
+      "y": 1113
+     },
+     "layout": {
+      "mode": "HORIZONTAL",
+      "spacing": 10,
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primaryAlign": "CENTER",
+      "counterAlign": "CENTER",
+      "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+     },
+     "children": [
+      {
+       "id": "214:356",
+       "type": "TEXT",
+       "name": "NÃO TESTADO EM ANIMAIS",
+       "size": {
+        "w": 265,
+        "h": 30
+       },
+       "pos": {
+        "x": 12829,
+        "y": 1113
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#000000",
+         "opacity": 1
+        }
+       ],
+       "text": "NÃO TESTADO EM ANIMAIS",
+       "font": "Inter Regular",
+       "fontSize": 18,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      }
+     ]
+    },
+    {
+     "id": "214:357",
+     "type": "FRAME",
+     "name": "Frame 6",
+     "size": {
+      "w": 296,
+      "h": 30
+     },
+     "pos": {
+      "x": 13094,
+      "y": 1113
+     },
+     "layout": {
+      "mode": "HORIZONTAL",
+      "spacing": 10,
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primaryAlign": "CENTER",
+      "counterAlign": "CENTER",
+      "primarySizing": "FIXED",
+      "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+     },
+     "children": [
+      {
+       "id": "214:358",
+       "type": "TEXT",
+       "name": "INGREDIENTES DE ORIGEM NATURAL",
+       "size": {
+        "w": 326,
+        "h": 30
+       },
+       "pos": {
+        "x": 13079,
+        "y": 1113
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#000000",
+         "opacity": 1
+        }
+       ],
+       "text": "INGREDIENTES DE ORIGEM NATURAL",
+       "font": "Inter Regular",
+       "fontSize": 18,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      }
+     ]
+    },
+    {
+     "id": "214:359",
+     "type": "FRAME",
+     "name": "Frame 7",
+     "size": {
+      "w": 266,
+      "h": 30
+     },
+     "pos": {
+      "x": 13390,
+      "y": 1113
+     },
+     "layout": {
+      "mode": "HORIZONTAL",
+      "spacing": 10,
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primaryAlign": "CENTER",
+      "counterAlign": "CENTER",
+      "primarySizing": "FIXED",
+      "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+     },
+     "children": [
+      {
+       "id": "214:360",
+       "type": "TEXT",
+       "name": "ORGUSAMENTE FRICANO",
+       "size": {
+        "w": 247,
+        "h": 30
+       },
+       "pos": {
+        "x": 13399,
+        "y": 1113
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#000000",
+         "opacity": 1
+        }
+       ],
+       "text": "ORGUSAMENTE FRICANO",
+       "font": "Inter Regular",
+       "fontSize": 18,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "214:361",
+   "type": "FRAME",
+   "name": "Cart",
+   "size": {
+    "w": 402,
+    "h": 3982
+   },
+   "pos": {
+    "x": 12850,
+    "y": 1156
+   },
+   "children": [
+    {
+     "id": "214:362",
+     "type": "FRAME",
+     "name": "Secçã 2",
+     "size": {
+      "w": 402,
+      "h": 89
+     },
+     "pos": {
+      "x": 12850,
+      "y": 1156
+     },
+     "cornerRadii": [
+      null,
+      null,
+      null,
+      null
+     ],
+     "fills": [
+      {
+       "type": "SOLID",
+       "color": "#ffffff",
+       "opacity": 1
+      }
+     ],
+     "layout": {
+      "mode": "HORIZONTAL",
+      "padding": [
+       null,
+       20,
+       null,
+       null
+      ],
+      "primaryAlign": "SPACE_EVENLY",
+      "counterAlign": "CENTER",
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "214:363",
+       "type": "FRAME",
+       "name": "Frame 2",
+       "size": {
+        "w": 362,
+        "h": 28
+       },
+       "pos": {
+        "x": 12870,
+        "y": 1187
+       },
+       "layout": {
+        "mode": "VERTICAL",
+        "spacing": 10,
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "primaryAlign": "CENTER"
+       },
+       "children": [
+        {
+         "id": "214:364",
+         "type": "TEXT",
+         "name": "Loja Skincare",
+         "size": {
+          "w": 362,
+          "h": 28
+         },
+         "pos": {
+          "x": 12870,
+          "y": 1187
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#000000",
+           "opacity": 1
+          }
+         ],
+         "text": "Loja Skincare",
+         "font": "Italiana Regular",
+         "fontSize": 25,
+         "lineHeight": {
+          "value": 100,
+          "units": "PERCENT"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         },
+         "textAlign": "CENTER"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "214:365",
+     "type": "FRAME",
+     "name": "Corpo da Secção 2",
+     "size": {
+      "w": 399,
+      "h": 3893
+     },
+     "pos": {
+      "x": 12850,
+      "y": 1245
+     },
+     "cornerRadii": [
+      null,
+      null,
+      null,
+      null
+     ],
+     "fills": [
+      {
+       "type": "SOLID",
+       "color": "#ffffff",
+       "opacity": 1
+      }
+     ],
+     "layout": {
+      "mode": "VERTICAL",
+      "padding": [
+       null,
+       30,
+       null,
+       null
+      ],
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "214:366",
+       "type": "FRAME",
+       "name": "Frame 5",
+       "size": {
+        "w": 339,
+        "h": 550
+       },
+       "pos": {
+        "x": 12880,
+        "y": 1245
+       },
+       "cornerRadius": 20,
+       "effects": [
+        {
+         "type": "DROP_SHADOW",
+         "color": "#000000 (a=0.09)",
+         "radius": 5,
+         "offset": {
+          "x": 0,
+          "y": 2
+         },
+         "spread": 0
+        }
+       ],
+       "layout": {
+        "mode": "VERTICAL",
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "primarySizing": "FIXED"
+       },
+       "children": [
+        {
+         "id": "214:367",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "Rectangle 1",
+         "size": {
+          "w": 339,
+          "h": 363
+         },
+         "pos": {
+          "x": 12880,
+          "y": 1245
+         },
+         "cornerRadius": 22,
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "7b78ab04e05b31e731b8e3c52647b6bd19bdb5fb.png"
+          }
+         ]
+        },
+        {
+         "id": "214:368",
+         "type": "FRAME",
+         "name": "Frame 3",
+         "size": {
+          "w": 339,
+          "h": 180
+         },
+         "pos": {
+          "x": 12880,
+          "y": 1608
+         },
+         "layout": {
+          "mode": "VERTICAL",
+          "spacing": 26,
+          "padding": [
+           null,
+           null,
+           40,
+           null
+          ],
+          "counterAlign": "CENTER"
+         },
+         "children": [
+          {
+           "id": "214:369",
+           "type": "FRAME",
+           "name": "Frame 1",
+           "size": {
+            "w": 339,
+            "h": 22
+           },
+           "pos": {
+            "x": 12880,
+            "y": 1648
+           },
+           "layout": {
+            "mode": "HORIZONTAL",
+            "spacing": 10,
+            "padding": [
+             null,
+             null,
+             null,
+             null
+            ],
+            "primaryAlign": "SPACE_EVENLY",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+           },
+           "children": [
+            {
+             "id": "214:370",
+             "type": "TEXT",
+             "name": "SERÚM FACIAL",
+             "size": {
+              "w": 108,
+              "h": 20
+             },
+             "pos": {
+              "x": 12880,
+              "y": 1649
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#000000",
+               "opacity": 1
+              }
+             ],
+             "text": "SERÚM FACIAL",
+             "font": "JetBrains Mono Regular",
+             "fontSize": 15,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            },
+            {
+             "id": "214:371",
+             "type": "TEXT",
+             "name": "14.500kz",
+             "size": {
+              "w": 69,
+              "h": 22
+             },
+             "pos": {
+              "x": 13150,
+              "y": 1648
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "text": "14.500kz",
+             "font": "Inria Sans Bold",
+             "fontSize": 18,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            }
+           ]
+          },
+          {
+           "id": "214:372",
+           "type": "FRAME",
+           "name": "Group 5",
+           "size": {
+            "w": 339,
+            "h": 52
+           },
+           "pos": {
+            "x": 12880,
+            "y": 1696
+           },
+           "children": [
+            {
+             "id": "214:373",
+             "type": "FRAME",
+             "name": "Frame 4",
+             "size": {
+              "w": 339,
+              "h": 52
+             },
+             "pos": {
+              "x": 12880,
+              "y": 1696
+             },
+             "cornerRadius": 5,
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ffffff",
+               "opacity": 1
+              }
+             ],
+             "strokes": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "strokeWeight": 1,
+             "layout": {
+              "mode": "HORIZONTAL",
+              "spacing": 10,
+              "padding": [
+               null,
+               10,
+               10,
+               null
+              ],
+              "primaryAlign": "CENTER",
+              "counterAlign": "CENTER",
+              "primarySizing": "FIXED"
+             },
+             "children": [
+              {
+               "id": "214:374",
+               "type": "TEXT",
+               "name": "VER DETALHES",
+               "size": {
+                "w": 104,
+                "h": 30
+               },
+               "pos": {
+                "x": 12998,
+                "y": 1707
+               },
+               "fills": [
+                {
+                 "type": "SOLID",
+                 "color": "#000000",
+                 "opacity": 1
+                }
+               ],
+               "text": "VER DETALHES ",
+               "font": "Jaldi Regular",
+               "fontSize": 18,
+               "lineHeight": {
+                "value": 100,
+                "units": "PERCENT"
+               },
+               "letterSpacing": {
+                "value": 0,
+                "units": "PERCENT"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "214:375",
+       "type": "FRAME",
+       "name": "Frame 6",
+       "size": {
+        "w": 339,
+        "h": 550
+       },
+       "pos": {
+        "x": 12880,
+        "y": 1795
+       },
+       "cornerRadius": 20,
+       "effects": [
+        {
+         "type": "DROP_SHADOW",
+         "color": "#000000 (a=0.09)",
+         "radius": 5,
+         "offset": {
+          "x": 0,
+          "y": 2
+         },
+         "spread": 0
+        }
+       ],
+       "layout": {
+        "mode": "VERTICAL",
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "primarySizing": "FIXED"
+       },
+       "children": [
+        {
+         "id": "214:376",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "Rectangle 1",
+         "size": {
+          "w": 339,
+          "h": 363
+         },
+         "pos": {
+          "x": 12880,
+          "y": 1795
+         },
+         "cornerRadius": 22,
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "43c52a030e0b0d28efecd97a5f815c28c36b40c8.png"
+          }
+         ]
+        },
+        {
+         "id": "214:377",
+         "type": "FRAME",
+         "name": "Frame 3",
+         "size": {
+          "w": 339,
+          "h": 180
+         },
+         "pos": {
+          "x": 12880,
+          "y": 2158
+         },
+         "layout": {
+          "mode": "VERTICAL",
+          "spacing": 26,
+          "padding": [
+           null,
+           null,
+           40,
+           null
+          ],
+          "counterAlign": "CENTER"
+         },
+         "children": [
+          {
+           "id": "214:378",
+           "type": "FRAME",
+           "name": "Frame 1",
+           "size": {
+            "w": 339,
+            "h": 22
+           },
+           "pos": {
+            "x": 12880,
+            "y": 2198
+           },
+           "layout": {
+            "mode": "HORIZONTAL",
+            "spacing": 10,
+            "padding": [
+             null,
+             null,
+             null,
+             null
+            ],
+            "primaryAlign": "SPACE_EVENLY",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+           },
+           "children": [
+            {
+             "id": "214:379",
+             "type": "TEXT",
+             "name": "CREME HIDRATANTE",
+             "size": {
+              "w": 144,
+              "h": 20
+             },
+             "pos": {
+              "x": 12880,
+              "y": 2199
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#000000",
+               "opacity": 1
+              }
+             ],
+             "text": "CREME HIDRATANTE",
+             "font": "JetBrains Mono Regular",
+             "fontSize": 15,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            },
+            {
+             "id": "214:380",
+             "type": "TEXT",
+             "name": "20.000kz",
+             "size": {
+              "w": 74,
+              "h": 22
+             },
+             "pos": {
+              "x": 13145,
+              "y": 2198
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "text": "20.000kz",
+             "font": "Inria Sans Bold",
+             "fontSize": 18,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            }
+           ]
+          },
+          {
+           "id": "214:381",
+           "type": "FRAME",
+           "name": "Group 5",
+           "size": {
+            "w": 339,
+            "h": 52
+           },
+           "pos": {
+            "x": 12880,
+            "y": 2246
+           },
+           "children": [
+            {
+             "id": "214:382",
+             "type": "FRAME",
+             "name": "Frame 4",
+             "size": {
+              "w": 339,
+              "h": 52
+             },
+             "pos": {
+              "x": 12880,
+              "y": 2246
+             },
+             "cornerRadius": 5,
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ffffff",
+               "opacity": 1
+              }
+             ],
+             "strokes": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "strokeWeight": 1,
+             "layout": {
+              "mode": "HORIZONTAL",
+              "spacing": 10,
+              "padding": [
+               null,
+               10,
+               10,
+               null
+              ],
+              "primaryAlign": "CENTER",
+              "counterAlign": "CENTER",
+              "primarySizing": "FIXED"
+             },
+             "children": [
+              {
+               "id": "214:383",
+               "type": "TEXT",
+               "name": "VER DETALHES",
+               "size": {
+                "w": 104,
+                "h": 30
+               },
+               "pos": {
+                "x": 12998,
+                "y": 2257
+               },
+               "fills": [
+                {
+                 "type": "SOLID",
+                 "color": "#000000",
+                 "opacity": 1
+                }
+               ],
+               "text": "VER DETALHES ",
+               "font": "Jaldi Regular",
+               "fontSize": 18,
+               "lineHeight": {
+                "value": 100,
+                "units": "PERCENT"
+               },
+               "letterSpacing": {
+                "value": 0,
+                "units": "PERCENT"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "214:384",
+       "type": "FRAME",
+       "name": "Frame 7",
+       "size": {
+        "w": 339,
+        "h": 550
+       },
+       "pos": {
+        "x": 12880,
+        "y": 2345
+       },
+       "cornerRadius": 20,
+       "effects": [
+        {
+         "type": "DROP_SHADOW",
+         "color": "#000000 (a=0.09)",
+         "radius": 5,
+         "offset": {
+          "x": 0,
+          "y": 2
+         },
+         "spread": 0
+        }
+       ],
+       "layout": {
+        "mode": "VERTICAL",
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "primarySizing": "FIXED"
+       },
+       "children": [
+        {
+         "id": "214:385",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "Rectangle 1",
+         "size": {
+          "w": 339,
+          "h": 363
+         },
+         "pos": {
+          "x": 12880,
+          "y": 2345
+         },
+         "cornerRadius": 22,
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "9034d2df77e2b3e795eec50c2e9a150667d4677b.png"
+          }
+         ]
+        },
+        {
+         "id": "214:386",
+         "type": "FRAME",
+         "name": "Frame 3",
+         "size": {
+          "w": 339,
+          "h": 180
+         },
+         "pos": {
+          "x": 12880,
+          "y": 2708
+         },
+         "layout": {
+          "mode": "VERTICAL",
+          "spacing": 26,
+          "padding": [
+           null,
+           null,
+           40,
+           null
+          ],
+          "counterAlign": "CENTER"
+         },
+         "children": [
+          {
+           "id": "214:387",
+           "type": "FRAME",
+           "name": "Frame 1",
+           "size": {
+            "w": 339,
+            "h": 22
+           },
+           "pos": {
+            "x": 12880,
+            "y": 2748
+           },
+           "layout": {
+            "mode": "HORIZONTAL",
+            "spacing": 10,
+            "padding": [
+             null,
+             null,
+             null,
+             null
+            ],
+            "primaryAlign": "SPACE_EVENLY",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+           },
+           "children": [
+            {
+             "id": "214:388",
+             "type": "TEXT",
+             "name": "PROTETOR SOLAR",
+             "size": {
+              "w": 126,
+              "h": 20
+             },
+             "pos": {
+              "x": 12880,
+              "y": 2749
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#000000",
+               "opacity": 1
+              }
+             ],
+             "text": "PROTETOR SOLAR",
+             "font": "JetBrains Mono Regular",
+             "fontSize": 15,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            },
+            {
+             "id": "214:389",
+             "type": "TEXT",
+             "name": "25.000kz",
+             "size": {
+              "w": 73,
+              "h": 22
+             },
+             "pos": {
+              "x": 13146,
+              "y": 2748
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "text": "25.000kz",
+             "font": "Inria Sans Bold",
+             "fontSize": 18,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            }
+           ]
+          },
+          {
+           "id": "214:390",
+           "type": "FRAME",
+           "name": "Group 5",
+           "size": {
+            "w": 339,
+            "h": 52
+           },
+           "pos": {
+            "x": 12880,
+            "y": 2796
+           },
+           "children": [
+            {
+             "id": "214:391",
+             "type": "FRAME",
+             "name": "Frame 4",
+             "size": {
+              "w": 339,
+              "h": 52
+             },
+             "pos": {
+              "x": 12880,
+              "y": 2796
+             },
+             "cornerRadius": 5,
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ffffff",
+               "opacity": 1
+              }
+             ],
+             "strokes": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "strokeWeight": 1,
+             "layout": {
+              "mode": "HORIZONTAL",
+              "spacing": 10,
+              "padding": [
+               null,
+               10,
+               10,
+               null
+              ],
+              "primaryAlign": "CENTER",
+              "counterAlign": "CENTER",
+              "primarySizing": "FIXED"
+             },
+             "children": [
+              {
+               "id": "214:392",
+               "type": "TEXT",
+               "name": "VER DETALHES",
+               "size": {
+                "w": 104,
+                "h": 30
+               },
+               "pos": {
+                "x": 12998,
+                "y": 2807
+               },
+               "fills": [
+                {
+                 "type": "SOLID",
+                 "color": "#000000",
+                 "opacity": 1
+                }
+               ],
+               "text": "VER DETALHES ",
+               "font": "Jaldi Regular",
+               "fontSize": 18,
+               "lineHeight": {
+                "value": 100,
+                "units": "PERCENT"
+               },
+               "letterSpacing": {
+                "value": 0,
+                "units": "PERCENT"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "214:393",
+       "type": "FRAME",
+       "name": "Frame 8",
+       "size": {
+        "w": 339,
+        "h": 550
+       },
+       "pos": {
+        "x": 12880,
+        "y": 2895
+       },
+       "cornerRadius": 20,
+       "effects": [
+        {
+         "type": "DROP_SHADOW",
+         "color": "#000000 (a=0.09)",
+         "radius": 5,
+         "offset": {
+          "x": 0,
+          "y": 2
+         },
+         "spread": 0
+        }
+       ],
+       "layout": {
+        "mode": "VERTICAL",
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "primarySizing": "FIXED"
+       },
+       "children": [
+        {
+         "id": "214:394",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "Rectangle 1",
+         "size": {
+          "w": 339,
+          "h": 363
+         },
+         "pos": {
+          "x": 12880,
+          "y": 2895
+         },
+         "cornerRadius": 22,
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "e196cd8479149a76c2d0e00f8f4ae44068515339.png"
+          }
+         ]
+        },
+        {
+         "id": "214:395",
+         "type": "FRAME",
+         "name": "Frame 3",
+         "size": {
+          "w": 339,
+          "h": 180
+         },
+         "pos": {
+          "x": 12880,
+          "y": 3258
+         },
+         "layout": {
+          "mode": "VERTICAL",
+          "spacing": 26,
+          "padding": [
+           null,
+           null,
+           40,
+           null
+          ],
+          "counterAlign": "CENTER"
+         },
+         "children": [
+          {
+           "id": "214:396",
+           "type": "FRAME",
+           "name": "Frame 1",
+           "size": {
+            "w": 339,
+            "h": 22
+           },
+           "pos": {
+            "x": 12880,
+            "y": 3298
+           },
+           "layout": {
+            "mode": "HORIZONTAL",
+            "spacing": 10,
+            "padding": [
+             null,
+             null,
+             null,
+             null
+            ],
+            "primaryAlign": "SPACE_EVENLY",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+           },
+           "children": [
+            {
+             "id": "214:397",
+             "type": "TEXT",
+             "name": "GEL DE LIMPEZA",
+             "size": {
+              "w": 126,
+              "h": 20
+             },
+             "pos": {
+              "x": 12880,
+              "y": 3299
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#000000",
+               "opacity": 1
+              }
+             ],
+             "text": "GEL DE LIMPEZA",
+             "font": "JetBrains Mono Regular",
+             "fontSize": 15,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            },
+            {
+             "id": "214:398",
+             "type": "TEXT",
+             "name": "23.000kz",
+             "size": {
+              "w": 73,
+              "h": 22
+             },
+             "pos": {
+              "x": 13146,
+              "y": 3298
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "text": "23.000kz",
+             "font": "Inria Sans Bold",
+             "fontSize": 18,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            }
+           ]
+          },
+          {
+           "id": "214:399",
+           "type": "FRAME",
+           "name": "Group 5",
+           "size": {
+            "w": 339,
+            "h": 52
+           },
+           "pos": {
+            "x": 12880,
+            "y": 3346
+           },
+           "children": [
+            {
+             "id": "214:400",
+             "type": "FRAME",
+             "name": "Frame 4",
+             "size": {
+              "w": 339,
+              "h": 52
+             },
+             "pos": {
+              "x": 12880,
+              "y": 3346
+             },
+             "cornerRadius": 5,
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ffffff",
+               "opacity": 1
+              }
+             ],
+             "strokes": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "strokeWeight": 1,
+             "layout": {
+              "mode": "HORIZONTAL",
+              "spacing": 10,
+              "padding": [
+               null,
+               10,
+               10,
+               null
+              ],
+              "primaryAlign": "CENTER",
+              "counterAlign": "CENTER",
+              "primarySizing": "FIXED"
+             },
+             "children": [
+              {
+               "id": "214:401",
+               "type": "TEXT",
+               "name": "VER DETALHES",
+               "size": {
+                "w": 104,
+                "h": 30
+               },
+               "pos": {
+                "x": 12998,
+                "y": 3357
+               },
+               "fills": [
+                {
+                 "type": "SOLID",
+                 "color": "#000000",
+                 "opacity": 1
+                }
+               ],
+               "text": "VER DETALHES ",
+               "font": "Jaldi Regular",
+               "fontSize": 18,
+               "lineHeight": {
+                "value": 100,
+                "units": "PERCENT"
+               },
+               "letterSpacing": {
+                "value": 0,
+                "units": "PERCENT"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "214:402",
+       "type": "FRAME",
+       "name": "Frame 9",
+       "size": {
+        "w": 339,
+        "h": 550
+       },
+       "pos": {
+        "x": 12880,
+        "y": 3445
+       },
+       "cornerRadius": 20,
+       "effects": [
+        {
+         "type": "DROP_SHADOW",
+         "color": "#000000 (a=0.09)",
+         "radius": 5,
+         "offset": {
+          "x": 0,
+          "y": 2
+         },
+         "spread": 0
+        }
+       ],
+       "layout": {
+        "mode": "VERTICAL",
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "primarySizing": "FIXED"
+       },
+       "children": [
+        {
+         "id": "214:403",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "Rectangle 1",
+         "size": {
+          "w": 339,
+          "h": 363
+         },
+         "pos": {
+          "x": 12880,
+          "y": 3445
+         },
+         "cornerRadius": 22,
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "8e3403dcd7a4621207d9a8328cf9a28b8b9be3ca.png"
+          }
+         ]
+        },
+        {
+         "id": "214:404",
+         "type": "FRAME",
+         "name": "Frame 3",
+         "size": {
+          "w": 339,
+          "h": 180
+         },
+         "pos": {
+          "x": 12880,
+          "y": 3808
+         },
+         "layout": {
+          "mode": "VERTICAL",
+          "spacing": 26,
+          "padding": [
+           null,
+           null,
+           40,
+           null
+          ],
+          "counterAlign": "CENTER"
+         },
+         "children": [
+          {
+           "id": "214:405",
+           "type": "FRAME",
+           "name": "Frame 1",
+           "size": {
+            "w": 339,
+            "h": 22
+           },
+           "pos": {
+            "x": 12880,
+            "y": 3848
+           },
+           "layout": {
+            "mode": "HORIZONTAL",
+            "spacing": 10,
+            "padding": [
+             null,
+             null,
+             null,
+             null
+            ],
+            "primaryAlign": "SPACE_EVENLY",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+           },
+           "children": [
+            {
+             "id": "214:406",
+             "type": "TEXT",
+             "name": "CONTORNO DE OLHOS",
+             "size": {
+              "w": 153,
+              "h": 20
+             },
+             "pos": {
+              "x": 12880,
+              "y": 3849
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#000000",
+               "opacity": 1
+              }
+             ],
+             "text": "CONTORNO DE OLHOS",
+             "font": "JetBrains Mono Regular",
+             "fontSize": 15,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            },
+            {
+             "id": "214:407",
+             "type": "TEXT",
+             "name": "18.000kz",
+             "size": {
+              "w": 71,
+              "h": 22
+             },
+             "pos": {
+              "x": 13148,
+              "y": 3848
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "text": "18.000kz",
+             "font": "Inria Sans Bold",
+             "fontSize": 18,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            }
+           ]
+          },
+          {
+           "id": "214:408",
+           "type": "FRAME",
+           "name": "Group 5",
+           "size": {
+            "w": 339,
+            "h": 52
+           },
+           "pos": {
+            "x": 12880,
+            "y": 3896
+           },
+           "children": [
+            {
+             "id": "214:409",
+             "type": "FRAME",
+             "name": "Frame 4",
+             "size": {
+              "w": 339,
+              "h": 52
+             },
+             "pos": {
+              "x": 12880,
+              "y": 3896
+             },
+             "cornerRadius": 5,
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ffffff",
+               "opacity": 1
+              }
+             ],
+             "strokes": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "strokeWeight": 1,
+             "layout": {
+              "mode": "HORIZONTAL",
+              "spacing": 10,
+              "padding": [
+               null,
+               10,
+               10,
+               null
+              ],
+              "primaryAlign": "CENTER",
+              "counterAlign": "CENTER",
+              "primarySizing": "FIXED"
+             },
+             "children": [
+              {
+               "id": "214:410",
+               "type": "TEXT",
+               "name": "VER DETALHES",
+               "size": {
+                "w": 104,
+                "h": 30
+               },
+               "pos": {
+                "x": 12998,
+                "y": 3907
+               },
+               "fills": [
+                {
+                 "type": "SOLID",
+                 "color": "#000000",
+                 "opacity": 1
+                }
+               ],
+               "text": "VER DETALHES ",
+               "font": "Jaldi Regular",
+               "fontSize": 18,
+               "lineHeight": {
+                "value": 100,
+                "units": "PERCENT"
+               },
+               "letterSpacing": {
+                "value": 0,
+                "units": "PERCENT"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "214:411",
+       "type": "FRAME",
+       "name": "Frame 10",
+       "size": {
+        "w": 339,
+        "h": 550
+       },
+       "pos": {
+        "x": 12880,
+        "y": 3995
+       },
+       "cornerRadius": 20,
+       "effects": [
+        {
+         "type": "DROP_SHADOW",
+         "color": "#000000 (a=0.09)",
+         "radius": 5,
+         "offset": {
+          "x": 0,
+          "y": 2
+         },
+         "spread": 0
+        }
+       ],
+       "layout": {
+        "mode": "VERTICAL",
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "primarySizing": "FIXED"
+       },
+       "children": [
+        {
+         "id": "214:412",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "Rectangle 1",
+         "size": {
+          "w": 339,
+          "h": 363
+         },
+         "pos": {
+          "x": 12880,
+          "y": 3995
+         },
+         "cornerRadius": 22,
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "836d7cd5a0762bdb6ae7117ffc14f994359c26d3.png"
+          }
+         ]
+        },
+        {
+         "id": "214:413",
+         "type": "FRAME",
+         "name": "Frame 3",
+         "size": {
+          "w": 339,
+          "h": 180
+         },
+         "pos": {
+          "x": 12880,
+          "y": 4358
+         },
+         "layout": {
+          "mode": "VERTICAL",
+          "spacing": 26,
+          "padding": [
+           null,
+           null,
+           40,
+           null
+          ],
+          "counterAlign": "CENTER"
+         },
+         "children": [
+          {
+           "id": "214:414",
+           "type": "FRAME",
+           "name": "Frame 1",
+           "size": {
+            "w": 339,
+            "h": 22
+           },
+           "pos": {
+            "x": 12880,
+            "y": 4398
+           },
+           "layout": {
+            "mode": "HORIZONTAL",
+            "spacing": 10,
+            "padding": [
+             null,
+             null,
+             null,
+             null
+            ],
+            "primaryAlign": "SPACE_EVENLY",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+           },
+           "children": [
+            {
+             "id": "214:415",
+             "type": "TEXT",
+             "name": "TÓNICO FACIAL",
+             "size": {
+              "w": 117,
+              "h": 20
+             },
+             "pos": {
+              "x": 12880,
+              "y": 4399
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#000000",
+               "opacity": 1
+              }
+             ],
+             "text": "TÓNICO FACIAL",
+             "font": "JetBrains Mono Regular",
+             "fontSize": 15,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            },
+            {
+             "id": "214:416",
+             "type": "TEXT",
+             "name": "24.000kz",
+             "size": {
+              "w": 73,
+              "h": 22
+             },
+             "pos": {
+              "x": 13146,
+              "y": 4398
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "text": "24.000kz",
+             "font": "Inria Sans Bold",
+             "fontSize": 18,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            }
+           ]
+          },
+          {
+           "id": "214:417",
+           "type": "FRAME",
+           "name": "Group 5",
+           "size": {
+            "w": 339,
+            "h": 52
+           },
+           "pos": {
+            "x": 12880,
+            "y": 4446
+           },
+           "children": [
+            {
+             "id": "214:418",
+             "type": "FRAME",
+             "name": "Frame 4",
+             "size": {
+              "w": 339,
+              "h": 52
+             },
+             "pos": {
+              "x": 12880,
+              "y": 4446
+             },
+             "cornerRadius": 5,
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ffffff",
+               "opacity": 1
+              }
+             ],
+             "strokes": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "strokeWeight": 1,
+             "layout": {
+              "mode": "HORIZONTAL",
+              "spacing": 10,
+              "padding": [
+               null,
+               10,
+               10,
+               null
+              ],
+              "primaryAlign": "CENTER",
+              "counterAlign": "CENTER",
+              "primarySizing": "FIXED"
+             },
+             "children": [
+              {
+               "id": "214:419",
+               "type": "TEXT",
+               "name": "VER DETALHES",
+               "size": {
+                "w": 104,
+                "h": 30
+               },
+               "pos": {
+                "x": 12998,
+                "y": 4457
+               },
+               "fills": [
+                {
+                 "type": "SOLID",
+                 "color": "#000000",
+                 "opacity": 1
+                }
+               ],
+               "text": "VER DETALHES ",
+               "font": "Jaldi Regular",
+               "fontSize": 18,
+               "lineHeight": {
+                "value": 100,
+                "units": "PERCENT"
+               },
+               "letterSpacing": {
+                "value": 0,
+                "units": "PERCENT"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "214:420",
+       "type": "FRAME",
+       "name": "Frame 11",
+       "size": {
+        "w": 339,
+        "h": 543
+       },
+       "pos": {
+        "x": 12880,
+        "y": 4545
+       },
+       "cornerRadius": 20,
+       "effects": [
+        {
+         "type": "DROP_SHADOW",
+         "color": "#000000 (a=0.09)",
+         "radius": 5,
+         "offset": {
+          "x": 0,
+          "y": 2
+         },
+         "spread": 0
+        }
+       ],
+       "layout": {
+        "mode": "VERTICAL",
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ]
+       },
+       "children": [
+        {
+         "id": "214:421",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "Rectangle 1",
+         "size": {
+          "w": 339,
+          "h": 363
+         },
+         "pos": {
+          "x": 12880,
+          "y": 4545
+         },
+         "cornerRadius": 22,
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "9eb73ada88316ee1a686213452bce647a7e63bdb.png"
+          }
+         ]
+        },
+        {
+         "id": "214:422",
+         "type": "FRAME",
+         "name": "Frame 3",
+         "size": {
+          "w": 339,
+          "h": 180
+         },
+         "pos": {
+          "x": 12880,
+          "y": 4908
+         },
+         "layout": {
+          "mode": "VERTICAL",
+          "spacing": 26,
+          "padding": [
+           null,
+           null,
+           40,
+           null
+          ],
+          "counterAlign": "CENTER"
+         },
+         "children": [
+          {
+           "id": "214:423",
+           "type": "FRAME",
+           "name": "Frame 1",
+           "size": {
+            "w": 339,
+            "h": 22
+           },
+           "pos": {
+            "x": 12880,
+            "y": 4948
+           },
+           "layout": {
+            "mode": "HORIZONTAL",
+            "spacing": 10,
+            "padding": [
+             null,
+             null,
+             null,
+             null
+            ],
+            "primaryAlign": "SPACE_EVENLY",
+            "counterAlign": "CENTER",
+            "primarySizing": "FIXED",
+            "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+           },
+           "children": [
+            {
+             "id": "214:424",
+             "type": "TEXT",
+             "name": "SABONETE FACIAL",
+             "size": {
+              "w": 135,
+              "h": 20
+             },
+             "pos": {
+              "x": 12880,
+              "y": 4949
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#000000",
+               "opacity": 1
+              }
+             ],
+             "text": "SABONETE FACIAL",
+             "font": "JetBrains Mono Regular",
+             "fontSize": 15,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            },
+            {
+             "id": "214:425",
+             "type": "TEXT",
+             "name": "20.000kz",
+             "size": {
+              "w": 74,
+              "h": 22
+             },
+             "pos": {
+              "x": 13145,
+              "y": 4948
+             },
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "text": "20.000kz",
+             "font": "Inria Sans Bold",
+             "fontSize": 18,
+             "lineHeight": {
+              "value": 100,
+              "units": "PERCENT"
+             },
+             "letterSpacing": {
+              "value": 0,
+              "units": "PERCENT"
+             }
+            }
+           ]
+          },
+          {
+           "id": "214:426",
+           "type": "FRAME",
+           "name": "Group 5",
+           "size": {
+            "w": 339,
+            "h": 52
+           },
+           "pos": {
+            "x": 12880,
+            "y": 4996
+           },
+           "children": [
+            {
+             "id": "214:427",
+             "type": "FRAME",
+             "name": "Frame 4",
+             "size": {
+              "w": 339,
+              "h": 52
+             },
+             "pos": {
+              "x": 12880,
+              "y": 4996
+             },
+             "cornerRadius": 5,
+             "fills": [
+              {
+               "type": "SOLID",
+               "color": "#ffffff",
+               "opacity": 1
+              }
+             ],
+             "strokes": [
+              {
+               "type": "SOLID",
+               "color": "#ba4104",
+               "opacity": 1
+              }
+             ],
+             "strokeWeight": 1,
+             "layout": {
+              "mode": "HORIZONTAL",
+              "spacing": 10,
+              "padding": [
+               null,
+               10,
+               10,
+               null
+              ],
+              "primaryAlign": "CENTER",
+              "counterAlign": "CENTER",
+              "primarySizing": "FIXED"
+             },
+             "children": [
+              {
+               "id": "214:428",
+               "type": "TEXT",
+               "name": "VER DETALHES",
+               "size": {
+                "w": 104,
+                "h": 30
+               },
+               "pos": {
+                "x": 12998,
+                "y": 5007
+               },
+               "fills": [
+                {
+                 "type": "SOLID",
+                 "color": "#000000",
+                 "opacity": 1
+                }
+               ],
+               "text": "VER DETALHES ",
+               "font": "Jaldi Regular",
+               "fontSize": 18,
+               "lineHeight": {
+                "value": 100,
+                "units": "PERCENT"
+               },
+               "letterSpacing": {
+                "value": 0,
+                "units": "PERCENT"
+               }
+              }
+             ]
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "214:455",
+   "type": "FRAME",
+   "name": "Menu Principal",
+   "size": {
+    "w": 402,
+    "h": 73
+   },
+   "pos": {
+    "x": 12850,
+    "y": 1083
+   },
+   "fills": [
+    {
+     "type": "SOLID",
+     "color": "#ffffff",
+     "opacity": 1
+    }
+   ],
+   "strokes": [
+    {
+     "type": "SOLID",
+     "color": "#e1e1e1",
+     "opacity": 1
+    }
+   ],
+   "strokeWeight": 1,
+   "layout": {
+    "mode": "HORIZONTAL",
+    "padding": [
+     null,
+     20,
+     null,
+     null
+    ],
+    "primaryAlign": "SPACE_EVENLY",
+    "counterAlign": "CENTER",
+    "primarySizing": "FIXED"
+   },
+   "children": [
+    {
+     "id": "214:456",
+     "type": "FRAME",
+     "name": "Logo",
+     "size": {
+      "w": 63,
+      "h": 40
+     },
+     "pos": {
+      "x": 12870,
+      "y": 1100
+     },
+     "children": [
+      {
+       "id": "214:457",
+       "type": "ROUNDED_RECTANGLE",
+       "name": "logo 1",
+       "size": {
+        "w": 63,
+        "h": 40
+       },
+       "pos": {
+        "x": 12870,
+        "y": 1100
+       },
+       "fills": [
+        {
+         "type": "IMAGE",
+         "file": "62644cbfd4ec562431891aba54769d1eefa0c0e5.png"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "214:458",
+     "type": "FRAME",
+     "name": "Menu Item",
+     "size": {
+      "w": 50,
+      "h": 19
+     },
+     "pos": {
+      "x": 12998,
+      "y": 1110
+     },
+     "layout": {
+      "mode": "HORIZONTAL",
+      "spacing": 20,
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "counterAlign": "CENTER",
+      "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+     }
+    },
+    {
+     "id": "214:459",
+     "type": "FRAME",
+     "name": "Menu Item 2",
+     "size": {
+      "w": 119,
+      "h": 24
+     },
+     "pos": {
+      "x": 13113,
+      "y": 1108
+     },
+     "layout": {
+      "mode": "HORIZONTAL",
+      "spacing": 30,
+      "padding": [
+       null,
+       20,
+       null,
+       null
+      ],
+      "counterAlign": "CENTER",
+      "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+     },
+     "children": [
+      {
+       "id": "214:460",
+       "type": "FRAME",
+       "name": "cart_icon_073d8ff8-7ae8-4007-9706-726f64a28828 1",
+       "size": {
+        "w": 24,
+        "h": 24
+       },
+       "pos": {
+        "x": 13133,
+        "y": 1108
+       },
+       "children": [
+        {
+         "id": "214:461",
+         "type": "VECTOR",
+         "name": "Vector",
+         "size": {
+          "w": 8,
+          "h": 4
+         },
+         "pos": {
+          "x": 13141,
+          "y": 1118
+         },
+         "strokes": [
+          {
+           "type": "SOLID",
+           "color": "#121212",
+           "opacity": 1
+          }
+         ],
+         "strokeWeight": 1.5
+        },
+        {
+         "id": "214:462",
+         "type": "VECTOR",
+         "name": "Vector",
+         "size": {
+          "w": 18,
+          "h": 0
+         },
+         "pos": {
+          "x": 13136,
+          "y": 1114
+         },
+         "strokes": [
+          {
+           "type": "SOLID",
+           "color": "#121212",
+           "opacity": 1
+          }
+         ],
+         "strokeWeight": 1.5
+        },
+        {
+         "id": "214:463",
+         "type": "VECTOR",
+         "name": "Vector",
+         "size": {
+          "w": 18,
+          "h": 20
+         },
+         "pos": {
+          "x": 13136,
+          "y": 1110
+         },
+         "strokes": [
+          {
+           "type": "SOLID",
+           "color": "#121212",
+           "opacity": 1
+          }
+         ],
+         "strokeWeight": 1.5
+        }
+       ]
+      },
+      {
+       "id": "214:464",
+       "type": "FRAME",
+       "name": "icon-MagnifyingGlass 1",
+       "size": {
+        "w": 25,
+        "h": 24
+       },
+       "pos": {
+        "x": 13187,
+        "y": 1108
+       },
+       "children": [
+        {
+         "id": "214:465",
+         "type": "VECTOR",
+         "name": "Vector",
+         "size": {
+          "w": 23,
+          "h": 0
+         },
+         "pos": {
+          "x": 13188,
+          "y": 1111
+         },
+         "strokes": [
+          {
+           "type": "SOLID",
+           "color": "#000000",
+           "opacity": 1
+          }
+         ],
+         "strokeWeight": 2
+        },
+        {
+         "id": "214:466",
+         "type": "VECTOR",
+         "name": "Vector",
+         "size": {
+          "w": 23,
+          "h": 0
+         },
+         "pos": {
+          "x": 13188,
+          "y": 1120
+         },
+         "strokes": [
+          {
+           "type": "SOLID",
+           "color": "#000000",
+           "opacity": 1
+          }
+         ],
+         "strokeWeight": 2
+        },
+        {
+         "id": "214:467",
+         "type": "VECTOR",
+         "name": "Vector",
+         "size": {
+          "w": 23,
+          "h": 0
+         },
+         "pos": {
+          "x": 13188,
+          "y": 1129
+         },
+         "strokes": [
+          {
+           "type": "SOLID",
+           "color": "#000000",
+           "opacity": 1
+          }
+         ],
+         "strokeWeight": 2
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "214:469",
+   "type": "FRAME",
+   "name": "Footer",
+   "size": {
+    "w": 402,
+    "h": 1009
+   },
+   "pos": {
+    "x": 12850,
+    "y": 5138
+   },
+   "cornerRadii": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "fills": [
+    {
+     "type": "SOLID",
+     "color": "#2b2b2b",
+     "opacity": 1
+    }
+   ],
+   "layout": {
+    "mode": "VERTICAL",
+    "spacing": 31,
+    "padding": [
+     null,
+     100,
+     50,
+     null
+    ],
+    "counterAlign": "CENTER"
+   },
+   "children": [
+    {
+     "id": "214:470",
+     "type": "FRAME",
+     "name": "Frame 2",
+     "size": {
+      "w": 150,
+      "h": 193
+     },
+     "pos": {
+      "x": 12976,
+      "y": 5188
+     },
+     "layout": {
+      "mode": "VERTICAL",
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primaryAlign": "CENTER",
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "214:471",
+       "type": "ROUNDED_RECTANGLE",
+       "name": "logo 1",
+       "size": {
+        "w": 150,
+        "h": 95
+       },
+       "pos": {
+        "x": 12976,
+        "y": 5208
+       },
+       "fills": [
+        {
+         "type": "IMAGE",
+         "file": "62644cbfd4ec562431891aba54769d1eefa0c0e5.png"
+        }
+       ]
+      },
+      {
+       "id": "214:472",
+       "type": "FRAME",
+       "name": "Frame 35",
+       "size": {
+        "w": 150,
+        "h": 59
+       },
+       "pos": {
+        "x": 12976,
+        "y": 5303
+       },
+       "layout": {
+        "mode": "HORIZONTAL",
+        "spacing": 10,
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "primaryAlign": "CENTER",
+        "counterAlign": "MAX",
+        "primarySizing": "FIXED"
+       },
+       "children": [
+        {
+         "id": "214:473",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "csed3d 1",
+         "size": {
+          "w": 35,
+          "h": 36
+         },
+         "pos": {
+          "x": 12989,
+          "y": 5326
+         },
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "e2c8c29cdcbf4e190edfaceebe2f1cda4bc7fe0f.png"
+          }
+         ]
+        },
+        {
+         "id": "214:474",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "csed3d 4",
+         "size": {
+          "w": 35,
+          "h": 36
+         },
+         "pos": {
+          "x": 13034,
+          "y": 5326
+         },
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "7f01d0d9f0e7f586a801691afc2042aaa042e3d8.png"
+          }
+         ]
+        },
+        {
+         "id": "214:475",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "csed3d 5",
+         "size": {
+          "w": 35,
+          "h": 36
+         },
+         "pos": {
+          "x": 13079,
+          "y": 5326
+         },
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "9053d95bc6d20d9ed0a16224e4d7223665984466.png"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "214:476",
+     "type": "FRAME",
+     "name": "Frame 5",
+     "size": {
+      "w": 245,
+      "h": 193
+     },
+     "pos": {
+      "x": 12929,
+      "y": 5412
+     },
+     "layout": {
+      "mode": "VERTICAL",
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "214:477",
+       "type": "TEXT",
+       "name": "Links Rápidos",
+       "size": {
+        "w": 245,
+        "h": 54
+       },
+       "pos": {
+        "x": 12929,
+        "y": 5412
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffd595",
+         "opacity": 1
+        }
+       ],
+       "text": "Links Rápidos",
+       "font": "Inria Serif Regular",
+       "fontSize": 30,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "214:478",
+       "type": "TEXT",
+       "name": "Início",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 12929,
+        "y": 5466
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Início",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "214:479",
+       "type": "TEXT",
+       "name": "Loja",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 12929,
+        "y": 5501
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Loja",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "214:480",
+       "type": "TEXT",
+       "name": "Clientes Satisfeitos",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 12929,
+        "y": 5536
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Clientes Satisfeitos",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "214:481",
+       "type": "TEXT",
+       "name": "Nossa História",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 12929,
+        "y": 5571
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Nossa História",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      }
+     ]
+    },
+    {
+     "id": "214:482",
+     "type": "FRAME",
+     "name": "Frame 7",
+     "size": {
+      "w": 318,
+      "h": 237
+     },
+     "pos": {
+      "x": 12892,
+      "y": 5636
+     },
+     "layout": {
+      "mode": "VERTICAL",
+      "spacing": 11,
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "214:483",
+       "type": "TEXT",
+       "name": "Newsletter",
+       "size": {
+        "w": 318,
+        "h": 54
+       },
+       "pos": {
+        "x": 12892,
+        "y": 5636
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffd595",
+         "opacity": 1
+        }
+       ],
+       "text": "Newsletter",
+       "font": "Inria Serif Regular",
+       "fontSize": 30,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "214:484",
+       "type": "TEXT",
+       "name": "Inscreva-se em nossa Newletters",
+       "size": {
+        "w": 318,
+        "h": 24
+       },
+       "pos": {
+        "x": 12892,
+        "y": 5701
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Inscreva-se em nossa Newletters",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "214:485",
+       "type": "FRAME",
+       "name": "Frame 37",
+       "size": {
+        "w": 318,
+        "h": 49
+       },
+       "pos": {
+        "x": 12892,
+        "y": 5736
+       },
+       "cornerRadius": 5,
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "layout": {
+        "mode": "HORIZONTAL",
+        "spacing": 10,
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED"
+       },
+       "children": [
+        {
+         "id": "214:486",
+         "type": "TEXT",
+         "name": "flordemarula.com",
+         "size": {
+          "w": 318,
+          "h": 17
+         },
+         "pos": {
+          "x": 12892,
+          "y": 5752
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#000000",
+           "opacity": 1
+          }
+         ],
+         "text": "  flordemarula.com",
+         "font": "Inter Regular",
+         "fontSize": 20,
+         "lineHeight": {
+          "value": 100,
+          "units": "PERCENT"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         }
+        }
+       ]
+      },
+      {
+       "id": "214:487",
+       "type": "FRAME",
+       "name": "Frame 38",
+       "size": {
+        "w": 318,
+        "h": 47
+       },
+       "pos": {
+        "x": 12892,
+        "y": 5796
+       },
+       "cornerRadius": 5,
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffd595",
+         "opacity": 1
+        }
+       ],
+       "layout": {
+        "mode": "HORIZONTAL",
+        "spacing": 10,
+        "padding": [
+         null,
+         null,
+         20,
+         null
+        ],
+        "primaryAlign": "CENTER",
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED"
+       },
+       "children": [
+        {
+         "id": "214:488",
+         "type": "TEXT",
+         "name": "Inscrever-se",
+         "size": {
+          "w": 318,
+          "h": 32
+         },
+         "pos": {
+          "x": 12892,
+          "y": 5804
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#000000",
+           "opacity": 1
+          }
+         ],
+         "text": "Inscrever-se",
+         "font": "Inter Regular",
+         "fontSize": 20,
+         "lineHeight": {
+          "value": 100,
+          "units": "PERCENT"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         },
+         "textAlign": "CENTER"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "214:489",
+     "type": "FRAME",
+     "name": "Frame 6",
+     "size": {
+      "w": 245,
+      "h": 193
+     },
+     "pos": {
+      "x": 12929,
+      "y": 5904
+     },
+     "layout": {
+      "mode": "VERTICAL",
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "214:490",
+       "type": "TEXT",
+       "name": "Contactos",
+       "size": {
+        "w": 245,
+        "h": 54
+       },
+       "pos": {
+        "x": 12929,
+        "y": 5904
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffd595",
+         "opacity": 1
+        }
+       ],
+       "text": "Contactos",
+       "font": "Inria Serif Regular",
+       "fontSize": 30,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "214:491",
+       "type": "TEXT",
+       "name": "932005773",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 12929,
+        "y": 5958
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "932005773",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "214:492",
+       "type": "TEXT",
+       "name": "Flordemarula@gmail.com",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 12929,
+        "y": 5993
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Flordemarula@gmail.com",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "214:493",
+       "type": "TEXT",
+       "name": "Luanda, Talatona",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 12929,
+        "y": 6028
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Luanda, Talatona",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

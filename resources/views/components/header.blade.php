@@ -1,7 +1,7 @@
 @php
     $navItems = [
         'Início' => ['route' => 'home', 'active' => request()->routeIs('home')],
-        'Loja' => ['route' => null, 'active' => false],
+        'Loja' => ['route' => 'shop.index', 'active' => request()->routeIs('shop.index')],
         'Clientes Satisfeitos' => ['route' => null, 'active' => false],
         'Nossa História' => ['route' => null, 'active' => false],
         'Centro de Ajuda' => ['route' => null, 'active' => false],

@@ -16,7 +16,7 @@
                 <p class="fm-footer__heading mb-3">Links Rápidos</p>
                 <ul class="list-unstyled d-flex flex-column gap-2 fs-6">
                     <li><a href="{{ route('home') }}">Início</a></li>
-                    <li><a href="#">Loja</a></li>
+                    <li><a href="{{ route('shop.index') }}">Loja</a></li>
                     <li><a href="#">Clientes Satisfeitos</a></li>
                     <li><a href="#">Nossa História</a></li>
                 </ul>

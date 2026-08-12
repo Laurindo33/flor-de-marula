@@ -1,0 +1,32 @@
+/* Loja — fiel ao frame "Loja" (id 154:594) do Figma */
+
+.fm-shop-title {
+    padding-block: 60px 30px;
+    text-align: left;
+}
+
+.fm-shop-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 40px;
+}
+
+.fm-shop-filters .fm-chip {
+    border: 1px solid var(--fm-primary);
+    color: var(--fm-text);
+    border-radius: var(--fm-radius-sm);
+    padding: 8px 18px;
+    font-size: 14px;
+    background: var(--fm-white);
+    text-decoration: none;
+}
+.fm-shop-filters .fm-chip.active,
+.fm-shop-filters .fm-chip:hover {
+    background: var(--fm-primary);
+    color: var(--fm-white);
+}
+
+.fm-shop-grid {
+    padding-bottom: 80px;
+}
