@@ -1,0 +1,27 @@
+#FFFFFF  x275  opacities=[1.00]  types=[FRAME,TEXT,ROUNDED_RECTANGLE]  e.g. names: Home Page - mobile | SEM PARABENHOS | Section 6 - why us | Secçã 2 | Corpo da Secção 2 | Frame 5
+#000000  x275  opacities=[1.00]  types=[TEXT,FRAME,REGULAR_POLYGON]  e.g. names: Por que somos Diferentes | Flor de Marula | Nossa promessa | Pele melhor em 30 dias | Se você não ficar satisfeito com algum de nossos produtos, oferecemos uma garantia de reembolso de 30 dias. | Secçã 2
+#BA4104  x71  opacities=[1.00]  types=[TEXT,ROUNDED_RECTANGLE,FRAME,ELLIPSE]  e.g. names: LOJA | 14.500kz | 20.000kz | 25.000kz | 23.000kz | 18.000kz
+#3F3F3F  x54  opacities=[1.00]  types=[TEXT]  e.g. names: Feito Por Nós | Ingredinetes Naturais | Seguro durante a gravidez | Livre de químicos, parabenos | Pequeno Lote Fresco | Feito para Pele de Melanina
+#FFD595  x50  opacities=[1.00,0.25]  types=[TEXT,FRAME,ROUNDED_RECTANGLE]  e.g. names: Links Rápidos | Contactos | Newsletter | Frame 38 | Rectangle 32 | Produtos Naturais
+#000000 (stroke)  x35  opacities=[]  types=[]  e.g. names: Vector
+#BA4104 (stroke)  x32  opacities=[]  types=[]  e.g. names: Frame 4 | image 2 | Second Btn
+#2B2B2B  x30  opacities=[1.00]  types=[FRAME,TEXT]  e.g. names: Footer | INÍCIO | CLIENTES SATISFEITOS | NOSSA HISTÓRIA | CENTRO DE AJUDA | Secçã 2
+#121212 (stroke)  x30  opacities=[]  types=[]  e.g. names: Vector
+#F0E9DA  x23  opacities=[1.00]  types=[FRAME]  e.g. names: Secçã 2 | Secção Nosso melhor  | Secçã 3
+#0C0B0B  x16  opacities=[1.00]  types=[TEXT]  e.g. names: Sérum facial | Ofertas exclusivas | 19.500kz | 24.500kz | 20.000kz |  Dá um brilho de pele de vidro
+#101010 (stroke)  x12  opacities=[]  types=[]  e.g. names: Line 1
+#FFC3AA  x8  opacities=[1.00]  types=[ELLIPSE]  e.g. names: Ellipse 2 | Ellipse 3
+#F8DDE0  x6  opacities=[1.00]  types=[FRAME]  e.g. names: Frame 26
+#C6C6C6 (stroke)  x6  opacities=[]  types=[]  e.g. names: Frame 51
+#A7A7A7  x6  opacities=[1.00]  types=[TEXT]  e.g. names: Ex.: Laurindo Henriques Moisés | Ex.: laurindomoises@gmail.com | Sua Mensagem
+#191919  x4  opacities=[1.00]  types=[FRAME]  e.g. names: Secçã 2 | Secção Nosso melhor 
+#FFE9E9  x4  opacities=[1.00]  types=[ROUNDED_RECTANGLE]  e.g. names: Rectangle 3
+#313131  x4  opacities=[1.00]  types=[TEXT]  e.g. names: Sérum Facial | Protetor Solar
+#E1E1E1 (stroke)  x4  opacities=[]  types=[]  e.g. names: Menu Principal
+#FFEFE9  x2  opacities=[1.00]  types=[ROUNDED_RECTANGLE]  e.g. names: Rectangle 15
+#FFFEFD  x2  opacities=[1.00]  types=[FRAME]  e.g. names: Frame 23
+#95C1FF  x2  opacities=[0.25]  types=[ROUNDED_RECTANGLE]  e.g. names: Rectangle 37
+#EB95FF  x2  opacities=[0.25]  types=[ROUNDED_RECTANGLE]  e.g. names: Rectangle 34
+#95FF9A  x2  opacities=[0.25]  types=[ROUNDED_RECTANGLE]  e.g. names: Rectangle 38
+#FFF2ED  x2  opacities=[1.00]  types=[FRAME]  e.g. names: Banner
+#FFF7EB  x2  opacities=[1.00]  types=[FRAME]  e.g. names: Secção Nosso melhor 

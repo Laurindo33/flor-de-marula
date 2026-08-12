@@ -1,0 +1,247 @@
+Inter | Regular | 20px | lh:100% | ls:[object Object]  x126
+   samples: Início || Loja || Clientes Satisfeitos
+
+Inria Serif | Regular | 30px | lh:100% | ls:[object Object]  x30
+   samples: Links Rápidos || Contactos || Newsletter
+
+Inter | Regular | 18px | lh:100% | ls:[object Object]  x30
+   samples: Se você não estiver satisfeito com algum || Sérum Facial || Protetor Solar
+
+Jaldi | Regular | 18px | lh:100% | ls:[object Object]  x28
+   samples: VER DETALHES  || Ver todos || VER TODOS
+
+Inter | Semi Bold | 12px | lh:100% | ls:[object Object]  x22
+   samples: ADICIONAR AO CARRINHO || Antes || Depois
+
+Inter | Regular | 15px | lh:100% | ls:[object Object]  x21
+   samples: Feito Por Nós || Ingredinetes Naturais || Seguro durante a gravidez
+
+Inter | Medium | 16px | lh:100% | ls:[object Object]  x20
+   samples: INÍCIO || CLIENTES SATISFEITOS || NOSSA HISTÓRIA
+
+JetBrains Mono | Regular | 20px | lh:100% | ls:[object Object]  x19
+   samples: SERÚM FACIAL || CREME HIDRATANTE || PROTETOR SOLAR
+
+Inria Sans | Bold | 24px | lh:100% | ls:[object Object]  x19
+   samples: 14.500kz || 20.000kz || 25.000kz
+
+Inter | Semi Bold | 14px | lh:100% | ls:[object Object]  x18
+   samples: Óleo semente da Árvore de Marula || Vitamina E || Óleo de rosa e pétalas
+
+Inter | Regular | 12px | lh:100% | ls:[object Object]  x13
+   samples: SEM PARABENHOS || SEM CORANTES || NÃO TESTADO EM ANIMAIS
+
+Inter | Regular | 16px | lh:40px | ls:[object Object]  x13
+   samples: Na Flor de Marula, acreditamos que cuida || A história da Flor de Marula nasceu da a || Nome Completo
+
+JetBrains Mono | Regular | 18px | lh:100% | ls:[object Object]  x12
+   samples: "Melhor sabonete de cúrcuma 
+do mercado || +
+
+Alice | Regular | 28px | lh:80px | ls:[object Object]  x11
+   samples: A Diferença dos Nossos Produtos || +300.000 Clientes adoram a Flor de Marul || Nossa Filosofia
+
+Inter | Regular | 14px | lh:40px | ls:[object Object]  x10
+   samples: Luanda, Talatona, Rua dos Mirantes || flordemarula@gmail.com || +244 932005773
+
+Inter | Semi Bold | 20px | lh:100% | ls:[object Object]  x10
+   samples: Ana Paula M. || Carla S. ||  Patrícia L.
+
+Inter | Light | 15px | lh:22px | ls:[object Object]  x10
+   samples: "Comecei a usar a linha Flor de Marula h || "O que mais gostei foi a sensação de cui || "A combinação do gel de limpeza com o tô
+
+Inter | Regular | 18px | lh:40px | ls:[object Object]  x9
+   samples: Contactos || Queremos tornar a sua experiência a melh || Envie a sua mensagem
+
+Inter | Semi Bold | 16px | lh:40px | ls:[object Object]  x8
+   samples: Visite-nos || Nosso E-mail || Nosso Contacto
+
+Alice | Regular | 25px | lh:80px | ls:[object Object]  x8
+   samples: Nosso Melhor Produto || +300.000 Clientes adoram a Flor de Marul || A Diferença dos Nossos Produtos
+
+Inter | Bold | 25px | lh:40px | ls:[object Object]  x8
+   samples: Produtos Naturais || Sem Parapenhos || Melanina Formulada
+
+Inter | Regular | 13px | lh:25px | ls:[object Object]  x8
+   samples: Nós garantimos a você que os nossos prod || Nós garantimos nenhuma toxina seja adici || Todos os nossos produtos são formulados 
+
+Inter | Extra Light | 12px | lh:18px | ls:[object Object]  x7
+   samples: Além de hidratar profundamente, seus ant || Indispensável para desbotar manchas escu || Reconhecida por equilibrar óleos para a 
+
+Inter | Regular | 16px | lh:25px | ls:[object Object]  x7
+   samples: Oferecer cosméticos naturais e de alta q || Ser uma marca de referência em cosmético || Desenvolvemos cosméticos que combinam in
+
+JetBrains Mono | Regular | 15px | lh:100% | ls:[object Object]  x7
+   samples: SERÚM FACIAL || CREME HIDRATANTE || PROTETOR SOLAR
+
+Inria Sans | Bold | 18px | lh:100% | ls:[object Object]  x7
+   samples: 14.500kz || 20.000kz || 25.000kz
+
+Inter | Regular | 22px | lh:100% | ls:[object Object]  x6
+   samples: Ofertas exclusivas || 24.500kz || 20.000kz
+
+JetBrains Mono | Regular | 16px | lh:100% | ls:[object Object]  x6
+   samples: 10% de desconto
+
+Inter | Bold | 24px | lh:100% | ls:[object Object]  x6
+   samples: Missão || Visão || Compromisso
+
+Inter | Bold | 16px | lh:100% | ls:[object Object]  x5
+   samples: LOJA || NOSSA HISTÓRIA || CENTRO DE AJUDA 
+
+Inter | Medium | 12px | lh:40px | ls:[object Object]  x5
+   samples: Ex.: Laurindo Henriques Moisés || Ex.: laurindomoises@gmail.com || Sua Mensagem
+
+Inter | Regular | 14px | lh:100% | ls:[object Object]  x4
+   samples: 2 FRASCOS || 6 FRASCOS
+
+Inria Sans | Light | 18px | lh:100% | ls:[object Object]  x4
+   samples: Ver Todos
+
+Inter | Bold | 26px | lh:100% | ls:[object Object]  x4
+   samples: 19.500kz || 20.000kz
+
+Inter | Semi Bold | 10px | lh:100% | ls:[object Object]  x3
+   samples: Garantia de devolução
+ do dinheiro
+
+Impact | Regular | 30px | lh:100% | ls:[object Object]  x3
+   samples: 30 DIAS
+
+Inter | Semi Bold | 25px | lh:100% | ls:[object Object]  x3
+   samples: Pele melhor em 30 dias ou é GRÁTIS || ADICIONAR AO CARRINHO
+
+Alice | Regular | 52px | lh:80px | ls:[object Object]  x3
+   samples: Sobre Nós || Centro de ajuda || Cosméticos Naturais
+Para Todo Tipo de Pe
+
+Inter | Regular | 24px | lh:40px | ls:[object Object]  x3
+   samples: Beleza inspirada na natureza. Cuidado pe || Estamos aqui para si || O Poder a África Para a sua Pele, Natura
+
+Inter | Regular | 12px | lh:40px | ls:[object Object]  x3
+   samples: Nome Completo || E-mail || Sua questão
+
+Inter | Medium | 10px | lh:40px | ls:[object Object]  x3
+   samples: Ex.: Laurindo Henriques Moisés || Ex.: laurindomoises@gmail.com || Sua Mensagem
+
+Italiana | Regular | 25px | lh:100% | ls:[object Object]  x2
+   samples: Por que somos Diferentes || Loja Skincare
+
+Katibeh | Regular | 25px | lh:100% | ls:[object Object]  x2
+   samples: Flor de Marula || Outros Produtos
+
+Italiana | Regular | 50px | lh:100% | ls:[object Object]  x2
+   samples: Loja Skincare || Por que somos Diferentes
+
+Inter | Semi Bold | 24px | lh:100% | ls:[object Object]  x2
+   samples: 19.500kz
+
+Inter | Regular | 16px | lh:100% | ls:[object Object]  x2
+   samples: 24.500kz || Complete Sua Rotina
+
+
+Alice | Regular | 32px | lh:80px | ls:[object Object]  x2
+   samples: Centro de ajuda || Fale Connosco
+
+Inter | Regular | 14px | lh:22px | ls:[object Object]  x2
+   samples: Entre em contacto através dos nossos can || Preencha o formulário e conte-nos como p
+
+Inter | Extra Light | 15px | lh:100% | ls:[object Object]  x2
+   samples: Veja o que alguns deles têm a dizer sobr
+
+Inter | Extra Light | 25px | lh:100% | ls:[object Object]  x2
+   samples: Veja o que alguns deles têm a dizer sobr
+
+Jomolhari | Regular | 28px | lh:80px | ls:[object Object]  x2
+   samples: Nossos Valores
+
+Katibeh | Regular | 40px | lh:100% | ls:[object Object]  x2
+   samples: Flor de Marula || Outros Produtos
+
+Inter | Regular | 12px | lh:22px | ls:[object Object]  x2
+   samples: Entre em contacto através dos nossos can || Preencha o formulário e conte-nos como p
+
+Jomolhari | Regular | 16px | lh:80px | ls:[object Object]  x1
+   samples: Nossa promessa
+
+Charis SIL | Bold | 18px | lh:40px | ls:[object Object]  x1
+   samples: Pele melhor em 30 dias
+
+Inter | Regular | 12px | lh:20px | ls:[object Object]  x1
+   samples: Se você não ficar satisfeito com algum d
+
+Iosevka Charon Mono | Regular | 50px | lh:100% | ls:[object Object]  x1
+   samples: Sérum facial
+
+Inter | Regular | 25px | lh:100% | ls:[object Object]  x1
+   samples: Creme Hidratante
+
+Inter | Regular | 30px | lh:100% | ls:[object Object]  x1
+   samples: Complete Sua Rotina
+
+
+Inter | Extra Light | 18px | lh:28px | ls:[object Object]  x1
+   samples: Óleo de semente de Vitis vinifera (uva),
+
+Instrument Serif | Regular | 38px | lh:100% | ls:[object Object]  x1
+   samples: Feito com ingredientes 100% naturais
+
+Alice | Regular | 35px | lh:80px | ls:[object Object]  x1
+   samples: Nossa História
+
+Inter | Regular | 22px | lh:40px | ls:[object Object]  x1
+   samples: O poder da África para a sua pele.
+
+Inter | Medium | 16px | lh:40px | ls:[object Object]  x1
+   samples: Enviar
+
+Inter | Medium | 20px | lh:40px | ls:[object Object]  x1
+   samples: Talatona, mirantes, Luanda, Angola
+
+Alice | Regular | 28px | lh:30px | ls:[object Object]  x1
+   samples: Cosméticos Naturais
+Para Todo Tipo de Pe
+
+Inria Serif | Bold | 28px | lh:30px | ls:[object Object]  x1
+   samples: Produtos em Alta
+
+Inria Serif | Bold | 32px | lh:45px | ls:[object Object]  x1
+   samples: Produtos 
+Em Alta
+
+Jomolhari | Regular | 20px | lh:80px | ls:[object Object]  x1
+   samples: Nossa promessa
+
+Charis SIL | Bold | 25px | lh:40px | ls:[object Object]  x1
+   samples: Pele melhor em 30 dias
+
+Inter | Regular | 13px | lh:40px | ls:[object Object]  x1
+   samples: Se você não ficar satisfeito com algum d
+
+Inter | Semi Bold | 8px | lh:100% | ls:[object Object]  x1
+   samples: ADICIONAR AO CARRINHO
+
+Inter | Semi Bold | 5px | lh:100% | ls:[object Object]  x1
+   samples: Garantia de devolução
+ do dinheiro
+
+Impact | Regular | 10px | lh:100% | ls:[object Object]  x1
+   samples: 30 DIAS
+
+Inter | Extra Light | 12px | lh:28px | ls:[object Object]  x1
+   samples: Óleo de semente de Vitis vinifera (uva),
+
+Instrument Serif | Regular | 23px | lh:100% | ls:[object Object]  x1
+   samples: Feito com ingredientes 100% naturais
+
+Inter | Extra Light | 10px | lh:18px | ls:[object Object]  x1
+   samples: Além de hidratar profundamente, seus ant
+
+Iosevka Charon Mono | Regular | 25px | lh:100% | ls:[object Object]  x1
+   samples: Sérum facial
+
+Inter | Regular | 16px | lh:20px | ls:[object Object]  x1
+   samples: Beleza inspirada na natureza. Cuidado pe
+
+Inter | Regular | 14px | lh:20px | ls:[object Object]  x1
+   samples: Queremos tornar a sua experiência a melh

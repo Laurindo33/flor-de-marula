@@ -1,0 +1,38 @@
+/*
+ * Design tokens extraidos do ficheiro Figma "Flor de Marula.fig".
+ * Valores exatos (nao estimados) — ver design/tokens-colors.txt e design/tokens-typography.txt
+ */
+:root {
+    /* Paleta de marca */
+    --fm-primary: #ba4104;      /* terracota — CTAs, precos, links ativos */
+    --fm-secondary: #2b2b2b;    /* footer / textos escuros */
+    --fm-dark: #191919;         /* faixa de beneficios */
+    --fm-accent: #ffd595;       /* peach claro — destaques sobre fundo escuro */
+    --fm-peach: #ffc3aa;        /* gradiente do hero */
+    --fm-peach-soft: #ffefe9;   /* gradiente do hero (inicio) */
+    --fm-cream: #f0e9da;        /* fundo das seccoes creme */
+    --fm-black: #000000;
+    --fm-white: #ffffff;
+    --fm-text: #3f3f3f;         /* corpo de texto padrao */
+    --fm-text-strong: #0c0b0b;
+    --fm-muted: #a7a7a7;        /* placeholders, texto apagado */
+
+    /* Tons de apoio (cards / badges) */
+    --fm-rose-bg: #ffe9e9;      /* fundo do card "produto em alta" */
+    --fm-rose-badge: #f8dde0;   /* badge de desconto */
+    --fm-rose-shadow: rgba(183, 106, 114, 0.14);
+
+    /* Sombras */
+    --fm-shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.09);
+    --fm-shadow-md: 0 2px 5px 3px rgba(0, 0, 0, 0.15);
+
+    /* Raios */
+    --fm-radius-sm: 5px;
+    --fm-radius-md: 20px;
+    --fm-radius-lg: 22px;
+
+    /* Container */
+    --fm-container-max: 1550px;
+    --fm-gutter-desktop: 100px;
+    --fm-gutter-mobile: 20px;
+}

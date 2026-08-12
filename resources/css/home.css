@@ -1,0 +1,265 @@
+/* Home — desktop, fiel ao frame "Home Page" (id 214:2) do Figma */
+
+/* Hero (Container id 214:3) */
+.fm-hero {
+    background: radial-gradient(circle at 30% 30%, var(--fm-peach-soft) 0%, var(--fm-peach) 100%);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.fm-hero__grid {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.fm-hero__image {
+    width: 675px;
+    max-width: 50%;
+    border-radius: var(--fm-radius-md);
+    object-fit: cover;
+}
+
+.fm-hero__title {
+    white-space: pre-line;
+    color: var(--fm-black);
+}
+
+.fm-hero__subtitle {
+    color: var(--fm-text);
+    margin-top: 16px;
+}
+
+.fm-hero__actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* Produtos em alta (dentro do hero) */
+.fm-trend {
+    margin-top: 60px;
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+
+.fm-trend__title {
+    font-family: 'Inria Serif', serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.1;
+    white-space: pre-line;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 161px;
+}
+
+/* Faixa de beneficios */
+.fm-benefits-strip {
+    background: var(--fm-dark);
+    padding-block: 26px;
+}
+.fm-benefits-strip__item {
+    color: var(--fm-white);
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Garantia 30 dias */
+.fm-guarantee {
+    padding-block: 60px;
+}
+.fm-guarantee__seal {
+    position: relative;
+    width: 228px;
+    height: 228px;
+    flex-shrink: 0;
+}
+.fm-guarantee__seal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.fm-guarantee__seal-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--fm-white);
+    text-align: center;
+}
+.fm-guarantee__seal-days {
+    font-family: 'Impact', 'Anton', sans-serif;
+    font-size: 30px;
+    line-height: 1;
+}
+.fm-guarantee__seal-label {
+    font-weight: 600;
+    font-size: 10px;
+    margin-top: 4px;
+}
+.fm-guarantee__promise-title {
+    font-family: 'Jomolhari', serif;
+    font-size: 20px;
+    line-height: 1.4;
+}
+.fm-guarantee__promise-heading {
+    font-family: 'Charis SIL', Georgia, serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 40px;
+}
+.fm-guarantee__promise-text {
+    font-size: 13px;
+    line-height: 40px;
+    color: var(--fm-black);
+}
+
+/* Nosso Melhor Produto / Diferenca — titulo de seccao */
+.fm-section-title {
+    text-align: center;
+}
+.fm-section-title__cta {
+    margin-left: auto;
+}
+
+/* Diferenca dos produtos */
+.fm-diff-section {
+    background: var(--fm-cream);
+    padding-block: 60px;
+}
+.fm-diff-card {
+    background: transparent;
+}
+.fm-diff-card__media {
+    position: relative;
+    border-radius: var(--fm-radius-md);
+    overflow: hidden;
+    box-shadow: var(--fm-shadow-sm);
+}
+.fm-diff-card__media img {
+    width: 100%;
+    aspect-ratio: 316 / 261;
+    object-fit: cover;
+    border-radius: var(--fm-radius-md);
+    display: block;
+}
+.fm-diff-card__category {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.fm-diff-card__before {
+    position: absolute;
+    bottom: 12px;
+    left: 16px;
+}
+.fm-diff-card__after {
+    position: absolute;
+    bottom: 12px;
+    right: 16px;
+}
+.fm-diff-card__name {
+    font-weight: 600;
+    font-size: 20px;
+    margin-top: 18px;
+}
+
+/* Beneficios (seccao escura) */
+.fm-benefits-dark {
+    background: var(--fm-secondary);
+    padding-block: 80px;
+}
+.fm-benefits-dark__image {
+    width: 100%;
+    border-radius: var(--fm-radius-md);
+    object-fit: cover;
+}
+.fm-benefits-dark__item-title {
+    color: var(--fm-accent);
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 40px;
+}
+.fm-benefits-dark__item-text {
+    color: var(--fm-white);
+    font-size: 13px;
+    line-height: 25px;
+}
+
+/* Por que somos diferentes */
+.fm-compare {
+    padding-block: 60px;
+}
+.fm-compare-card {
+    background: var(--fm-white);
+    border-radius: var(--fm-radius-md);
+    box-shadow: var(--fm-shadow-md);
+    overflow: hidden;
+    height: 100%;
+}
+.fm-compare-card__header {
+    height: 101px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fm-compare-card__header--us {
+    background: linear-gradient(90deg, #eedace, #ffc05f);
+}
+.fm-compare-card__header--them {
+    background: linear-gradient(90deg, #eedace, var(--fm-primary));
+}
+.fm-compare-card__image {
+    width: 100%;
+    aspect-ratio: 459 / 167;
+    object-fit: cover;
+}
+.fm-compare-card__list {
+    list-style: none;
+    margin: 0;
+    padding: 20px 20px 40px;
+}
+.fm-compare-card__list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 13px 0;
+    font-size: 20px;
+    color: var(--fm-text);
+}
+.fm-compare-card__list img {
+    width: 19px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Clientes adoram */
+.fm-testimonials {
+    background: var(--fm-cream);
+    padding-block: 60px;
+}
+.fm-testimonial-card {
+    background: var(--fm-white);
+    border-radius: var(--fm-radius-md);
+    box-shadow: var(--fm-shadow-md);
+    overflow: hidden;
+}
+.fm-testimonial-card img {
+    width: 100%;
+    aspect-ratio: 392 / 518;
+    object-fit: cover;
+}
+.fm-testimonial-card__caption {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 18px;
+    color: var(--fm-text);
+    text-align: center;
+    padding: 20px;
+    white-space: pre-line;
+}

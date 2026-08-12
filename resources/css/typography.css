@@ -1,0 +1,99 @@
+/*
+ * Tipografia extraida do Figma (design/tokens-typography.txt).
+ * Fonte principal: Inter. Titulos usam varias fontes decorativas especificas
+ * por seccao (Alice, Italiana, Inria Serif/Sans, Katibeh, Jomolhari, JetBrains Mono,
+ * Jaldi, Impact, Charis SIL) — carregadas via Google Fonts no layout base.
+ * "Charis SIL" nao existe no Google Fonts; mantem-se o nome exato com fallback serif.
+ */
+:root {
+    --fm-font-base: 'Inter', system-ui, sans-serif;
+}
+
+body {
+    font-family: var(--fm-font-base);
+    color: var(--fm-text);
+}
+
+/* Escala de titulos */
+.fm-heading-xl {
+    font-family: 'Alice', serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 80px;
+}
+
+.fm-heading-lg {
+    font-family: 'Alice', serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 80px;
+}
+
+.fm-heading-italiana {
+    font-family: 'Italiana', serif;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 1;
+}
+
+.fm-heading-serif {
+    font-family: 'Inria Serif', serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 45px;
+}
+
+.fm-heading-katibeh {
+    font-family: 'Katibeh', serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1;
+}
+
+/* Corpo de texto */
+.fm-body-lg {
+    font-family: var(--fm-font-base);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.fm-body-md {
+    font-family: var(--fm-font-base);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.fm-body-sm {
+    font-family: var(--fm-font-base);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+/* Precos e labels */
+.fm-price {
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--fm-primary);
+}
+
+.fm-label {
+    font-family: var(--fm-font-base);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.02em;
+}
+
+.fm-product-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 400;
+}
+
+.fm-cta-label {
+    font-family: 'Jaldi', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}

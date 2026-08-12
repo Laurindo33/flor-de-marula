@@ -1,0 +1,183 @@
+/* Componentes reutilizaveis do Design System Flor de Marula — sobrepoe o estilo padrao do Bootstrap */
+
+.fm-container {
+    max-width: var(--fm-container-max);
+    margin-inline: auto;
+    padding-inline: var(--fm-gutter-desktop);
+}
+
+/* Botoes */
+.fm-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    padding-inline: 24px;
+    border-radius: var(--fm-radius-sm);
+    font-family: var(--fm-font-base);
+    font-size: 18px;
+    line-height: 1;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: opacity 0.15s ease, background-color 0.15s ease;
+    white-space: nowrap;
+}
+
+.fm-btn-primary {
+    background-color: var(--fm-primary);
+    color: var(--fm-white);
+}
+.fm-btn-primary:hover {
+    opacity: 0.9;
+    color: var(--fm-white);
+}
+
+.fm-btn-outline {
+    background-color: transparent;
+    border-color: var(--fm-primary);
+    color: var(--fm-text);
+}
+.fm-btn-outline:hover {
+    background-color: var(--fm-primary);
+    color: var(--fm-white);
+}
+
+/* Header */
+.fm-header {
+    background: var(--fm-white);
+    height: 106px;
+    display: flex;
+    align-items: center;
+}
+
+.fm-nav-link {
+    font-family: var(--fm-font-base);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--fm-text);
+    text-decoration: none;
+    padding: 8px 0;
+}
+.fm-nav-link.active,
+.fm-nav-link:hover {
+    color: var(--fm-primary);
+}
+
+.fm-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 24px;
+    color: var(--fm-black);
+    background: none;
+    border: none;
+}
+
+/* Product card */
+.fm-product-card {
+    background: var(--fm-white);
+    border-radius: var(--fm-radius-md);
+    box-shadow: var(--fm-shadow-sm);
+    overflow: hidden;
+    height: 100%;
+}
+
+.fm-product-card__image {
+    width: 100%;
+    aspect-ratio: 426 / 451;
+    object-fit: cover;
+    border-radius: var(--fm-radius-lg);
+}
+
+.fm-product-card__body {
+    padding: 20px 24px 40px;
+}
+
+.fm-product-card__name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 20px;
+    color: var(--fm-black);
+    text-transform: uppercase;
+}
+
+/* Trend card (produtos em alta) */
+.fm-trend-card {
+    background: var(--fm-rose-bg);
+    border-radius: var(--fm-radius-md);
+    box-shadow: 0 0 5px var(--fm-rose-shadow);
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.fm-trend-card__image {
+    width: 66px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.fm-discount-badge {
+    background: var(--fm-rose-badge);
+    color: var(--fm-primary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    border-radius: var(--fm-radius-sm);
+    padding: 4px 10px;
+    display: inline-block;
+}
+
+.fm-add-btn {
+    width: 27px;
+    height: 24px;
+    border-radius: var(--fm-radius-sm);
+    background: var(--fm-primary);
+    color: var(--fm-white);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Badges Antes/Depois */
+.fm-pill {
+    border-radius: var(--fm-radius-sm);
+    padding: 4px 12px;
+    font-family: var(--fm-font-base);
+    font-weight: 600;
+    font-size: 12px;
+}
+.fm-pill--dark { background: #000000; color: var(--fm-white); }
+.fm-pill--light { background: var(--fm-white); color: var(--fm-black); }
+
+/* Rating / testemunho */
+.fm-quote {
+    font-family: var(--fm-font-base);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--fm-black);
+}
+
+/* Footer */
+.fm-footer {
+    background: var(--fm-secondary);
+    color: var(--fm-white);
+    padding-block: 50px;
+}
+.fm-footer a {
+    color: var(--fm-white);
+    text-decoration: none;
+}
+.fm-footer a:hover {
+    color: var(--fm-accent);
+}
+.fm-footer__heading {
+    font-family: 'Inria Serif', serif;
+    font-size: 30px;
+    color: var(--fm-accent);
+}
