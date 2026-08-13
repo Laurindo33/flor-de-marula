@@ -13,6 +13,18 @@
 
 <section class="fm-shop-grid">
     <div class="fm-container">
+        @if ($categories->isNotEmpty())
+            <div class="fm-shop-filters">
+                <a href="{{ route('shop.index') }}" class="fm-chip {{ $activeCategory === '' ? 'active' : '' }}">Todos</a>
+                @foreach ($categories as $category)
+                    <a
+                        href="{{ route('shop.index', ['categoria' => $category->slug]) }}"
+                        class="fm-chip {{ $activeCategory === $category->slug ? 'active' : '' }}"
+                    >{{ $category->name }}</a>
+                @endforeach
+            </div>
+        @endif
+
         <div class="row g-4">
             @forelse ($products as $product)
                 <div class="col-12 col-md-6 col-lg-4">
@@ -22,6 +34,12 @@
                 <p>Nenhum produto disponível de momento.</p>
             @endforelse
         </div>
+
+        @if ($products->hasPages())
+            <div class="mt-5">
+                {{ $products->links() }}
+            </div>
+        @endif
     </div>
 </section>
 

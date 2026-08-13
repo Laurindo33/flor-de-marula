@@ -1,0 +1,2229 @@
+{
+ "id": "216:1108",
+ "type": "FRAME",
+ "name": "Nossa História - mobile",
+ "size": {
+  "w": 402,
+  "h": 5579
+ },
+ "pos": {
+  "x": 14192,
+  "y": 1083
+ },
+ "fills": [
+  {
+   "type": "SOLID",
+   "color": "#ffffff",
+   "opacity": 1
+  }
+ ],
+ "layout": {
+  "mode": "VERTICAL",
+  "padding": [
+   null,
+   null,
+   null,
+   null
+  ]
+ },
+ "children": [
+  {
+   "id": "216:1109",
+   "type": "FRAME",
+   "name": "Frame 22",
+   "size": {
+    "w": 402,
+    "h": 1002
+   },
+   "pos": {
+    "x": 14192,
+    "y": 1156
+   },
+   "cornerRadii": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "fills": [
+    {
+     "type": "GRADIENT_RADIAL",
+     "stops": [
+      {
+       "pos": 0,
+       "color": "#ffefe9"
+      },
+      {
+       "pos": 1,
+       "color": "#ffc3aa"
+      }
+     ]
+    }
+   ],
+   "layout": {
+    "mode": "VERTICAL",
+    "padding": [
+     null,
+     null,
+     20,
+     null
+    ]
+   },
+   "children": [
+    {
+     "id": "216:1130",
+     "type": "FRAME",
+     "name": "Secçã 2",
+     "size": {
+      "w": 402,
+      "h": 962
+     },
+     "pos": {
+      "x": 14192,
+      "y": 1176
+     },
+     "cornerRadii": [
+      null,
+      null,
+      null,
+      null
+     ],
+     "layout": {
+      "mode": "VERTICAL",
+      "padding": [
+       null,
+       20,
+       null,
+       null
+      ],
+      "primaryAlign": "CENTER",
+      "counterAlign": "CENTER"
+     },
+     "children": [
+      {
+       "id": "216:1131",
+       "type": "FRAME",
+       "name": "Frame 2",
+       "size": {
+        "w": 362,
+        "h": 519
+       },
+       "pos": {
+        "x": 14212,
+        "y": 1176
+       },
+       "layout": {
+        "mode": "VERTICAL",
+        "spacing": 10,
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "primaryAlign": "CENTER"
+       },
+       "children": [
+        {
+         "id": "216:1132",
+         "type": "TEXT",
+         "name": "Sobre Nós",
+         "size": {
+          "w": 362,
+          "h": 80
+         },
+         "pos": {
+          "x": 14212,
+          "y": 1176
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#000000",
+           "opacity": 1
+          }
+         ],
+         "text": "Sobre Nós",
+         "font": "Alice Regular",
+         "fontSize": 28,
+         "lineHeight": {
+          "value": 80,
+          "units": "PIXELS"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         },
+         "textAlign": "CENTER"
+        },
+        {
+         "id": "216:1133",
+         "type": "TEXT",
+         "name": "Beleza inspirada na natureza. Cuidado pensado para a sua pele.",
+         "size": {
+          "w": 362,
+          "h": 39
+         },
+         "pos": {
+          "x": 14212,
+          "y": 1266
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#000000",
+           "opacity": 1
+          }
+         ],
+         "text": "Beleza inspirada na natureza. Cuidado pensado para a sua pele.",
+         "font": "Inter Regular",
+         "fontSize": 16,
+         "lineHeight": {
+          "value": 20,
+          "units": "PIXELS"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         },
+         "textAlign": "CENTER"
+        },
+        {
+         "id": "216:1134",
+         "type": "TEXT",
+         "name": "Na Flor de Marula, acreditamos que cuidar da pele vai muito além da estética. É um gesto diário de autoestima, confiança e bem-estar. Inspirados no poder do óleo de marula, um dos ingredientes naturais mais valorizados do continente africano, desenvolvemos uma linha de cosméticos que combina tradição, natureza e inovação para oferecer um cuidado eficaz e delicado.",
+         "size": {
+          "w": 362,
+          "h": 380
+         },
+         "pos": {
+          "x": 14212,
+          "y": 1315
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#3f3f3f",
+           "opacity": 1
+          }
+         ],
+         "text": "Na Flor de Marula, acreditamos que cuidar da pele vai muito além da estética. É um gesto diário de autoestima, confiança e bem-estar.\nInspirados no poder do óleo de marula, um dos ingredientes naturais mais valorizados do continente africano, desenvolvemos uma linha de cosméticos que combina tradição, natureza e inovação para oferecer um cuidado eficaz e delicado.",
+         "font": "Inter Regular",
+         "fontSize": 16,
+         "lineHeight": {
+          "value": 40,
+          "units": "PIXELS"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         },
+         "textAlign": "CENTER"
+        }
+       ]
+      },
+      {
+       "id": "216:1138",
+       "type": "FRAME",
+       "name": "Frame 3",
+       "size": {
+        "w": 362,
+        "h": 360
+       },
+       "pos": {
+        "x": 14212,
+        "y": 1695
+       },
+       "layout": {
+        "mode": "HORIZONTAL",
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "primaryAlign": "CENTER",
+        "primarySizing": "FIXED",
+        "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+       },
+       "children": [
+        {
+         "id": "216:1139",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "BCO 1",
+         "size": {
+          "w": 323,
+          "h": 360
+         },
+         "pos": {
+          "x": 14232,
+          "y": 1695
+         },
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "3edf2c5248cd5078fd848e48ea88c712f845ec9f.png"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "216:1206",
+       "type": "FRAME",
+       "name": "Frame 20",
+       "size": {
+        "w": 362,
+        "h": 83
+       },
+       "pos": {
+        "x": 14212,
+        "y": 2055
+       },
+       "layout": {
+        "mode": "HORIZONTAL",
+        "spacing": 20,
+        "padding": [
+         null,
+         null,
+         50,
+         null
+        ],
+        "primaryAlign": "CENTER",
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED"
+       },
+       "children": [
+        {
+         "id": "216:1207",
+         "type": "FRAME",
+         "name": "Frame 18",
+         "size": {
+          "w": 362,
+          "h": 52
+         },
+         "pos": {
+          "x": 14212,
+          "y": 2071
+         },
+         "cornerRadii": [
+          5,
+          5,
+          5,
+          5
+         ],
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#ba4104",
+           "opacity": 1
+          }
+         ],
+         "layout": {
+          "mode": "HORIZONTAL",
+          "spacing": 20,
+          "padding": [
+           null,
+           null,
+           null,
+           null
+          ],
+          "primaryAlign": "CENTER",
+          "counterAlign": "CENTER",
+          "primarySizing": "FIXED",
+          "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+         },
+         "children": [
+          {
+           "id": "216:1208",
+           "type": "TEXT",
+           "name": "Contactos",
+           "size": {
+            "w": 178,
+            "h": 52
+           },
+           "pos": {
+            "x": 14304,
+            "y": 2071
+           },
+           "fills": [
+            {
+             "type": "SOLID",
+             "color": "#ffffff",
+             "opacity": 1
+            }
+           ],
+           "text": "Contactos",
+           "font": "Inter Regular",
+           "fontSize": 18,
+           "lineHeight": {
+            "value": 40,
+            "units": "PIXELS"
+           },
+           "letterSpacing": {
+            "value": 0,
+            "units": "PERCENT"
+           },
+           "textAlign": "CENTER"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "216:1140",
+   "type": "FRAME",
+   "name": "Secçã 2",
+   "size": {
+    "w": 402,
+    "h": 1404
+   },
+   "pos": {
+    "x": 14192,
+    "y": 2158
+   },
+   "cornerRadii": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "fills": [
+    {
+     "type": "SOLID",
+     "color": "#ffffff",
+     "opacity": 1
+    }
+   ],
+   "layout": {
+    "mode": "VERTICAL",
+    "spacing": 60,
+    "padding": [
+     null,
+     20,
+     40,
+     null
+    ],
+    "counterAlign": "CENTER"
+   },
+   "children": [
+    {
+     "id": "216:1141",
+     "type": "FRAME",
+     "name": "Frame 3",
+     "size": {
+      "w": 362,
+      "h": 459
+     },
+     "pos": {
+      "x": 14212,
+      "y": 3063
+     },
+     "layout": {
+      "mode": "HORIZONTAL",
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primaryAlign": "MAX",
+      "counterAlign": "CENTER",
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "216:1142",
+       "type": "ROUNDED_RECTANGLE",
+       "name": "BCO 1",
+       "size": {
+        "w": 362,
+        "h": 459
+       },
+       "pos": {
+        "x": 14212,
+        "y": 3063
+       },
+       "fills": [
+        {
+         "type": "IMAGE",
+         "file": "7902b47401e62355908e38bb1bf5cb375dd991d8.png"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "216:1143",
+     "type": "FRAME",
+     "name": "Frame 2",
+     "size": {
+      "w": 362,
+      "h": 805
+     },
+     "pos": {
+      "x": 14212,
+      "y": 2198
+     },
+     "layout": {
+      "mode": "VERTICAL",
+      "spacing": 10,
+      "padding": [
+       null,
+       null,
+       40,
+       null
+      ],
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "216:1144",
+       "type": "TEXT",
+       "name": "Nossa História",
+       "size": {
+        "w": 362,
+        "h": 80
+       },
+       "pos": {
+        "x": 14212,
+        "y": 2238
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#000000",
+         "opacity": 1
+        }
+       ],
+       "text": "Nossa História",
+       "font": "Alice Regular",
+       "fontSize": 28,
+       "lineHeight": {
+        "value": 80,
+        "units": "PIXELS"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "216:1145",
+       "type": "TEXT",
+       "name": "O poder da África para a sua pele.",
+       "size": {
+        "w": 362,
+        "h": 46
+       },
+       "pos": {
+        "x": 14212,
+        "y": 2328
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#000000",
+         "opacity": 1
+        }
+       ],
+       "text": "O poder da África para a sua pele.",
+       "font": "Inter Regular",
+       "fontSize": 18,
+       "lineHeight": {
+        "value": 40,
+        "units": "PIXELS"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "216:1146",
+       "type": "TEXT",
+       "name": "A história da Flor de Marula nasceu da admiração por uma das árvores mais emblemáticas da África: a Maruleira. Durante gerações, o óleo extraído do seu fruto foi utilizado por comunidades africanas devido às suas propriedades hidratantes e ao seu rico conteúdo em antioxidantes e vitaminas. Inspirados pela tradição africana, criamos a Flor de Marula para transformar ingredientes naturais em cosméticos de alta qualidade. Continuamos desenvolvendo fórmulas que unem natureza, inovação e simplicidade para oferecer um cuidado premium e valorizar a beleza natural da sua pele.",
+       "size": {
+        "w": 362,
+        "h": 489
+       },
+       "pos": {
+        "x": 14212,
+        "y": 2384
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#3f3f3f",
+         "opacity": 1
+        }
+       ],
+       "text": "A história da Flor de Marula nasceu da admiração por uma das árvores mais emblemáticas da África: a Maruleira.\nDurante gerações, o óleo extraído do seu fruto foi utilizado por comunidades africanas devido às suas propriedades hidratantes e ao seu rico conteúdo em antioxidantes e vitaminas.\n\nInspirados pela tradição africana, criamos a Flor de Marula para transformar ingredientes naturais em cosméticos de alta qualidade. Continuamos desenvolvendo fórmulas que unem natureza, inovação e simplicidade para oferecer um cuidado premium e valorizar a beleza natural da sua pele.",
+       "font": "Inter Regular",
+       "fontSize": 16,
+       "lineHeight": {
+        "value": 40,
+        "units": "PIXELS"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "216:1147",
+   "type": "FRAME",
+   "name": "Secção Nosso melhor ",
+   "size": {
+    "w": 402,
+    "h": 1017
+   },
+   "pos": {
+    "x": 14192,
+    "y": 3562
+   },
+   "fills": [
+    {
+     "type": "SOLID",
+     "color": "#191919",
+     "opacity": 1
+    }
+   ],
+   "layout": {
+    "mode": "VERTICAL",
+    "padding": [
+     null,
+     20,
+     10,
+     null
+    ]
+   },
+   "children": [
+    {
+     "id": "216:1148",
+     "type": "FRAME",
+     "name": "Secçã 2",
+     "size": {
+      "w": 362,
+      "h": 101
+     },
+     "pos": {
+      "x": 14212,
+      "y": 3572
+     },
+     "cornerRadii": [
+      null,
+      null,
+      null,
+      null
+     ],
+     "layout": {
+      "mode": "HORIZONTAL",
+      "padding": [
+       null,
+       100,
+       20,
+       null
+      ],
+      "primaryAlign": "SPACE_EVENLY",
+      "counterAlign": "CENTER",
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "216:1149",
+       "type": "FRAME",
+       "name": "Frame 5",
+       "size": {
+        "w": 162,
+        "h": 67
+       },
+       "pos": {
+        "x": 14312,
+        "y": 3589
+       },
+       "layout": {
+        "mode": "HORIZONTAL",
+        "spacing": 10,
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "primaryAlign": "CENTER",
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED",
+        "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+       },
+       "children": [
+        {
+         "id": "216:1150",
+         "type": "TEXT",
+         "name": "Nossa Filosofia",
+         "size": {
+          "w": 162,
+          "h": 67
+         },
+         "pos": {
+          "x": 14312,
+          "y": 3589
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#ffffff",
+           "opacity": 1
+          }
+         ],
+         "text": "Nossa Filosofia",
+         "font": "Alice Regular",
+         "fontSize": 28,
+         "lineHeight": {
+          "value": 80,
+          "units": "PIXELS"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         },
+         "textAlign": "CENTER"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "216:1151",
+     "type": "FRAME",
+     "name": "Secçã 3",
+     "size": {
+      "w": 362,
+      "h": 896
+     },
+     "pos": {
+      "x": 14212,
+      "y": 3673
+     },
+     "cornerRadii": [
+      null,
+      null,
+      null,
+      null
+     ],
+     "layout": {
+      "mode": "VERTICAL",
+      "spacing": 50,
+      "padding": [
+       null,
+       20,
+       50,
+       null
+      ],
+      "counterAlign": "CENTER"
+     },
+     "children": [
+      {
+       "id": "216:1152",
+       "type": "FRAME",
+       "name": "Frame 2",
+       "size": {
+        "w": 322,
+        "h": 242
+       },
+       "pos": {
+        "x": 14232,
+        "y": 3693
+       },
+       "cornerRadius": 20,
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ba4104",
+         "opacity": 1
+        }
+       ],
+       "layout": {
+        "mode": "VERTICAL",
+        "spacing": 10,
+        "padding": [
+         null,
+         20,
+         20,
+         null
+        ],
+        "primaryAlign": "CENTER",
+        "counterAlign": "CENTER"
+       },
+       "children": [
+        {
+         "id": "216:1153",
+         "type": "TEXT",
+         "name": "Missão",
+         "size": {
+          "w": 191,
+          "h": 30
+         },
+         "pos": {
+          "x": 14298,
+          "y": 3713
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#ffffff",
+           "opacity": 1
+          }
+         ],
+         "text": "Missão",
+         "font": "Inter Bold",
+         "fontSize": 24,
+         "lineHeight": {
+          "value": 100,
+          "units": "PERCENT"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         },
+         "textAlign": "CENTER"
+        },
+        {
+         "id": "216:1154",
+         "type": "TEXT",
+         "name": "Oferecer cosméticos naturais e de alta qualidade que promovam hidratação, proteção e bem-estar, proporcionando uma rotina de cuidados simples, eficaz e inspirada na riqueza da natureza africana.",
+         "size": {
+          "w": 282,
+          "h": 162
+         },
+         "pos": {
+          "x": 14252,
+          "y": 3753
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#ffffff",
+           "opacity": 1
+          }
+         ],
+         "text": "Oferecer cosméticos naturais e de alta qualidade que promovam hidratação, proteção e bem-estar, proporcionando uma rotina de cuidados simples, eficaz e inspirada na riqueza da natureza africana.",
+         "font": "Inter Regular",
+         "fontSize": 16,
+         "lineHeight": {
+          "value": 25,
+          "units": "PIXELS"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         },
+         "textAlign": "CENTER"
+        }
+       ]
+      },
+      {
+       "id": "216:1155",
+       "type": "FRAME",
+       "name": "Frame 3",
+       "size": {
+        "w": 322,
+        "h": 242
+       },
+       "pos": {
+        "x": 14232,
+        "y": 3985
+       },
+       "cornerRadius": 20,
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ba4104",
+         "opacity": 1
+        }
+       ],
+       "layout": {
+        "mode": "VERTICAL",
+        "spacing": 10,
+        "padding": [
+         null,
+         20,
+         20,
+         null
+        ],
+        "primaryAlign": "CENTER",
+        "counterAlign": "CENTER"
+       },
+       "children": [
+        {
+         "id": "216:1156",
+         "type": "TEXT",
+         "name": "Visão",
+         "size": {
+          "w": 191,
+          "h": 30
+         },
+         "pos": {
+          "x": 14298,
+          "y": 4005
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#ffffff",
+           "opacity": 1
+          }
+         ],
+         "text": "Visão",
+         "font": "Inter Bold",
+         "fontSize": 24,
+         "lineHeight": {
+          "value": 100,
+          "units": "PERCENT"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         },
+         "textAlign": "CENTER"
+        },
+        {
+         "id": "216:1157",
+         "type": "TEXT",
+         "name": "Ser uma marca de referência em cosméticos naturais, reconhecida pela qualidade, inovação e compromisso com o cuidado da pele.",
+         "size": {
+          "w": 282,
+          "h": 162
+         },
+         "pos": {
+          "x": 14252,
+          "y": 4045
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#ffffff",
+           "opacity": 1
+          }
+         ],
+         "text": "Ser uma marca de referência em cosméticos naturais, reconhecida pela qualidade, inovação e compromisso com o cuidado da pele.",
+         "font": "Inter Regular",
+         "fontSize": 16,
+         "lineHeight": {
+          "value": 25,
+          "units": "PIXELS"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         },
+         "textAlign": "CENTER"
+        }
+       ]
+      },
+      {
+       "id": "216:1158",
+       "type": "FRAME",
+       "name": "Frame 4",
+       "size": {
+        "w": 322,
+        "h": 242
+       },
+       "pos": {
+        "x": 14232,
+        "y": 4277
+       },
+       "cornerRadius": 20,
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ba4104",
+         "opacity": 1
+        }
+       ],
+       "layout": {
+        "mode": "VERTICAL",
+        "spacing": 10,
+        "padding": [
+         null,
+         20,
+         20,
+         null
+        ],
+        "primaryAlign": "CENTER",
+        "counterAlign": "CENTER"
+       },
+       "children": [
+        {
+         "id": "216:1159",
+         "type": "TEXT",
+         "name": "Compromisso",
+         "size": {
+          "w": 191,
+          "h": 30
+         },
+         "pos": {
+          "x": 14298,
+          "y": 4297
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#ffffff",
+           "opacity": 1
+          }
+         ],
+         "text": "Compromisso",
+         "font": "Inter Bold",
+         "fontSize": 24,
+         "lineHeight": {
+          "value": 100,
+          "units": "PERCENT"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         },
+         "textAlign": "CENTER"
+        },
+        {
+         "id": "216:1160",
+         "type": "TEXT",
+         "name": "Desenvolvemos cosméticos que combinam ingredientes naturais, qualidade e bem-estar para cuidar da sua pele todos os dias.",
+         "size": {
+          "w": 282,
+          "h": 162
+         },
+         "pos": {
+          "x": 14252,
+          "y": 4337
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#ffffff",
+           "opacity": 1
+          }
+         ],
+         "text": "Desenvolvemos cosméticos que combinam ingredientes naturais, qualidade e bem-estar para cuidar da sua pele todos os dias.",
+         "font": "Inter Regular",
+         "fontSize": 16,
+         "lineHeight": {
+          "value": 25,
+          "units": "PIXELS"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         },
+         "textAlign": "CENTER"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "216:1161",
+   "type": "FRAME",
+   "name": "Secçã 3",
+   "size": {
+    "w": 402,
+    "h": 1074
+   },
+   "pos": {
+    "x": 14192,
+    "y": 4579
+   },
+   "cornerRadii": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "fills": [
+    {
+     "type": "SOLID",
+     "color": "#f0e9da",
+     "opacity": 1
+    }
+   ],
+   "layout": {
+    "mode": "VERTICAL",
+    "spacing": 60,
+    "padding": [
+     null,
+     20,
+     40,
+     null
+    ],
+    "counterAlign": "CENTER"
+   },
+   "children": [
+    {
+     "id": "216:1162",
+     "type": "FRAME",
+     "name": "Frame 3",
+     "size": {
+      "w": 362,
+      "h": 467
+     },
+     "pos": {
+      "x": 14212,
+      "y": 5146
+     },
+     "layout": {
+      "mode": "HORIZONTAL",
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primaryAlign": "MAX",
+      "counterAlign": "CENTER",
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "216:1163",
+       "type": "ROUNDED_RECTANGLE",
+       "name": "BCO 1",
+       "size": {
+        "w": 362,
+        "h": 467
+       },
+       "pos": {
+        "x": 14212,
+        "y": 5146
+       },
+       "fills": [
+        {
+         "type": "IMAGE",
+         "file": "c3f7def7da6cc1eb87b6a9d4773832eb2a714b44.jpg"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "216:1164",
+     "type": "FRAME",
+     "name": "Frame 2",
+     "size": {
+      "w": 362,
+      "h": 467
+     },
+     "pos": {
+      "x": 14212,
+      "y": 4619
+     },
+     "layout": {
+      "mode": "VERTICAL",
+      "spacing": 10,
+      "padding": [
+       null,
+       null,
+       40,
+       null
+      ],
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "216:1165",
+       "type": "TEXT",
+       "name": "Nossos Valores",
+       "size": {
+        "w": 362,
+        "h": 80
+       },
+       "pos": {
+        "x": 14212,
+        "y": 4619
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#000000",
+         "opacity": 1
+        }
+       ],
+       "text": "Nossos Valores",
+       "font": "Jomolhari Regular",
+       "fontSize": 28,
+       "lineHeight": {
+        "value": 80,
+        "units": "PIXELS"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "216:1166",
+       "type": "TEXT",
+       "name": "🌿 Ingredientes Naturais Selecionamos ingredientes de origem natural para criar fórmulas suaves e eficazes. ✨ Qualidade Cada produto é desenvolvido com rigor para oferecer segurança e excelente desempenho. 🤎 Respeito à Pele Criamos produtos pensados para diferentes tipos de pele, valorizando especialmente as necessidades da pele rica em melanina.",
+       "size": {
+        "w": 362,
+        "h": 499
+       },
+       "pos": {
+        "x": 14212,
+        "y": 4709
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#3f3f3f",
+         "opacity": 1
+        }
+       ],
+       "text": "🌿 Ingredientes Naturais\nSelecionamos ingredientes de origem natural para criar fórmulas suaves e eficazes.\n✨ Qualidade\nCada produto é desenvolvido com rigor para oferecer segurança e excelente desempenho.\n🤎 Respeito à Pele\nCriamos produtos pensados para diferentes tipos de pele, valorizando especialmente as necessidades da pele rica em melanina.",
+       "font": "Inter Regular",
+       "fontSize": 16,
+       "lineHeight": {
+        "value": 40,
+        "units": "PIXELS"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "216:1192",
+   "type": "FRAME",
+   "name": "Menu Principal",
+   "size": {
+    "w": 402,
+    "h": 73
+   },
+   "pos": {
+    "x": 14192,
+    "y": 1083
+   },
+   "fills": [
+    {
+     "type": "SOLID",
+     "color": "#ffffff",
+     "opacity": 1
+    }
+   ],
+   "strokes": [
+    {
+     "type": "SOLID",
+     "color": "#e1e1e1",
+     "opacity": 1
+    }
+   ],
+   "strokeWeight": 1,
+   "layout": {
+    "mode": "HORIZONTAL",
+    "padding": [
+     null,
+     20,
+     null,
+     null
+    ],
+    "primaryAlign": "SPACE_EVENLY",
+    "counterAlign": "CENTER",
+    "primarySizing": "FIXED"
+   },
+   "children": [
+    {
+     "id": "216:1193",
+     "type": "FRAME",
+     "name": "Logo",
+     "size": {
+      "w": 63,
+      "h": 40
+     },
+     "pos": {
+      "x": 14212,
+      "y": 1100
+     },
+     "children": [
+      {
+       "id": "216:1194",
+       "type": "ROUNDED_RECTANGLE",
+       "name": "logo 1",
+       "size": {
+        "w": 63,
+        "h": 40
+       },
+       "pos": {
+        "x": 14212,
+        "y": 1100
+       },
+       "fills": [
+        {
+         "type": "IMAGE",
+         "file": "62644cbfd4ec562431891aba54769d1eefa0c0e5.png"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "216:1195",
+     "type": "FRAME",
+     "name": "Menu Item",
+     "size": {
+      "w": 50,
+      "h": 19
+     },
+     "pos": {
+      "x": 14340,
+      "y": 1110
+     },
+     "layout": {
+      "mode": "HORIZONTAL",
+      "spacing": 20,
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "counterAlign": "CENTER",
+      "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+     }
+    },
+    {
+     "id": "216:1196",
+     "type": "FRAME",
+     "name": "Menu Item 2",
+     "size": {
+      "w": 119,
+      "h": 24
+     },
+     "pos": {
+      "x": 14455,
+      "y": 1108
+     },
+     "layout": {
+      "mode": "HORIZONTAL",
+      "spacing": 30,
+      "padding": [
+       null,
+       20,
+       null,
+       null
+      ],
+      "counterAlign": "CENTER",
+      "counterSizing": "RESIZE_TO_FIT_WITH_IMPLICIT_SIZE"
+     },
+     "children": [
+      {
+       "id": "216:1197",
+       "type": "FRAME",
+       "name": "cart_icon_073d8ff8-7ae8-4007-9706-726f64a28828 1",
+       "size": {
+        "w": 24,
+        "h": 24
+       },
+       "pos": {
+        "x": 14475,
+        "y": 1108
+       },
+       "children": [
+        {
+         "id": "216:1198",
+         "type": "VECTOR",
+         "name": "Vector",
+         "size": {
+          "w": 8,
+          "h": 4
+         },
+         "pos": {
+          "x": 14483,
+          "y": 1118
+         },
+         "strokes": [
+          {
+           "type": "SOLID",
+           "color": "#121212",
+           "opacity": 1
+          }
+         ],
+         "strokeWeight": 1.5
+        },
+        {
+         "id": "216:1199",
+         "type": "VECTOR",
+         "name": "Vector",
+         "size": {
+          "w": 18,
+          "h": 0
+         },
+         "pos": {
+          "x": 14478,
+          "y": 1114
+         },
+         "strokes": [
+          {
+           "type": "SOLID",
+           "color": "#121212",
+           "opacity": 1
+          }
+         ],
+         "strokeWeight": 1.5
+        },
+        {
+         "id": "216:1200",
+         "type": "VECTOR",
+         "name": "Vector",
+         "size": {
+          "w": 18,
+          "h": 20
+         },
+         "pos": {
+          "x": 14478,
+          "y": 1110
+         },
+         "strokes": [
+          {
+           "type": "SOLID",
+           "color": "#121212",
+           "opacity": 1
+          }
+         ],
+         "strokeWeight": 1.5
+        }
+       ]
+      },
+      {
+       "id": "216:1201",
+       "type": "FRAME",
+       "name": "icon-MagnifyingGlass 1",
+       "size": {
+        "w": 25,
+        "h": 24
+       },
+       "pos": {
+        "x": 14529,
+        "y": 1108
+       },
+       "children": [
+        {
+         "id": "216:1202",
+         "type": "VECTOR",
+         "name": "Vector",
+         "size": {
+          "w": 23,
+          "h": 0
+         },
+         "pos": {
+          "x": 14530,
+          "y": 1111
+         },
+         "strokes": [
+          {
+           "type": "SOLID",
+           "color": "#000000",
+           "opacity": 1
+          }
+         ],
+         "strokeWeight": 2
+        },
+        {
+         "id": "216:1203",
+         "type": "VECTOR",
+         "name": "Vector",
+         "size": {
+          "w": 23,
+          "h": 0
+         },
+         "pos": {
+          "x": 14530,
+          "y": 1120
+         },
+         "strokes": [
+          {
+           "type": "SOLID",
+           "color": "#000000",
+           "opacity": 1
+          }
+         ],
+         "strokeWeight": 2
+        },
+        {
+         "id": "216:1204",
+         "type": "VECTOR",
+         "name": "Vector",
+         "size": {
+          "w": 23,
+          "h": 0
+         },
+         "pos": {
+          "x": 14530,
+          "y": 1129
+         },
+         "strokes": [
+          {
+           "type": "SOLID",
+           "color": "#000000",
+           "opacity": 1
+          }
+         ],
+         "strokeWeight": 2
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "216:1262",
+   "type": "FRAME",
+   "name": "Footer",
+   "size": {
+    "w": 402,
+    "h": 1009
+   },
+   "pos": {
+    "x": 14192,
+    "y": 5653
+   },
+   "cornerRadii": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "fills": [
+    {
+     "type": "SOLID",
+     "color": "#2b2b2b",
+     "opacity": 1
+    }
+   ],
+   "layout": {
+    "mode": "VERTICAL",
+    "spacing": 31,
+    "padding": [
+     null,
+     100,
+     50,
+     null
+    ],
+    "counterAlign": "CENTER"
+   },
+   "children": [
+    {
+     "id": "216:1263",
+     "type": "FRAME",
+     "name": "Frame 2",
+     "size": {
+      "w": 150,
+      "h": 193
+     },
+     "pos": {
+      "x": 14318,
+      "y": 5703
+     },
+     "layout": {
+      "mode": "VERTICAL",
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primaryAlign": "CENTER",
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "216:1264",
+       "type": "ROUNDED_RECTANGLE",
+       "name": "logo 1",
+       "size": {
+        "w": 150,
+        "h": 95
+       },
+       "pos": {
+        "x": 14318,
+        "y": 5723
+       },
+       "fills": [
+        {
+         "type": "IMAGE",
+         "file": "62644cbfd4ec562431891aba54769d1eefa0c0e5.png"
+        }
+       ]
+      },
+      {
+       "id": "216:1265",
+       "type": "FRAME",
+       "name": "Frame 35",
+       "size": {
+        "w": 150,
+        "h": 59
+       },
+       "pos": {
+        "x": 14318,
+        "y": 5818
+       },
+       "layout": {
+        "mode": "HORIZONTAL",
+        "spacing": 10,
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "primaryAlign": "CENTER",
+        "counterAlign": "MAX",
+        "primarySizing": "FIXED"
+       },
+       "children": [
+        {
+         "id": "216:1266",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "csed3d 1",
+         "size": {
+          "w": 35,
+          "h": 36
+         },
+         "pos": {
+          "x": 14331,
+          "y": 5841
+         },
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "e2c8c29cdcbf4e190edfaceebe2f1cda4bc7fe0f.png"
+          }
+         ]
+        },
+        {
+         "id": "216:1267",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "csed3d 4",
+         "size": {
+          "w": 35,
+          "h": 36
+         },
+         "pos": {
+          "x": 14376,
+          "y": 5841
+         },
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "7f01d0d9f0e7f586a801691afc2042aaa042e3d8.png"
+          }
+         ]
+        },
+        {
+         "id": "216:1268",
+         "type": "ROUNDED_RECTANGLE",
+         "name": "csed3d 5",
+         "size": {
+          "w": 35,
+          "h": 36
+         },
+         "pos": {
+          "x": 14421,
+          "y": 5841
+         },
+         "fills": [
+          {
+           "type": "IMAGE",
+           "file": "9053d95bc6d20d9ed0a16224e4d7223665984466.png"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "216:1269",
+     "type": "FRAME",
+     "name": "Frame 5",
+     "size": {
+      "w": 245,
+      "h": 193
+     },
+     "pos": {
+      "x": 14271,
+      "y": 5927
+     },
+     "layout": {
+      "mode": "VERTICAL",
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "216:1270",
+       "type": "TEXT",
+       "name": "Links Rápidos",
+       "size": {
+        "w": 245,
+        "h": 54
+       },
+       "pos": {
+        "x": 14271,
+        "y": 5927
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffd595",
+         "opacity": 1
+        }
+       ],
+       "text": "Links Rápidos",
+       "font": "Inria Serif Regular",
+       "fontSize": 30,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "216:1271",
+       "type": "TEXT",
+       "name": "Início",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 14271,
+        "y": 5981
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Início",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "216:1272",
+       "type": "TEXT",
+       "name": "Loja",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 14271,
+        "y": 6016
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Loja",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "216:1273",
+       "type": "TEXT",
+       "name": "Clientes Satisfeitos",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 14271,
+        "y": 6051
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Clientes Satisfeitos",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "216:1274",
+       "type": "TEXT",
+       "name": "Nossa História",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 14271,
+        "y": 6086
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Nossa História",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      }
+     ]
+    },
+    {
+     "id": "216:1275",
+     "type": "FRAME",
+     "name": "Frame 7",
+     "size": {
+      "w": 318,
+      "h": 237
+     },
+     "pos": {
+      "x": 14234,
+      "y": 6151
+     },
+     "layout": {
+      "mode": "VERTICAL",
+      "spacing": 11,
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "216:1276",
+       "type": "TEXT",
+       "name": "Newsletter",
+       "size": {
+        "w": 318,
+        "h": 54
+       },
+       "pos": {
+        "x": 14234,
+        "y": 6151
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffd595",
+         "opacity": 1
+        }
+       ],
+       "text": "Newsletter",
+       "font": "Inria Serif Regular",
+       "fontSize": 30,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "216:1277",
+       "type": "TEXT",
+       "name": "Inscreva-se em nossa Newletters",
+       "size": {
+        "w": 318,
+        "h": 24
+       },
+       "pos": {
+        "x": 14234,
+        "y": 6216
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Inscreva-se em nossa Newletters",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "216:1278",
+       "type": "FRAME",
+       "name": "Frame 37",
+       "size": {
+        "w": 318,
+        "h": 49
+       },
+       "pos": {
+        "x": 14234,
+        "y": 6251
+       },
+       "cornerRadius": 5,
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "layout": {
+        "mode": "HORIZONTAL",
+        "spacing": 10,
+        "padding": [
+         null,
+         null,
+         null,
+         null
+        ],
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED"
+       },
+       "children": [
+        {
+         "id": "216:1279",
+         "type": "TEXT",
+         "name": "flordemarula.com",
+         "size": {
+          "w": 318,
+          "h": 17
+         },
+         "pos": {
+          "x": 14234,
+          "y": 6267
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#000000",
+           "opacity": 1
+          }
+         ],
+         "text": "  flordemarula.com",
+         "font": "Inter Regular",
+         "fontSize": 20,
+         "lineHeight": {
+          "value": 100,
+          "units": "PERCENT"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         }
+        }
+       ]
+      },
+      {
+       "id": "216:1280",
+       "type": "FRAME",
+       "name": "Frame 38",
+       "size": {
+        "w": 318,
+        "h": 47
+       },
+       "pos": {
+        "x": 14234,
+        "y": 6311
+       },
+       "cornerRadius": 5,
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffd595",
+         "opacity": 1
+        }
+       ],
+       "layout": {
+        "mode": "HORIZONTAL",
+        "spacing": 10,
+        "padding": [
+         null,
+         null,
+         20,
+         null
+        ],
+        "primaryAlign": "CENTER",
+        "counterAlign": "CENTER",
+        "primarySizing": "FIXED"
+       },
+       "children": [
+        {
+         "id": "216:1281",
+         "type": "TEXT",
+         "name": "Inscrever-se",
+         "size": {
+          "w": 318,
+          "h": 32
+         },
+         "pos": {
+          "x": 14234,
+          "y": 6319
+         },
+         "fills": [
+          {
+           "type": "SOLID",
+           "color": "#000000",
+           "opacity": 1
+          }
+         ],
+         "text": "Inscrever-se",
+         "font": "Inter Regular",
+         "fontSize": 20,
+         "lineHeight": {
+          "value": 100,
+          "units": "PERCENT"
+         },
+         "letterSpacing": {
+          "value": 0,
+          "units": "PERCENT"
+         },
+         "textAlign": "CENTER"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "id": "216:1282",
+     "type": "FRAME",
+     "name": "Frame 6",
+     "size": {
+      "w": 245,
+      "h": 193
+     },
+     "pos": {
+      "x": 14271,
+      "y": 6419
+     },
+     "layout": {
+      "mode": "VERTICAL",
+      "padding": [
+       null,
+       null,
+       null,
+       null
+      ],
+      "primarySizing": "FIXED"
+     },
+     "children": [
+      {
+       "id": "216:1283",
+       "type": "TEXT",
+       "name": "Contactos",
+       "size": {
+        "w": 245,
+        "h": 54
+       },
+       "pos": {
+        "x": 14271,
+        "y": 6419
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffd595",
+         "opacity": 1
+        }
+       ],
+       "text": "Contactos",
+       "font": "Inria Serif Regular",
+       "fontSize": 30,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "216:1284",
+       "type": "TEXT",
+       "name": "932005773",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 14271,
+        "y": 6473
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "932005773",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "216:1285",
+       "type": "TEXT",
+       "name": "Flordemarula@gmail.com",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 14271,
+        "y": 6508
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Flordemarula@gmail.com",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      },
+      {
+       "id": "216:1286",
+       "type": "TEXT",
+       "name": "Luanda, Talatona",
+       "size": {
+        "w": 245,
+        "h": 35
+       },
+       "pos": {
+        "x": 14271,
+        "y": 6543
+       },
+       "fills": [
+        {
+         "type": "SOLID",
+         "color": "#ffffff",
+         "opacity": 1
+        }
+       ],
+       "text": "Luanda, Talatona",
+       "font": "Inter Regular",
+       "fontSize": 20,
+       "lineHeight": {
+        "value": 100,
+        "units": "PERCENT"
+       },
+       "letterSpacing": {
+        "value": 0,
+        "units": "PERCENT"
+       },
+       "textAlign": "CENTER"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

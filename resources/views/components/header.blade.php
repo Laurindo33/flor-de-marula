@@ -2,10 +2,11 @@
     $navItems = [
         'Início' => ['route' => 'home', 'active' => request()->routeIs('home')],
         'Loja' => ['route' => 'shop.index', 'active' => request()->routeIs('shop.index')],
-        'Clientes Satisfeitos' => ['route' => null, 'active' => false],
-        'Nossa História' => ['route' => null, 'active' => false],
-        'Centro de Ajuda' => ['route' => null, 'active' => false],
+        'Clientes Satisfeitos' => ['route' => 'reviews.index', 'active' => request()->routeIs('reviews.index')],
+        'Nossa História' => ['route' => 'historia.index', 'active' => request()->routeIs('historia.index')],
+        'Centro de Ajuda' => ['route' => 'ajuda.index', 'active' => request()->routeIs('ajuda.index')],
     ];
+    $cartItemCount = app(\App\Services\CartService::class)->itemCount();
 @endphp
 
 <header class="fm-header d-none d-lg-flex">
@@ -24,10 +25,13 @@
         </nav>
 
         <div class="d-flex align-items-center gap-4">
-            <a href="#" class="fm-icon-btn" aria-label="Carrinho">
+            <a href="{{ route('cart.index') }}" class="fm-icon-btn fm-icon-btn--cart" aria-label="Carrinho ({{ $cartItemCount }} {{ Str::plural('item', $cartItemCount) }})">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h2l2.4 11.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9" cy="21" r="1"/><circle cx="17" cy="21" r="1"/></svg>
+                @if ($cartItemCount > 0)
+                    <span class="fm-icon-btn__badge">{{ $cartItemCount }}</span>
+                @endif
             </a>
-            <a href="#" class="fm-icon-btn" aria-label="Conta">
+            <a href="{{ auth()->check() ? route('account.index') : route('login') }}" class="fm-icon-btn" aria-label="Conta">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
             </a>
             <a href="#" class="fm-icon-btn" aria-label="Pesquisar">
@@ -43,8 +47,11 @@
             <img src="{{ asset('images/home/logo.png') }}" alt="Flor de Marula" style="height: 44px; width: auto;">
         </a>
         <div class="d-flex align-items-center gap-3">
-            <a href="#" class="fm-icon-btn" aria-label="Carrinho">
+            <a href="{{ route('cart.index') }}" class="fm-icon-btn fm-icon-btn--cart" aria-label="Carrinho ({{ $cartItemCount }} {{ Str::plural('item', $cartItemCount) }})">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h2l2.4 11.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9" cy="21" r="1"/><circle cx="17" cy="21" r="1"/></svg>
+                @if ($cartItemCount > 0)
+                    <span class="fm-icon-btn__badge">{{ $cartItemCount }}</span>
+                @endif
             </a>
             <button class="btn p-0 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#fmMobileMenu" aria-label="Menu">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>

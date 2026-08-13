@@ -1,0 +1,101 @@
+/*
+ * Clientes Satisfeitos — sem frame dedicado no Figma (regra 74). Reutiliza a
+ * secao de testemunhos e os pills Antes/Depois ja usados no Home/PDP.
+ */
+
+.fm-reviews-hero {
+    padding-block: 60px 20px;
+}
+
+.fm-reviews {
+    padding-block: 20px 60px;
+}
+
+.fm-review-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 576px) {
+    .fm-review-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .fm-review-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.fm-review-card {
+    background: var(--fm-white);
+    border-radius: var(--fm-radius-md);
+    box-shadow: var(--fm-shadow-sm);
+    overflow: hidden;
+}
+
+.fm-review-card__media {
+    position: relative;
+    display: block;
+}
+
+.fm-review-card__media img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.fm-review-card__media--split {
+    display: flex;
+}
+.fm-review-card__media--split img {
+    width: 50%;
+}
+
+.fm-review-card__video {
+    aspect-ratio: 4 / 3;
+    background: var(--fm-dark);
+    color: var(--fm-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: var(--fm-font-base);
+    font-size: 15px;
+}
+
+.fm-review-card__body {
+    padding: 18px 20px;
+}
+
+.fm-review-card__stars {
+    color: var(--fm-primary);
+    font-size: 15px;
+}
+
+.fm-review-card__name {
+    font-family: var(--fm-font-base);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--fm-black);
+}
+
+.fm-review-card__product {
+    font-family: var(--fm-font-base);
+    font-size: 12px;
+    color: var(--fm-muted);
+    text-transform: uppercase;
+}
+
+/* Formulario de avaliacao */
+.fm-review-form-section {
+    background: var(--fm-cream);
+    padding-block: 60px;
+}
+
+.fm-review-form {
+    max-width: 640px;
+    margin-inline: auto;
+}

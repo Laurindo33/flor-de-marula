@@ -1,0 +1,256 @@
+@extends('layouts.app')
+
+@section('title', $product->name)
+@section('meta_description', $product->description)
+@section('og_type', 'product')
+@section('og_image', asset($product->image_path))
+
+@section('content')
+
+{{-- Faixa de beneficios (Secçã 2 / 213:1689) --}}
+@include('partials.benefits-strip')
+
+@php
+    $mainImage = $product->images->first()?->image_path ?? $product->image_path;
+    $thumbnails = $product->images->slice(1);
+@endphp
+
+{{-- Product details (155:996 "Product details" / Frame 41-77) --}}
+<section class="fm-pdp">
+    <div class="fm-container">
+        <div class="fm-pdp__body">
+
+            {{-- Miniaturas ("Other images" 161:1482-1486) --}}
+            @if ($thumbnails->isNotEmpty())
+                <div class="fm-pdp__thumbs order-2 order-lg-1">
+                    @foreach ($thumbnails as $thumb)
+                        <button
+                            type="button"
+                            class="fm-pdp__thumb {{ $loop->first ? 'active' : '' }}"
+                            data-fm-gallery-thumb
+                            data-image="{{ asset($thumb->image_path) }}"
+                        >
+                            <img src="{{ asset($thumb->image_path) }}" alt="{{ $product->name }} — imagem {{ $loop->iteration }}">
+                        </button>
+                    @endforeach
+                </div>
+            @endif
+
+            {{-- Imagem principal + garantia + Complete Sua Rotina (Frame 77) --}}
+            <div class="fm-pdp__visual order-1 order-lg-2">
+                <div class="fm-pdp__main-image">
+                    <img src="{{ asset($mainImage) }}" alt="{{ $product->name }}" data-fm-gallery-main>
+
+                    <div class="fm-pdp__guarantee-badge">
+                        <img src="{{ asset('images/product/guarantee-badge-icon.png') }}" alt="">
+                        <span class="fm-pdp__guarantee-badge-days">30 DIAS</span>
+                        <span class="fm-pdp__guarantee-badge-text">Garantia de devolução{{ "\n" }}do dinheiro</span>
+                    </div>
+                </div>
+
+                <div class="fm-pdp__guarantee-text">
+                    <img src="{{ asset('images/product/icon-check.png') }}" alt="" class="fm-pdp__guarantee-text-icon">
+                    <p class="mb-0">Se você não estiver satisfeito com algum de nossos produtos, oferecemos garantia de devolução de dinheiro por 30 dias. <strong>Pele melhor em 30 dias ou é GRÁTIS</strong></p>
+                </div>
+
+                @if ($product->routineProduct)
+                    <div class="fm-pdp__routine">
+                        <h2 class="fm-pdp__routine-title">Complete Sua Rotina</h2>
+                        <p class="fm-pdp__routine-subtitle">A combinação perfeita de autocuidado que os usuários adoram com esse produto</p>
+                        <div class="fm-pdp__routine-card">
+                            <img src="{{ asset($product->routineProduct->image_path) }}" alt="{{ $product->routineProduct->name }}" loading="lazy">
+                            <div class="flex-grow-1">
+                                <p class="fm-pdp__routine-card-name mb-1">{{ $product->routineProduct->name }}</p>
+                                <p class="mb-0">
+                                    <span class="fm-price">{{ $product->routineProduct->formatted_price }}</span>
+                                    @if ($product->routineProduct->compare_price)
+                                        <span class="fm-pdp__routine-card-compare">{{ number_format($product->routineProduct->compare_price, 0, ',', '.') }}kz</span>
+                                    @endif
+                                </p>
+                            </div>
+                            <a href="{{ route('product.show', $product->routineProduct) }}" class="fm-btn fm-btn-primary fm-pdp__routine-cta">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                @endif
+            </div>
+
+            {{-- Nome, avaliacoes, preco, desconto, beneficios, ofertas, CTA, acordeao (Frame 75) --}}
+            <div class="fm-pdp__info order-3 order-lg-3">
+                <h1 class="fm-pdp__name">{{ $product->name }}</h1>
+
+                <div class="fm-pdp__avatars" aria-label="Avaliações de clientes">
+                    @for ($i = 0; $i < 5; $i++)
+                        <img src="{{ asset('images/product/icon-avatar.png') }}" alt="">
+                    @endfor
+                </div>
+
+                <div class="fm-pdp__price">
+                    @if ($product->compare_price)
+                        <span class="fm-pdp__price-compare">{{ number_format($product->compare_price, 0, ',', '.') }}kz</span>
+                    @endif
+                    <span class="fm-pdp__price-current">{{ $product->formatted_price }}</span>
+                </div>
+
+                @if ($product->discount_percent)
+                    <span class="fm-discount-badge fm-pdp__discount-badge">{{ $product->discount_percent }}% de desconto</span>
+                @endif
+
+                @if (!empty($product->benefits))
+                    <ul class="fm-pdp__benefits">
+                        @foreach ($product->benefits as $benefit)
+                            <li>
+                                <img src="{{ asset('images/product/icon-check.png') }}" alt="">
+                                <span>{{ $benefit }}</span>
+                            </li>
+                        @endforeach
+                    </ul>
+                @endif
+
+                <form action="{{ route('cart.add') }}" method="POST" class="fm-pdp__add-form">
+                    @csrf
+                    <input type="hidden" name="product_id" value="{{ $product->id }}">
+
+                    @if ($product->offers->isNotEmpty())
+                        <div class="fm-pdp__offers">
+                            <p class="fm-pdp__offers-title">Ofertas exclusivas</p>
+                            <div class="fm-pdp__offers-grid">
+                                @foreach ($product->offers as $offer)
+                                    <label class="fm-pdp__offer {{ $loop->first ? 'active' : '' }}">
+                                        <input type="radio" name="offer_id" value="{{ $offer->id }}" {{ $loop->first ? 'checked' : '' }}>
+                                        <img src="{{ asset($product->image_path) }}" alt="{{ $offer->label }}">
+                                        <span class="fm-pdp__offer-label">{{ $offer->label }}</span>
+                                        <span class="fm-pdp__offer-price">{{ $offer->formatted_price }}</span>
+                                    </label>
+                                @endforeach
+                            </div>
+                            <button type="button" class="fm-pdp__offer-clear" data-fm-offer-clear>Comprar apenas 1 unidade ({{ $product->formatted_price }})</button>
+                        </div>
+                    @endif
+
+                    <button type="submit" class="fm-btn fm-btn-primary fm-pdp__add-btn">Adicionar ao Carrinho</button>
+                </form>
+
+                <div class="accordion fm-pdp__accordion" id="fmProductAccordion">
+                    @php
+                        $accordionItems = collect([
+                            ['title' => 'Descrição', 'body' => $product->description],
+                            ['title' => 'Ingredientes', 'body' => $product->ingredients->pluck('name')->implode(', ') ?: $product->ingredients_list],
+                            ['title' => 'Como usar', 'body' => $product->how_to_use],
+                            ['title' => 'Avaliação de um especialista', 'body' => $product->expert_review],
+                            ['title' => 'Envio e Devoluções', 'body' => $product->shipping_returns],
+                        ])->filter(fn ($item) => filled($item['body']));
+                    @endphp
+                    @foreach ($accordionItems as $item)
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button {{ $loop->first ? '' : 'collapsed' }}" type="button" data-bs-toggle="collapse" data-bs-target="#fmAcc{{ $loop->index }}" aria-expanded="{{ $loop->first ? 'true' : 'false' }}">
+                                    {{ $item['title'] }}
+                                </button>
+                            </h3>
+                            <div id="fmAcc{{ $loop->index }}" class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}" data-bs-parent="#fmProductAccordion">
+                                <div class="accordion-body">{{ $item['body'] }}</div>
+                            </div>
+                        </div>
+                    @endforeach
+
+                    @if ($product->faqs->isNotEmpty())
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#fmAccFaq">
+                                    Perguntas Frequentes
+                                </button>
+                            </h3>
+                            <div id="fmAccFaq" class="accordion-collapse collapse" data-bs-parent="#fmProductAccordion">
+                                <div class="accordion-body">
+                                    @foreach ($product->faqs as $faq)
+                                        <p class="fm-pdp__faq-question mb-1">{{ $faq->question }}</p>
+                                        <p class="fm-pdp__faq-answer {{ $loop->last ? 'mb-0' : 'mb-3' }}">{{ $faq->answer }}</p>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{{-- Produtos Relacionados (Secção Nosso melhor / Frame 5-9) --}}
+@if ($product->relatedProducts->isNotEmpty())
+    <section class="py-5">
+        <div class="fm-container">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+                <h2 class="fm-heading-lg mb-0">Produtos Relacionados</h2>
+                <a href="{{ route('shop.index') }}" class="fm-btn fm-btn-primary fm-cta-label">Ver Todos</a>
+            </div>
+            <div class="row g-4">
+                @foreach ($product->relatedProducts as $related)
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <x-product-card :product="$related" variant="best" />
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+@endif
+
+{{-- Ingredientes (Frame 42 / 84-85) --}}
+@if ($product->ingredients->isNotEmpty() || $product->ingredients_list)
+    <section class="fm-pdp-ingredients">
+        <div class="fm-container">
+            <div class="row g-5">
+                <div class="col-12 col-lg-5">
+                    <h2 class="fm-heading-instrument mb-3">Feito com ingredientes 100% naturais</h2>
+                    @if ($product->ingredients_list)
+                        <p class="fm-pdp-ingredients__list">{{ $product->ingredients_list }}</p>
+                    @endif
+                </div>
+                <div class="col-12 col-lg-7">
+                    <div class="d-flex flex-column gap-4">
+                        @foreach ($product->ingredients as $ingredient)
+                            <div class="fm-pdp-ingredients__card">
+                                <img src="{{ asset($ingredient->image_path) }}" alt="{{ $ingredient->name }}" loading="lazy">
+                                <div>
+                                    <p class="fm-pdp-ingredients__card-name mb-1">{{ $ingredient->name }}</p>
+                                    <p class="fm-pdp-ingredients__card-desc mb-0">{{ $ingredient->description }}</p>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endif
+
+{{-- A Diferenca dos Nossos Produtos (Secção Nosso melhor) --}}
+@include('partials.diff-section')
+
+{{-- Clientes adoram a Flor de Marula (Secção Nosso melhor) --}}
+@include('partials.testimonials-section')
+
+@endsection
+
+@push('scripts')
+    @vite(['resources/js/product.js'])
+
+    <script type="application/ld+json">
+        {!! json_encode([
+            '@context' => 'https://schema.org/',
+            '@type' => 'Product',
+            'name' => $product->name,
+            'description' => $product->description,
+            'sku' => $product->sku,
+            'image' => asset($product->image_path),
+            'offers' => [
+                '@type' => 'Offer',
+                'priceCurrency' => 'AOA',
+                'price' => $product->price,
+                'availability' => $product->stock > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
+                'url' => route('product.show', $product),
+            ],
+        ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) !!}
+    </script>
+@endpush

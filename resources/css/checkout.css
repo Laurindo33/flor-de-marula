@@ -1,0 +1,226 @@
+/*
+ * Checkout — sem frame no Figma (regra 74). Mobile-first: formulario e resumo
+ * empilham no mobile; desktop coloca o resumo fixo ao lado (padrao ja usado
+ * no PDP e nas paginas institucionais).
+ */
+
+.fm-checkout {
+    padding-block: 40px 80px;
+}
+
+.fm-checkout__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@media (min-width: 992px) {
+    .fm-checkout__grid {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+    }
+    .fm-checkout__form {
+        flex: 1 1 auto;
+    }
+    .fm-checkout__summary {
+        flex: 0 0 380px;
+        position: sticky;
+        top: 24px;
+    }
+}
+
+.fm-checkout-section {
+    margin-bottom: 32px;
+}
+
+.fm-checkout-section__title {
+    font-family: 'Alice', serif;
+    font-size: 22px;
+    color: var(--fm-black);
+    margin-bottom: 16px;
+}
+
+.fm-checkout-field {
+    margin-bottom: 16px;
+}
+
+.fm-checkout-field label {
+    display: block;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    color: var(--fm-text);
+    margin-bottom: 6px;
+}
+
+.fm-checkout-field input {
+    width: 100%;
+    height: 46px;
+    border: 1px solid #ddd;
+    border-radius: var(--fm-radius-sm);
+    padding: 0 14px;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+}
+
+.fm-checkout-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fm-checkout-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border: 1px solid #ddd;
+    border-radius: var(--fm-radius-sm);
+    padding: 14px 16px;
+    cursor: pointer;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    color: var(--fm-black);
+}
+
+.fm-checkout-option.active {
+    border-color: var(--fm-primary);
+    background: var(--fm-peach-soft);
+}
+
+.fm-checkout-option__price {
+    color: var(--fm-primary);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Resumo */
+.fm-checkout__summary {
+    background: var(--fm-cream);
+    border-radius: var(--fm-radius-md);
+    padding: 28px;
+}
+
+.fm-checkout-items {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.fm-checkout-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.fm-checkout-item img {
+    width: 56px;
+    height: 56px;
+    object-fit: cover;
+    border-radius: var(--fm-radius-sm);
+    flex-shrink: 0;
+}
+
+.fm-checkout-item__info {
+    flex: 1 1 auto;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    color: var(--fm-black);
+}
+
+.fm-checkout-item__info span {
+    display: block;
+    font-size: 12px;
+    color: var(--fm-muted);
+}
+
+.fm-checkout-item__total {
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--fm-primary);
+    white-space: nowrap;
+}
+
+.fm-checkout__disclaimer {
+    font-family: var(--fm-font-base);
+    font-size: 12px;
+    color: var(--fm-muted);
+    margin: 14px 0 0;
+    text-align: center;
+}
+
+/* Confirmacao do pedido */
+.fm-order-confirmation {
+    padding-block: 60px 80px;
+    max-width: 640px;
+    margin-inline: auto;
+}
+
+.fm-order-confirmation__header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.fm-order-confirmation__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--fm-primary);
+    color: var(--fm-white);
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.fm-order-card {
+    background: var(--fm-cream);
+    border-radius: var(--fm-radius-md);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.fm-order-card__row {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    color: var(--fm-text);
+    padding-block: 8px;
+}
+.fm-order-card__row:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+.fm-order-card__row span:last-child {
+    color: var(--fm-black);
+    text-align: right;
+}
+
+.fm-order-status {
+    display: inline-block;
+    background: var(--fm-primary);
+    color: var(--fm-white);
+    border-radius: var(--fm-radius-sm);
+    padding: 2px 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.fm-order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.fm-order-confirmation__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 28px;
+}

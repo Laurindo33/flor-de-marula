@@ -16,6 +16,7 @@
 @media (min-width: 992px) {
     .fm-hero__grid {
         flex-direction: row;
+        flex-wrap: nowrap;
         gap: 60px;
     }
 }
@@ -25,8 +26,10 @@
     justify-content: center;
 }
 @media (min-width: 992px) {
+    .fm-hero__col-text,
     .fm-hero__col-image {
-        order: 1;
+        flex: 1 1 0;
+        max-width: none;
     }
 }
 
@@ -47,7 +50,6 @@
 }
 @media (min-width: 992px) {
     .fm-hero__col-text {
-        order: 2;
         text-align: left;
     }
 }

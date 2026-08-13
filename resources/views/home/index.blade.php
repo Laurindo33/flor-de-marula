@@ -38,15 +38,7 @@
 </section>
 
 {{-- Faixa de beneficios (Section 1 / 214:60) --}}
-<section class="fm-benefits-strip">
-    <div class="fm-container d-flex flex-wrap justify-content-center justify-content-lg-between gap-3">
-        <p class="fm-benefits-strip__item mb-0">SEM PARABENHOS</p>
-        <p class="fm-benefits-strip__item mb-0">SEM CORANTES</p>
-        <p class="fm-benefits-strip__item mb-0">NÃO TESTADO EM ANIMAIS</p>
-        <p class="fm-benefits-strip__item mb-0">INGREDIENTES DE ORIGEM NATURAL</p>
-        <p class="fm-benefits-strip__item mb-0">ORGULHOSAMENTE AFRICANO</p>
-    </div>
-</section>
+@include('partials.benefits-strip')
 
 {{-- Garantia de 30 dias (Section 2 / 214:72) --}}
 <section class="fm-guarantee">
@@ -54,7 +46,7 @@
         <div class="row align-items-center justify-content-center g-5">
             <div class="col-auto">
                 <div class="fm-guarantee__seal">
-                    <img src="{{ asset('images/home/guarantee-seal.png') }}" alt="Selo de garantia de 30 dias">
+                    <img src="{{ asset('images/home/guarantee-seal.png') }}" alt="Selo de garantia de 30 dias" loading="lazy">
                     <div class="fm-guarantee__seal-text">
                         <span class="fm-guarantee__seal-days">30 DIAS</span>
                         <span class="fm-guarantee__seal-label">Garantia de devolução{{ "\n" }}do dinheiro</span>
@@ -88,42 +80,14 @@
 </section>
 
 {{-- A Diferenca dos Nossos Produtos (214:121) --}}
-<section class="fm-diff-section">
-    <div class="fm-container">
-        <h2 class="fm-heading-lg text-center mb-5">A Diferença dos Nossos Produtos</h2>
-        <div class="row g-4">
-            @php
-                $diffs = [
-                    ['category' => 'Hiperpigmentação', 'customer' => 'Ana Paula M.', 'image' => 'diff-hiperpigmentacao.png', 'quote' => 'Comecei a usar a linha Flor de Marula há algumas semanas e senti minha pele muito mais hidratada e macia. O sérum tem uma textura leve e deixa um toque agradável durante o dia.'],
-                    ['category' => 'Poros Obstruídos', 'customer' => 'Carla S.', 'image' => 'diff-poros-obstruidos.png', 'quote' => 'O que mais gostei foi a sensação de cuidado natural. O creme hidratante absorve rapidamente e não deixa a pele oleosa. Já virou parte da minha rotina diária.'],
-                    ['category' => 'Manchas', 'customer' => 'Patrícia L.', 'image' => 'diff-manchas.png', 'quote' => 'A combinação do gel de limpeza com o tônico fez toda a diferença na minha rotina. Minha pele ficou com aspecto mais fresco e bem cuidada.'],
-                    ['category' => 'Acne + Oleosidade', 'customer' => 'Juliana R.', 'image' => 'diff-acne-oleosidade.png', 'quote' => 'O protetor solar é excelente! Espalha facilmente, não deixa resíduos brancos e a pele fica confortável mesmo depois de várias horas.'],
-                ];
-            @endphp
-            @foreach ($diffs as $diff)
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="fm-diff-card">
-                        <div class="fm-diff-card__media">
-                            <img src="{{ asset('images/home/' . $diff['image']) }}" alt="Antes e depois — {{ $diff['category'] }}">
-                            <span class="fm-pill fm-pill--dark fm-diff-card__before">Antes</span>
-                            <span class="fm-pill fm-pill--light fm-diff-card__after">Depois</span>
-                            <span class="fm-pill fm-pill--light fm-diff-card__category">{{ $diff['category'] }}</span>
-                        </div>
-                        <p class="fm-diff-card__name">{{ $diff['customer'] }}</p>
-                        <p class="fm-quote">&ldquo;{{ $diff['quote'] }}&rdquo;</p>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div>
-</section>
+@include('partials.diff-section')
 
 {{-- Produtos Naturais — beneficios (secao escura, Secca 2 / 214:194) --}}
 <section class="fm-benefits-dark">
     <div class="fm-container">
         <div class="row align-items-center g-5">
             <div class="col-12 col-lg-6">
-                <img src="{{ asset('images/home/benefits-dark-photo.png') }}" alt="Ingredientes naturais Flor de Marula" class="fm-benefits-dark__image">
+                <img src="{{ asset('images/home/benefits-dark-photo.png') }}" alt="Ingredientes naturais Flor de Marula" class="fm-benefits-dark__image" loading="lazy">
             </div>
             <div class="col-12 col-lg-6">
                 <div class="row g-4">
@@ -157,7 +121,7 @@
                     <div class="fm-compare-card__header fm-compare-card__header--us">
                         <p class="fm-heading-katibeh mb-0">Flor de Marula</p>
                     </div>
-                    <img src="{{ asset('images/home/compare-flor-de-marula.jpg') }}" alt="Flor de Marula" class="fm-compare-card__image">
+                    <img src="{{ asset('images/home/compare-flor-de-marula.jpg') }}" alt="Flor de Marula" class="fm-compare-card__image" loading="lazy">
                     <ul class="fm-compare-card__list">
                         @foreach (['Feito Por Nós', 'Ingredientes Naturais', 'Seguro durante a gravidez', 'Livre de químicos, parabenos', 'Pequeno Lote Fresco', 'Feito para Pele de Melanina'] as $item)
                             <li>
@@ -173,7 +137,7 @@
                     <div class="fm-compare-card__header fm-compare-card__header--them">
                         <p class="fm-heading-katibeh mb-0">Outros Produtos</p>
                     </div>
-                    <img src="{{ asset('images/home/compare-outros-produtos.png') }}" alt="Outros produtos" class="fm-compare-card__image">
+                    <img src="{{ asset('images/home/compare-outros-produtos.png') }}" alt="Outros produtos" class="fm-compare-card__image" loading="lazy">
                     <ul class="fm-compare-card__list">
                         @foreach (['Feito na China', 'SEM ingredientes naturais', 'NÃO é seguro para gravidez', 'NÃO químico, livre de parabenos', 'Grande Produção', 'Irrita a pele com melanina', 'Rotinas de 15 Min'] as $item)
                             <li>
@@ -189,21 +153,6 @@
 </section>
 
 {{-- Clientes adoram a Flor de Marula (214:280) --}}
-<section class="fm-testimonials">
-    <div class="fm-container">
-        <h2 class="fm-heading-lg text-center mb-2">+300.000 Clientes adoram a Flor de Marula</h2>
-        <p class="fm-body-lg text-center mb-5" style="font-size: 25px; font-weight: 200;">Veja o que alguns deles têm a dizer sobre seu produto favorito</p>
-        <div class="row g-4">
-            @foreach (['testimonial-1.png', 'testimonial-2.png', 'testimonial-3.png'] as $image)
-                <div class="col-12 col-md-4">
-                    <div class="fm-testimonial-card">
-                        <img src="{{ asset('images/home/' . $image) }}" alt="Cliente satisfeito Flor de Marula">
-                        <p class="fm-testimonial-card__caption mb-0">"Melhor sabonete de cúrcuma{{ "\n" }}do mercado</p>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div>
-</section>
+@include('partials.testimonials-section')
 
 @endsection

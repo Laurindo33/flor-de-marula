@@ -79,6 +79,27 @@
     border: none;
 }
 
+.fm-icon-btn--cart {
+    position: relative;
+}
+
+.fm-icon-btn__badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    min-width: 16px;
+    height: 16px;
+    padding: 0 4px;
+    border-radius: 999px;
+    background: var(--fm-primary);
+    color: var(--fm-white);
+    font-family: var(--fm-font-base);
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+}
+
 /* Product card */
 .fm-product-card {
     background: var(--fm-white);

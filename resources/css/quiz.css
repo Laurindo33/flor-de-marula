@@ -1,0 +1,89 @@
+/*
+ * Quiz da Pele — funcionalidade adicional sem frame no Figma (regra 74/68).
+ * Reutiliza a paleta e tipografia do Design System.
+ */
+
+.fm-quiz-hero {
+    background: radial-gradient(circle, var(--fm-peach-soft), var(--fm-peach));
+    padding-block: 60px 40px;
+}
+
+.fm-quiz {
+    padding-block: 40px 80px;
+}
+
+.fm-quiz-form {
+    max-width: 640px;
+    margin-inline: auto;
+}
+
+.fm-quiz-progress {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.fm-quiz-progress__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+}
+.fm-quiz-progress__dot.active {
+    background: var(--fm-primary);
+}
+
+.fm-quiz-step__title {
+    font-family: 'Alice', serif;
+    font-size: 26px;
+    text-align: center;
+    color: var(--fm-black);
+    margin-bottom: 28px;
+}
+
+.fm-quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.fm-quiz-option {
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: var(--fm-radius-sm);
+    padding: 16px 20px;
+    font-family: var(--fm-font-base);
+    font-size: 16px;
+    color: var(--fm-black);
+    cursor: pointer;
+    text-align: center;
+}
+
+.fm-quiz-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fm-quiz-option:has(input:checked) {
+    border-color: var(--fm-primary);
+    background: var(--fm-peach-soft);
+    color: var(--fm-primary);
+    font-weight: 600;
+}
+
+.fm-quiz-submit {
+    display: flex;
+    margin: 28px auto 0;
+}
+
+/* Resultado */
+.fm-quiz-result {
+    padding-block: 40px 80px;
+}
+
+.fm-quiz-result__actions {
+    text-align: center;
+    margin-top: 40px;
+}

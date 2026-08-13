@@ -1,0 +1,244 @@
+/* Centro de Ajuda — fiel aos frames "Contact Us" (197:398) e "Contactos - mobile" (216:1288) do Figma */
+
+/* Hero */
+.fm-ajuda-hero {
+    background: radial-gradient(circle, var(--fm-peach-soft), var(--fm-peach));
+    padding-block: 40px;
+}
+
+.fm-ajuda-hero__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+@media (min-width: 992px) {
+    .fm-ajuda-hero__grid {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+}
+
+.fm-ajuda-hero__text {
+    max-width: 742px;
+}
+
+.fm-ajuda-hero__paragraph {
+    font-family: var(--fm-font-base);
+    font-size: 16px;
+    line-height: 40px;
+    color: var(--fm-text);
+    white-space: pre-line;
+}
+
+.fm-ajuda-hero__image {
+    width: 100%;
+    max-width: 563px;
+    aspect-ratio: 563 / 626;
+    object-fit: cover;
+    border-radius: var(--fm-radius-md);
+}
+
+/* Corpo: canais + formulario */
+.fm-ajuda-body {
+    background: #fffefd;
+    padding-block: 60px;
+}
+
+.fm-ajuda-body__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+@media (min-width: 992px) {
+    .fm-ajuda-body__grid {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 94px;
+    }
+    .fm-ajuda-channels {
+        flex: 0 0 659px;
+    }
+    .fm-ajuda-form-col {
+        flex: 0 0 532px;
+    }
+}
+
+.fm-ajuda-channels__lead {
+    color: var(--fm-black);
+    margin-bottom: 6px;
+}
+
+.fm-ajuda-channels__text {
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--fm-text);
+    white-space: pre-line;
+    margin-bottom: 32px;
+}
+
+.fm-ajuda-channels__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 576px) {
+    .fm-ajuda-channels__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.fm-channel-card {
+    background: var(--fm-white);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
+    padding: 20px;
+}
+
+.fm-channel-card__badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 61px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.fm-channel-card__badge img {
+    width: 24px;
+    height: 24px;
+}
+
+.fm-channel-card__title {
+    font-family: var(--fm-font-base);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--fm-black);
+}
+
+.fm-channel-card__value {
+    display: block;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    color: var(--fm-black);
+    text-decoration: none;
+}
+a.fm-channel-card__value:hover {
+    color: var(--fm-primary);
+}
+
+/* Formulario */
+.fm-ajuda-form-col__lead {
+    color: var(--fm-black);
+    margin-bottom: 6px;
+}
+
+.fm-ajuda-form-col__text {
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    line-height: 22px;
+    color: var(--fm-text);
+    margin-bottom: 24px;
+}
+
+.fm-ajuda-form {
+    background: var(--fm-white);
+    border-radius: 10px;
+    box-shadow: var(--fm-shadow-sm);
+    padding: 32px 28px;
+}
+
+.fm-ajuda-form__field {
+    margin-bottom: 20px;
+}
+
+.fm-ajuda-form__field label {
+    display: block;
+    font-family: var(--fm-font-base);
+    font-size: 16px;
+    color: var(--fm-black);
+    margin-bottom: 6px;
+}
+
+.fm-ajuda-form__field input,
+.fm-ajuda-form__field textarea {
+    width: 100%;
+    border: 1px solid rgba(198, 198, 198, 0.9);
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    color: var(--fm-black);
+    resize: vertical;
+}
+
+.fm-ajuda-form__field input::placeholder,
+.fm-ajuda-form__field textarea::placeholder {
+    color: var(--fm-muted);
+}
+
+.fm-ajuda-form__error {
+    font-family: var(--fm-font-base);
+    font-size: 13px;
+    color: #c0392b;
+    margin: 6px 0 0;
+}
+
+.fm-ajuda-form__submit {
+    width: 100%;
+    background: var(--fm-primary);
+    color: var(--fm-white);
+    border: none;
+    border-radius: 5px;
+    height: 52px;
+    font-family: var(--fm-font-base);
+    font-weight: 500;
+    font-size: 16px;
+}
+.fm-ajuda-form__submit:hover {
+    opacity: 0.9;
+}
+
+.fm-ajuda-form__success {
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    color: var(--fm-primary);
+    margin: 12px 0 0;
+}
+
+/* Mapa */
+.fm-ajuda-map {
+    background: #fff2ed;
+    padding-block: 50px;
+}
+
+.fm-ajuda-map__image {
+    width: 100%;
+    aspect-ratio: 1350 / 413;
+    object-fit: cover;
+    border: 1px solid var(--fm-primary);
+    border-radius: var(--fm-radius-sm);
+    margin-bottom: 20px;
+}
+
+.fm-ajuda-map__row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.fm-ajuda-map__address {
+    font-family: var(--fm-font-base);
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--fm-black);
+}

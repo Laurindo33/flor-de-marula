@@ -17,8 +17,8 @@
                 <ul class="list-unstyled d-flex flex-column gap-2 fs-6">
                     <li><a href="{{ route('home') }}">Início</a></li>
                     <li><a href="{{ route('shop.index') }}">Loja</a></li>
-                    <li><a href="#">Clientes Satisfeitos</a></li>
-                    <li><a href="#">Nossa História</a></li>
+                    <li><a href="{{ route('reviews.index') }}">Clientes Satisfeitos</a></li>
+                    <li><a href="{{ route('historia.index') }}">Nossa História</a></li>
                 </ul>
             </div>
 

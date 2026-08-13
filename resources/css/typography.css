@@ -50,6 +50,34 @@ body {
     line-height: 1;
 }
 
+.fm-heading-instrument {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 1.1;
+}
+
+.fm-heading-md {
+    font-family: 'Alice', serif;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 80px;
+}
+
+.fm-heading-sm {
+    font-family: 'Alice', serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 80px;
+}
+
+.fm-heading-jomolhari {
+    font-family: 'Jomolhari', serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 80px;
+}
+
 /* Corpo de texto */
 .fm-body-lg {
     font-family: var(--fm-font-base);

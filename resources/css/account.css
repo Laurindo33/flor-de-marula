@@ -1,0 +1,172 @@
+/*
+ * Autenticacao e Minha Conta — sem frame no Figma (regra 74). Reutiliza os
+ * tokens de formulario ja criados em checkout.css (.fm-checkout-field) e o
+ * resto do Design System.
+ */
+
+.fm-auth {
+    padding-block: 60px 100px;
+}
+
+.fm-auth-card {
+    max-width: 440px;
+    margin-inline: auto;
+    background: var(--fm-cream);
+    border-radius: var(--fm-radius-md);
+    padding: 36px 32px;
+}
+
+.fm-auth-remember {
+    font-family: var(--fm-font-base);
+    font-size: 13px;
+    color: var(--fm-text);
+    margin-bottom: 20px;
+}
+
+.fm-auth-switch {
+    text-align: center;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    margin: 20px 0 0;
+}
+.fm-auth-switch a {
+    color: var(--fm-primary);
+    text-decoration: underline;
+}
+
+/* Minha Conta */
+.fm-account {
+    padding-block: 40px 80px;
+}
+
+.fm-account__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@media (min-width: 992px) {
+    .fm-account__grid {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+    }
+    .fm-account-nav {
+        flex: 0 0 220px;
+        position: sticky;
+        top: 24px;
+    }
+    .fm-account__content {
+        flex: 1 1 auto;
+    }
+}
+
+.fm-account-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    background: var(--fm-cream);
+    border-radius: var(--fm-radius-md);
+    padding: 16px;
+}
+
+@media (min-width: 992px) {
+    .fm-account-nav {
+        flex-direction: column;
+    }
+}
+
+.fm-account-nav__link {
+    display: block;
+    padding: 10px 14px;
+    border-radius: var(--fm-radius-sm);
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    color: var(--fm-text);
+    text-decoration: none;
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+}
+.fm-account-nav__link:hover,
+.fm-account-nav__link.active {
+    background: var(--fm-white);
+    color: var(--fm-primary);
+}
+.fm-account-nav__logout {
+    color: #c0392b;
+}
+
+.fm-account-form {
+    max-width: 520px;
+    margin-bottom: 40px;
+}
+
+.fm-account__recent-title {
+    margin-top: 40px;
+}
+
+.fm-account-orders {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.fm-account-order-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: var(--fm-cream);
+    border-radius: var(--fm-radius-sm);
+    padding: 14px 18px;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    color: var(--fm-black);
+    text-decoration: none;
+}
+a.fm-account-order-row:hover {
+    background: var(--fm-peach-soft);
+}
+
+.fm-address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.fm-address-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background: var(--fm-cream);
+    border-radius: var(--fm-radius-sm);
+    padding: 16px 18px;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+}
+
+.fm-address-card__label {
+    font-weight: 600;
+    color: var(--fm-black);
+}
+
+/* Selects reaproveitam o estilo dos inputs do checkout */
+.fm-checkout-field select,
+.fm-checkout-field textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: var(--fm-radius-sm);
+    padding: 10px 14px;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+}
+.fm-checkout-field select {
+    height: 46px;
+}

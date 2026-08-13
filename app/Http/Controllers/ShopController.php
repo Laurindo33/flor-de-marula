@@ -2,14 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class ShopController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::orderBy('sort_order')->get();
+        $categories = Cache::remember('shop.categories', now()->addHour(), function () {
+            return Category::orderBy('sort_order')->get();
+        });
 
-        return view('shop.index', compact('products'));
+        $activeCategory = $request->string('categoria')->toString();
+
+        $products = Product::active()
+            ->when($activeCategory, fn ($query) => $query->whereHas(
+                'categories',
+                fn ($q) => $q->where('slug', $activeCategory)
+            ))
+            ->orderBy('sort_order')
+            ->paginate(12)
+            ->withQueryString();
+
+        return view('shop.index', compact('products', 'categories', 'activeCategory'));
     }
 }

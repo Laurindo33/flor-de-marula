@@ -1,0 +1,465 @@
+/*
+ * Detalhes do Produto — fiel ao frame "Detalhes" (id 155:995) e "Detalhes - mobile"
+ * do Figma. "Iosevka Charon Mono" (nome do produto) nao existe no Google Fonts —
+ * mantem-se o nome exato com fallback monospace, como ja feito para "Charis SIL".
+ */
+
+.fm-pdp {
+    padding-block: 40px 60px;
+}
+
+.fm-pdp__body {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+@media (min-width: 992px) {
+    .fm-pdp__body {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+    }
+}
+
+/* Coluna A — miniaturas */
+.fm-pdp__thumbs {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    overflow-x: auto;
+}
+
+@media (min-width: 992px) {
+    .fm-pdp__thumbs {
+        flex-direction: column;
+        flex: 0 0 105px;
+        overflow: visible;
+    }
+}
+
+.fm-pdp__thumb {
+    flex: 0 0 auto;
+    width: 80px;
+    height: 72px;
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: var(--fm-radius-sm);
+    overflow: hidden;
+    background: none;
+    cursor: pointer;
+}
+
+@media (min-width: 992px) {
+    .fm-pdp__thumb {
+        width: 105px;
+        height: 94px;
+    }
+}
+
+.fm-pdp__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fm-pdp__thumb.active {
+    border-color: var(--fm-primary);
+}
+
+/* Coluna B — imagem principal + garantia + rotina */
+.fm-pdp__visual {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media (min-width: 992px) {
+    .fm-pdp__visual {
+        flex: 1 1 auto;
+    }
+}
+
+.fm-pdp__main-image {
+    position: relative;
+    border-radius: var(--fm-radius-md);
+    overflow: hidden;
+}
+
+.fm-pdp__main-image img {
+    width: 100%;
+    aspect-ratio: 747 / 538;
+    object-fit: cover;
+    display: block;
+}
+
+.fm-pdp__guarantee-badge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--fm-primary), var(--fm-dark));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--fm-white);
+    padding: 10px;
+}
+
+.fm-pdp__guarantee-badge img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px;
+}
+
+.fm-pdp__guarantee-badge-days {
+    font-family: 'Impact', sans-serif;
+    font-size: 22px;
+    line-height: 1;
+}
+
+.fm-pdp__guarantee-badge-text {
+    font-family: var(--fm-font-base);
+    font-weight: 600;
+    font-size: 10px;
+    white-space: pre-line;
+}
+
+.fm-pdp__guarantee-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-family: var(--fm-font-base);
+    font-size: 15px;
+    color: var(--fm-text);
+}
+
+.fm-pdp__guarantee-text-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.fm-pdp__routine-title {
+    font-family: var(--fm-font-base);
+    font-weight: 400;
+    font-size: 30px;
+    color: var(--fm-black);
+    margin-bottom: 8px;
+}
+
+.fm-pdp__routine-subtitle {
+    font-family: var(--fm-font-base);
+    font-size: 22px;
+    color: var(--fm-black);
+    margin-bottom: 20px;
+}
+
+.fm-pdp__routine-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--fm-peach-soft);
+    border-radius: var(--fm-radius-sm);
+    padding: 16px 24px;
+    flex-wrap: wrap;
+}
+
+.fm-pdp__routine-card img {
+    width: 87px;
+    height: 74px;
+    object-fit: cover;
+    border-radius: var(--fm-radius-sm);
+}
+
+.fm-pdp__routine-card-name {
+    font-family: var(--fm-font-base);
+    font-size: 25px;
+    color: var(--fm-black);
+}
+
+.fm-pdp__routine-card-compare {
+    font-family: var(--fm-font-base);
+    font-size: 16px;
+    color: var(--fm-text);
+    text-decoration: line-through;
+    margin-left: 8px;
+}
+
+.fm-pdp__routine-cta {
+    border-radius: 10px;
+    height: 55px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: auto;
+}
+
+/* Coluna C — informacao do produto */
+.fm-pdp__info {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 992px) {
+    .fm-pdp__info {
+        flex: 0 0 443px;
+    }
+}
+
+.fm-pdp__name {
+    font-family: 'Iosevka Charon Mono', 'JetBrains Mono', monospace;
+    font-weight: 400;
+    font-size: 38px;
+    color: var(--fm-text-strong);
+    margin-bottom: 12px;
+}
+
+@media (min-width: 992px) {
+    .fm-pdp__name {
+        font-size: 50px;
+    }
+}
+
+.fm-pdp__avatars {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 16px;
+}
+
+.fm-pdp__avatars img {
+    width: 24px;
+    height: 25px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.fm-pdp__price {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.fm-pdp__price-compare {
+    font-family: var(--fm-font-base);
+    font-size: 18px;
+    color: var(--fm-muted);
+    text-decoration: line-through;
+}
+
+.fm-pdp__price-current {
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--fm-primary);
+}
+
+.fm-pdp__discount-badge {
+    margin-bottom: 20px;
+}
+
+.fm-pdp__benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fm-pdp__benefits li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--fm-font-base);
+    font-size: 18px;
+    color: var(--fm-text-strong);
+}
+
+.fm-pdp__benefits img {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+}
+
+.fm-pdp__offers-title {
+    font-family: var(--fm-font-base);
+    font-size: 20px;
+    color: var(--fm-text-strong);
+    margin-bottom: 12px;
+}
+
+.fm-pdp__offers-grid {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.fm-pdp__offer {
+    flex: 0 0 124px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--fm-white);
+    border-radius: 10px;
+    box-shadow: var(--fm-shadow-md);
+    padding: 10px 8px 12px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.fm-pdp__offer input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fm-pdp__offer img {
+    width: 72px;
+    height: 58px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 8px;
+}
+
+.fm-pdp__offer-label {
+    display: block;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    color: var(--fm-black);
+}
+
+.fm-pdp__offer-price {
+    display: block;
+    font-family: var(--fm-font-base);
+    font-size: 12px;
+    color: var(--fm-black);
+}
+
+.fm-pdp__offer.active {
+    outline: 2px solid var(--fm-primary);
+}
+
+.fm-pdp__offer-clear {
+    display: block;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 10px;
+    font-family: var(--fm-font-base);
+    font-size: 13px;
+    color: var(--fm-text);
+    text-decoration: underline;
+}
+.fm-pdp__offer-clear:hover {
+    color: var(--fm-primary);
+}
+
+.fm-pdp__add-form {
+    margin-bottom: 24px;
+}
+
+.fm-pdp__add-btn {
+    width: 100%;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* Acordeao — sobrepoe estilo padrao do Bootstrap */
+.fm-pdp__accordion .accordion-item {
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    background: transparent;
+}
+
+.fm-pdp__accordion .accordion-button {
+    font-family: var(--fm-font-base);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--fm-text-strong);
+    background: transparent;
+    padding: 18px 0;
+    box-shadow: none;
+}
+
+.fm-pdp__accordion .accordion-button:not(.collapsed) {
+    color: var(--fm-primary);
+    background: transparent;
+    box-shadow: none;
+}
+
+.fm-pdp__accordion .accordion-button:focus {
+    box-shadow: none;
+}
+
+.fm-pdp__accordion .accordion-button::after {
+    width: 14px;
+    height: 14px;
+    background-size: 14px;
+}
+
+.fm-pdp__accordion .accordion-body {
+    padding: 0 0 20px;
+    font-family: var(--fm-font-base);
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--fm-text);
+    white-space: pre-line;
+}
+
+.fm-pdp__faq-question {
+    font-weight: 600;
+    color: var(--fm-text-strong);
+}
+
+/* Ingredientes */
+.fm-pdp-ingredients {
+    padding-block: 60px;
+    background: var(--fm-cream);
+}
+
+.fm-pdp-ingredients__list {
+    font-family: var(--fm-font-base);
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--fm-black);
+}
+
+.fm-pdp-ingredients__card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.fm-pdp-ingredients__card img {
+    width: 90px;
+    height: 78px;
+    object-fit: cover;
+    border-radius: var(--fm-radius-sm);
+    flex-shrink: 0;
+}
+
+.fm-pdp-ingredients__card-name {
+    font-family: var(--fm-font-base);
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--fm-black);
+}
+
+.fm-pdp-ingredients__card-desc {
+    font-family: var(--fm-font-base);
+    font-weight: 200;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--fm-black);
+}

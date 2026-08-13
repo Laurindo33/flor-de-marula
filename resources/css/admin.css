@@ -1,0 +1,350 @@
+/*
+ * CMS Flor de Marula — layout proprio (nao copia o layout da loja), mas
+ * reutiliza a paleta e tipografia da marca ja definidas em variables.css.
+ */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import './variables.css';
+
+body.fm-admin-body {
+    font-family: var(--fm-font-base);
+    background: #f5f3ef;
+    color: var(--fm-text);
+}
+
+.fm-admin-shell {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.fm-admin-sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    background: var(--fm-secondary);
+    color: var(--fm-white);
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.fm-admin-sidebar__brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    font-family: 'Alice', serif;
+    font-size: 20px;
+    color: var(--fm-accent);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fm-admin-nav {
+    flex: 1 1 auto;
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.fm-admin-nav__label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.4);
+    padding: 16px 12px 6px;
+}
+
+.fm-admin-nav a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: var(--fm-radius-sm);
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+}
+.fm-admin-nav a:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--fm-white);
+}
+.fm-admin-nav a.active {
+    background: var(--fm-primary);
+    color: var(--fm-white);
+}
+
+.fm-admin-sidebar__footer {
+    padding: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.fm-admin-sidebar__footer form button {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    padding: 8px 12px;
+}
+.fm-admin-sidebar__footer form button:hover {
+    color: var(--fm-white);
+}
+
+/* Main */
+.fm-admin-main {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.fm-admin-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--fm-white);
+    padding: 16px 28px;
+    border-bottom: 1px solid #e5e1d8;
+}
+
+.fm-admin-topbar__title {
+    font-family: 'Alice', serif;
+    font-size: 22px;
+    color: var(--fm-black);
+}
+
+.fm-admin-topbar__user {
+    font-size: 13px;
+    color: var(--fm-muted);
+}
+.fm-admin-topbar__user strong {
+    color: var(--fm-black);
+}
+
+.fm-admin-content {
+    padding: 28px;
+}
+
+/* Cards / KPIs */
+.fm-admin-kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.fm-admin-kpi {
+    background: var(--fm-white);
+    border-radius: var(--fm-radius-md);
+    padding: 20px;
+    box-shadow: var(--fm-shadow-sm);
+}
+
+.fm-admin-kpi__label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--fm-muted);
+    margin-bottom: 8px;
+}
+
+.fm-admin-kpi__value {
+    font-family: 'Inria Sans', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: var(--fm-black);
+}
+
+.fm-admin-card {
+    background: var(--fm-white);
+    border-radius: var(--fm-radius-md);
+    box-shadow: var(--fm-shadow-sm);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.fm-admin-card__title {
+    font-family: 'Alice', serif;
+    font-size: 19px;
+    color: var(--fm-black);
+    margin-bottom: 16px;
+}
+
+/* Tables */
+.fm-admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.fm-admin-table th {
+    text-align: left;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--fm-muted);
+    padding: 10px 12px;
+    border-bottom: 2px solid #eee;
+}
+.fm-admin-table td {
+    padding: 12px;
+    border-bottom: 1px solid #f0efe9;
+    vertical-align: middle;
+}
+.fm-admin-table tr:hover td {
+    background: #faf9f6;
+}
+
+.fm-admin-table-wrap {
+    overflow-x: auto;
+}
+
+/* Badges */
+.fm-badge {
+    display: inline-block;
+    border-radius: 999px;
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.fm-badge--success { background: #eafaf0; color: #1b7a43; }
+.fm-badge--warning { background: #fff6e0; color: #8a6d00; }
+.fm-badge--danger { background: #fdecea; color: #c0392b; }
+.fm-badge--neutral { background: #eee; color: #555; }
+.fm-badge--primary { background: var(--fm-rose-badge); color: var(--fm-primary); }
+
+/* Buttons */
+.fm-admin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: var(--fm-radius-sm);
+    padding: 9px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.fm-admin-btn--primary {
+    background: var(--fm-primary);
+    color: var(--fm-white);
+}
+.fm-admin-btn--primary:hover { opacity: 0.9; color: var(--fm-white); }
+.fm-admin-btn--outline {
+    background: var(--fm-white);
+    border-color: #ddd;
+    color: var(--fm-black);
+}
+.fm-admin-btn--outline:hover { border-color: var(--fm-primary); color: var(--fm-primary); }
+.fm-admin-btn--danger {
+    background: #fdecea;
+    color: #c0392b;
+}
+.fm-admin-btn--danger:hover { background: #f8d7d4; }
+.fm-admin-btn--sm { padding: 5px 10px; font-size: 12px; }
+
+/* Forms */
+.fm-admin-field {
+    margin-bottom: 18px;
+}
+.fm-admin-field label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--fm-black);
+    margin-bottom: 6px;
+}
+.fm-admin-field input[type="text"],
+.fm-admin-field input[type="email"],
+.fm-admin-field input[type="password"],
+.fm-admin-field input[type="number"],
+.fm-admin-field input[type="date"],
+.fm-admin-field input[type="url"],
+.fm-admin-field select,
+.fm-admin-field textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: var(--fm-radius-sm);
+    padding: 9px 12px;
+    font-size: 14px;
+    font-family: var(--fm-font-base);
+}
+.fm-admin-field textarea { resize: vertical; }
+.fm-admin-field small {
+    display: block;
+    color: var(--fm-muted);
+    font-size: 12px;
+    margin-top: 4px;
+}
+.fm-admin-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.fm-admin-checkbox input { width: auto; }
+
+.fm-admin-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+.fm-admin-filters a {
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-size: 13px;
+    color: var(--fm-text);
+    text-decoration: none;
+}
+.fm-admin-filters a.active {
+    background: var(--fm-primary);
+    border-color: var(--fm-primary);
+    color: var(--fm-white);
+}
+
+.fm-admin-alert {
+    border-radius: var(--fm-radius-sm);
+    padding: 12px 16px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.fm-admin-alert--success { background: #eafaf0; color: #1b7a43; }
+.fm-admin-alert--error { background: #fdecea; color: #c0392b; }
+
+.fm-admin-login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, var(--fm-peach-soft), var(--fm-peach));
+}
+.fm-admin-login__card {
+    background: var(--fm-white);
+    border-radius: var(--fm-radius-md);
+    padding: 40px 36px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: var(--fm-shadow-md);
+}
+.fm-admin-login__title {
+    font-family: 'Alice', serif;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 4px;
+}
+.fm-admin-login__subtitle {
+    text-align: center;
+    color: var(--fm-muted);
+    font-size: 13px;
+    margin-bottom: 24px;
+}
+
+.fm-admin-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--fm-muted);
+}
+
+.fm-admin-pagination {
+    margin-top: 20px;
+}

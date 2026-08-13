@@ -1,0 +1,176 @@
+/* Nossa Historia — fiel aos frames "Nossa Historia" (186:2) e "Nossa Historia - mobile" (216:1108) do Figma */
+
+/* Hero "Sobre Nos" */
+.fm-historia-hero {
+    background: radial-gradient(circle, var(--fm-peach-soft), var(--fm-peach));
+    padding-block: 40px 40px;
+}
+
+.fm-historia-hero__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+@media (min-width: 992px) {
+    .fm-historia-hero__grid {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+    }
+}
+
+.fm-historia-hero__text {
+    max-width: 742px;
+}
+
+.fm-historia-hero__paragraph {
+    font-family: var(--fm-font-base);
+    font-size: 16px;
+    line-height: 40px;
+    color: var(--fm-text);
+    white-space: pre-line;
+    margin-bottom: 24px;
+}
+
+.fm-historia-hero__image {
+    width: 100%;
+    max-width: 563px;
+    aspect-ratio: 563 / 626;
+    object-fit: cover;
+    border-radius: var(--fm-radius-md);
+}
+
+/* Nossa Historia — corpo */
+.fm-historia-body {
+    padding-block: 60px;
+}
+
+.fm-historia-body__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+@media (min-width: 992px) {
+    .fm-historia-body__grid {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 60px;
+    }
+}
+
+.fm-historia-body__text {
+    max-width: 805px;
+}
+
+.fm-historia-body__lead {
+    color: var(--fm-black);
+    margin-bottom: 16px;
+}
+
+.fm-historia-body__paragraph {
+    font-family: var(--fm-font-base);
+    font-size: 16px;
+    line-height: 40px;
+    color: var(--fm-text);
+    white-space: pre-line;
+}
+
+.fm-historia-body__image {
+    width: 100%;
+    max-width: 485px;
+    aspect-ratio: 485 / 627;
+    object-fit: cover;
+    border-radius: var(--fm-radius-md);
+    flex-shrink: 0;
+}
+
+/* Nossa Filosofia */
+.fm-historia-filosofia {
+    background: var(--fm-dark);
+    padding-block: 60px;
+}
+
+.fm-filosofia-card {
+    background: var(--fm-primary);
+    border-radius: 20px;
+    padding: 24px 28px;
+    text-align: center;
+    height: 100%;
+}
+
+.fm-filosofia-card__title {
+    font-family: var(--fm-font-base);
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--fm-white);
+    margin-bottom: 10px;
+}
+
+.fm-filosofia-card__text {
+    font-family: var(--fm-font-base);
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--fm-white);
+}
+
+/* Nossos Valores */
+.fm-historia-valores {
+    background: var(--fm-cream);
+    padding-block: 60px;
+}
+
+.fm-historia-valores__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+@media (min-width: 992px) {
+    .fm-historia-valores__grid {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 60px;
+    }
+}
+
+.fm-historia-valores__text {
+    max-width: 805px;
+}
+
+.fm-historia-valores__image {
+    width: 100%;
+    max-width: 403px;
+    aspect-ratio: 403 / 467;
+    object-fit: cover;
+    border-radius: var(--fm-radius-md);
+    flex-shrink: 0;
+}
+
+.fm-historia-valores__list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fm-historia-valores__item-title {
+    font-family: var(--fm-font-base);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--fm-black);
+}
+
+.fm-historia-valores__item-text {
+    font-family: var(--fm-font-base);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--fm-text);
+}
