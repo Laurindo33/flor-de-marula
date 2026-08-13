@@ -174,3 +174,67 @@
     line-height: 1.6;
     color: var(--fm-text);
 }
+
+@media (max-width: 991.98px) {
+    .fm-historia-hero__text,
+    .fm-historia-body__text,
+    .fm-historia-valores__text {
+        text-align: center;
+    }
+
+    .fm-historia-valores__list {
+        align-items: center;
+    }
+
+    .fm-historia-hero__text .fm-heading-xl {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .fm-historia-hero__text .fm-body-lg {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .fm-historia-hero__paragraph {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .fm-historia-hero__text .fm-btn {
+        width: 100%;
+    }
+
+    .fm-historia-body__text .fm-heading-md {
+        font-size: 24px;
+    }
+
+    .fm-historia-body__lead {
+        font-size: 14px;
+    }
+
+    .fm-historia-body__paragraph {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .fm-filosofia-card__title {
+        font-size: 18px;
+    }
+
+    .fm-filosofia-card__text {
+        font-size: 13px;
+    }
+
+    .fm-historia-valores__text .fm-heading-jomolhari {
+        font-size: 20px;
+    }
+
+    .fm-historia-valores__item-title {
+        font-size: 15px;
+    }
+
+    .fm-historia-valores__item-text {
+        font-size: 13px;
+    }
+}

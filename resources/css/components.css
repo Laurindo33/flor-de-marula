@@ -53,6 +53,7 @@
     height: 106px;
     display: flex;
     align-items: center;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .fm-nav-link {

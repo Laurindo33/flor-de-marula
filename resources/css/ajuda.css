@@ -222,7 +222,6 @@ a.fm-channel-card__value:hover {
 .fm-ajuda-map__image {
     width: 100%;
     aspect-ratio: 1350 / 413;
-    object-fit: cover;
     border: 1px solid var(--fm-primary);
     border-radius: var(--fm-radius-sm);
     margin-bottom: 20px;

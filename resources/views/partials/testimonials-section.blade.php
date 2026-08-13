@@ -6,7 +6,7 @@
         @else
             <h2 class="fm-heading-lg text-center mb-2">+300.000 Clientes adoram a Flor de Marula</h2>
         @endif
-        <p class="fm-body-lg text-center mb-5" style="font-size: 25px; font-weight: 200;">Veja o que alguns deles têm a dizer sobre seu produto favorito</p>
+        <p class="fm-body-lg fm-testimonials__subtitle text-center mb-5">Veja o que alguns deles têm a dizer sobre seu produto favorito</p>
         @php $testimonialVideos = ['testimonial-1.mp4', 'testimonial-2.mp4', 'testimonial-3.mp4']; @endphp
         <div class="row g-4 fm-testimonial-cards{{ !empty($homeHeadingStyle) ? ' fm-testimonial-cards--carousel' : '' }}">
             @foreach ($testimonialVideos as $video)

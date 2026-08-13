@@ -88,7 +88,13 @@
 {{-- Mapa, Endereco e Direcoes (Secção Nosso melhor / Banner) --}}
 <section class="fm-ajuda-map">
     <div class="fm-container">
-        <img src="{{ asset('images/ajuda/map.png') }}" alt="Mapa — Talatona, Mirantes, Luanda, Angola" class="fm-ajuda-map__image" loading="lazy">
+        <iframe
+            src="https://www.google.com/maps?q={{ urlencode('Condomínio Mirantes do Talatona, Talatona, Luanda, Angola') }}&output=embed"
+            class="fm-ajuda-map__image"
+            title="Mapa — Talatona, Mirantes, Luanda, Angola"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
         <div class="fm-ajuda-map__row">
             <span class="fm-ajuda-map__address">Talatona, mirantes, Luanda, Angola</span>
             <a href="https://maps.google.com/?q=Talatona,Luanda,Angola" target="_blank" rel="noopener" class="fm-btn fm-btn-primary">Direções</a>

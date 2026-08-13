@@ -11,9 +11,18 @@ class ShopController extends Controller
 {
     public function index(Request $request)
     {
-        $categories = Cache::remember('shop.categories', now()->addHour(), function () {
-            return Category::orderBy('sort_order')->get();
-        });
+        try {
+            $categories = Cache::remember('shop.categories', now()->addHour(), function () {
+                return Category::orderBy('sort_order')->get();
+            });
+        } catch (\Throwable $e) {
+            $categories = null;
+        }
+
+        if (!$categories instanceof \Illuminate\Support\Collection) {
+            Cache::forget('shop.categories');
+            $categories = Category::orderBy('sort_order')->get();
+        }
 
         $activeCategory = $request->string('categoria')->toString();
 

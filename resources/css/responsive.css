@@ -12,6 +12,23 @@
         font-size: 25px;
     }
 
+    .fm-best-product-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    .fm-best-product-section .fm-product-card__name {
+        font-size: 16px;
+    }
+
+    .fm-best-product-section .fm-price {
+        font-size: 18px;
+    }
+
+    .fm-best-product-section .fm-product-card .fm-cta-label {
+        font-size: 14px;
+    }
+
     .fm-guarantee {
         background: var(--fm-cream);
     }

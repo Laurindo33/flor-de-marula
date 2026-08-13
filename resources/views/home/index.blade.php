@@ -61,11 +61,11 @@
 </section>
 
 {{-- Nosso Melhor Produto (214:86) --}}
-<section class="py-5">
+<section class="py-5 fm-best-product-section">
     <div class="fm-container">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
-            <h2 class="fm-heading-italiana fm-heading-split mb-0">Nosso Melhor <span class="fm-accent-word">Produto</span></h2>
-            <a href="#" class="fm-btn fm-btn-primary fm-cta-label">Ver Todos</a>
+            <h2 class="fm-heading-italiana fm-heading-split fm-best-product-title mb-0">Nosso Melhor <span class="fm-accent-word">Produto</span></h2>
+            <a href="#" class="fm-btn fm-btn-primary fm-cta-label d-none d-lg-inline-flex">Ver Todos</a>
         </div>
         <div class="row g-4">
             @foreach ($bestProducts as $product)
@@ -74,6 +74,7 @@
                 </div>
             @endforeach
         </div>
+        <a href="#" class="fm-btn fm-btn-primary fm-cta-label d-flex d-lg-none w-100 mt-4">Ver Todos</a>
     </div>
 </section>
 
@@ -121,7 +122,7 @@
                     </div>
                     <img src="{{ asset('images/home/compare-flor-de-marula.jpg') }}" alt="Flor de Marula" class="fm-compare-card__image" loading="lazy">
                     <ul class="fm-compare-card__list">
-                        @foreach (['Feito Por Nós', 'Ingredientes Naturais', 'Seguro durante a gravidez', 'Livre de químicos, parabenos', 'Pequeno Lote Fresco', 'Feito para Pele de Melanina'] as $item)
+                        @foreach (['Feito Por Nós', 'Ingredientes Naturais', 'Seguro durante a gravidez', 'Livre de químicos, parabenos', 'Pequeno Lote Fresco', 'Feito para Pele de Melanina', '3-5 minutos por dia'] as $item)
                             <li>
                                 <img src="{{ asset('images/home/icon-check.png') }}" alt="">
                                 <span>{{ $item }}</span>
@@ -137,7 +138,7 @@
                     </div>
                     <img src="{{ asset('images/home/compare-outros-produtos.png') }}" alt="Outros produtos" class="fm-compare-card__image" loading="lazy">
                     <ul class="fm-compare-card__list">
-                        @foreach (['Feito na China', 'SEM ingredientes naturais', 'NÃO é seguro para gravidez', 'NÃO químico, livre de parabenos', 'Grande Produção', 'Irrita a pele com melanina', 'Rotinas de 15 Min'] as $item)
+                        @foreach (['Feito na China', 'SEM ingredientes naturais', 'NÃO é seguro para gravidez', 'Com químicos e parabenos', 'Grande Produção', 'Irrita a pele com melanina', 'Rotinas de 15 Min'] as $item)
                             <li>
                                 <img src="{{ asset('images/home/icon-cross.png') }}" alt="">
                                 <span>{{ $item }}</span>
