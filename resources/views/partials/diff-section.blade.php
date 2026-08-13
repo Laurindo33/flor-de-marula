@@ -9,7 +9,11 @@
 @endphp
 <section class="fm-diff-section">
     <div class="fm-container">
-        <h2 class="fm-heading-lg text-center mb-5">A Diferença dos Nossos Produtos</h2>
+        @if (!empty($homeHeadingStyle))
+            <h2 class="fm-heading-italiana fm-heading-split text-center mb-5">A Diferença dos Nossos <span class="fm-accent-word">Produtos</span></h2>
+        @else
+            <h2 class="fm-heading-lg text-center mb-5">A Diferença dos Nossos Produtos</h2>
+        @endif
         <div class="row g-4">
             @foreach ($diffs as $diff)
                 <div class="col-12 col-md-6 col-lg-3">

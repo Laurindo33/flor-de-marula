@@ -128,15 +128,23 @@
 }
 
 /* Trend card (produtos em alta) */
+.fm-trend__cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 20px;
+}
+
 .fm-trend-card {
     background: var(--fm-rose-bg);
     border-radius: var(--fm-radius-md);
-    box-shadow: 0 0 5px var(--fm-rose-shadow);
+    box-shadow: var(--fm-shadow-sm);
     padding: 16px 20px;
     display: flex;
     align-items: center;
     gap: 20px;
     position: relative;
+    flex: 0 1 360px;
 }
 
 .fm-trend-card__image {
@@ -144,6 +152,17 @@
     height: 100px;
     object-fit: contain;
     flex-shrink: 0;
+}
+
+.fm-trend-card__name {
+    font-family: var(--fm-font-base);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--fm-text-strong);
+}
+
+.fm-trend-card .fm-price {
+    color: var(--fm-black);
 }
 
 .fm-discount-badge {

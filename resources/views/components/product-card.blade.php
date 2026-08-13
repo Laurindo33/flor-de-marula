@@ -4,7 +4,7 @@
     <div class="fm-trend-card">
         <img src="{{ asset($product->image_path) }}" alt="{{ $product->name }}" class="fm-trend-card__image">
         <div class="flex-grow-1">
-            <p class="fm-product-card__name mb-1" style="font-size: 18px;">{{ $product->name }}</p>
+            <p class="fm-trend-card__name mb-1">{{ $product->name }}</p>
             <p class="fm-price mb-1">{{ $product->formatted_price }}</p>
             @if ($product->discount_percent)
                 <span class="fm-discount-badge">{{ $product->discount_percent }}% de desconto</span>

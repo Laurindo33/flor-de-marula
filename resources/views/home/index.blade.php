@@ -25,11 +25,9 @@
             <div class="fm-trend">
                 <p class="fm-trend__title d-none d-lg-flex">Produtos{{ "\n" }}Em Alta</p>
                 <p class="fm-trend__title d-flex d-lg-none">Produtos em Alta</p>
-                <div class="row g-3 flex-grow-1">
+                <div class="fm-trend__cards flex-grow-1">
                     @foreach ($trendingProducts as $product)
-                        <div class="col-12 col-md-6">
-                            <x-product-card :product="$product" variant="trend" />
-                        </div>
+                        <x-product-card :product="$product" variant="trend" />
                     @endforeach
                 </div>
             </div>
@@ -66,7 +64,7 @@
 <section class="py-5">
     <div class="fm-container">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
-            <h2 class="fm-heading-lg mb-0">Nosso Melhor Produto</h2>
+            <h2 class="fm-heading-italiana fm-heading-split mb-0">Nosso Melhor <span class="fm-accent-word">Produto</span></h2>
             <a href="#" class="fm-btn fm-btn-primary fm-cta-label">Ver Todos</a>
         </div>
         <div class="row g-4">
@@ -80,7 +78,7 @@
 </section>
 
 {{-- A Diferenca dos Nossos Produtos (214:121) --}}
-@include('partials.diff-section')
+@include('partials.diff-section', ['homeHeadingStyle' => true])
 
 {{-- Produtos Naturais — beneficios (secao escura, Secca 2 / 214:194) --}}
 <section class="fm-benefits-dark">
@@ -114,7 +112,7 @@
 {{-- Por que somos Diferentes (Section 6 - why us / 214:211) --}}
 <section class="fm-compare">
     <div class="fm-container">
-        <h2 class="fm-heading-italiana text-center mb-5">Por que somos Diferentes</h2>
+        <h2 class="fm-heading-italiana fm-heading-split text-center mb-5">Por que somos <span class="fm-accent-word">Diferentes</span></h2>
         <div class="row g-4 justify-content-center">
             <div class="col-12 col-md-6 col-lg-5">
                 <div class="fm-compare-card">
@@ -153,6 +151,6 @@
 </section>
 
 {{-- Clientes adoram a Flor de Marula (214:280) --}}
-@include('partials.testimonials-section')
+@include('partials.testimonials-section', ['homeHeadingStyle' => true])
 
 @endsection
