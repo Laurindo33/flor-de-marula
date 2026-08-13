@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
+            <div class="col-12 col-md-3 text-center text-md-start">
                 <p class="fm-footer__heading mb-3">Links Rápidos</p>
                 <ul class="list-unstyled d-flex flex-column gap-2 fs-6">
                     <li><a href="{{ route('home') }}">Início</a></li>
@@ -22,7 +22,7 @@
                 </ul>
             </div>
 
-            <div class="col-12 col-md-3">
+            <div class="col-12 col-md-3 text-center text-md-start">
                 <p class="fm-footer__heading mb-3">Newsletter</p>
                 <p class="mb-3">Inscreva-se em nossa Newsletter</p>
                 <form method="POST" action="{{ route('newsletter.subscribe') }}" class="d-flex flex-column gap-2">
@@ -47,7 +47,7 @@
                 @enderror
             </div>
 
-            <div class="col-6 col-md-3">
+            <div class="col-12 col-md-3 text-center text-md-start">
                 <p class="fm-footer__heading mb-3">Contactos</p>
                 <ul class="list-unstyled d-flex flex-column gap-2 fs-6">
                     <li><a href="tel:+244945960249">945960249</a></li>
