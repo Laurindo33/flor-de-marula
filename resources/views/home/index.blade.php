@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-md-7 text-center text-md-start">
                 <p class="fm-guarantee__promise-title mb-2">Nossa promessa</p>
                 <p class="fm-guarantee__promise-heading mb-2">Pele melhor em 30 dias</p>
                 <p class="fm-guarantee__promise-text mb-0">Se você não ficar satisfeito com algum de nossos produtos, oferecemos uma garantia de reembolso de 30 dias.</p>
