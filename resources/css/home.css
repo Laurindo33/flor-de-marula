@@ -392,10 +392,13 @@
     box-shadow: var(--fm-shadow-md);
     overflow: hidden;
 }
-.fm-testimonial-card img {
+.fm-testimonial-card img,
+.fm-testimonial-card video {
     width: 100%;
     aspect-ratio: 392 / 518;
     object-fit: cover;
+    display: block;
+    background: var(--fm-black);
 }
 .fm-testimonial-card__caption {
     font-family: 'JetBrains Mono', monospace;
