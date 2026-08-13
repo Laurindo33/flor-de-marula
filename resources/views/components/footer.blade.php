@@ -3,7 +3,7 @@
         <div class="row gy-5">
             <div class="col-12 col-md-3 text-center text-md-start">
                 <a href="{{ route('home') }}">
-                    <img src="{{ asset('images/home/logo.png') }}" alt="Flor de Marula" style="height: 95px; width: auto;">
+                    <img src="{{ asset('images/home/logo-footer.png') }}" alt="Flor de Marula" style="height: 95px; width: auto;">
                 </a>
                 <div class="d-flex gap-3 justify-content-center justify-content-md-start mt-3">
                     <a href="#" aria-label="Facebook"><img src="{{ asset('images/home/icon-facebook.png') }}" alt="" width="35" height="36"></a>
@@ -50,7 +50,7 @@
             <div class="col-6 col-md-3">
                 <p class="fm-footer__heading mb-3">Contactos</p>
                 <ul class="list-unstyled d-flex flex-column gap-2 fs-6">
-                    <li><a href="tel:+244932005773">932005773</a></li>
+                    <li><a href="tel:+244945960249">945960249</a></li>
                     <li><a href="mailto:flordemarula@gmail.com">flordemarula@gmail.com</a></li>
                     <li>Luanda, Talatona</li>
                 </ul>

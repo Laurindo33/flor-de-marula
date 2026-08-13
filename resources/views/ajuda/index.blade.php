@@ -30,7 +30,7 @@
 
                 @php
                     $canais = [
-                        ['icon' => 'icon-phone.png', 'badge' => '#ffd595', 'title' => 'Nosso Contacto', 'value' => '+244 932005773', 'href' => 'tel:+244932005773'],
+                        ['icon' => 'icon-phone.png', 'badge' => '#ffd595', 'title' => 'Nosso Contacto', 'value' => '+244 945960249', 'href' => 'tel:+244945960249'],
                         ['icon' => 'icon-email.png', 'badge' => '#eb95ff', 'title' => 'Nosso E-mail', 'value' => 'flordemarula@gmail.com', 'href' => 'mailto:flordemarula@gmail.com'],
                         ['icon' => 'icon-marker.png', 'badge' => '#95c1ff', 'title' => 'Visite-nos', 'value' => 'Luanda, Talatona, Rua dos Mirantes', 'href' => null],
                         ['icon' => 'icon-instagram.png', 'badge' => '#95ff9a', 'title' => 'Instagran', 'value' => '@flordemarula', 'href' => 'https://instagram.com/flordemarula'],
