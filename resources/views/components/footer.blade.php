@@ -1,11 +1,11 @@
 <footer class="fm-footer">
     <div class="fm-container">
         <div class="row gy-5">
-            <div class="col-12 col-md-3 text-center text-md-start">
+            <div class="col-12 col-md-3 text-center">
                 <a href="{{ route('home') }}">
                     <img src="{{ asset('images/home/logo-footer.png') }}" alt="Flor de Marula" style="height: 95px; width: auto;">
                 </a>
-                <div class="d-flex gap-3 justify-content-center justify-content-md-start mt-3">
+                <div class="d-flex gap-3 justify-content-center mt-3">
                     <a href="#" aria-label="Facebook"><img src="{{ asset('images/home/icon-facebook.png') }}" alt="" width="35" height="36"></a>
                     <a href="#" aria-label="Instagram"><img src="{{ asset('images/home/icon-instagram.png') }}" alt="" width="35" height="36"></a>
                     <a href="#" aria-label="TikTok"><img src="{{ asset('images/home/icon-tiktok.png') }}" alt="" width="35" height="36"></a>

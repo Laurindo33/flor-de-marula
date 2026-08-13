@@ -98,7 +98,7 @@
                         ];
                     @endphp
                     @foreach ($benefits as $benefit)
-                        <div class="col-12 col-md-6">
+                        <div class="col-12 col-md-6 text-center text-lg-start">
                             <p class="fm-benefits-dark__item-title mb-2">{{ $benefit['title'] }}</p>
                             <p class="fm-benefits-dark__item-text mb-0">{{ $benefit['text'] }}</p>
                         </div>
