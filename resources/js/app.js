@@ -2,11 +2,11 @@ import * as bootstrap from 'bootstrap';
 
 window.bootstrap = bootstrap;
 
-document.querySelectorAll('[data-diff-dots]').forEach((dotsContainer) => {
+document.querySelectorAll('[data-carousel-dots]').forEach((dotsContainer) => {
     const carousel = dotsContainer.previousElementSibling;
-    if (!carousel || !carousel.classList.contains('fm-diff-cards--carousel')) return;
+    if (!carousel || carousel.children.length === 0) return;
 
-    const dots = Array.from(dotsContainer.querySelectorAll('[data-diff-dot]'));
+    const dots = Array.from(dotsContainer.querySelectorAll('[data-carousel-dot]'));
     const items = Array.from(carousel.children);
 
     dots.forEach((dot, index) => {

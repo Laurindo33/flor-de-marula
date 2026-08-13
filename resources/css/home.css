@@ -231,9 +231,10 @@
     padding-block: 60px;
 }
 
-/* Carrossel no mobile (apenas Home — variante "fm-diff-cards--carousel") */
+/* Carrossel no mobile (apenas Home — variantes "--carousel") */
 @media (max-width: 991.98px) {
-    .fm-diff-cards--carousel {
+    .fm-diff-cards--carousel,
+    .fm-testimonial-cards--carousel {
         --bs-gutter-x: 0;
         display: flex;
         flex-wrap: nowrap;
@@ -243,10 +244,12 @@
         scrollbar-width: none;
         gap: 16px;
     }
-    .fm-diff-cards--carousel::-webkit-scrollbar {
+    .fm-diff-cards--carousel::-webkit-scrollbar,
+    .fm-testimonial-cards--carousel::-webkit-scrollbar {
         display: none;
     }
-    .fm-diff-cards--carousel > .fm-diff-cards__item {
+    .fm-diff-cards--carousel > .fm-diff-cards__item,
+    .fm-testimonial-cards--carousel > .fm-testimonial-cards__item {
         flex: 0 0 85%;
         max-width: 85%;
         scroll-snap-align: center;
@@ -257,10 +260,10 @@
     }
 }
 
-.fm-diff-dots {
+.fm-carousel-dots {
     margin-top: 24px;
 }
-.fm-diff-dot {
+.fm-carousel-dot {
     width: 8px;
     height: 8px;
     padding: 0;
@@ -268,7 +271,7 @@
     border-radius: 50%;
     background: var(--fm-peach);
 }
-.fm-diff-dot.is-active {
+.fm-carousel-dot.is-active {
     background: var(--fm-primary);
 }
 .fm-diff-card {

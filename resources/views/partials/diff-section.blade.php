@@ -31,9 +31,9 @@
             @endforeach
         </div>
         @if (!empty($homeHeadingStyle))
-            <div class="fm-diff-dots d-flex d-lg-none justify-content-center gap-2 mt-4" data-diff-dots>
+            <div class="fm-carousel-dots d-flex d-lg-none justify-content-center gap-2 mt-4" data-carousel-dots>
                 @foreach ($diffs as $i => $diff)
-                    <button type="button" class="fm-diff-dot{{ $i === 0 ? ' is-active' : '' }}" aria-label="Ver depoimento {{ $i + 1 }}" data-diff-dot></button>
+                    <button type="button" class="fm-carousel-dot{{ $i === 0 ? ' is-active' : '' }}" aria-label="Ver depoimento {{ $i + 1 }}" data-carousel-dot></button>
                 @endforeach
             </div>
         @endif
