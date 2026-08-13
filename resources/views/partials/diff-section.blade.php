@@ -14,9 +14,9 @@
         @else
             <h2 class="fm-heading-lg text-center mb-5">A Diferença dos Nossos Produtos</h2>
         @endif
-        <div class="row g-4">
+        <div class="row g-4 fm-diff-cards{{ !empty($homeHeadingStyle) ? ' fm-diff-cards--carousel' : '' }}">
             @foreach ($diffs as $diff)
-                <div class="col-12 col-md-6 col-lg-3">
+                <div class="col-12 col-md-6 col-lg-3 fm-diff-cards__item">
                     <div class="fm-diff-card">
                         <div class="fm-diff-card__media">
                             <img src="{{ asset('images/home/' . $diff['image']) }}" alt="Antes e depois — {{ $diff['category'] }}" loading="lazy">
@@ -30,5 +30,12 @@
                 </div>
             @endforeach
         </div>
+        @if (!empty($homeHeadingStyle))
+            <div class="fm-diff-dots d-flex d-lg-none justify-content-center gap-2 mt-4" data-diff-dots>
+                @foreach ($diffs as $i => $diff)
+                    <button type="button" class="fm-diff-dot{{ $i === 0 ? ' is-active' : '' }}" aria-label="Ver depoimento {{ $i + 1 }}" data-diff-dot></button>
+                @endforeach
+            </div>
+        @endif
     </div>
 </section>

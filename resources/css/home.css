@@ -230,6 +230,47 @@
     background: var(--fm-cream);
     padding-block: 60px;
 }
+
+/* Carrossel no mobile (apenas Home — variante "fm-diff-cards--carousel") */
+@media (max-width: 991.98px) {
+    .fm-diff-cards--carousel {
+        --bs-gutter-x: 0;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 16px;
+    }
+    .fm-diff-cards--carousel::-webkit-scrollbar {
+        display: none;
+    }
+    .fm-diff-cards--carousel > .fm-diff-cards__item {
+        flex: 0 0 85%;
+        max-width: 85%;
+        scroll-snap-align: center;
+    }
+    .fm-diff-cards--carousel .fm-diff-card__name,
+    .fm-diff-cards--carousel .fm-quote {
+        text-align: center;
+    }
+}
+
+.fm-diff-dots {
+    margin-top: 24px;
+}
+.fm-diff-dot {
+    width: 8px;
+    height: 8px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: var(--fm-peach);
+}
+.fm-diff-dot.is-active {
+    background: var(--fm-primary);
+}
 .fm-diff-card {
     background: transparent;
 }
