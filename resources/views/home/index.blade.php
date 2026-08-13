@@ -7,17 +7,17 @@
 {{-- Hero + Produtos em Alta (frame "Container" 214:3) --}}
 <section class="fm-hero">
     <div class="fm-container">
-        <div class="fm-hero__grid row align-items-center gy-5">
-            <div class="col-12 col-lg-6 fm-hero__col-text">
+        <div class="fm-hero__grid">
+            <div class="fm-hero__text-top">
                 <h1 class="fm-heading-xl fm-hero__title">Cosméticos Naturais{{ "\n" }}Para Todo Tipo de Pele</h1>
                 <p class="fm-body-lg fm-hero__subtitle">O Poder a África Para a sua Pele, Natural e Puro, rico em Antioxidantes, Hidrata e regenera, Feito para pele Africana.</p>
-                <div class="fm-hero__actions">
-                    <a href="#" class="fm-btn fm-btn-primary">Comprar agora</a>
-                    <a href="#" class="fm-btn fm-btn-outline">Nossa História</a>
-                </div>
             </div>
-            <div class="col-12 col-lg-6 fm-hero__col-image">
+            <div class="fm-hero__col-image">
                 <img src="{{ asset('images/home/hero-banner.png') }}" alt="Modelo usando cosméticos Flor de Marula" class="fm-hero__image img-fluid">
+            </div>
+            <div class="fm-hero__actions">
+                <a href="#" class="fm-btn fm-btn-primary">Comprar agora</a>
+                <a href="#" class="fm-btn fm-btn-outline">Nossa História</a>
             </div>
         </div>
 
