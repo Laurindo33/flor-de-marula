@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Ingredient;
 use App\Models\Product;
 use App\Models\ProductImage;
 use Illuminate\Http\RedirectResponse;
@@ -28,6 +29,7 @@ class ProductController extends Controller
     {
         return view('admin.products.create', [
             'categories' => Category::orderBy('name')->get(),
+            'ingredients' => Ingredient::orderBy('name')->get(),
             'routineOptions' => Product::orderBy('name')->get(),
         ]);
     }
@@ -46,6 +48,7 @@ class ProductController extends Controller
 
             $product = Product::create($validated);
             $product->categories()->sync($request->input('categories', []));
+            $this->syncIngredients($request, $product);
             $this->syncGalleryImages($request, $product);
 
             return redirect()->route('admin.products.index')->with('admin_success', 'Produto criado com sucesso.');
@@ -58,6 +61,8 @@ class ProductController extends Controller
             'product' => $product,
             'categories' => Category::orderBy('name')->get(),
             'productCategoryIds' => $product->categories()->pluck('categories.id')->toArray(),
+            'ingredients' => Ingredient::orderBy('name')->get(),
+            'productIngredientIds' => $product->ingredients()->pluck('ingredients.id')->toArray(),
             'routineOptions' => Product::where('id', '!=', $product->id)->orderBy('name')->get(),
         ]);
     }
@@ -76,6 +81,7 @@ class ProductController extends Controller
 
             $product->update($validated);
             $product->categories()->sync($request->input('categories', []));
+            $this->syncIngredients($request, $product);
             $this->syncGalleryImages($request, $product);
 
             return redirect()->route('admin.products.index')->with('admin_success', 'Produto atualizado com sucesso.');
@@ -129,7 +135,10 @@ class ProductController extends Controller
             'slug' => ['nullable', 'string', 'max:255', 'unique:products,slug,' . $productId],
             'sku' => ['required', 'string', 'max:255', 'unique:products,sku,' . $productId],
             'description' => ['nullable', 'string'],
+            'ingredients_list' => ['nullable', 'string'],
             'how_to_use' => ['nullable', 'string'],
+            'expert_review' => ['nullable', 'string'],
+            'shipping_returns' => ['nullable', 'string'],
             'price' => ['required', 'integer', 'min:0'],
             'compare_price' => ['nullable', 'integer', 'min:0'],
             'stock' => ['required', 'integer', 'min:0'],
@@ -137,6 +146,8 @@ class ProductController extends Controller
             'image_path' => ['nullable', 'image', 'max:5120'],
             'gallery_images' => ['nullable', 'array'],
             'gallery_images.*' => ['image', 'max:5120'],
+            'ingredients' => ['nullable', 'array'],
+            'ingredients.*' => ['integer', 'exists:ingredients,id'],
             'routine_product_id' => ['nullable', 'exists:products,id'],
             'sort_order' => ['nullable', 'integer'],
         ]);
@@ -163,6 +174,15 @@ class ProductController extends Controller
                 'sort_order' => $nextOrder++,
             ]);
         }
+    }
+
+    private function syncIngredients(Request $request, Product $product): void
+    {
+        $ingredientIds = $request->input('ingredients', []);
+
+        $product->ingredients()->sync(
+            collect($ingredientIds)->mapWithKeys(fn ($id, $i) => [$id => ['sort_order' => $i]])->all()
+        );
     }
 
     private function parseBenefits(?string $text): array

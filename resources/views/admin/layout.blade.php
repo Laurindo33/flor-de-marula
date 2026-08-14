@@ -23,6 +23,7 @@
                     'Catálogo' => [
                         'Produtos' => 'admin.products.index',
                         'Categorias' => 'admin.categories.index',
+                        'Ingredientes' => 'admin.ingredients.index',
                         'Stock' => 'admin.stock.index',
                         'FAQ' => 'admin.faqs.index',
                     ],

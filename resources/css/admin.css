@@ -294,6 +294,27 @@ body.fm-admin-body {
     text-decoration: underline;
 }
 
+/* FAQ do produto */
+.fm-admin-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+.fm-admin-faq-item {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 12px 14px;
+}
+.fm-admin-faq-item__question {
+    font-weight: 600;
+    color: var(--fm-black);
+}
+.fm-admin-faq-item__answer {
+    font-size: 13px;
+    color: var(--fm-muted);
+}
+
 /* Forms */
 .fm-admin-field {
     margin-bottom: 18px;

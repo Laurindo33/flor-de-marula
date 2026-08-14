@@ -150,22 +150,6 @@
     white-space: pre-line;
 }
 
-.fm-pdp__guarantee-text {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-family: var(--fm-font-base);
-    font-size: 15px;
-    color: var(--fm-text);
-}
-
-.fm-pdp__guarantee-text-icon {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-    margin-top: 2px;
-}
-
 .fm-pdp__guarantee-card {
     background: var(--fm-primary);
     border-radius: var(--fm-radius-md);
@@ -191,15 +175,17 @@
 .fm-pdp__routine-title {
     font-family: var(--fm-font-base);
     font-weight: 400;
-    font-size: 30px;
+    font-size: 20px;
     color: var(--fm-black);
+    text-align: center;
     margin-bottom: 8px;
 }
 
 .fm-pdp__routine-subtitle {
     font-family: var(--fm-font-base);
-    font-size: 22px;
+    font-size: 14px;
     color: var(--fm-black);
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -429,16 +415,6 @@
     .fm-pdp__add-btn {
         order: 1;
         margin-bottom: 24px;
-    }
-
-    .fm-pdp__routine-title {
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .fm-pdp__routine-subtitle {
-        font-size: 14px;
-        text-align: center;
     }
 
     .fm-pdp-ingredients h2,

@@ -51,12 +51,7 @@
 
             {{-- Garantia (texto) + Complete Sua Rotina --}}
             <div class="fm-pdp__routine-block order-4">
-                <div class="fm-pdp__guarantee-text d-none d-lg-flex">
-                    <img src="{{ asset('images/product/icon-check.png') }}" alt="" class="fm-pdp__guarantee-text-icon">
-                    <p class="mb-0">Se você não estiver satisfeito com algum de nossos produtos, oferecemos garantia de devolução de dinheiro por 30 dias. <strong>Pele melhor em 30 dias ou é GRÁTIS</strong></p>
-                </div>
-
-                <div class="fm-pdp__guarantee-card d-lg-none">
+                <div class="fm-pdp__guarantee-card">
                     <p class="fm-pdp__guarantee-card__title mb-3">Pele melhor em 30 dias ou é GRÁTIS</p>
                     <p class="fm-pdp__guarantee-card__text mb-0">Se você não estiver satisfeito com algum de nossos produtos, oferecemos garantia de devolução de dinheiro por 30 dias.</p>
                 </div>
@@ -125,7 +120,7 @@
                                 @foreach ($product->offers as $offer)
                                     <label class="fm-pdp__offer {{ $loop->first ? 'active' : '' }}">
                                         <input type="radio" name="offer_id" value="{{ $offer->id }}" {{ $loop->first ? 'checked' : '' }}>
-                                        <img src="{{ asset($product->image_path) }}" alt="{{ $offer->label }}">
+                                        <img src="{{ asset($offer->image_path ?? $product->image_path) }}" alt="{{ $offer->label }}">
                                         <span class="fm-pdp__offer-label">{{ $offer->label }}</span>
                                         <span class="fm-pdp__offer-price">{{ $offer->formatted_price }}</span>
                                     </label>

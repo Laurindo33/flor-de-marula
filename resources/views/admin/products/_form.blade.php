@@ -38,9 +38,101 @@
             </div>
 
             <div class="fm-admin-field">
+                <label for="ingredients_list">Ingredientes (texto, usado se não houver ingredientes com imagem cadastrados)</label>
+                <textarea name="ingredients_list" id="ingredients_list" rows="3">{{ old('ingredients_list', $product?->ingredients_list) }}</textarea>
+            </div>
+
+            <div class="fm-admin-field">
                 <label for="how_to_use">Como Usar</label>
                 <textarea name="how_to_use" id="how_to_use" rows="3">{{ old('how_to_use', $product?->how_to_use) }}</textarea>
             </div>
+
+            <div class="fm-admin-field">
+                <label for="expert_review">Avaliação de um Especialista</label>
+                <textarea name="expert_review" id="expert_review" rows="3">{{ old('expert_review', $product?->expert_review) }}</textarea>
+            </div>
+
+            <div class="fm-admin-field">
+                <label for="shipping_returns">Envio e Devoluções</label>
+                <textarea name="shipping_returns" id="shipping_returns" rows="3">{{ old('shipping_returns', $product?->shipping_returns) }}</textarea>
+            </div>
+        </div>
+
+        <div class="fm-admin-card">
+            <p class="fm-admin-card__title">Ofertas Exclusivas</p>
+
+            @if ($product?->offers?->isNotEmpty())
+                <div class="fm-admin-faq-list">
+                    @foreach ($product->offers as $offer)
+                        <div class="fm-admin-faq-item d-flex align-items-center justify-content-between gap-3 flex-wrap">
+                            <div class="d-flex align-items-center gap-3">
+                                <img src="{{ asset($offer->image_path ?? $product->image_path) }}" alt="" style="width:48px; height:48px; object-fit:cover; border-radius:6px;">
+                                <div>
+                                    <p class="fm-admin-faq-item__question mb-1">{{ $offer->label }} ({{ $offer->quantity }} un.)</p>
+                                    <p class="fm-admin-faq-item__answer mb-0">{{ $offer->formatted_price }}</p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <input type="file" id="offer_image_{{ $offer->id }}" accept="image/*" style="font-size:12px; max-width:160px;">
+                                <button
+                                    type="button"
+                                    class="fm-admin-btn fm-admin-btn--outline fm-admin-btn--sm"
+                                    data-admin-update-offer-image
+                                    data-url="{{ route('admin.products.offers.update', [$product, $offer]) }}"
+                                    data-image-input="offer_image_{{ $offer->id }}"
+                                >Atualizar Imagem</button>
+                                <button
+                                    type="button"
+                                    class="fm-admin-gallery__remove"
+                                    style="width:auto; white-space:nowrap;"
+                                    data-admin-delete-offer
+                                    data-url="{{ route('admin.products.offers.destroy', [$product, $offer]) }}"
+                                    data-confirm="Remover esta oferta?"
+                                >Remover</button>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            @endif
+
+            @if ($product)
+                <div class="row g-2">
+                    <div class="col-4">
+                        <div class="fm-admin-field">
+                            <label for="new_offer_label">Rótulo</label>
+                            <input type="text" id="new_offer_label" placeholder="Ex.: 2 FRASCOS">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="fm-admin-field">
+                            <label for="new_offer_quantity">Quantidade</label>
+                            <input type="number" id="new_offer_quantity" min="1" value="2">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="fm-admin-field">
+                            <label for="new_offer_price">Preço (kz)</label>
+                            <input type="number" id="new_offer_price" min="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="fm-admin-field">
+                    <label for="new_offer_image">Imagem (opcional — usa a imagem principal do produto se em branco)</label>
+                    <input type="file" id="new_offer_image" accept="image/*">
+                </div>
+                <button
+                    type="button"
+                    class="fm-admin-btn fm-admin-btn--outline"
+                    data-admin-add-offer
+                    data-url="{{ route('admin.products.offers.store', $product) }}"
+                    data-label-input="new_offer_label"
+                    data-quantity-input="new_offer_quantity"
+                    data-price-input="new_offer_price"
+                    data-image-input="new_offer_image"
+                >Adicionar Oferta</button>
+            @else
+                <p class="fm-admin-empty">Guarde o produto primeiro para poder adicionar ofertas.</p>
+            @endif
         </div>
 
         <div class="fm-admin-card">
@@ -53,6 +145,27 @@
                     </label>
                 @endforeach
             </div>
+        </div>
+
+        <div class="fm-admin-card">
+            <p class="fm-admin-card__title">Ingredientes ("Feito com ingredientes 100% naturais")</p>
+            @if ($ingredients->isEmpty())
+                <p class="fm-admin-empty" style="text-align:left; padding:0;">
+                    Nenhum ingrediente cadastrado ainda. <a href="{{ route('admin.ingredients.index') }}">Crie ingredientes aqui</a> antes de os associar a este produto.
+                </p>
+            @else
+                <div class="d-flex flex-wrap gap-3">
+                    @foreach ($ingredients as $ingredient)
+                        <label class="fm-admin-checkbox">
+                            <input type="checkbox" name="ingredients[]" value="{{ $ingredient->id }}" {{ in_array($ingredient->id, old('ingredients', $productIngredientIds ?? [])) ? 'checked' : '' }}>
+                            {{ $ingredient->name }}
+                        </label>
+                    @endforeach
+                </div>
+                <p class="fm-admin-empty" style="text-align:left; padding:12px 0 0;">
+                    Precisa de um novo ingrediente? <a href="{{ route('admin.ingredients.index') }}">Gerir ingredientes</a>.
+                </p>
+            @endif
         </div>
     </div>
 

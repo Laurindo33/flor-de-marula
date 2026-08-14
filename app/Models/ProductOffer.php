@@ -12,6 +12,7 @@ class ProductOffer extends Model
         'label',
         'quantity',
         'price',
+        'image_path',
         'sort_order',
     ];
 

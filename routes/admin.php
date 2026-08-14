@@ -6,9 +6,11 @@ use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\FaqController;
+use App\Http\Controllers\Admin\IngredientController;
 use App\Http\Controllers\Admin\NewsletterController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Admin\ProductOfferController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\StockController;
 use App\Http\Controllers\Admin\SupportMessageController;
@@ -35,11 +37,19 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::post('/produtos/{product}/duplicar', [ProductController::class, 'duplicate'])->name('products.duplicate');
         Route::post('/produtos/{product}/ativar', [ProductController::class, 'toggleActive'])->name('products.toggle-active');
         Route::delete('/produtos/{product}/imagens/{image}', [ProductController::class, 'destroyImage'])->name('products.images.destroy');
+        Route::post('/produtos/{product}/ofertas', [ProductOfferController::class, 'store'])->name('products.offers.store');
+        Route::put('/produtos/{product}/ofertas/{offer}', [ProductOfferController::class, 'update'])->name('products.offers.update');
+        Route::delete('/produtos/{product}/ofertas/{offer}', [ProductOfferController::class, 'destroy'])->name('products.offers.destroy');
 
         Route::get('/categorias', [CategoryController::class, 'index'])->name('categories.index');
         Route::post('/categorias', [CategoryController::class, 'store'])->name('categories.store');
         Route::put('/categorias/{category}', [CategoryController::class, 'update'])->name('categories.update');
         Route::delete('/categorias/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+
+        Route::get('/ingredientes', [IngredientController::class, 'index'])->name('ingredients.index');
+        Route::post('/ingredientes', [IngredientController::class, 'store'])->name('ingredients.store');
+        Route::put('/ingredientes/{ingredient}', [IngredientController::class, 'update'])->name('ingredients.update');
+        Route::delete('/ingredientes/{ingredient}', [IngredientController::class, 'destroy'])->name('ingredients.destroy');
 
         Route::get('/stock', [StockController::class, 'index'])->name('stock.index');
         Route::get('/stock/{product}', [StockController::class, 'movements'])->name('stock.movements');
