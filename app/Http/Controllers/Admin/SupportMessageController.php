@@ -25,12 +25,14 @@ class SupportMessageController extends Controller
 
     public function updateStatus(Request $request, SupportMessage $message): RedirectResponse
     {
-        $validated = $request->validate([
-            'status' => ['required', 'in:Novo,Em atendimento,Resolvido'],
-        ]);
+        return $this->safely(function () use ($request, $message) {
+            $validated = $request->validate([
+                'status' => ['required', 'in:Novo,Em atendimento,Resolvido'],
+            ]);
 
-        $message->update($validated);
+            $message->update($validated);
 
-        return back()->with('admin_success', 'Mensagem atualizada.');
+            return back()->with('admin_success', 'Mensagem atualizada.');
+        });
     }
 }

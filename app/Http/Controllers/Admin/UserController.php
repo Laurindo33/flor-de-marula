@@ -24,18 +24,20 @@ class UserController extends Controller
     {
         $this->authorizeSuperAdmin();
 
-        $validated = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email', 'max:255', 'unique:admins,email'],
-            'password' => ['required', 'string', 'min:8'],
-            'role' => ['required', 'in:Super Admin,Gestor,Atendimento,Marketing'],
-        ]);
+        return $this->safely(function () use ($request) {
+            $validated = $request->validate([
+                'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'email', 'max:255', 'unique:admins,email'],
+                'password' => ['required', 'string', 'min:8'],
+                'role' => ['required', 'in:Super Admin,Gestor,Atendimento,Marketing'],
+            ]);
 
-        $validated['password'] = Hash::make($validated['password']);
+            $validated['password'] = Hash::make($validated['password']);
 
-        Admin::create($validated);
+            Admin::create($validated);
 
-        return back()->with('admin_success', 'Utilizador criado com sucesso.');
+            return back()->with('admin_success', 'Utilizador criado com sucesso.');
+        });
     }
 
     public function destroy(Admin $user): RedirectResponse

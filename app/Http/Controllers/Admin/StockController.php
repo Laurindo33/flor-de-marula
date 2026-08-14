@@ -31,19 +31,21 @@ class StockController extends Controller
 
     public function store(Request $request, Product $product): RedirectResponse
     {
-        $validated = $request->validate([
-            'type' => ['required', 'in:entrada,venda,ajuste,cancelamento,devolucao'],
-            'quantity' => ['required', 'integer', 'not_in:0'],
-            'note' => ['nullable', 'string', 'max:255'],
-        ]);
+        return $this->safely(function () use ($request, $product) {
+            $validated = $request->validate([
+                'type' => ['required', 'in:entrada,venda,ajuste,cancelamento,devolucao'],
+                'quantity' => ['required', 'integer', 'not_in:0'],
+                'note' => ['nullable', 'string', 'max:255'],
+            ]);
 
-        $this->inventoryService->registerMovement(
-            $product,
-            $validated['type'],
-            $validated['quantity'],
-            $validated['note'] ?? null
-        );
+            $this->inventoryService->registerMovement(
+                $product,
+                $validated['type'],
+                $validated['quantity'],
+                $validated['note'] ?? null
+            );
 
-        return back()->with('admin_success', 'Movimento de stock registado.');
+            return back()->with('admin_success', 'Movimento de stock registado.');
+        });
     }
 }

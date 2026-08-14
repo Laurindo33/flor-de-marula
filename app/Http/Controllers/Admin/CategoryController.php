@@ -20,32 +20,36 @@ class CategoryController extends Controller
 
     public function store(Request $request): RedirectResponse
     {
-        $validated = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'description' => ['nullable', 'string'],
-            'sort_order' => ['nullable', 'integer'],
-        ]);
+        return $this->safely(function () use ($request) {
+            $validated = $request->validate([
+                'name' => ['required', 'string', 'max:255'],
+                'description' => ['nullable', 'string'],
+                'sort_order' => ['nullable', 'integer'],
+            ]);
 
-        $validated['slug'] = Str::slug($validated['name']);
+            $validated['slug'] = Str::slug($validated['name']);
 
-        Category::create($validated);
-        Cache::forget('shop.categories');
+            Category::create($validated);
+            Cache::forget('shop.categories');
 
-        return back()->with('admin_success', 'Categoria criada com sucesso.');
+            return back()->with('admin_success', 'Categoria criada com sucesso.');
+        });
     }
 
     public function update(Request $request, Category $category): RedirectResponse
     {
-        $validated = $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'description' => ['nullable', 'string'],
-            'sort_order' => ['nullable', 'integer'],
-        ]);
+        return $this->safely(function () use ($request, $category) {
+            $validated = $request->validate([
+                'name' => ['required', 'string', 'max:255'],
+                'description' => ['nullable', 'string'],
+                'sort_order' => ['nullable', 'integer'],
+            ]);
 
-        $category->update($validated);
-        Cache::forget('shop.categories');
+            $category->update($validated);
+            Cache::forget('shop.categories');
 
-        return back()->with('admin_success', 'Categoria atualizada.');
+            return back()->with('admin_success', 'Categoria atualizada.');
+        });
     }
 
     public function destroy(Category $category): RedirectResponse

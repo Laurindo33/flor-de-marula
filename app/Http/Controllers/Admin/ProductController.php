@@ -34,20 +34,22 @@ class ProductController extends Controller
 
     public function store(Request $request): RedirectResponse
     {
-        $validated = $this->validateProduct($request);
+        return $this->safely(function () use ($request) {
+            $validated = $this->validateProduct($request);
 
-        $validated['slug'] = $request->input('slug') ?: Str::slug($validated['name']);
-        $validated['benefits'] = $this->parseBenefits($request->input('benefits_text'));
+            $validated['slug'] = $request->input('slug') ?: Str::slug($validated['name']);
+            $validated['benefits'] = $this->parseBenefits($request->input('benefits_text'));
 
-        if ($request->hasFile('image_path')) {
-            $validated['image_path'] = 'storage/' . $request->file('image_path')->store('products', 'public');
-        }
+            if ($request->hasFile('image_path')) {
+                $validated['image_path'] = 'storage/' . $request->file('image_path')->store('products', 'public');
+            }
 
-        $product = Product::create($validated);
-        $product->categories()->sync($request->input('categories', []));
-        $this->syncGalleryImages($request, $product);
+            $product = Product::create($validated);
+            $product->categories()->sync($request->input('categories', []));
+            $this->syncGalleryImages($request, $product);
 
-        return redirect()->route('admin.products.index')->with('admin_success', 'Produto criado com sucesso.');
+            return redirect()->route('admin.products.index')->with('admin_success', 'Produto criado com sucesso.');
+        });
     }
 
     public function edit(Product $product)
@@ -62,20 +64,22 @@ class ProductController extends Controller
 
     public function update(Request $request, Product $product): RedirectResponse
     {
-        $validated = $this->validateProduct($request, $product);
+        return $this->safely(function () use ($request, $product) {
+            $validated = $this->validateProduct($request, $product);
 
-        $validated['slug'] = $request->input('slug') ?: Str::slug($validated['name']);
-        $validated['benefits'] = $this->parseBenefits($request->input('benefits_text'));
+            $validated['slug'] = $request->input('slug') ?: Str::slug($validated['name']);
+            $validated['benefits'] = $this->parseBenefits($request->input('benefits_text'));
 
-        if ($request->hasFile('image_path')) {
-            $validated['image_path'] = 'storage/' . $request->file('image_path')->store('products', 'public');
-        }
+            if ($request->hasFile('image_path')) {
+                $validated['image_path'] = 'storage/' . $request->file('image_path')->store('products', 'public');
+            }
 
-        $product->update($validated);
-        $product->categories()->sync($request->input('categories', []));
-        $this->syncGalleryImages($request, $product);
+            $product->update($validated);
+            $product->categories()->sync($request->input('categories', []));
+            $this->syncGalleryImages($request, $product);
 
-        return redirect()->route('admin.products.index')->with('admin_success', 'Produto atualizado com sucesso.');
+            return redirect()->route('admin.products.index')->with('admin_success', 'Produto atualizado com sucesso.');
+        });
     }
 
     public function destroy(Product $product): RedirectResponse
@@ -97,9 +101,11 @@ class ProductController extends Controller
 
     public function toggleActive(Product $product): RedirectResponse
     {
-        $product->update(['is_active' => ! $product->is_active]);
+        return $this->safely(function () use ($product) {
+            $product->update(['is_active' => ! $product->is_active]);
 
-        return back()->with('admin_success', $product->is_active ? 'Produto ativado.' : 'Produto desativado.');
+            return back()->with('admin_success', $product->is_active ? 'Produto ativado.' : 'Produto desativado.');
+        });
     }
 
     public function duplicate(Product $product): RedirectResponse

@@ -72,6 +72,9 @@
                 @if (session('admin_success'))
                     <div class="fm-admin-alert fm-admin-alert--success">{{ session('admin_success') }}</div>
                 @endif
+                @if (session('admin_error'))
+                    <div class="fm-admin-alert fm-admin-alert--error">{{ session('admin_error') }}</div>
+                @endif
                 @if ($errors->any())
                     <div class="fm-admin-alert fm-admin-alert--error">
                         <ul class="mb-0">

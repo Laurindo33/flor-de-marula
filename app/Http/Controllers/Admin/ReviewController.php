@@ -25,12 +25,14 @@ class ReviewController extends Controller
 
     public function updateStatus(Request $request, Review $review): RedirectResponse
     {
-        $validated = $request->validate([
-            'status' => ['required', 'in:Pendente,Aprovado,Rejeitado'],
-        ]);
+        return $this->safely(function () use ($request, $review) {
+            $validated = $request->validate([
+                'status' => ['required', 'in:Pendente,Aprovado,Rejeitado'],
+            ]);
 
-        $review->update($validated);
+            $review->update($validated);
 
-        return back()->with('admin_success', 'Avaliação atualizada.');
+            return back()->with('admin_success', 'Avaliação atualizada.');
+        });
     }
 }

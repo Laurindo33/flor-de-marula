@@ -50,17 +50,19 @@ class OrderController extends Controller
 
     public function updateStatus(Request $request, Order $order): RedirectResponse
     {
-        $validated = $request->validate([
-            'status' => ['required', Rule::in(self::STATUSES)],
-            'note' => ['nullable', 'string', 'max:255'],
-        ]);
+        return $this->safely(function () use ($request, $order) {
+            $validated = $request->validate([
+                'status' => ['required', Rule::in(self::STATUSES)],
+                'note' => ['nullable', 'string', 'max:255'],
+            ]);
 
-        $order->update(['status' => $validated['status']]);
-        $order->statusHistory()->create([
-            'status' => $validated['status'],
-            'note' => $validated['note'] ?? null,
-        ]);
+            $order->update(['status' => $validated['status']]);
+            $order->statusHistory()->create([
+                'status' => $validated['status'],
+                'note' => $validated['note'] ?? null,
+            ]);
 
-        return back()->with('admin_success', 'Estado do pedido atualizado.');
+            return back()->with('admin_success', 'Estado do pedido atualizado.');
+        });
     }
 }

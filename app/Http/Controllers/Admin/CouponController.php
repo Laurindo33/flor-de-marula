@@ -18,20 +18,24 @@ class CouponController extends Controller
 
     public function store(Request $request): RedirectResponse
     {
-        $validated = $this->validateCoupon($request);
+        return $this->safely(function () use ($request) {
+            $validated = $this->validateCoupon($request);
 
-        Coupon::create($validated);
+            Coupon::create($validated);
 
-        return back()->with('admin_success', 'Cupom criado com sucesso.');
+            return back()->with('admin_success', 'Cupom criado com sucesso.');
+        });
     }
 
     public function update(Request $request, Coupon $coupon): RedirectResponse
     {
-        $validated = $this->validateCoupon($request, $coupon);
+        return $this->safely(function () use ($request, $coupon) {
+            $validated = $this->validateCoupon($request, $coupon);
 
-        $coupon->update($validated);
+            $coupon->update($validated);
 
-        return back()->with('admin_success', 'Cupom atualizado.');
+            return back()->with('admin_success', 'Cupom atualizado.');
+        });
     }
 
     public function destroy(Coupon $coupon): RedirectResponse

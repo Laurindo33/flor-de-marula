@@ -20,30 +20,34 @@ class FaqController extends Controller
 
     public function store(Request $request): RedirectResponse
     {
-        $validated = $request->validate([
-            'product_id' => ['nullable', 'exists:products,id'],
-            'question' => ['required', 'string', 'max:255'],
-            'answer' => ['required', 'string'],
-            'sort_order' => ['nullable', 'integer'],
-        ]);
+        return $this->safely(function () use ($request) {
+            $validated = $request->validate([
+                'product_id' => ['nullable', 'exists:products,id'],
+                'question' => ['required', 'string', 'max:255'],
+                'answer' => ['required', 'string'],
+                'sort_order' => ['nullable', 'integer'],
+            ]);
 
-        Faq::create($validated);
+            Faq::create($validated);
 
-        return back()->with('admin_success', 'FAQ criada com sucesso.');
+            return back()->with('admin_success', 'FAQ criada com sucesso.');
+        });
     }
 
     public function update(Request $request, Faq $faq): RedirectResponse
     {
-        $validated = $request->validate([
-            'product_id' => ['nullable', 'exists:products,id'],
-            'question' => ['required', 'string', 'max:255'],
-            'answer' => ['required', 'string'],
-            'sort_order' => ['nullable', 'integer'],
-        ]);
+        return $this->safely(function () use ($request, $faq) {
+            $validated = $request->validate([
+                'product_id' => ['nullable', 'exists:products,id'],
+                'question' => ['required', 'string', 'max:255'],
+                'answer' => ['required', 'string'],
+                'sort_order' => ['nullable', 'integer'],
+            ]);
 
-        $faq->update($validated);
+            $faq->update($validated);
 
-        return back()->with('admin_success', 'FAQ atualizada.');
+            return back()->with('admin_success', 'FAQ atualizada.');
+        });
     }
 
     public function destroy(Faq $faq): RedirectResponse
