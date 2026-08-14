@@ -20,14 +20,3 @@ offers.forEach((offer) => {
         offer.classList.add('active');
     });
 });
-
-const offerClearBtn = document.querySelector('[data-fm-offer-clear]');
-
-if (offerClearBtn) {
-    offerClearBtn.addEventListener('click', () => {
-        offers.forEach((o) => {
-            o.classList.remove('active');
-            o.querySelector('input[type="radio"]').checked = false;
-        });
-    });
-}

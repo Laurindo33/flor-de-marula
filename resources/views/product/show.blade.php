@@ -126,7 +126,6 @@
                                     </label>
                                 @endforeach
                             </div>
-                            <button type="button" class="fm-pdp__offer-clear" data-fm-offer-clear>Comprar apenas 1 unidade ({{ $product->formatted_price }})</button>
                         </div>
                     @endif
 

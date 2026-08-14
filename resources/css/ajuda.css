@@ -26,6 +26,10 @@
     max-width: 742px;
 }
 
+.fm-ajuda-hero__text h1 {
+    color: #000000;
+}
+
 .fm-ajuda-hero__paragraph {
     font-family: var(--fm-font-base);
     font-size: 16px;

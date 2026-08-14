@@ -65,7 +65,7 @@
     <div class="fm-container">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
             <h2 class="fm-heading-italiana fm-heading-split fm-best-product-title mb-0">Nosso Melhor <span class="fm-accent-word">Produto</span></h2>
-            <a href="#" class="fm-btn fm-btn-primary fm-cta-label d-none d-lg-inline-flex">Ver Todos</a>
+            <a href="{{ route('shop.index') }}" class="fm-btn fm-btn-primary fm-cta-label d-none d-lg-inline-flex">Ver Todos</a>
         </div>
         <div class="row g-4">
             @foreach ($bestProducts as $product)
@@ -74,7 +74,7 @@
                 </div>
             @endforeach
         </div>
-        <a href="#" class="fm-btn fm-btn-primary fm-cta-label d-flex d-lg-none w-100 mt-4">Ver Todos</a>
+        <a href="{{ route('shop.index') }}" class="fm-btn fm-btn-primary fm-cta-label d-flex d-lg-none w-100 mt-4">Ver Todos</a>
     </div>
 </section>
 
