@@ -89,6 +89,33 @@
         </div>
 
         <div class="fm-admin-card">
+            <p class="fm-admin-card__title">Galeria de Imagens</p>
+
+            @if ($product?->images?->isNotEmpty())
+                <div class="fm-admin-gallery">
+                    @foreach ($product->images as $image)
+                        <div class="fm-admin-gallery__item">
+                            <img src="{{ asset($image->image_path) }}" alt="">
+                            <button
+                                type="button"
+                                class="fm-admin-gallery__remove"
+                                data-admin-delete-image
+                                data-url="{{ route('admin.products.images.destroy', [$product, $image]) }}"
+                                data-confirm="Remover esta imagem da galeria?"
+                            >Remover</button>
+                        </div>
+                    @endforeach
+                </div>
+            @endif
+
+            <div class="fm-admin-field">
+                <label for="gallery_images">Adicionar imagens</label>
+                <input type="file" name="gallery_images[]" id="gallery_images" accept="image/*" multiple>
+                <small>Aparecem na página do produto como miniaturas, na ordem em que forem adicionadas.</small>
+            </div>
+        </div>
+
+        <div class="fm-admin-card">
             <p class="fm-admin-card__title">Definições</p>
             <label class="fm-admin-checkbox">
                 <input type="checkbox" name="is_featured" value="1" {{ old('is_featured', $product?->is_featured) ? 'checked' : '' }}>

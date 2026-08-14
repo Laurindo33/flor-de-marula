@@ -47,4 +47,8 @@
     .fm-compare-card__list li {
         font-size: 16px;
     }
+
+    .fm-testimonial-card__caption {
+        padding: 28px;
+    }
 }

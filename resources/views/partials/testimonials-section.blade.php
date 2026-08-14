@@ -1,5 +1,5 @@
 {{-- Clientes adoram a Flor de Marula — reutilizada na Home e nos Detalhes do Produto (214:280 / Secção Nosso melhor) --}}
-<section class="fm-testimonials">
+<section class="fm-testimonials {{ $sectionClass ?? '' }}">
     <div class="fm-container">
         @if (!empty($homeHeadingStyle))
             <h2 class="fm-heading-italiana fm-heading-split text-center mb-2">+300.000 Clientes adoram a <span class="fm-accent-word">Flor de Marula</span></h2>

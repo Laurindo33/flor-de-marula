@@ -11,8 +11,8 @@
 @include('partials.benefits-strip')
 
 @php
-    $mainImage = $product->images->first()?->image_path ?? $product->image_path;
-    $thumbnails = $product->images->slice(1);
+    $mainImage = $product->image_path;
+    $thumbnails = $product->images;
 @endphp
 
 {{-- Product details (155:996 "Product details" / Frame 41-77) --}}
@@ -22,7 +22,7 @@
 
             {{-- Miniaturas ("Other images" 161:1482-1486) --}}
             @if ($thumbnails->isNotEmpty())
-                <div class="fm-pdp__thumbs order-2 order-lg-1">
+                <div class="fm-pdp__thumbs order-2">
                     @foreach ($thumbnails as $thumb)
                         <button
                             type="button"
@@ -36,8 +36,8 @@
                 </div>
             @endif
 
-            {{-- Imagem principal + garantia + Complete Sua Rotina (Frame 77) --}}
-            <div class="fm-pdp__visual order-1 order-lg-2">
+            {{-- Imagem principal + garantia (Frame 77) --}}
+            <div class="fm-pdp__visual order-1">
                 <div class="fm-pdp__main-image">
                     <img src="{{ asset($mainImage) }}" alt="{{ $product->name }}" data-fm-gallery-main>
 
@@ -47,10 +47,18 @@
                         <span class="fm-pdp__guarantee-badge-text">Garantia de devolução{{ "\n" }}do dinheiro</span>
                     </div>
                 </div>
+            </div>
 
-                <div class="fm-pdp__guarantee-text">
+            {{-- Garantia (texto) + Complete Sua Rotina --}}
+            <div class="fm-pdp__routine-block order-4">
+                <div class="fm-pdp__guarantee-text d-none d-lg-flex">
                     <img src="{{ asset('images/product/icon-check.png') }}" alt="" class="fm-pdp__guarantee-text-icon">
                     <p class="mb-0">Se você não estiver satisfeito com algum de nossos produtos, oferecemos garantia de devolução de dinheiro por 30 dias. <strong>Pele melhor em 30 dias ou é GRÁTIS</strong></p>
+                </div>
+
+                <div class="fm-pdp__guarantee-card d-lg-none">
+                    <p class="fm-pdp__guarantee-card__title mb-3">Pele melhor em 30 dias ou é GRÁTIS</p>
+                    <p class="fm-pdp__guarantee-card__text mb-0">Se você não estiver satisfeito com algum de nossos produtos, oferecemos garantia de devolução de dinheiro por 30 dias.</p>
                 </div>
 
                 @if ($product->routineProduct)
@@ -75,7 +83,7 @@
             </div>
 
             {{-- Nome, avaliacoes, preco, desconto, beneficios, ofertas, CTA, acordeao (Frame 75) --}}
-            <div class="fm-pdp__info order-3 order-lg-3">
+            <div class="fm-pdp__info order-3">
                 <h1 class="fm-pdp__name">{{ $product->name }}</h1>
 
                 <div class="fm-pdp__avatars" aria-label="Avaliações de clientes">
@@ -179,11 +187,11 @@
 
 {{-- Produtos Relacionados (Secção Nosso melhor / Frame 5-9) --}}
 @if ($product->relatedProducts->isNotEmpty())
-    <section class="py-5">
+    <section class="py-5 fm-best-product-section fm-pdp-related">
         <div class="fm-container">
             <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
-                <h2 class="fm-heading-lg mb-0">Produtos Relacionados</h2>
-                <a href="{{ route('shop.index') }}" class="fm-btn fm-btn-primary fm-cta-label">Ver Todos</a>
+                <h2 class="fm-heading-italiana fm-heading-split fm-best-product-title mb-0">Produtos <span class="fm-accent-word">Relacionados</span></h2>
+                <a href="{{ route('shop.index') }}" class="fm-btn fm-btn-primary fm-cta-label d-none d-lg-inline-flex">Ver Todos</a>
             </div>
             <div class="row g-4">
                 @foreach ($product->relatedProducts as $related)
@@ -192,6 +200,7 @@
                     </div>
                 @endforeach
             </div>
+            <a href="{{ route('shop.index') }}" class="fm-btn fm-btn-primary fm-cta-label d-flex d-lg-none w-100 mt-4">Ver Todos</a>
         </div>
     </section>
 @endif
@@ -226,10 +235,10 @@
 @endif
 
 {{-- A Diferenca dos Nossos Produtos (Secção Nosso melhor) --}}
-@include('partials.diff-section')
+@include('partials.diff-section', ['homeHeadingStyle' => true, 'sectionClass' => 'fm-diff-section--pdp'])
 
 {{-- Clientes adoram a Flor de Marula (Secção Nosso melhor) --}}
-@include('partials.testimonials-section')
+@include('partials.testimonials-section', ['homeHeadingStyle' => true, 'sectionClass' => 'fm-testimonials--pdp'])
 
 @endsection
 

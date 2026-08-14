@@ -3,13 +3,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Dashboard') — CMS Flor de Marula</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Alice&family=Inria+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
     @vite(['resources/css/admin.css', 'resources/js/admin.js'])
 </head>
 <body class="fm-admin-body">
     <div class="fm-admin-shell">
-        <aside class="fm-admin-sidebar">
+        <div class="fm-admin-backdrop" data-admin-backdrop></div>
+
+        <aside class="fm-admin-sidebar" id="fmAdminSidebar">
             <div class="fm-admin-sidebar__brand">Flor de Marula</div>
 
             @php
@@ -58,6 +61,9 @@
 
         <div class="fm-admin-main">
             <div class="fm-admin-topbar">
+                <button type="button" class="fm-admin-topbar__menu-btn" data-admin-menu-toggle aria-label="Abrir menu" aria-controls="fmAdminSidebar" aria-expanded="false">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+                </button>
                 <p class="fm-admin-topbar__title mb-0">@yield('title', 'Dashboard')</p>
                 <p class="fm-admin-topbar__user mb-0"><strong>{{ auth('admin')->user()?->name }}</strong> · {{ auth('admin')->user()?->role }}</p>
             </div>

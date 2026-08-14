@@ -7,7 +7,7 @@
         ['category' => 'Acne + Oleosidade', 'customer' => 'Juliana R.', 'image' => 'diff-acne-oleosidade.png', 'quote' => 'O protetor solar é excelente! Espalha facilmente, não deixa resíduos brancos e a pele fica confortável mesmo depois de várias horas.'],
     ];
 @endphp
-<section class="fm-diff-section">
+<section class="fm-diff-section {{ $sectionClass ?? '' }}">
     <div class="fm-container">
         @if (!empty($homeHeadingStyle))
             <h2 class="fm-heading-italiana fm-heading-split text-center mb-5">A Diferença dos Nossos <span class="fm-accent-word">Produtos</span></h2>

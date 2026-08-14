@@ -1,12 +1,17 @@
 /*
  * CMS Flor de Marula — layout proprio (nao copia o layout da loja), mas
- * reutiliza a paleta e tipografia da marca ja definidas em variables.css.
+ * reutiliza a paleta de cores da marca ja definida em variables.css.
+ * Tipografia propria do CMS (Roboto), independente da tipografia da loja.
  */
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import './variables.css';
 
+:root {
+    --fm-admin-font: 'Roboto', sans-serif;
+}
+
 body.fm-admin-body {
-    font-family: var(--fm-font-base);
+    font-family: var(--fm-admin-font);
     background: #f5f3ef;
     color: var(--fm-text);
 }
@@ -35,7 +40,7 @@ body.fm-admin-body {
     align-items: center;
     gap: 10px;
     padding: 20px;
-    font-family: 'Alice', serif;
+    font-family: var(--fm-admin-font);
     font-size: 20px;
     color: var(--fm-accent);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -98,16 +103,33 @@ body.fm-admin-body {
 .fm-admin-topbar {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 12px;
     background: var(--fm-white);
     padding: 16px 28px;
     border-bottom: 1px solid #e5e1d8;
 }
 
+.fm-admin-topbar__menu-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--fm-black);
+    cursor: pointer;
+}
+
 .fm-admin-topbar__title {
-    font-family: 'Alice', serif;
+    font-family: var(--fm-admin-font);
     font-size: 22px;
     color: var(--fm-black);
+    flex: 1 1 auto;
 }
 
 .fm-admin-topbar__user {
@@ -146,7 +168,7 @@ body.fm-admin-body {
 }
 
 .fm-admin-kpi__value {
-    font-family: 'Inria Sans', sans-serif;
+    font-family: var(--fm-admin-font);
     font-weight: 700;
     font-size: 26px;
     color: var(--fm-black);
@@ -161,7 +183,7 @@ body.fm-admin-body {
 }
 
 .fm-admin-card__title {
-    font-family: 'Alice', serif;
+    font-family: var(--fm-admin-font);
     font-size: 19px;
     color: var(--fm-black);
     margin-bottom: 16px;
@@ -240,6 +262,38 @@ body.fm-admin-body {
 .fm-admin-btn--danger:hover { background: #f8d7d4; }
 .fm-admin-btn--sm { padding: 5px 10px; font-size: 12px; }
 
+/* Galeria de imagens do produto */
+.fm-admin-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+    margin-bottom: 14px;
+}
+.fm-admin-gallery__item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.fm-admin-gallery__item img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+.fm-admin-gallery__remove {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 2px 0;
+    font-size: 11px;
+    color: #c0392b;
+    cursor: pointer;
+}
+.fm-admin-gallery__remove:hover {
+    text-decoration: underline;
+}
+
 /* Forms */
 .fm-admin-field {
     margin-bottom: 18px;
@@ -264,7 +318,7 @@ body.fm-admin-body {
     border-radius: var(--fm-radius-sm);
     padding: 9px 12px;
     font-size: 14px;
-    font-family: var(--fm-font-base);
+    font-family: var(--fm-admin-font);
 }
 .fm-admin-field textarea { resize: vertical; }
 .fm-admin-field small {
@@ -327,7 +381,7 @@ body.fm-admin-body {
     box-shadow: var(--fm-shadow-md);
 }
 .fm-admin-login__title {
-    font-family: 'Alice', serif;
+    font-family: var(--fm-admin-font);
     font-size: 26px;
     text-align: center;
     margin-bottom: 4px;
@@ -347,4 +401,54 @@ body.fm-admin-body {
 
 .fm-admin-pagination {
     margin-top: 20px;
+}
+
+/* Responsivo */
+.fm-admin-backdrop {
+    display: none;
+}
+
+@media (max-width: 991.98px) {
+    .fm-admin-topbar__menu-btn {
+        display: inline-flex;
+    }
+
+    .fm-admin-sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1050;
+        width: 260px;
+        max-width: 80vw;
+        transform: translateX(-100%);
+        transition: transform 0.25s ease;
+    }
+
+    .fm-admin-sidebar.is-open {
+        transform: translateX(0);
+    }
+
+    .fm-admin-backdrop.is-open {
+        display: block;
+        position: fixed;
+        inset: 0;
+        z-index: 1040;
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    .fm-admin-topbar {
+        padding: 14px 16px;
+    }
+
+    .fm-admin-topbar__title {
+        font-size: 18px;
+    }
+
+    .fm-admin-content {
+        padding: 16px;
+    }
+
+    .fm-admin-login__card {
+        padding: 32px 24px;
+    }
 }

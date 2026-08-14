@@ -241,3 +241,57 @@ a.fm-channel-card__value:hover {
     font-size: 20px;
     color: var(--fm-black);
 }
+
+@media (max-width: 991.98px) {
+    .fm-ajuda-hero__text,
+    .fm-ajuda-channels h2,
+    .fm-ajuda-channels__lead,
+    .fm-ajuda-channels__text,
+    .fm-ajuda-form-col h2,
+    .fm-ajuda-form-col__lead,
+    .fm-ajuda-form-col__text {
+        text-align: center;
+    }
+
+    .fm-ajuda-hero__text .fm-heading-xl {
+        font-size: 34px;
+        line-height: 1.2;
+    }
+
+    .fm-ajuda-hero__text .fm-body-lg {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .fm-ajuda-hero__paragraph {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .fm-ajuda-channels h2,
+    .fm-ajuda-form-col h2 {
+        font-size: 22px;
+    }
+
+    .fm-ajuda-channels__lead,
+    .fm-ajuda-form-col__lead {
+        font-size: 14px;
+    }
+
+    .fm-ajuda-channels__text,
+    .fm-ajuda-form-col__text {
+        font-size: 12px;
+    }
+
+    .fm-channel-card__title {
+        font-size: 14px;
+    }
+
+    .fm-channel-card__value {
+        font-size: 13px;
+    }
+
+    .fm-ajuda-map__address {
+        font-size: 15px;
+    }
+}

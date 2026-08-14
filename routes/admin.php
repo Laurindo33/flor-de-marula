@@ -34,6 +34,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::delete('/produtos/{product}', [ProductController::class, 'destroy'])->name('products.destroy');
         Route::post('/produtos/{product}/duplicar', [ProductController::class, 'duplicate'])->name('products.duplicate');
         Route::post('/produtos/{product}/ativar', [ProductController::class, 'toggleActive'])->name('products.toggle-active');
+        Route::delete('/produtos/{product}/imagens/{image}', [ProductController::class, 'destroyImage'])->name('products.images.destroy');
 
         Route::get('/categorias', [CategoryController::class, 'index'])->name('categories.index');
         Route::post('/categorias', [CategoryController::class, 'store'])->name('categories.store');

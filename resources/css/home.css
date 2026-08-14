@@ -243,6 +243,7 @@
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
         gap: 16px;
+        padding-block: 10px;
     }
     .fm-diff-cards--carousel::-webkit-scrollbar,
     .fm-testimonial-cards--carousel::-webkit-scrollbar {
@@ -391,7 +392,7 @@
 }
 @media (max-width: 991.98px) {
     .fm-testimonials__subtitle {
-        font-size: 11px;
+        font-size: 13px;
         font-weight: 400;
     }
 }
@@ -399,7 +400,6 @@
     background: var(--fm-white);
     border-radius: var(--fm-radius-md);
     box-shadow: var(--fm-shadow-md);
-    overflow: hidden;
 }
 .fm-testimonial-card img,
 .fm-testimonial-card video {
@@ -408,6 +408,7 @@
     object-fit: cover;
     display: block;
     background: var(--fm-black);
+    border-radius: var(--fm-radius-md) var(--fm-radius-md) 0 0;
 }
 .fm-testimonial-card__caption {
     font-family: 'JetBrains Mono', monospace;
@@ -416,4 +417,5 @@
     text-align: center;
     padding: 20px;
     white-space: pre-line;
+    border-radius: 0 0 var(--fm-radius-md) var(--fm-radius-md);
 }

@@ -209,17 +209,18 @@ class ProductSeeder extends Seeder
             }
         }
 
-        // Galeria (foto principal 161:1489 + miniaturas "Other images" 161:1482 a 161:1486) —
-        // apenas o Sérum Facial tem galeria definida no frame "Detalhes" do Figma. A primeira
-        // imagem (sort_order 0) é a foto grande exibida por omissão; as restantes são as
-        // miniaturas que trocam a imagem principal via JS.
+        // Galeria de miniaturas ("Other images" 161:1482 a 161:1486) — independente da imagem
+        // principal (image_path); apenas o Sérum Facial tem galeria definida no frame
+        // "Detalhes" do Figma. As miniaturas trocam a imagem principal exibida via JS.
         $serum = Product::where('slug', 'serum-facial')->first();
-        $galleryImages = ['serum-facial-main.png', 'serum-facial-thumb-1.png', 'serum-facial-thumb-2.png', 'serum-facial-thumb-3.png', 'serum-facial-thumb-4.png', 'serum-facial-thumb-5.png'];
+        $galleryImages = ['serum-facial-thumb-1.png', 'serum-facial-thumb-2.png', 'serum-facial-thumb-3.png', 'serum-facial-thumb-4.png', 'serum-facial-thumb-5.png'];
+        $serum->images()->delete();
         foreach ($galleryImages as $i => $file) {
-            ProductImage::updateOrCreate(
-                ['product_id' => $serum->id, 'sort_order' => $i],
-                ['image_path' => "images/product/{$file}"]
-            );
+            ProductImage::create([
+                'product_id' => $serum->id,
+                'sort_order' => $i,
+                'image_path' => "images/product/{$file}",
+            ]);
         }
 
         // Ingredientes (Frame 79 a 82) — associados ao Sérum Facial no Figma.

@@ -16,9 +16,31 @@
 
 @media (min-width: 992px) {
     .fm-pdp__body {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 40px;
+        display: grid;
+        grid-template-columns: 105px 1fr 443px;
+        column-gap: 40px;
+        row-gap: 24px;
+        align-items: start;
+    }
+
+    .fm-pdp__thumbs {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .fm-pdp__visual {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .fm-pdp__routine-block {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .fm-pdp__info {
+        grid-column: 3;
+        grid-row: 1 / span 2;
     }
 }
 
@@ -33,7 +55,6 @@
 @media (min-width: 992px) {
     .fm-pdp__thumbs {
         flex-direction: column;
-        flex: 0 0 105px;
         overflow: visible;
     }
 }
@@ -67,17 +88,17 @@
     border-color: var(--fm-primary);
 }
 
-/* Coluna B — imagem principal + garantia + rotina */
+/* Coluna B — imagem principal */
 .fm-pdp__visual {
     display: flex;
     flex-direction: column;
-    gap: 24px;
 }
 
-@media (min-width: 992px) {
-    .fm-pdp__visual {
-        flex: 1 1 auto;
-    }
+/* Garantia (texto) + Complete Sua Rotina — mesma coluna da imagem, na linha abaixo (desktop) */
+.fm-pdp__routine-block {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 .fm-pdp__main-image {
@@ -145,6 +166,28 @@
     margin-top: 2px;
 }
 
+.fm-pdp__guarantee-card {
+    background: var(--fm-primary);
+    border-radius: var(--fm-radius-md);
+    padding: 28px 24px;
+    text-align: center;
+}
+
+.fm-pdp__guarantee-card__title {
+    font-family: var(--fm-font-base);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--fm-white);
+}
+
+.fm-pdp__guarantee-card__text {
+    font-family: var(--fm-font-base);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--fm-white);
+}
+
 .fm-pdp__routine-title {
     font-family: var(--fm-font-base);
     font-weight: 400;
@@ -206,12 +249,6 @@
     flex-direction: column;
 }
 
-@media (min-width: 992px) {
-    .fm-pdp__info {
-        flex: 0 0 443px;
-    }
-}
-
 .fm-pdp__name {
     font-family: 'Iosevka Charon Mono', 'JetBrains Mono', monospace;
     font-weight: 400;
@@ -223,6 +260,12 @@
 @media (min-width: 992px) {
     .fm-pdp__name {
         font-size: 50px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .fm-pdp__name {
+        font-size: 26px;
     }
 }
 
@@ -373,6 +416,61 @@
     text-transform: uppercase;
 }
 
+@media (max-width: 991.98px) {
+    .fm-pdp__add-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fm-pdp__offers {
+        order: 2;
+    }
+
+    .fm-pdp__add-btn {
+        order: 1;
+        margin-bottom: 24px;
+    }
+
+    .fm-pdp__routine-title {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .fm-pdp__routine-subtitle {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .fm-pdp-ingredients h2,
+    .fm-pdp-ingredients__list {
+        text-align: center;
+    }
+
+    .fm-pdp-ingredients h2 {
+        font-size: 28px;
+    }
+
+    .fm-pdp-ingredients__list {
+        font-size: 14px;
+    }
+
+    .fm-pdp__accordion .accordion-button {
+        font-size: 16px;
+    }
+
+    .fm-pdp__accordion .accordion-body {
+        font-size: 13px;
+    }
+
+    .fm-pdp__routine-card-name {
+        font-size: 18px;
+    }
+
+    .fm-pdp__routine-card .fm-price {
+        font-size: 16px;
+    }
+}
+
 /* Acordeao — sobrepoe estilo padrao do Bootstrap */
 .fm-pdp__accordion .accordion-item {
     border: none;
@@ -424,7 +522,20 @@
 /* Ingredientes */
 .fm-pdp-ingredients {
     padding-block: 60px;
-    background: var(--fm-cream);
+    background: #ffffff;
+}
+
+/* Backgrounds especificos desta pagina (nao afetam a Home, que reusa os mesmos partials/classes) */
+.fm-pdp-related {
+    background: #fff7eb;
+}
+
+.fm-diff-section--pdp {
+    background: #fff7eb;
+}
+
+.fm-testimonials--pdp {
+    background: #ffffff;
 }
 
 .fm-pdp-ingredients__list {

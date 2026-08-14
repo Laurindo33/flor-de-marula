@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductImage;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ProductController extends Controller
@@ -43,6 +45,7 @@ class ProductController extends Controller
 
         $product = Product::create($validated);
         $product->categories()->sync($request->input('categories', []));
+        $this->syncGalleryImages($request, $product);
 
         return redirect()->route('admin.products.index')->with('admin_success', 'Produto criado com sucesso.');
     }
@@ -70,6 +73,7 @@ class ProductController extends Controller
 
         $product->update($validated);
         $product->categories()->sync($request->input('categories', []));
+        $this->syncGalleryImages($request, $product);
 
         return redirect()->route('admin.products.index')->with('admin_success', 'Produto atualizado com sucesso.');
     }
@@ -79,6 +83,16 @@ class ProductController extends Controller
         $product->delete();
 
         return back()->with('admin_success', 'Produto eliminado.');
+    }
+
+    public function destroyImage(Product $product, ProductImage $image): RedirectResponse
+    {
+        abort_if($image->product_id !== $product->id, 404);
+
+        Storage::disk('public')->delete(Str::after($image->image_path, 'storage/'));
+        $image->delete();
+
+        return back()->with('admin_success', 'Imagem removida.');
     }
 
     public function toggleActive(Product $product): RedirectResponse
@@ -115,6 +129,8 @@ class ProductController extends Controller
             'stock' => ['required', 'integer', 'min:0'],
             'stock_minimo' => ['required', 'integer', 'min:0'],
             'image_path' => ['nullable', 'image', 'max:5120'],
+            'gallery_images' => ['nullable', 'array'],
+            'gallery_images.*' => ['image', 'max:5120'],
             'routine_product_id' => ['nullable', 'exists:products,id'],
             'sort_order' => ['nullable', 'integer'],
         ]);
@@ -124,6 +140,23 @@ class ProductController extends Controller
         $validated['is_active'] = $request->boolean('is_active');
 
         return $validated;
+    }
+
+    private function syncGalleryImages(Request $request, Product $product): void
+    {
+        $files = $request->file('gallery_images', []);
+        if (! $files) {
+            return;
+        }
+
+        $nextOrder = (int) $product->images()->max('sort_order') + 1;
+
+        foreach ($files as $file) {
+            $product->images()->create([
+                'image_path' => 'storage/' . $file->store('products', 'public'),
+                'sort_order' => $nextOrder++,
+            ]);
+        }
     }
 
     private function parseBenefits(?string $text): array
