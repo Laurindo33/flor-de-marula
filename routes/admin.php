@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\CheckoutOptionController;
 use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\ProductOfferController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\StockController;
+use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Admin\SupportMessageController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
@@ -51,6 +53,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::put('/ingredientes/{ingredient}', [IngredientController::class, 'update'])->name('ingredients.update');
         Route::delete('/ingredientes/{ingredient}', [IngredientController::class, 'destroy'])->name('ingredients.destroy');
 
+        Route::get('/entrega-pagamento', [CheckoutOptionController::class, 'index'])->name('checkout-options.index');
+        Route::post('/entrega-pagamento/entrega', [CheckoutOptionController::class, 'storeShipping'])->name('checkout-options.shipping.store');
+        Route::put('/entrega-pagamento/entrega/{shippingMethod}', [CheckoutOptionController::class, 'updateShipping'])->name('checkout-options.shipping.update');
+        Route::delete('/entrega-pagamento/entrega/{shippingMethod}', [CheckoutOptionController::class, 'destroyShipping'])->name('checkout-options.shipping.destroy');
+        Route::post('/entrega-pagamento/pagamento', [CheckoutOptionController::class, 'storePayment'])->name('checkout-options.payment.store');
+        Route::put('/entrega-pagamento/pagamento/{paymentMethod}', [CheckoutOptionController::class, 'updatePayment'])->name('checkout-options.payment.update');
+        Route::delete('/entrega-pagamento/pagamento/{paymentMethod}', [CheckoutOptionController::class, 'destroyPayment'])->name('checkout-options.payment.destroy');
+
         Route::get('/stock', [StockController::class, 'index'])->name('stock.index');
         Route::get('/stock/{product}', [StockController::class, 'movements'])->name('stock.movements');
         Route::post('/stock/{product}', [StockController::class, 'store'])->name('stock.store');
@@ -84,5 +94,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/utilizadores', [UserController::class, 'index'])->name('users.index');
         Route::post('/utilizadores', [UserController::class, 'store'])->name('users.store');
         Route::delete('/utilizadores/{user}', [UserController::class, 'destroy'])->name('users.destroy');
+
+        Route::get('/contactos', [SiteSettingController::class, 'edit'])->name('settings.edit');
+        Route::put('/contactos', [SiteSettingController::class, 'update'])->name('settings.update');
     });
 });

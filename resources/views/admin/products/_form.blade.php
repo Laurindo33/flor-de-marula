@@ -167,6 +167,22 @@
                 </p>
             @endif
         </div>
+
+        <div class="fm-admin-card">
+            <p class="fm-admin-card__title">Produtos Relacionados</p>
+            @if ($routineOptions->isEmpty())
+                <p class="fm-admin-empty" style="text-align:left; padding:0;">Crie outros produtos primeiro para poder relacioná-los a este.</p>
+            @else
+                <div class="d-flex flex-wrap gap-3">
+                    @foreach ($routineOptions as $option)
+                        <label class="fm-admin-checkbox">
+                            <input type="checkbox" name="related_products[]" value="{{ $option->id }}" {{ in_array($option->id, old('related_products', $productRelatedIds ?? [])) ? 'checked' : '' }}>
+                            {{ $option->name }}
+                        </label>
+                    @endforeach
+                </div>
+            @endif
+        </div>
     </div>
 
     <div class="col-12 col-lg-4">

@@ -1,3 +1,4 @@
+@php $siteSettings = \App\Models\SiteSetting::current(); @endphp
 <footer class="fm-footer">
     <div class="fm-container">
         <div class="row gy-5">
@@ -7,7 +8,7 @@
                 </a>
                 <div class="d-flex gap-3 justify-content-center mt-3">
                     <a href="#" aria-label="Facebook"><img src="{{ asset('images/home/icon-facebook.png') }}" alt="" width="35" height="36"></a>
-                    <a href="#" aria-label="Instagram"><img src="{{ asset('images/home/icon-instagram.png') }}" alt="" width="35" height="36"></a>
+                    <a href="{{ $siteSettings->instagram ? 'https://instagram.com/' . $siteSettings->instagram : '#' }}" aria-label="Instagram"><img src="{{ asset('images/home/icon-instagram.png') }}" alt="" width="35" height="36"></a>
                     <a href="#" aria-label="TikTok"><img src="{{ asset('images/home/icon-tiktok.png') }}" alt="" width="35" height="36"></a>
                 </div>
             </div>
@@ -50,9 +51,15 @@
             <div class="col-12 col-md-3 text-center text-md-start">
                 <p class="fm-footer__heading mb-3">Contactos</p>
                 <ul class="list-unstyled d-flex flex-column gap-2 fs-6">
-                    <li><a href="tel:+244945960249">945960249</a></li>
-                    <li><a href="mailto:flordemarula@gmail.com">flordemarula@gmail.com</a></li>
-                    <li>Luanda, Talatona</li>
+                    @if ($siteSettings->phone)
+                        <li><a href="tel:+244{{ $siteSettings->phone }}">{{ $siteSettings->phone }}</a></li>
+                    @endif
+                    @if ($siteSettings->email)
+                        <li><a href="mailto:{{ $siteSettings->email }}">{{ $siteSettings->email }}</a></li>
+                    @endif
+                    @if ($siteSettings->address)
+                        <li>{{ $siteSettings->address }}</li>
+                    @endif
                 </ul>
             </div>
         </div>

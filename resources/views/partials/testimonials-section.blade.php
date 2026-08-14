@@ -7,20 +7,26 @@
             <h2 class="fm-heading-lg text-center mb-2">+300.000 Clientes adoram a Flor de Marula</h2>
         @endif
         <p class="fm-body-lg fm-testimonials__subtitle text-center mb-5">Veja o que alguns deles têm a dizer sobre seu produto favorito</p>
-        @php $testimonialVideos = ['testimonial-1.mp4', 'testimonial-2.mp4', 'testimonial-3.mp4']; @endphp
+        @php
+            $testimonialVideos = [
+                ['file' => 'testimonial-1.mp4', 'caption' => "Melhor sérum facial\ndo mercado"],
+                ['file' => 'testimonial-2.mp4', 'caption' => "Minha pele nunca\nesteve tão radiante"],
+                ['file' => 'testimonial-3.mp4', 'caption' => "Resultado visível\nem poucos dias"],
+            ];
+        @endphp
         <div class="row g-4 fm-testimonial-cards{{ !empty($homeHeadingStyle) ? ' fm-testimonial-cards--carousel' : '' }}">
-            @foreach ($testimonialVideos as $video)
+            @foreach ($testimonialVideos as $testimonial)
                 <div class="col-12 col-md-4 fm-testimonial-cards__item">
                     <div class="fm-testimonial-card">
-                        <video src="{{ asset('videos/home/' . $video) }}" autoplay muted loop playsinline controls preload="metadata" aria-label="Depoimento em vídeo de cliente Flor de Marula"></video>
-                        <p class="fm-testimonial-card__caption mb-0">"Melhor sabonete de cúrcuma{{ "\n" }}do mercado</p>
+                        <video src="{{ asset('videos/home/' . $testimonial['file']) }}" autoplay muted loop playsinline controls preload="metadata" aria-label="Depoimento em vídeo de cliente Flor de Marula"></video>
+                        <p class="fm-testimonial-card__caption mb-0">"{{ $testimonial['caption'] }}"</p>
                     </div>
                 </div>
             @endforeach
         </div>
         @if (!empty($homeHeadingStyle))
             <div class="fm-carousel-dots d-flex d-lg-none justify-content-center gap-2 mt-4" data-carousel-dots>
-                @foreach ($testimonialVideos as $i => $video)
+                @foreach ($testimonialVideos as $i => $testimonial)
                     <button type="button" class="fm-carousel-dot{{ $i === 0 ? ' is-active' : '' }}" aria-label="Ver depoimento {{ $i + 1 }}" data-carousel-dot></button>
                 @endforeach
             </div>

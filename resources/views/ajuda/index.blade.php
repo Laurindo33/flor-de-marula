@@ -29,11 +29,12 @@
                 <p class="fm-ajuda-channels__text">Entre em contacto através dos nossos canais de atendimento.{{ "\n" }}Será um prazer ajudá-lo!</p>
 
                 @php
+                    $siteSettings = \App\Models\SiteSetting::current();
                     $canais = [
-                        ['icon' => 'icon-phone.png', 'badge' => '#ffd595', 'title' => 'Nosso Contacto', 'value' => '+244 945960249', 'href' => 'tel:+244945960249'],
-                        ['icon' => 'icon-email.png', 'badge' => '#eb95ff', 'title' => 'Nosso E-mail', 'value' => 'flordemarula@gmail.com', 'href' => 'mailto:flordemarula@gmail.com'],
-                        ['icon' => 'icon-marker.png', 'badge' => '#95c1ff', 'title' => 'Visite-nos', 'value' => 'Luanda, Talatona, Rua dos Mirantes', 'href' => null],
-                        ['icon' => 'icon-instagram.png', 'badge' => '#95ff9a', 'title' => 'Instagran', 'value' => '@flordemarula', 'href' => 'https://instagram.com/flordemarula'],
+                        ['icon' => 'icon-phone.png', 'badge' => '#ffd595', 'title' => 'Nosso Contacto', 'value' => '+244 ' . $siteSettings->phone, 'href' => 'tel:+244' . $siteSettings->phone],
+                        ['icon' => 'icon-email.png', 'badge' => '#eb95ff', 'title' => 'Nosso E-mail', 'value' => $siteSettings->email, 'href' => 'mailto:' . $siteSettings->email],
+                        ['icon' => 'icon-marker.png', 'badge' => '#95c1ff', 'title' => 'Visite-nos', 'value' => $siteSettings->address, 'href' => null],
+                        ['icon' => 'icon-instagram.png', 'badge' => '#95ff9a', 'title' => 'Instagran', 'value' => '@' . $siteSettings->instagram, 'href' => 'https://instagram.com/' . $siteSettings->instagram],
                     ];
                 @endphp
                 <div class="fm-ajuda-channels__grid">

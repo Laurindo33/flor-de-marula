@@ -19,6 +19,7 @@
                 $adminNav = [
                     'Geral' => [
                         'Dashboard' => 'admin.dashboard',
+                        'Contactos' => 'admin.settings.edit',
                     ],
                     'Catálogo' => [
                         'Produtos' => 'admin.products.index',
@@ -31,6 +32,7 @@
                         'Pedidos' => 'admin.orders.index',
                         'Clientes' => 'admin.customers.index',
                         'Cupons' => 'admin.coupons.index',
+                        'Entrega e Pagamento' => 'admin.checkout-options.index',
                     ],
                     'Comunidade' => [
                         'Avaliações' => 'admin.reviews.index',

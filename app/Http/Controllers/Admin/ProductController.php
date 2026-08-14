@@ -49,6 +49,7 @@ class ProductController extends Controller
             $product = Product::create($validated);
             $product->categories()->sync($request->input('categories', []));
             $this->syncIngredients($request, $product);
+            $this->syncRelatedProducts($request, $product);
             $this->syncGalleryImages($request, $product);
 
             return redirect()->route('admin.products.index')->with('admin_success', 'Produto criado com sucesso.');
@@ -64,6 +65,7 @@ class ProductController extends Controller
             'ingredients' => Ingredient::orderBy('name')->get(),
             'productIngredientIds' => $product->ingredients()->pluck('ingredients.id')->toArray(),
             'routineOptions' => Product::where('id', '!=', $product->id)->orderBy('name')->get(),
+            'productRelatedIds' => $product->relatedProducts()->pluck('products.id')->toArray(),
         ]);
     }
 
@@ -82,6 +84,7 @@ class ProductController extends Controller
             $product->update($validated);
             $product->categories()->sync($request->input('categories', []));
             $this->syncIngredients($request, $product);
+            $this->syncRelatedProducts($request, $product);
             $this->syncGalleryImages($request, $product);
 
             return redirect()->route('admin.products.index')->with('admin_success', 'Produto atualizado com sucesso.');
@@ -148,6 +151,8 @@ class ProductController extends Controller
             'gallery_images.*' => ['image', 'max:5120'],
             'ingredients' => ['nullable', 'array'],
             'ingredients.*' => ['integer', 'exists:ingredients,id'],
+            'related_products' => ['nullable', 'array'],
+            'related_products.*' => ['integer', 'exists:products,id'],
             'routine_product_id' => ['nullable', 'exists:products,id'],
             'sort_order' => ['nullable', 'integer'],
         ]);
@@ -182,6 +187,17 @@ class ProductController extends Controller
 
         $product->ingredients()->sync(
             collect($ingredientIds)->mapWithKeys(fn ($id, $i) => [$id => ['sort_order' => $i]])->all()
+        );
+    }
+
+    private function syncRelatedProducts(Request $request, Product $product): void
+    {
+        $relatedIds = collect($request->input('related_products', []))
+            ->reject(fn ($id) => (int) $id === $product->id)
+            ->values();
+
+        $product->relatedProducts()->sync(
+            $relatedIds->mapWithKeys(fn ($id, $i) => [$id => ['sort_order' => $i]])->all()
         );
     }
 

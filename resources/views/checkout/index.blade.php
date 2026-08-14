@@ -69,11 +69,11 @@
                 <div class="fm-checkout-section">
                     <h2 class="fm-checkout-section__title">Método de Entrega</h2>
                     <div class="fm-checkout-options">
-                        @foreach ($shippingMethods as $key => $method)
+                        @foreach ($shippingMethods as $method)
                             <label class="fm-checkout-option {{ $loop->first ? 'active' : '' }}">
-                                <input type="radio" name="shipping_method" value="{{ $key }}" data-fm-shipping-cost="{{ $method['cost'] }}" {{ old('shipping_method', array_key_first($shippingMethods)) === $key ? 'checked' : '' }}>
-                                <span class="fm-checkout-option__label">{{ $method['label'] }}</span>
-                                <span class="fm-checkout-option__price">{{ $method['cost'] > 0 ? number_format($method['cost'], 0, ',', '.') . 'kz' : 'Grátis' }}</span>
+                                <input type="radio" name="shipping_method" value="{{ $method->id }}" data-fm-shipping-cost="{{ $method->cost }}" {{ (int) old('shipping_method', $shippingMethods->first()?->id) === $method->id ? 'checked' : '' }}>
+                                <span class="fm-checkout-option__label">{{ $method->label }}</span>
+                                <span class="fm-checkout-option__price">{{ $method->cost > 0 ? number_format($method->cost, 0, ',', '.') . 'kz' : 'Grátis' }}</span>
                             </label>
                         @endforeach
                     </div>
@@ -82,10 +82,10 @@
                 <div class="fm-checkout-section">
                     <h2 class="fm-checkout-section__title">Pagamento</h2>
                     <div class="fm-checkout-options">
-                        @foreach ($paymentMethods as $key => $label)
+                        @foreach ($paymentMethods as $method)
                             <label class="fm-checkout-option {{ $loop->first ? 'active' : '' }}">
-                                <input type="radio" name="payment_method" value="{{ $key }}" {{ old('payment_method', array_key_first($paymentMethods)) === $key ? 'checked' : '' }}>
-                                <span class="fm-checkout-option__label">{{ $label }}</span>
+                                <input type="radio" name="payment_method" value="{{ $method->id }}" {{ (int) old('payment_method', $paymentMethods->first()?->id) === $method->id ? 'checked' : '' }}>
+                                <span class="fm-checkout-option__label">{{ $method->label }}</span>
                             </label>
                         @endforeach
                     </div>
@@ -121,11 +121,11 @@
                     @endif
                     <div class="fm-cart-totals__row">
                         <span>Entrega</span>
-                        <span data-fm-shipping-label>{{ number_format(reset($shippingMethods)['cost'], 0, ',', '.') }}kz</span>
+                        <span data-fm-shipping-label>{{ number_format($shippingMethods->first()?->cost ?? 0, 0, ',', '.') }}kz</span>
                     </div>
                     <div class="fm-cart-totals__row fm-cart-totals__row--total">
                         <span>Total</span>
-                        <span data-fm-order-total>{{ number_format(max(0, $subtotal - $discount) + reset($shippingMethods)['cost'], 0, ',', '.') }}kz</span>
+                        <span data-fm-order-total>{{ number_format(max(0, $subtotal - $discount) + ($shippingMethods->first()?->cost ?? 0), 0, ',', '.') }}kz</span>
                     </div>
                 </div>
 
