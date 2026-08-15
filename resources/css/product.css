@@ -312,6 +312,7 @@
     font-size: 20px;
     color: var(--fm-text-strong);
     margin-bottom: 12px;
+    text-align: center;
 }
 
 .fm-pdp__offers-grid {
