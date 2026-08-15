@@ -316,12 +316,14 @@
 
 .fm-pdp__offers-grid {
     display: flex;
-    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
     margin-bottom: 24px;
 }
 
 .fm-pdp__offer {
-    flex: 0 0 124px;
+    flex: 0 0 104px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -340,8 +342,8 @@
 }
 
 .fm-pdp__offer img {
-    width: 72px;
-    height: 58px;
+    width: 60px;
+    height: 48px;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
     margin-bottom: 8px;
