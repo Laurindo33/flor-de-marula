@@ -2,7 +2,7 @@
 
 /* Hero */
 .fm-ajuda-hero {
-    background: radial-gradient(circle, var(--fm-peach-soft), var(--fm-peach));
+    background: linear-gradient(to right, var(--fm-peach-soft), var(--fm-peach));
     padding-block: 40px;
 }
 
