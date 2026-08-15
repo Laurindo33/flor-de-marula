@@ -40,12 +40,6 @@
             <div class="fm-pdp__visual order-1">
                 <div class="fm-pdp__main-image">
                     <img src="{{ asset($mainImage) }}" alt="{{ $product->name }}" data-fm-gallery-main>
-
-                    <div class="fm-pdp__guarantee-badge">
-                        <img src="{{ asset('images/product/guarantee-badge-icon.png') }}" alt="">
-                        <span class="fm-pdp__guarantee-badge-days">30 DIAS</span>
-                        <span class="fm-pdp__guarantee-badge-text">Garantia de devolução{{ "\n" }}do dinheiro</span>
-                    </div>
                 </div>
             </div>
 

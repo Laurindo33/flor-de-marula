@@ -120,42 +120,6 @@
     display: block;
 }
 
-.fm-pdp__guarantee-badge {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background: radial-gradient(circle, var(--fm-primary), var(--fm-dark));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--fm-white);
-    padding: 10px;
-}
-
-.fm-pdp__guarantee-badge img {
-    width: 28px;
-    height: 28px;
-    margin-bottom: 4px;
-}
-
-.fm-pdp__guarantee-badge-days {
-    font-family: 'Impact', sans-serif;
-    font-size: 22px;
-    line-height: 1;
-}
-
-.fm-pdp__guarantee-badge-text {
-    font-family: var(--fm-font-base);
-    font-weight: 600;
-    font-size: 10px;
-    white-space: pre-line;
-}
-
 .fm-pdp__guarantee-card {
     background: var(--fm-primary);
     border-radius: var(--fm-radius-md);
