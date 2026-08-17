@@ -25,7 +25,7 @@ const upsellModalEl = document.querySelector('[data-fm-upsell-modal]');
 const upsellOptionsEl = document.querySelector('[data-fm-upsell-options]');
 const offerRadios = document.querySelectorAll('[data-fm-offer-radio]');
 const addForm = document.querySelector('[data-fm-add-form]');
-const checkoutFlag = document.querySelector('[data-fm-checkout-flag]');
+const cartFlag = document.querySelector('[data-fm-cart-flag]');
 const addedModalEl = document.querySelector('[data-fm-added-modal]');
 
 const upsellModal = upsellModalEl && window.bootstrap ? new window.bootstrap.Modal(upsellModalEl) : null;
@@ -87,54 +87,56 @@ const showUpsellModal = (upsells) => {
     upsellModal.show();
 };
 
-if (upsellModal && upsellOptionsEl && addForm && checkoutFlag) {
-    const finishBtn = document.querySelector('[data-fm-upsell-finish]');
-    if (finishBtn) {
-        finishBtn.addEventListener('click', () => {
-            checkoutFlag.value = '1';
+// So o clique explicito em "Finalizar Compra" (em qualquer um dos popups)
+// adiciona de facto ao carrinho — seleccionar uma oferta ou clicar em
+// "Comprar Agora" apenas decide qual popup mostrar, nunca adiciona sozinho.
+if (upsellModal && upsellOptionsEl && addForm && cartFlag) {
+    const upsellFinishBtn = document.querySelector('[data-fm-upsell-finish]');
+    if (upsellFinishBtn) {
+        upsellFinishBtn.addEventListener('click', () => {
+            cartFlag.value = '1';
             upsellModal.hide();
             addForm.requestSubmit();
         });
     }
 }
 
-const submitAddToCart = () => {
-    fetch(addForm.action, {
-        method: 'POST',
-        body: new FormData(addForm),
-        credentials: 'same-origin',
-    }).then((response) => {
-        if (response.ok) {
-            if (addedModal) addedModal.show();
-        } else {
-            addForm.submit();
-        }
-    }).catch(() => {
-        addForm.submit();
-    });
+if (addedModal && addForm && cartFlag) {
+    const addedFinishBtn = document.querySelector('[data-fm-added-finish]');
+    if (addedFinishBtn) {
+        addedFinishBtn.addEventListener('click', () => {
+            cartFlag.value = '1';
+            addedModal.hide();
+            addForm.requestSubmit();
+        });
+    }
+}
+
+const showRelevantPopup = () => {
+    const upsells = (offerRadios.length && upsellModal && upsellOptionsEl)
+        ? getUpsellsForCurrentSelection()
+        : [];
+
+    if (upsells.length > 0) {
+        showUpsellModal(upsells);
+    } else if (addedModal) {
+        addedModal.show();
+    }
 };
 
-if (offerRadios.length && upsellModal && upsellOptionsEl) {
+if (offerRadios.length) {
     offerRadios.forEach((radio) => {
         radio.addEventListener('change', () => {
-            if (!radio.checked) return;
-
-            const upsells = getUpsellsForCurrentSelection();
-
-            if (upsells.length > 0) {
-                showUpsellModal(upsells);
-            } else {
-                submitAddToCart();
-            }
+            if (radio.checked) showRelevantPopup();
         });
     });
 }
 
 if (addForm) {
     addForm.addEventListener('submit', (event) => {
-        if (checkoutFlag && checkoutFlag.value === '1') return;
+        if (cartFlag && cartFlag.value === '1') return;
 
         event.preventDefault();
-        submitAddToCart();
+        showRelevantPopup();
     });
 }

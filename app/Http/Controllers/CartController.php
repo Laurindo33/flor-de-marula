@@ -34,7 +34,7 @@ class CartController extends Controller
         $validated = $request->validate([
             'product_id' => ['required', 'exists:products,id'],
             'offer_id' => ['nullable', 'exists:product_offers,id'],
-            'checkout' => ['nullable', 'boolean'],
+            'redirect_to_cart' => ['nullable', 'boolean'],
         ]);
 
         $product = Product::findOrFail($validated['product_id']);
@@ -54,8 +54,8 @@ class CartController extends Controller
             $this->cartService->addItem($product, 1);
         }
 
-        if ($request->boolean('checkout')) {
-            return redirect()->route('checkout.index');
+        if ($request->boolean('redirect_to_cart')) {
+            return redirect()->route('cart.index');
         }
 
         return back()->with('cart_success', "{$product->name} adicionado ao carrinho.");

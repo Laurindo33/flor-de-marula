@@ -112,7 +112,7 @@
                 <form action="{{ route('cart.add') }}" method="POST" class="fm-pdp__add-form" data-fm-add-form>
                     @csrf
                     <input type="hidden" name="product_id" value="{{ $product->id }}">
-                    <input type="hidden" name="checkout" value="0" data-fm-checkout-flag>
+                    <input type="hidden" name="redirect_to_cart" value="0" data-fm-cart-flag>
 
                     @if ($product->offers->isNotEmpty())
                         <div class="fm-pdp__offers">
@@ -168,9 +168,9 @@
                             <div class="modal-content fm-added-modal">
                                 <button type="button" class="btn-close fm-added-modal__close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                                 <div class="modal-body text-center">
-                                    <p class="fm-added-modal__title">Produto adicionado ao carrinho!</p>
+                                    <p class="fm-added-modal__title">Confirme a sua compra!</p>
                                     <p class="fm-added-modal__text">Finalize a compra agora para não perder a oportunidade de garantir o seu produto.</p>
-                                    <a href="{{ route('checkout.index') }}" class="fm-btn fm-btn-primary fm-added-modal__finish w-100 justify-content-center">Finalizar Compra</a>
+                                    <button type="button" class="fm-btn fm-btn-primary fm-added-modal__finish w-100 justify-content-center" data-fm-added-finish>Finalizar Compra</button>
                                     <button type="button" class="fm-added-modal__continue" data-bs-dismiss="modal">Continuar a comprar</button>
                                 </div>
                             </div>
