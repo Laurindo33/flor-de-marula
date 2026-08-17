@@ -36,6 +36,7 @@
                     ],
                     'Comunidade' => [
                         'Avaliações' => 'admin.reviews.index',
+                        'Depoimentos' => 'admin.testimonials.index',
                         'Newsletter' => 'admin.newsletter.index',
                         'Mensagens' => 'admin.messages.index',
                     ],

@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\StockController;
 use App\Http\Controllers\Admin\SiteSettingController;
 use App\Http\Controllers\Admin\SupportMessageController;
+use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -90,6 +91,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::post('/faq', [FaqController::class, 'store'])->name('faqs.store');
         Route::put('/faq/{faq}', [FaqController::class, 'update'])->name('faqs.update');
         Route::delete('/faq/{faq}', [FaqController::class, 'destroy'])->name('faqs.destroy');
+
+        Route::get('/depoimentos', [TestimonialController::class, 'index'])->name('testimonials.index');
+        Route::post('/depoimentos', [TestimonialController::class, 'store'])->name('testimonials.store');
+        Route::delete('/depoimentos/{testimonial}', [TestimonialController::class, 'destroy'])->name('testimonials.destroy');
 
         Route::get('/utilizadores', [UserController::class, 'index'])->name('users.index');
         Route::post('/utilizadores', [UserController::class, 'store'])->name('users.store');

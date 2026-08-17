@@ -155,22 +155,24 @@
 @include('partials.testimonials-section', ['homeHeadingStyle' => true])
 
 {{-- Depoimentos reais das redes sociais, em grelha tipo mosaico --}}
-<section class="fm-social-proof">
-    <div class="fm-container">
-        <h2 class="fm-heading-italiana fm-heading-split text-center mb-2">Mais de 17.000 clientes confiam na <span class="fm-accent-word">Flor de Marula</span></h2>
-        <p class="fm-body-lg fm-social-proof__subtitle text-center mb-5">Depoimentos reais partilhados pelos nossos clientes nas redes sociais</p>
-        <div class="fm-social-proof__grid">
-            @foreach (range(1, 24) as $i)
-                <div class="fm-social-proof__item">
-                    <img
-                        src="{{ asset('images/home/testimonials/depo-' . str_pad($i, 2, '0', STR_PAD_LEFT) . '.jpg') }}"
-                        alt="Depoimento de cliente Flor de Marula"
-                        loading="lazy"
-                    >
-                </div>
-            @endforeach
+@if ($testimonials->isNotEmpty())
+    <section class="fm-social-proof">
+        <div class="fm-container">
+            <h2 class="fm-heading-italiana fm-heading-split text-center mb-2">Mais de 17.000 clientes confiam na <span class="fm-accent-word">Flor de Marula</span></h2>
+            <p class="fm-body-lg fm-social-proof__subtitle text-center mb-5">Depoimentos reais partilhados pelos nossos clientes nas redes sociais</p>
+            <div class="fm-social-proof__grid">
+                @foreach ($testimonials as $testimonial)
+                    <div class="fm-social-proof__item">
+                        <img
+                            src="{{ asset($testimonial->image_path) }}"
+                            alt="Depoimento de cliente Flor de Marula"
+                            loading="lazy"
+                        >
+                    </div>
+                @endforeach
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+@endif
 
 @endsection
