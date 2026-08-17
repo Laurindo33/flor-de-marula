@@ -75,9 +75,19 @@
     justify-content: center;
     width: 25px;
     height: 24px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    flex-shrink: 0;
     color: var(--fm-black);
     background: none;
     border: none;
+}
+
+.fm-icon-btn svg {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
 }
 
 .fm-icon-btn--cart {
@@ -88,6 +98,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    flex-shrink: 0;
 }
 
 .fm-header-search__form {
