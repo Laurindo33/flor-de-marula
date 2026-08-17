@@ -7,7 +7,7 @@
 
 <section class="fm-reviews-hero">
     <div class="fm-container">
-        <h1 class="fm-heading-lg text-center mb-2">+300.000 Clientes adoram a Flor de Marula</h1>
+        <h1 class="fm-heading-lg text-center mb-2">+17.000 Clientes adoram a Flor de Marula</h1>
         <p class="fm-body-lg text-center">Veja o que alguns deles têm a dizer sobre seu produto favorito</p>
     </div>
 </section>

@@ -2,9 +2,9 @@
 <section class="fm-testimonials {{ $sectionClass ?? '' }}">
     <div class="fm-container">
         @if (!empty($homeHeadingStyle))
-            <h2 class="fm-heading-italiana fm-heading-split text-center mb-2">+300.000 Clientes adoram a <span class="fm-accent-word">Flor de Marula</span></h2>
+            <h2 class="fm-heading-italiana fm-heading-split text-center mb-2">+17.000 Clientes adoram a <span class="fm-accent-word">Flor de Marula</span></h2>
         @else
-            <h2 class="fm-heading-lg text-center mb-2">+300.000 Clientes adoram a Flor de Marula</h2>
+            <h2 class="fm-heading-lg text-center mb-2">+17.000 Clientes adoram a Flor de Marula</h2>
         @endif
         <p class="fm-body-lg fm-testimonials__subtitle text-center mb-5">Veja o que alguns deles têm a dizer sobre seu produto favorito</p>
         @php
