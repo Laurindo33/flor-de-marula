@@ -407,6 +407,83 @@
     text-transform: uppercase;
 }
 
+/* Popup de ofertas (upsell) */
+.fm-upsell-modal {
+    border-radius: var(--fm-radius-md);
+    border: none;
+    padding: 8px;
+}
+
+.fm-upsell-modal__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+}
+
+.fm-upsell-modal__title {
+    font-family: 'Iosevka Charon Mono', 'JetBrains Mono', monospace;
+    font-size: 24px;
+    color: var(--fm-text-strong);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.fm-upsell-modal__options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.fm-upsell-modal__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    background: var(--fm-rose-bg);
+    border: 2px solid transparent;
+    border-radius: var(--fm-radius-sm);
+    padding: 14px 16px;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+}
+
+.fm-upsell-modal__option:hover {
+    border-color: var(--fm-primary);
+}
+
+.fm-upsell-modal__option-label {
+    font-family: var(--fm-font-base);
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--fm-black);
+}
+
+.fm-upsell-modal__option-price {
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    color: var(--fm-text);
+}
+
+.fm-upsell-modal__option-savings {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--fm-primary);
+    white-space: nowrap;
+}
+
+.fm-upsell-modal__finish {
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 @media (max-width: 991.98px) {
     .fm-pdp__add-form {
         display: flex;

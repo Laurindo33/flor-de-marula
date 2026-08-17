@@ -71,7 +71,7 @@
                             <a
                                 href="{{ route('product.show', $product->routineProduct) }}"
                                 class="fm-btn fm-btn-primary fm-pdp__routine-cta {{ $product->routineProduct->is_out_of_stock ? 'fm-btn-primary--disabled' : '' }}"
-                            >{{ $product->routineProduct->is_out_of_stock ? 'Fora de Estoque' : 'Adicionar ao Carrinho' }}</a>
+                            >{{ $product->routineProduct->is_out_of_stock ? 'Fora de Estoque' : 'Comprar Agora' }}</a>
                         </div>
                     </div>
                 @endif
@@ -109,17 +109,28 @@
                     </ul>
                 @endif
 
-                <form action="{{ route('cart.add') }}" method="POST" class="fm-pdp__add-form">
+                <form action="{{ route('cart.add') }}" method="POST" class="fm-pdp__add-form" data-fm-add-form>
                     @csrf
                     <input type="hidden" name="product_id" value="{{ $product->id }}">
+                    <input type="hidden" name="checkout" value="0" data-fm-checkout-flag>
 
                     @if ($product->offers->isNotEmpty())
                         <div class="fm-pdp__offers">
                             <p class="fm-pdp__offers-title">Ofertas exclusivas</p>
                             <div class="fm-pdp__offers-grid">
                                 @foreach ($product->offers as $offer)
-                                    <label class="fm-pdp__offer {{ $loop->first ? 'active' : '' }}">
-                                        <input type="radio" name="offer_id" value="{{ $offer->id }}" {{ $loop->first ? 'checked' : '' }}>
+                                    @php
+                                        $offerSavings = max(0, ($product->price * $offer->quantity) - $offer->price);
+                                    @endphp
+                                    <label
+                                        class="fm-pdp__offer {{ $loop->first ? 'active' : '' }}"
+                                        data-fm-offer
+                                        data-offer-quantity="{{ $offer->quantity }}"
+                                        data-offer-label="{{ $offer->label }}"
+                                        data-offer-price-formatted="{{ $offer->formatted_price }}"
+                                        data-offer-savings-formatted="{{ number_format($offerSavings, 0, ',', '.') }}kz"
+                                    >
+                                        <input type="radio" name="offer_id" value="{{ $offer->id }}" data-fm-offer-radio {{ $loop->first ? 'checked' : '' }}>
                                         <img src="{{ asset($offer->image_path ?? $product->image_path) }}" alt="{{ $offer->label }}">
                                         <span class="fm-pdp__offer-label">{{ $offer->label }}</span>
                                         <span class="fm-pdp__offer-price">{{ $offer->formatted_price }}</span>
@@ -132,9 +143,24 @@
                     @if ($product->is_out_of_stock)
                         <button type="button" class="fm-btn fm-btn-primary fm-pdp__add-btn" disabled>Fora de Estoque</button>
                     @else
-                        <button type="submit" class="fm-btn fm-btn-primary fm-pdp__add-btn">Adicionar ao Carrinho</button>
+                        <button type="submit" class="fm-btn fm-btn-primary fm-pdp__add-btn">Comprar Agora</button>
                     @endif
                 </form>
+
+                @if ($product->offers->isNotEmpty())
+                    <div class="modal fade" id="fmUpsellModal" tabindex="-1" aria-hidden="true" data-fm-upsell-modal>
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content fm-upsell-modal">
+                                <button type="button" class="btn-close fm-upsell-modal__close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                <div class="modal-body">
+                                    <p class="fm-upsell-modal__title">Poupe ainda mais!</p>
+                                    <div class="fm-upsell-modal__options" data-fm-upsell-options></div>
+                                    <button type="button" class="fm-btn fm-btn-primary fm-upsell-modal__finish w-100 justify-content-center" data-fm-upsell-finish>Finalizar Compra</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endif
 
                 <div class="accordion fm-pdp__accordion" id="fmProductAccordion">
                     @php
