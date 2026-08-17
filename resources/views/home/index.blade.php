@@ -17,7 +17,7 @@
             </div>
             <div class="fm-hero__actions">
                 <a href="#" class="fm-btn fm-btn-primary">Comprar agora</a>
-                <a href="#" class="fm-btn fm-btn-outline">Nossa História</a>
+                <a href="{{ route('historia.index') }}" class="fm-btn fm-btn-outline">Nossa História</a>
             </div>
         </div>
 
