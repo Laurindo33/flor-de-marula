@@ -68,7 +68,10 @@
                                     @endif
                                 </p>
                             </div>
-                            <a href="{{ route('product.show', $product->routineProduct) }}" class="fm-btn fm-btn-primary fm-pdp__routine-cta">Adicionar ao Carrinho</a>
+                            <a
+                                href="{{ route('product.show', $product->routineProduct) }}"
+                                class="fm-btn fm-btn-primary fm-pdp__routine-cta {{ $product->routineProduct->is_out_of_stock ? 'fm-btn-primary--disabled' : '' }}"
+                            >{{ $product->routineProduct->is_out_of_stock ? 'Fora de Estoque' : 'Adicionar ao Carrinho' }}</a>
                         </div>
                     </div>
                 @endif
