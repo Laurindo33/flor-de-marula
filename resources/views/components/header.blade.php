@@ -86,6 +86,10 @@
                     class="fm-nav-link text-uppercase {{ $item['active'] ? 'active' : '' }}"
                 >{{ $label }}</a>
             @endforeach
+            <a
+                href="{{ auth()->check() ? route('account.index') : route('login') }}"
+                class="fm-nav-link text-uppercase {{ request()->routeIs('account.*') ? 'active' : '' }}"
+            >Minha Conta</a>
         </nav>
     </div>
 </div>
