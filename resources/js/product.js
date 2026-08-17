@@ -96,3 +96,29 @@ if (upsellModalEl && upsellOptionsEl && offerRadios.length && window.bootstrap) 
         });
     }
 }
+
+const addedModalEl = document.querySelector('[data-fm-added-modal]');
+
+if (addForm && addedModalEl && checkoutFlag && window.bootstrap) {
+    const addedModal = new window.bootstrap.Modal(addedModalEl);
+
+    addForm.addEventListener('submit', (event) => {
+        if (checkoutFlag.value === '1') return;
+
+        event.preventDefault();
+
+        fetch(addForm.action, {
+            method: 'POST',
+            body: new FormData(addForm),
+            credentials: 'same-origin',
+        }).then((response) => {
+            if (response.ok) {
+                addedModal.show();
+            } else {
+                addForm.submit();
+            }
+        }).catch(() => {
+            addForm.submit();
+        });
+    });
+}

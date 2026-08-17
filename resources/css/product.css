@@ -484,6 +484,58 @@
     text-transform: uppercase;
 }
 
+/* Popup de confirmacao "produto adicionado ao carrinho" */
+.fm-added-modal {
+    border-radius: var(--fm-radius-md);
+    border: none;
+    padding: 8px;
+}
+
+.fm-added-modal__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+}
+
+.fm-added-modal__title {
+    font-family: 'Iosevka Charon Mono', 'JetBrains Mono', monospace;
+    font-size: 22px;
+    color: var(--fm-text-strong);
+    margin-bottom: 12px;
+}
+
+.fm-added-modal__text {
+    font-family: var(--fm-font-base);
+    font-size: 15px;
+    color: var(--fm-text);
+    margin-bottom: 24px;
+}
+
+.fm-added-modal__finish {
+    height: 60px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.fm-added-modal__continue {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    color: var(--fm-text);
+    text-decoration: underline;
+}
+.fm-added-modal__continue:hover {
+    color: var(--fm-primary);
+}
+
 @media (max-width: 991.98px) {
     .fm-pdp__add-form {
         display: flex;

@@ -162,6 +162,22 @@
                     </div>
                 @endif
 
+                @unless ($product->is_out_of_stock)
+                    <div class="modal fade" id="fmAddedModal" tabindex="-1" aria-hidden="true" data-fm-added-modal>
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content fm-added-modal">
+                                <button type="button" class="btn-close fm-added-modal__close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                                <div class="modal-body text-center">
+                                    <p class="fm-added-modal__title">Produto adicionado ao carrinho!</p>
+                                    <p class="fm-added-modal__text">Finalize a compra agora para não perder a oportunidade de garantir o seu produto.</p>
+                                    <a href="{{ route('checkout.index') }}" class="fm-btn fm-btn-primary fm-added-modal__finish w-100 justify-content-center">Finalizar Compra</a>
+                                    <button type="button" class="fm-added-modal__continue" data-bs-dismiss="modal">Continuar a comprar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endunless
+
                 <div class="accordion fm-pdp__accordion" id="fmProductAccordion">
                     @php
                         $accordionItems = collect([
