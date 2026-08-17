@@ -120,6 +120,11 @@
     display: block;
 }
 
+.fm-pdp__main-image--out-of-stock img {
+    opacity: 0.45;
+    filter: grayscale(60%);
+}
+
 @media (max-width: 991.98px) {
     .fm-pdp__main-image img {
         aspect-ratio: 426 / 451;

@@ -38,6 +38,10 @@ class CartController extends Controller
 
         $product = Product::findOrFail($validated['product_id']);
 
+        if ($product->is_out_of_stock) {
+            return back()->with('cart_error', "{$product->name} está fora de estoque.");
+        }
+
         if (! empty($validated['offer_id'])) {
             $offer = ProductOffer::where('id', $validated['offer_id'])
                 ->where('product_id', $product->id)
@@ -60,7 +64,9 @@ class CartController extends Controller
         ]);
 
         foreach (Product::whereIn('id', $validated['product_ids'])->get() as $product) {
-            $this->cartService->addItem($product, 1);
+            if (! $product->is_out_of_stock) {
+                $this->cartService->addItem($product, 1);
+            }
         }
 
         return redirect()->route('cart.index')->with('cart_success', 'Rotina adicionada ao carrinho.');

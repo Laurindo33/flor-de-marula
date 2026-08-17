@@ -120,4 +120,9 @@ class Product extends Model
     {
         return $this->stock <= $this->stock_minimo;
     }
+
+    public function getIsOutOfStockAttribute(): bool
+    {
+        return $this->stock <= 0;
+    }
 }

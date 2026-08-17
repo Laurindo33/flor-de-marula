@@ -36,6 +36,11 @@
     opacity: 0.9;
     color: var(--fm-white);
 }
+.fm-btn-primary:disabled {
+    background-color: var(--fm-text);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 
 .fm-btn-outline {
     background-color: transparent;
@@ -187,11 +192,20 @@
     height: 100%;
 }
 
+.fm-product-card__image-wrap {
+    position: relative;
+}
+
 .fm-product-card__image {
     width: 100%;
     aspect-ratio: 426 / 451;
     object-fit: cover;
     border-radius: var(--fm-radius-lg);
+}
+
+.fm-product-card--out-of-stock .fm-product-card__image {
+    opacity: 0.45;
+    filter: grayscale(60%);
 }
 
 .fm-product-card__body {
@@ -203,6 +217,24 @@
     font-size: 20px;
     color: var(--fm-black);
     text-transform: uppercase;
+}
+
+/* Badge "Fora de Estoque" */
+.fm-stock-badge {
+    background: rgba(0, 0, 0, 0.75);
+    color: var(--fm-white);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    border-radius: var(--fm-radius-sm);
+    padding: 4px 10px;
+    display: inline-block;
+}
+
+.fm-stock-badge--overlay {
+    position: absolute;
+    top: 12px;
+    left: 12px;
 }
 
 /* Trend card (produtos em alta) */
@@ -237,6 +269,11 @@
     flex-shrink: 0;
 }
 
+.fm-trend-card--out-of-stock .fm-trend-card__image {
+    opacity: 0.45;
+    filter: grayscale(60%);
+}
+
 .fm-trend-card__name {
     font-family: var(--fm-font-base);
     font-weight: 400;
@@ -269,6 +306,12 @@
     align-items: center;
     justify-content: center;
     font-family: 'JetBrains Mono', monospace;
+}
+
+.fm-add-btn--disabled {
+    background: var(--fm-text);
+    opacity: 0.4;
+    cursor: not-allowed;
 }
 
 /* Badges Antes/Depois */

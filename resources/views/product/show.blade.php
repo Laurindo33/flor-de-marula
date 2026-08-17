@@ -38,8 +38,11 @@
 
             {{-- Imagem principal + garantia (Frame 77) --}}
             <div class="fm-pdp__visual order-1">
-                <div class="fm-pdp__main-image">
+                <div class="fm-pdp__main-image {{ $product->is_out_of_stock ? 'fm-pdp__main-image--out-of-stock' : '' }}">
                     <img src="{{ asset($mainImage) }}" alt="{{ $product->name }}" data-fm-gallery-main>
+                    @if ($product->is_out_of_stock)
+                        <span class="fm-stock-badge fm-stock-badge--overlay">Fora de Estoque</span>
+                    @endif
                 </div>
             </div>
 
@@ -123,7 +126,11 @@
                         </div>
                     @endif
 
-                    <button type="submit" class="fm-btn fm-btn-primary fm-pdp__add-btn">Adicionar ao Carrinho</button>
+                    @if ($product->is_out_of_stock)
+                        <button type="button" class="fm-btn fm-btn-primary fm-pdp__add-btn" disabled>Fora de Estoque</button>
+                    @else
+                        <button type="submit" class="fm-btn fm-btn-primary fm-pdp__add-btn">Adicionar ao Carrinho</button>
+                    @endif
                 </form>
 
                 <div class="accordion fm-pdp__accordion" id="fmProductAccordion">
