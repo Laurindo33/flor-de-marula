@@ -7,6 +7,16 @@
     padding-block: 60px 20px;
 }
 
+@media (max-width: 991.98px) {
+    .fm-reviews-hero h1 {
+        line-height: 1.2;
+    }
+
+    .fm-reviews-hero p {
+        font-size: 15px;
+    }
+}
+
 .fm-reviews {
     padding-block: 20px 60px;
 }
