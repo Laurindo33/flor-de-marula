@@ -114,21 +114,27 @@ const submitAddToCart = () => {
     });
 };
 
+if (offerRadios.length && upsellModal && upsellOptionsEl) {
+    offerRadios.forEach((radio) => {
+        radio.addEventListener('change', () => {
+            if (!radio.checked) return;
+
+            const upsells = getUpsellsForCurrentSelection();
+
+            if (upsells.length > 0) {
+                showUpsellModal(upsells);
+            } else {
+                submitAddToCart();
+            }
+        });
+    });
+}
+
 if (addForm) {
     addForm.addEventListener('submit', (event) => {
         if (checkoutFlag && checkoutFlag.value === '1') return;
 
         event.preventDefault();
-
-        const upsells = (offerRadios.length && upsellModal && upsellOptionsEl)
-            ? getUpsellsForCurrentSelection()
-            : [];
-
-        if (upsells.length > 0) {
-            showUpsellModal(upsells);
-            return;
-        }
-
         submitAddToCart();
     });
 }
