@@ -154,4 +154,23 @@
 {{-- Clientes adoram a Flor de Marula (214:280) --}}
 @include('partials.testimonials-section', ['homeHeadingStyle' => true])
 
+{{-- Depoimentos reais das redes sociais, em grelha tipo mosaico --}}
+<section class="fm-social-proof">
+    <div class="fm-container">
+        <h2 class="fm-heading-lg text-center mb-2">Mais de 17.000 clientes confiam na Flor de Marula</h2>
+        <p class="fm-body-lg fm-social-proof__subtitle text-center mb-5">Depoimentos reais partilhados pelos nossos clientes nas redes sociais</p>
+        <div class="fm-social-proof__grid">
+            @foreach (range(1, 24) as $i)
+                <div class="fm-social-proof__item">
+                    <img
+                        src="{{ asset('images/home/testimonials/depo-' . str_pad($i, 2, '0', STR_PAD_LEFT) . '.jpg') }}"
+                        alt="Depoimento de cliente Flor de Marula"
+                        loading="lazy"
+                    >
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
 @endsection

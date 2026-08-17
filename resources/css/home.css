@@ -419,3 +419,49 @@
     white-space: pre-line;
     border-radius: 0 0 var(--fm-radius-md) var(--fm-radius-md);
 }
+
+/* Depoimentos das redes sociais (grid tipo mosaico) */
+.fm-social-proof {
+    padding-block: 60px;
+}
+
+.fm-social-proof__subtitle {
+    font-family: var(--fm-font-base);
+    font-size: 16px;
+    color: var(--fm-text);
+}
+
+.fm-social-proof__grid {
+    columns: 5 220px;
+    column-gap: 16px;
+}
+
+.fm-social-proof__item {
+    display: block;
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 16px;
+    border-radius: var(--fm-radius-md);
+    overflow: hidden;
+    box-shadow: var(--fm-shadow-sm);
+}
+
+.fm-social-proof__item img {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 991.98px) {
+    .fm-social-proof {
+        padding-block: 40px;
+    }
+
+    .fm-social-proof__grid {
+        columns: 2;
+        column-gap: 10px;
+    }
+
+    .fm-social-proof__item {
+        margin-bottom: 10px;
+    }
+}
