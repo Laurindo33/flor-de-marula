@@ -157,7 +157,7 @@
 {{-- Depoimentos reais das redes sociais, em grelha tipo mosaico --}}
 <section class="fm-social-proof">
     <div class="fm-container">
-        <h2 class="fm-heading-lg text-center mb-2">Mais de 17.000 clientes confiam na Flor de Marula</h2>
+        <h2 class="fm-heading-italiana fm-heading-split text-center mb-2">Mais de 17.000 clientes confiam na <span class="fm-accent-word">Flor de Marula</span></h2>
         <p class="fm-body-lg fm-social-proof__subtitle text-center mb-5">Depoimentos reais partilhados pelos nossos clientes nas redes sociais</p>
         <div class="fm-social-proof__grid">
             @foreach (range(1, 24) as $i)
