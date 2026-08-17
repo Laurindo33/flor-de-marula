@@ -56,6 +56,12 @@
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
 }
 
+@media (max-width: 991.98px) {
+    .fm-header {
+        height: 68px;
+    }
+}
+
 .fm-nav-link {
     font-family: var(--fm-font-base);
     font-size: 16px;
@@ -131,7 +137,7 @@
 @media (max-width: 991.98px) {
     .fm-header-search__form {
         position: fixed;
-        top: 106px;
+        top: 68px;
         left: 0;
         right: 0;
         width: auto;
