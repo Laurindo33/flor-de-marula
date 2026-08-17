@@ -58,6 +58,14 @@
                     <span class="fm-icon-btn__badge">{{ $cartItemCount }}</span>
                 @endif
             </a>
+            <div class="fm-header-search" data-fm-search>
+                <form action="{{ route('shop.index') }}" method="GET" class="fm-header-search__form">
+                    <input type="text" name="busca" placeholder="Pesquisar produtos..." class="fm-header-search__input" data-fm-search-input autocomplete="off">
+                </form>
+                <button type="button" class="fm-icon-btn" aria-label="Pesquisar" data-fm-search-toggle>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+                </button>
+            </div>
             <button class="btn p-0 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#fmMobileMenu" aria-label="Menu">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
             </button>

@@ -128,6 +128,33 @@
     border-color: var(--fm-primary);
 }
 
+@media (max-width: 991.98px) {
+    .fm-header-search__form {
+        position: fixed;
+        top: 106px;
+        left: 0;
+        right: 0;
+        width: auto;
+        max-height: 0;
+        padding-inline: 16px;
+        background: var(--fm-white);
+        box-shadow: var(--fm-shadow-sm);
+        transition: max-height 0.2s ease, padding-block 0.2s ease;
+        z-index: 1040;
+    }
+
+    .fm-header-search.is-open .fm-header-search__form {
+        width: auto;
+        max-height: 68px;
+        padding-block: 12px;
+        margin-right: 0;
+    }
+
+    .fm-header-search__input {
+        width: 100%;
+    }
+}
+
 .fm-icon-btn__badge {
     position: absolute;
     top: -8px;
