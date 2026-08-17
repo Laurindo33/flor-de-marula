@@ -120,6 +120,12 @@
     display: block;
 }
 
+@media (max-width: 991.98px) {
+    .fm-pdp__main-image img {
+        aspect-ratio: 426 / 451;
+    }
+}
+
 .fm-pdp__guarantee-card {
     background: var(--fm-primary);
     border-radius: var(--fm-radius-md);
