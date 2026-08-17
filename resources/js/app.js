@@ -2,6 +2,26 @@ import * as bootstrap from 'bootstrap';
 
 window.bootstrap = bootstrap;
 
+document.querySelectorAll('[data-fm-search]').forEach((wrapper) => {
+    const toggle = wrapper.querySelector('[data-fm-search-toggle]');
+    const input = wrapper.querySelector('[data-fm-search-input]');
+
+    toggle.addEventListener('click', () => {
+        const isOpen = wrapper.classList.toggle('is-open');
+        if (isOpen) {
+            input.focus();
+        } else if (!input.value) {
+            wrapper.classList.remove('is-open');
+        }
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!wrapper.contains(event.target) && !input.value) {
+            wrapper.classList.remove('is-open');
+        }
+    });
+});
+
 document.querySelectorAll('[data-carousel-dots]').forEach((dotsContainer) => {
     const carousel = dotsContainer.previousElementSibling;
     if (!carousel || carousel.children.length === 0) return;

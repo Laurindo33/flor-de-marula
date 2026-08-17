@@ -34,9 +34,14 @@
             <a href="{{ auth()->check() ? route('account.index') : route('login') }}" class="fm-icon-btn" aria-label="Conta">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>
             </a>
-            <a href="#" class="fm-icon-btn" aria-label="Pesquisar">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-            </a>
+            <div class="fm-header-search" data-fm-search>
+                <form action="{{ route('shop.index') }}" method="GET" class="fm-header-search__form">
+                    <input type="text" name="busca" placeholder="Pesquisar produtos..." class="fm-header-search__input" data-fm-search-input autocomplete="off">
+                </form>
+                <button type="button" class="fm-icon-btn" aria-label="Pesquisar" data-fm-search-toggle>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+                </button>
+            </div>
         </div>
     </div>
 </header>

@@ -84,6 +84,39 @@
     position: relative;
 }
 
+.fm-header-search {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.fm-header-search__form {
+    width: 0;
+    overflow: hidden;
+    transition: width 0.2s ease;
+}
+
+.fm-header-search.is-open .fm-header-search__form {
+    width: 200px;
+    margin-right: 8px;
+}
+
+.fm-header-search__input {
+    width: 200px;
+    height: 36px;
+    padding: 0 12px;
+    border: 1px solid #ddd;
+    border-radius: 999px;
+    font-family: var(--fm-font-base);
+    font-size: 14px;
+    color: var(--fm-black);
+}
+
+.fm-header-search__input:focus {
+    outline: none;
+    border-color: var(--fm-primary);
+}
+
 .fm-icon-btn__badge {
     position: absolute;
     top: -8px;

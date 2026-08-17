@@ -25,16 +25,18 @@ class ShopController extends Controller
         }
 
         $activeCategory = $request->string('categoria')->toString();
+        $search = $request->string('busca')->toString();
 
         $products = Product::active()
             ->when($activeCategory, fn ($query) => $query->whereHas(
                 'categories',
                 fn ($q) => $q->where('slug', $activeCategory)
             ))
+            ->when($search, fn ($query) => $query->where('name', 'like', "%{$search}%"))
             ->orderBy('sort_order')
             ->paginate(12)
             ->withQueryString();
 
-        return view('shop.index', compact('products', 'categories', 'activeCategory'));
+        return view('shop.index', compact('products', 'categories', 'activeCategory', 'search'));
     }
 }

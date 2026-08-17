@@ -25,13 +25,23 @@
             </div>
         @endif
 
+        @if ($search)
+            <p class="mb-4">Resultados para "<strong>{{ $search }}</strong>"</p>
+        @endif
+
         <div class="row g-4">
             @forelse ($products as $product)
                 <div class="col-12 col-md-6 col-lg-4">
                     <x-product-card :product="$product" variant="best" />
                 </div>
             @empty
-                <p>Nenhum produto disponível de momento.</p>
+                <p>
+                    @if ($search)
+                        Nenhum produto encontrado para "{{ $search }}".
+                    @else
+                        Nenhum produto disponível de momento.
+                    @endif
+                </p>
             @endforelse
         </div>
 
