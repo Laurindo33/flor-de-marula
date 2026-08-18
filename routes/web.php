@@ -36,10 +36,10 @@ Route::post('/newsletter', [NewsletterController::class, 'subscribe'])->name('ne
 Route::get('/carrinho', [CartController::class, 'index'])->name('cart.index');
 Route::post('/carrinho/adicionar', [CartController::class, 'add'])->name('cart.add');
 Route::post('/carrinho/adicionar-varios', [CartController::class, 'addMany'])->name('cart.add.many');
-Route::patch('/carrinho/{cartItem}', [CartController::class, 'update'])->name('cart.update');
-Route::delete('/carrinho/{cartItem}', [CartController::class, 'remove'])->name('cart.remove');
 Route::post('/carrinho/cupom', [CartController::class, 'applyCoupon'])->name('cart.coupon.apply')->middleware('throttle:15,1');
 Route::delete('/carrinho/cupom', [CartController::class, 'removeCoupon'])->name('cart.coupon.remove');
+Route::patch('/carrinho/{cartItem}', [CartController::class, 'update'])->name('cart.update');
+Route::delete('/carrinho/{cartItem}', [CartController::class, 'remove'])->name('cart.remove');
 
 Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
 Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store')->middleware('throttle:10,1');
