@@ -16,7 +16,7 @@
                 <img src="{{ asset('images/home/hero-banner.png') }}" alt="Modelo usando cosméticos Flor de Marula" class="fm-hero__image img-fluid">
             </div>
             <div class="fm-hero__actions">
-                <a href="{{ route('shop.index') }}" class="fm-btn fm-btn-primary fm-hero__cta-primary">Comprar agora</a>
+                <a href="{{ route('shop.index') }}" class="fm-btn fm-btn-primary">Comprar agora</a>
                 <a href="{{ route('historia.index') }}" class="fm-btn fm-btn-outline">Nossa História</a>
             </div>
         </div>

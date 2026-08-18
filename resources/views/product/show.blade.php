@@ -142,8 +142,8 @@
 
                     @unless ($product->is_out_of_stock)
                         <p class="fm-pdp__coupon-hint">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.59 13.41 12 22 2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82Z"/><circle cx="7" cy="7" r="1.5" fill="currentColor" stroke="none"/></svg>
-                            Tem um cupom de desconto? Adicione o produto ao carrinho e aplique o código no <strong>Carrinho</strong>, antes de finalizar a compra.
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.59 13.41 12 22 2 12V2h10z"/><circle cx="7" cy="7" r="1.5" fill="currentColor" stroke="none"/></svg>
+                            <span>Tem um cupom de desconto? Adicione o produto ao carrinho e aplique o código na página do <a href="{{ route('cart.index') }}">Carrinho</a>.</span>
                         </p>
                     @endunless
 

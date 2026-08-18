@@ -409,22 +409,27 @@
 
 .fm-pdp__coupon-hint {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 8px;
     font-family: var(--fm-font-base);
     font-size: 13px;
-    line-height: 1.4;
+    line-height: 1.5;
     color: var(--fm-text);
-    background: var(--fm-rose-bg);
-    border-radius: var(--fm-radius-sm);
-    padding: 10px 14px;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .fm-pdp__coupon-hint svg {
     flex-shrink: 0;
-    margin-top: 2px;
     color: var(--fm-primary);
+}
+
+.fm-pdp__coupon-hint a {
+    color: var(--fm-primary);
+    font-weight: 600;
+    text-decoration: underline;
+}
+.fm-pdp__coupon-hint a:hover {
+    text-decoration: none;
 }
 
 /* Popup de ofertas (upsell) */
@@ -568,6 +573,8 @@
 
     .fm-pdp__coupon-hint {
         order: 1;
+        justify-content: center;
+        text-align: center;
     }
 
     .fm-pdp__add-btn {
