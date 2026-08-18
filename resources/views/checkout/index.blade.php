@@ -129,7 +129,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="fm-btn fm-btn-primary w-100 justify-content-center">Finalizar Compra</button>
+                <button type="submit" class="fm-btn fm-btn-primary fm-checkout__submit-btn w-100 justify-content-center">Finalizar Compra</button>
                 <a href="{{ route('cart.index') }}" class="fm-cart__continue">Voltar ao Carrinho</a>
 
                 <p class="fm-checkout__disclaimer">Os valores finais (subtotal, desconto e entrega) são sempre confirmados pelo servidor ao finalizar a compra.</p>

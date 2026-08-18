@@ -44,15 +44,23 @@
     pointer-events: none;
 }
 
-/* Botao "Comprar Agora" (adicionar ao carrinho / upsell da rotina) */
+/* Botoes "Comprar Agora" / "Finalizar Compra" (em toda a loja) */
 .fm-pdp__add-btn:not(:disabled),
 .fm-pdp__routine-cta:not(.fm-btn-primary--disabled),
-.fm-upsell-modal__finish {
+.fm-upsell-modal__finish,
+.fm-added-modal__finish,
+.fm-hero__cta-primary,
+.fm-checkout__submit-btn,
+.fm-cart__checkout-btn {
     background-color: #008000;
 }
 .fm-pdp__add-btn:not(:disabled):hover,
 .fm-pdp__routine-cta:not(.fm-btn-primary--disabled):hover,
-.fm-upsell-modal__finish:hover {
+.fm-upsell-modal__finish:hover,
+.fm-added-modal__finish:hover,
+.fm-hero__cta-primary:hover,
+.fm-checkout__submit-btn:hover,
+.fm-cart__checkout-btn:hover {
     opacity: 0.9;
 }
 

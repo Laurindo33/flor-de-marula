@@ -94,7 +94,7 @@
                         </div>
                     </div>
 
-                    <a href="{{ route('checkout.index') }}" class="fm-btn fm-btn-primary w-100 justify-content-center">Finalizar Compra</a>
+                    <a href="{{ route('checkout.index') }}" class="fm-btn fm-btn-primary fm-cart__checkout-btn w-100 justify-content-center">Finalizar Compra</a>
                     <a href="{{ route('shop.index') }}" class="fm-cart__continue">Continuar a Comprar</a>
                 </div>
             </div>
