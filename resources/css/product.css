@@ -415,6 +415,9 @@
     font-size: 13px;
     line-height: 1.5;
     color: var(--fm-text);
+    background: var(--fm-rose-bg);
+    border-radius: var(--fm-radius-sm);
+    padding: 10px 14px;
     margin-bottom: 16px;
 }
 
