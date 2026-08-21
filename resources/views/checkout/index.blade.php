@@ -25,22 +25,23 @@
                 <div class="fm-checkout-section">
                     <h2 class="fm-checkout-section__title">Dados Pessoais</h2>
                     <div class="fm-checkout-field">
-                        <label for="name">Nome Completo</label>
+                        <label for="name">Nome</label>
                         <input type="text" name="name" id="name" value="{{ old('name') }}" required>
                     </div>
-                    <div class="row g-3">
-                        <div class="col-12 col-sm-6">
-                            <div class="fm-checkout-field">
-                                <label for="email">E-mail</label>
-                                <input type="email" name="email" id="email" value="{{ old('email') }}" required>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <div class="fm-checkout-field">
-                                <label for="phone">Telefone</label>
-                                <input type="text" name="phone" id="phone" value="{{ old('phone') }}" placeholder="+244 9XX XXX XXX" required>
-                            </div>
-                        </div>
+                    <div class="fm-checkout-field">
+                        <label for="phone">Telefone</label>
+                        <input
+                            type="tel"
+                            name="phone"
+                            id="phone"
+                            value="{{ old('phone') }}"
+                            placeholder="932005773"
+                            inputmode="numeric"
+                            pattern="[0-9]{9}"
+                            maxlength="9"
+                            title="Introduza os 9 dígitos do número de telefone"
+                            required
+                        >
                     </div>
                 </div>
 
@@ -50,19 +51,13 @@
                         <label for="address_line">Endereço</label>
                         <input type="text" name="address_line" id="address_line" value="{{ old('address_line') }}" placeholder="Rua, número, bairro" required>
                     </div>
-                    <div class="row g-3">
-                        <div class="col-12 col-sm-6">
-                            <div class="fm-checkout-field">
-                                <label for="city">Cidade / Município</label>
-                                <input type="text" name="city" id="city" value="{{ old('city') }}" required>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6">
-                            <div class="fm-checkout-field">
-                                <label for="province">Província</label>
-                                <input type="text" name="province" id="province" value="{{ old('province', 'Luanda') }}" required>
-                            </div>
-                        </div>
+                    <div class="fm-checkout-field">
+                        <label for="province">Província</label>
+                        <select name="province" id="province" data-fm-province required>
+                            <option value="Luanda" {{ old('province', 'Luanda') === 'Luanda' ? 'selected' : '' }}>Luanda</option>
+                            <option value="Outro" {{ old('province') === 'Outro' ? 'selected' : '' }}>Outro</option>
+                        </select>
+                        <p class="fm-checkout__province-note" data-fm-province-note hidden>De momento, só fazemos entregas em Luanda.</p>
                     </div>
                 </div>
 
@@ -129,7 +124,7 @@
                     </div>
                 </div>
 
-                <button type="submit" class="fm-btn fm-btn-primary fm-checkout__submit-btn w-100 justify-content-center">Finalizar Compra</button>
+                <button type="submit" class="fm-btn fm-btn-primary fm-checkout__submit-btn w-100 justify-content-center" data-fm-checkout-submit>Finalizar Compra</button>
                 <a href="{{ route('cart.index') }}" class="fm-cart__continue">Voltar ao Carrinho</a>
 
                 <p class="fm-checkout__disclaimer">Os valores finais (subtotal, desconto e entrega) são sempre confirmados pelo servidor ao finalizar a compra.</p>
@@ -165,5 +160,25 @@
             input.closest('.fm-checkout-option').classList.add('active');
         });
     });
+
+    const provinceSelect = document.querySelector('[data-fm-province]');
+    const provinceNote = document.querySelector('[data-fm-province-note]');
+    const checkoutSubmit = document.querySelector('[data-fm-checkout-submit]');
+
+    if (provinceSelect && provinceNote && checkoutSubmit) {
+        provinceSelect.addEventListener('change', () => {
+            const isLuanda = provinceSelect.value === 'Luanda';
+            provinceNote.hidden = isLuanda;
+            checkoutSubmit.disabled = !isLuanda;
+        });
+        provinceSelect.dispatchEvent(new Event('change'));
+    }
+
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', () => {
+            phoneInput.value = phoneInput.value.replace(/\D/g, '').slice(0, 9);
+        });
+    }
 </script>
 @endpush

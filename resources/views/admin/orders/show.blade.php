@@ -57,7 +57,9 @@
         <div class="fm-admin-card">
             <p class="fm-admin-card__title">Cliente</p>
             <p class="mb-1"><strong>{{ $order->customer_name }}</strong></p>
-            <p class="mb-1">{{ $order->customer_email }}</p>
+            @if ($order->customer_email)
+                <p class="mb-1">{{ $order->customer_email }}</p>
+            @endif
             <p class="mb-1">{{ $order->customer_phone }}</p>
             @if ($order->user)
                 <a href="{{ route('admin.customers.show', $order->user) }}" class="fm-admin-btn fm-admin-btn--outline fm-admin-btn--sm mt-2">Ver Conta do Cliente</a>
@@ -66,7 +68,7 @@
 
         <div class="fm-admin-card">
             <p class="fm-admin-card__title">Entrega e Pagamento</p>
-            <p class="mb-1"><strong>Endereço:</strong> {{ $order->address_line }}, {{ $order->city }}, {{ $order->province }}</p>
+            <p class="mb-1"><strong>Endereço:</strong> {{ collect([$order->address_line, $order->city, $order->province])->filter()->implode(', ') }}</p>
             <p class="mb-1"><strong>Método de entrega:</strong> {{ $order->shipping_method }}</p>
             <p class="mb-0"><strong>Pagamento:</strong> {{ $order->payment_method }}</p>
         </div>

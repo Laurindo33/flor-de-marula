@@ -27,7 +27,7 @@
             </div>
             <div class="fm-order-card__row">
                 <span>Endereço</span>
-                <span>{{ $order->address_line }}, {{ $order->city }}, {{ $order->province }}</span>
+                <span>{{ collect([$order->address_line, $order->city, $order->province])->filter()->implode(', ') }}</span>
             </div>
         </div>
 

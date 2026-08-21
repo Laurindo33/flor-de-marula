@@ -48,13 +48,14 @@ class CheckoutController extends Controller
 
         $validated = $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email', 'max:255'],
-            'phone' => ['required', 'string', 'max:30'],
+            'phone' => ['required', 'digits:9'],
             'address_line' => ['required', 'string', 'max:255'],
-            'city' => ['required', 'string', 'max:255'],
-            'province' => ['required', 'string', 'max:255'],
+            'province' => ['required', Rule::in(['Luanda'])],
             'shipping_method' => ['required', Rule::exists('shipping_methods', 'id')->where('is_active', true)],
             'payment_method' => ['required', Rule::exists('payment_methods', 'id')->where('is_active', true)],
+        ], [
+            'province.in' => 'De momento, só fazemos entregas em Luanda.',
+            'phone.digits' => 'O telefone deve ter exatamente 9 dígitos.',
         ]);
 
         $shippingMethod = ShippingMethod::findOrFail($validated['shipping_method']);
@@ -62,10 +63,8 @@ class CheckoutController extends Controller
 
         $order = $this->orderService->createFromCart($cart, [
             'name' => $validated['name'],
-            'email' => $validated['email'],
             'phone' => $validated['phone'],
             'address_line' => $validated['address_line'],
-            'city' => $validated['city'],
             'province' => $validated['province'],
             'shipping_method' => $shippingMethod->label,
             'shipping_cost' => $shippingMethod->cost,

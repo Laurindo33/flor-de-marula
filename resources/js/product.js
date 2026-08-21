@@ -78,7 +78,9 @@ const showUpsellModal = (upsells) => {
         option.append(label, price, savings);
         option.addEventListener('click', () => {
             selectOffer(value);
+            cartFlag.value = '1';
             upsellModal.hide();
+            addForm.requestSubmit();
         });
 
         upsellOptionsEl.appendChild(option);
@@ -87,9 +89,10 @@ const showUpsellModal = (upsells) => {
     upsellModal.show();
 };
 
-// So o clique explicito em "Finalizar Compra" (em qualquer um dos popups)
-// adiciona de facto ao carrinho — seleccionar uma oferta ou clicar em
-// "Comprar Agora" apenas decide qual popup mostrar, nunca adiciona sozinho.
+// Escolher uma sugestao dentro do popup "Poupe ainda mais" adiciona logo
+// essa oferta ao carrinho e vai para a pagina do carrinho. Fora do popup,
+// seleccionar uma oferta ou clicar em "Comprar Agora" apenas decide qual
+// popup mostrar, nunca adiciona sozinho.
 if (upsellModal && upsellOptionsEl && addForm && cartFlag) {
     const upsellFinishBtn = document.querySelector('[data-fm-upsell-finish]');
     if (upsellFinishBtn) {
