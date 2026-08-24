@@ -215,9 +215,12 @@
 
 /* Versao B (comparacao) — mantem os elementos lado a lado tambem no mobile */
 @media (max-width: 991.98px) {
+    .fm-guarantee--compact .row {
+        --bs-gutter-x: 1rem;
+    }
     .fm-guarantee--compact .fm-guarantee__seal {
-        width: 96px;
-        height: 96px;
+        width: 110px;
+        height: 110px;
     }
     .fm-guarantee--compact .fm-guarantee__seal-days {
         font-size: 14px;
@@ -228,7 +231,7 @@
         margin-top: 2px;
     }
     .fm-guarantee--compact .fm-guarantee__promise-title {
-        font-size: 14px;
+        font-size: 18px;
         margin-bottom: 4px !important;
     }
     .fm-guarantee--compact .fm-guarantee__promise-heading {
@@ -237,7 +240,7 @@
         margin-bottom: 4px !important;
     }
     .fm-guarantee--compact .fm-guarantee__promise-text {
-        font-size: 11px;
+        font-size: 12px;
         line-height: 1.35;
     }
 }
