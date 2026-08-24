@@ -383,7 +383,7 @@
 
 /* Diferenca dos produtos */
 .fm-diff-section {
-    background: var(--fm-white);
+    background: var(--fm-cream);
     padding-block: 40px;
 }
 
@@ -579,7 +579,6 @@
 
 /* Depoimentos das redes sociais (grid tipo mosaico) */
 .fm-social-proof {
-    background: var(--fm-cream);
     padding-block: 40px;
 }
 
