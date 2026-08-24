@@ -38,29 +38,7 @@
 {{-- Faixa de beneficios (Section 1 / 214:60) --}}
 @include('partials.benefits-strip')
 
-{{-- Garantia de 30 dias (Section 2 / 214:72) — Versao A (original, empilha no mobile) --}}
-<section class="fm-guarantee">
-    <div class="fm-container">
-        <div class="row align-items-center justify-content-center g-5">
-            <div class="col-auto">
-                <div class="fm-guarantee__seal">
-                    <img src="{{ asset('images/home/guarantee-seal.png') }}" alt="Selo de garantia de 30 dias" loading="lazy">
-                    <div class="fm-guarantee__seal-text">
-                        <span class="fm-guarantee__seal-days">30 DIAS</span>
-                        <span class="fm-guarantee__seal-label">Garantia de devolução{{ "\n" }}do dinheiro</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-7 text-center text-md-start">
-                <p class="fm-guarantee__promise-title mb-2">Nossa promessa</p>
-                <p class="fm-guarantee__promise-heading mb-2">Pele melhor em 30 dias</p>
-                <p class="fm-guarantee__promise-text mb-0">Se você não ficar satisfeito com algum de nossos produtos, oferecemos uma garantia de reembolso de 30 dias.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-{{-- Garantia de 30 dias — Versao B (comparacao: lado a lado tambem no mobile, texto mais curto) --}}
+{{-- Garantia de 30 dias (Section 2 / 214:72) — lado a lado tambem no mobile --}}
 <section class="fm-guarantee fm-guarantee--compact">
     <div class="fm-container">
         <div class="row align-items-center justify-content-center g-5 flex-nowrap">

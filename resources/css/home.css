@@ -213,7 +213,7 @@
     color: var(--fm-black);
 }
 
-/* Versao B (comparacao) — mantem os elementos lado a lado tambem no mobile */
+/* Mantem o selo e o texto lado a lado tambem no mobile */
 @media (max-width: 991.98px) {
     .fm-guarantee--compact .row {
         --bs-gutter-x: 1rem;
