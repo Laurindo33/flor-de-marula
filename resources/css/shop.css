@@ -1,7 +1,7 @@
 /* Loja — fiel ao frame "Loja" (id 154:594) do Figma */
 
 .fm-shop-title {
-    padding-block: 60px 30px;
+    padding-block: 28px 20px;
     text-align: left;
 }
 
@@ -34,6 +34,7 @@
 @media (max-width: 991.98px) {
     .fm-shop-title {
         text-align: center;
+        padding-block: 16px 12px;
     }
 
     .fm-shop-filters {

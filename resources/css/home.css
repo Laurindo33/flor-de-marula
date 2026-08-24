@@ -4,11 +4,12 @@
 .fm-hero {
     background: radial-gradient(circle at 30% 30%, var(--fm-peach-soft) 0%, var(--fm-peach) 100%);
     padding-top: 60px;
-    padding-bottom: 100px;
+    padding-bottom: 48px;
 }
 @media (max-width: 991.98px) {
     .fm-hero {
         padding-top: 32px;
+        padding-bottom: 20px;
     }
 }
 
@@ -149,7 +150,7 @@
 
 /* Faixa de beneficios — cartao com selos ilustrados */
 .fm-benefits-strip {
-    padding-block: 40px;
+    padding-block: 28px;
 }
 
 .fm-benefits-card {
@@ -275,7 +276,7 @@
 /* Garantia 30 dias */
 .fm-guarantee {
     background: var(--fm-cream);
-    padding-block: 60px;
+    padding-block: 40px;
 }
 .fm-guarantee--compact .row > .col {
     flex: 0 1 auto;
@@ -383,7 +384,7 @@
 /* Diferenca dos produtos */
 .fm-diff-section {
     background: var(--fm-cream);
-    padding-block: 60px;
+    padding-block: 40px;
 }
 
 /* Carrossel no mobile (apenas Home — variantes "--carousel") */
@@ -578,7 +579,7 @@
 
 /* Depoimentos das redes sociais (grid tipo mosaico) */
 .fm-social-proof {
-    padding-block: 60px;
+    padding-block: 40px;
 }
 
 .fm-social-proof__subtitle {
@@ -609,7 +610,7 @@
 
 @media (max-width: 991.98px) {
     .fm-social-proof {
-        padding-block: 40px;
+        padding-block: 24px;
     }
 
     .fm-social-proof__subtitle {

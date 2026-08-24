@@ -61,7 +61,7 @@
 </section>
 
 {{-- Nosso Melhor Produto (214:86) --}}
-<section class="py-5 fm-best-product-section">
+<section class="py-4 py-lg-5 fm-best-product-section">
     <div class="fm-container">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
             <h2 class="fm-heading-italiana fm-heading-split fm-best-product-title mb-0">Nosso Melhor <span class="fm-accent-word">Produto</span></h2>

@@ -30,8 +30,17 @@
         font-size: 14px;
     }
 
+    .fm-benefits-strip {
+        padding-block: 20px;
+    }
+
     .fm-guarantee {
         background: var(--fm-cream);
+        padding-block: 24px;
+    }
+
+    .fm-diff-section {
+        padding-block: 24px;
     }
 
     .fm-benefits-dark {

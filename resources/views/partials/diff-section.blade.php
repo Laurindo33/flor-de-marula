@@ -10,9 +10,9 @@
 <section class="fm-diff-section {{ $sectionClass ?? '' }}">
     <div class="fm-container">
         @if (!empty($homeHeadingStyle))
-            <h2 class="fm-heading-italiana fm-heading-split text-center mb-5">A Diferença dos Nossos <span class="fm-accent-word">Produtos</span></h2>
+            <h2 class="fm-heading-italiana fm-heading-split text-center mb-3 mb-lg-4">A Diferença dos Nossos <span class="fm-accent-word">Produtos</span></h2>
         @else
-            <h2 class="fm-heading-lg text-center mb-5">A Diferença dos Nossos Produtos</h2>
+            <h2 class="fm-heading-lg text-center mb-3 mb-lg-4">A Diferença dos Nossos Produtos</h2>
         @endif
         <div class="row g-4 fm-diff-cards{{ !empty($homeHeadingStyle) ? ' fm-diff-cards--carousel' : '' }}">
             @foreach ($diffs as $diff)
