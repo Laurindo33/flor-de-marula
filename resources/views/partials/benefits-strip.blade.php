@@ -19,13 +19,13 @@
                     <img src="{{ asset('images/home/benefits/badge-mortar.png') }}" alt="" class="fm-benefits-card__icon">
                     <span>Ingredientes de Origem Natural</span>
                 </div>
-            </div>
 
-            <div class="fm-benefits-card__africa">
-                <span class="fm-benefits-card__africa-ornament">✦</span>
-                <img src="{{ asset('images/home/benefits/badge-heart-africa.png') }}" alt="" class="fm-benefits-card__africa-icon">
-                <span class="fm-benefits-card__africa-text">Orgulhosamente<strong>Africano</strong></span>
-                <span class="fm-benefits-card__africa-ornament">✦</span>
+                <div class="fm-benefits-card__africa">
+                    <span class="fm-benefits-card__africa-ornament">✦</span>
+                    <img src="{{ asset('images/home/benefits/badge-heart-africa.png') }}" alt="" class="fm-benefits-card__africa-icon">
+                    <span class="fm-benefits-card__africa-text">Orgulhosamente<strong>Africano</strong></span>
+                    <span class="fm-benefits-card__africa-ornament">✦</span>
+                </div>
             </div>
         </div>
     </div>
