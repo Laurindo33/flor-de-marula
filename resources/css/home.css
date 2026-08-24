@@ -277,6 +277,10 @@
     background: var(--fm-cream);
     padding-block: 60px;
 }
+.fm-guarantee--compact .row > .col {
+    flex: 0 1 auto;
+    max-width: 480px;
+}
 .fm-guarantee__seal {
     position: relative;
     width: 228px;
