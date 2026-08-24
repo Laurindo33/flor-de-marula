@@ -30,3 +30,13 @@
 .fm-shop-grid {
     padding-bottom: 80px;
 }
+
+@media (max-width: 991.98px) {
+    .fm-shop-title {
+        text-align: center;
+    }
+
+    .fm-shop-filters {
+        justify-content: center;
+    }
+}

@@ -107,11 +107,24 @@
     display: flex;
     align-items: center;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
+
+main {
+    padding-top: 106px;
 }
 
 @media (max-width: 991.98px) {
     .fm-header {
         height: 73px;
+    }
+
+    main {
+        padding-top: 73px;
     }
 }
 
