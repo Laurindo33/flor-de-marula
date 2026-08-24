@@ -219,8 +219,8 @@
         --bs-gutter-x: 1rem;
     }
     .fm-guarantee--compact .fm-guarantee__seal {
-        width: 110px;
-        height: 110px;
+        width: 125px;
+        height: 125px;
     }
     .fm-guarantee--compact .fm-guarantee__seal-days {
         font-size: 14px;
@@ -231,16 +231,16 @@
         margin-top: 2px;
     }
     .fm-guarantee--compact .fm-guarantee__promise-title {
-        font-size: 18px;
+        font-size: 20px;
         margin-bottom: 4px !important;
     }
     .fm-guarantee--compact .fm-guarantee__promise-heading {
-        font-size: 16px;
+        font-size: 17px;
         line-height: 1.3;
         margin-bottom: 4px !important;
     }
     .fm-guarantee--compact .fm-guarantee__promise-text {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1.35;
     }
 }
