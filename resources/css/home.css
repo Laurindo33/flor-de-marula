@@ -158,35 +158,6 @@
     text-align: center;
 }
 
-/* Versao B (comparacao) — icones + separadores verticais */
-.fm-benefits-strip--v2 .fm-benefits-strip__item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding-inline: 20px;
-    letter-spacing: 0.4px;
-    position: relative;
-}
-.fm-benefits-strip--v2 .fm-benefits-strip__item svg {
-    color: var(--fm-accent);
-    flex-shrink: 0;
-}
-.fm-benefits-strip--v2 .fm-benefits-strip__item:not(:first-child)::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
-    height: 16px;
-    background: rgba(255, 255, 255, 0.25);
-}
-@media (max-width: 991.98px) {
-    .fm-benefits-strip--v2 .fm-benefits-strip__item {
-        padding-inline: 12px;
-    }
-}
-
 /* Garantia 30 dias */
 .fm-guarantee {
     background: var(--fm-cream);

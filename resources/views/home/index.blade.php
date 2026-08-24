@@ -35,26 +35,8 @@
     </div>
 </section>
 
-{{-- Faixa de beneficios (Section 1 / 214:60) — Versao A (original) --}}
+{{-- Faixa de beneficios (Section 1 / 214:60) --}}
 @include('partials.benefits-strip')
-
-{{-- Faixa de beneficios — Versao B (comparacao: icones + separadores) --}}
-<section class="fm-benefits-strip fm-benefits-strip--v2">
-    <div class="fm-container d-flex flex-wrap justify-content-center">
-        @foreach ([
-            'SEM PARABENHOS',
-            'SEM CORANTES',
-            'NÃO TESTADO EM ANIMAIS',
-            'INGREDIENTES DE ORIGEM NATURAL',
-            'ORGULHOSAMENTE AFRICANO',
-        ] as $item)
-            <p class="fm-benefits-strip__item mb-0">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
-                {{ $item }}
-            </p>
-        @endforeach
-    </div>
-</section>
 
 {{-- Garantia de 30 dias (Section 2 / 214:72) — lado a lado tambem no mobile --}}
 <section class="fm-guarantee fm-guarantee--compact">
