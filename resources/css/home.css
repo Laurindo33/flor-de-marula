@@ -213,6 +213,35 @@
     color: var(--fm-black);
 }
 
+/* Versao B (comparacao) — mantem os elementos lado a lado tambem no mobile */
+@media (max-width: 991.98px) {
+    .fm-guarantee--compact .fm-guarantee__seal {
+        width: 96px;
+        height: 96px;
+    }
+    .fm-guarantee--compact .fm-guarantee__seal-days {
+        font-size: 14px;
+    }
+    .fm-guarantee--compact .fm-guarantee__seal-label {
+        font-size: 6px;
+        max-width: 70px;
+        margin-top: 2px;
+    }
+    .fm-guarantee--compact .fm-guarantee__promise-title {
+        font-size: 14px;
+        margin-bottom: 4px !important;
+    }
+    .fm-guarantee--compact .fm-guarantee__promise-heading {
+        font-size: 16px;
+        line-height: 1.3;
+        margin-bottom: 4px !important;
+    }
+    .fm-guarantee--compact .fm-guarantee__promise-text {
+        font-size: 11px;
+        line-height: 1.35;
+    }
+}
+
 /* Nosso Melhor Produto / Diferenca — titulo de seccao */
 .fm-section-title {
     text-align: center;
