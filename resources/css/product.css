@@ -580,15 +580,15 @@
         order: 2;
     }
 
-    .fm-pdp__coupon-hint {
-        order: 1;
-        justify-content: center;
-        text-align: center;
-    }
-
     .fm-pdp__add-btn {
         order: 1;
-        margin-bottom: 24px;
+        margin-bottom: 12px;
+    }
+
+    .fm-pdp__coupon-hint {
+        order: 3;
+        justify-content: center;
+        text-align: center;
     }
 
     .fm-pdp-ingredients h2,
