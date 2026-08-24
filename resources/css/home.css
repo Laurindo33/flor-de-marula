@@ -3,8 +3,13 @@
 /* Hero (Container id 214:3) */
 .fm-hero {
     background: radial-gradient(circle at 30% 30%, var(--fm-peach-soft) 0%, var(--fm-peach) 100%);
-    padding-top: 100px;
+    padding-top: 60px;
     padding-bottom: 100px;
+}
+@media (max-width: 991.98px) {
+    .fm-hero {
+        padding-top: 32px;
+    }
 }
 
 /* Grid com areas nomeadas: no mobile empilha texto -> imagem -> botoes

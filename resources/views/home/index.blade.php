@@ -78,6 +78,27 @@
     </div>
 </section>
 
+{{-- Depoimentos reais das redes sociais, em grelha tipo mosaico --}}
+@if ($testimonials->isNotEmpty())
+    <section class="fm-social-proof">
+        <div class="fm-container">
+            <h2 class="fm-heading-italiana fm-heading-split text-center mb-2">Mais de 17.000 clientes confiam na <span class="fm-accent-word">Flor de Marula</span></h2>
+            <p class="fm-body-lg fm-social-proof__subtitle text-center mb-5">Depoimentos reais partilhados pelos nossos clientes nas redes sociais</p>
+            <div class="fm-social-proof__grid">
+                @foreach ($testimonials as $testimonial)
+                    <div class="fm-social-proof__item">
+                        <img
+                            src="{{ asset($testimonial->image_path) }}"
+                            alt="Depoimento de cliente Flor de Marula"
+                            loading="lazy"
+                        >
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+@endif
+
 {{-- A Diferenca dos Nossos Produtos (214:121) --}}
 @include('partials.diff-section', ['homeHeadingStyle' => true])
 
@@ -131,48 +152,11 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-5">
-                <div class="fm-compare-card">
-                    <div class="fm-compare-card__header fm-compare-card__header--them">
-                        <p class="fm-heading-katibeh mb-0">Outros Produtos</p>
-                    </div>
-                    <img src="{{ asset('images/home/compare-outros-produtos.png') }}" alt="Outros produtos" class="fm-compare-card__image" loading="lazy">
-                    <ul class="fm-compare-card__list">
-                        @foreach (['Feito na China', 'SEM ingredientes naturais', 'NÃO é seguro para gravidez', 'Com químicos e parabenos', 'Grande Produção', 'Irrita a pele com melanina', 'Rotinas de 15 Min'] as $item)
-                            <li>
-                                <img src="{{ asset('images/home/icon-cross.png') }}" alt="">
-                                <span>{{ $item }}</span>
-                            </li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
         </div>
     </div>
 </section>
 
 {{-- Clientes adoram a Flor de Marula (214:280) --}}
 @include('partials.testimonials-section', ['homeHeadingStyle' => true])
-
-{{-- Depoimentos reais das redes sociais, em grelha tipo mosaico --}}
-@if ($testimonials->isNotEmpty())
-    <section class="fm-social-proof">
-        <div class="fm-container">
-            <h2 class="fm-heading-italiana fm-heading-split text-center mb-2">Mais de 17.000 clientes confiam na <span class="fm-accent-word">Flor de Marula</span></h2>
-            <p class="fm-body-lg fm-social-proof__subtitle text-center mb-5">Depoimentos reais partilhados pelos nossos clientes nas redes sociais</p>
-            <div class="fm-social-proof__grid">
-                @foreach ($testimonials as $testimonial)
-                    <div class="fm-social-proof__item">
-                        <img
-                            src="{{ asset($testimonial->image_path) }}"
-                            alt="Depoimento de cliente Flor de Marula"
-                            loading="lazy"
-                        >
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-@endif
 
 @endsection
