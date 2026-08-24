@@ -287,6 +287,13 @@ a.fm-channel-card__value:hover {
         font-size: 12px;
     }
 
+    .fm-channel-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .fm-channel-card__title {
         font-size: 14px;
     }
