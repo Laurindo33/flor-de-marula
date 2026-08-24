@@ -63,9 +63,6 @@
                                 <p class="fm-pdp__routine-card-name mb-1">{{ $product->routineProduct->name }}</p>
                                 <p class="mb-0">
                                     <span class="fm-price">{{ $product->routineProduct->formatted_price }}</span>
-                                    @if ($product->routineProduct->compare_price)
-                                        <span class="fm-pdp__routine-card-compare">{{ number_format($product->routineProduct->compare_price, 0, ',', '.') }}kz</span>
-                                    @endif
                                 </p>
                             </div>
                             <a
@@ -85,18 +82,12 @@
                     @for ($i = 0; $i < 5; $i++)
                         <img src="{{ asset('images/product/icon-avatar.png') }}" alt="">
                     @endfor
+                    <span class="fm-pdp__rating-value">({{ number_format($product->average_rating, 1) }}/5)</span>
                 </div>
 
                 <div class="fm-pdp__price">
-                    @if ($product->compare_price)
-                        <span class="fm-pdp__price-compare">{{ number_format($product->compare_price, 0, ',', '.') }}kz</span>
-                    @endif
                     <span class="fm-pdp__price-current">{{ $product->formatted_price }}</span>
                 </div>
-
-                @if ($product->discount_percent)
-                    <span class="fm-discount-badge fm-pdp__discount-badge">{{ $product->discount_percent }}% de desconto</span>
-                @endif
 
                 @if (!empty($product->benefits))
                     <ul class="fm-pdp__benefits">

@@ -346,16 +346,6 @@ main {
     color: var(--fm-black);
 }
 
-.fm-discount-badge {
-    background: var(--fm-rose-badge);
-    color: var(--fm-primary);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 14px;
-    border-radius: var(--fm-radius-sm);
-    padding: 4px 10px;
-    display: inline-block;
-}
-
 .fm-add-btn {
     width: 27px;
     height: 24px;

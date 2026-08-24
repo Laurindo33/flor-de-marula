@@ -125,4 +125,11 @@ class Product extends Model
     {
         return $this->stock <= 0;
     }
+
+    public function getAverageRatingAttribute(): float
+    {
+        $average = $this->reviews()->avg('rating');
+
+        return $average ? round($average, 1) : 4.9;
+    }
 }

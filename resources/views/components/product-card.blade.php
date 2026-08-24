@@ -8,8 +8,6 @@
             <p class="fm-price mb-1">{{ $product->formatted_price }}</p>
             @if ($product->is_out_of_stock)
                 <span class="fm-stock-badge">Fora de Estoque</span>
-            @elseif ($product->discount_percent)
-                <span class="fm-discount-badge">{{ $product->discount_percent }}% de desconto</span>
             @endif
         </div>
         @if ($product->is_out_of_stock)
