@@ -306,6 +306,10 @@
     display: flex;
     align-items: center;
     gap: 24px;
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 18px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
 }
 
 /* Garantia 30 dias */
