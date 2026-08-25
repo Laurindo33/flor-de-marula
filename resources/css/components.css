@@ -326,7 +326,7 @@ main {
     align-items: center;
     gap: 20px;
     position: relative;
-    flex: 0 1 320px;
+    flex: 0 1 350px;
 }
 
 .fm-trend-card__image-wrap {
@@ -336,12 +336,18 @@ main {
     flex-shrink: 0;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    width: max-content;
     height: 100px;
-    padding: 8px;
+    padding: 0px;
     display: flex;
     overflow: hidden;
     box-shadow: 0 1px 4px #00000014;
+}
+
+.fm-trend-card .fm-stock-badge {
+    font-size: 10px;
+    padding: 3px 8px;
+    white-space: nowrap;
 }
 
 .fm-trend-card__image {
