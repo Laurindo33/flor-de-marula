@@ -29,10 +29,13 @@
             @endif
         </div>
         <div class="fm-product-card__body">
-            <div class="d-flex justify-content-between align-items-center mb-3">
+            <div class="d-flex justify-content-between align-items-center mb-1">
                 <p class="fm-product-card__name mb-0">{{ $product->name }}</p>
                 <p class="fm-price mb-0">{{ $product->formatted_price }}</p>
             </div>
+            @if ($product->tagline)
+                <p class="fm-product-card__tagline mb-3">{{ $product->tagline }}</p>
+            @endif
             <a href="{{ route('product.show', $product) }}" class="fm-btn fm-btn-outline fm-cta-label w-100 text-uppercase">Ver Detalhes</a>
         </div>
     </article>

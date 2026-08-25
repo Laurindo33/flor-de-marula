@@ -197,7 +197,7 @@ a.fm-channel-card__value:hover {
 
 .fm-ajuda-form__submit {
     width: 100%;
-    background: var(--fm-primary);
+    background: #008000;
     color: var(--fm-white);
     border: none;
     border-radius: 5px;

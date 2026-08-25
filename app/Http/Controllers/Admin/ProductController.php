@@ -138,6 +138,7 @@ class ProductController extends Controller
             'slug' => ['nullable', 'string', 'max:255', 'unique:products,slug,' . $productId],
             'sku' => ['required', 'string', 'max:255', 'unique:products,sku,' . $productId],
             'description' => ['nullable', 'string'],
+            'tagline' => ['nullable', 'string', 'max:255'],
             'ingredients_list' => ['nullable', 'string'],
             'how_to_use' => ['nullable', 'string'],
             'expert_review' => ['nullable', 'string'],

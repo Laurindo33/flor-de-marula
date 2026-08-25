@@ -64,7 +64,7 @@
 <section class="py-4 py-lg-5 fm-best-product-section">
     <div class="fm-container">
         <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
-            <h2 class="fm-heading-italiana fm-heading-split fm-best-product-title mb-0">Nosso Melhor <span class="fm-accent-word">Produto</span></h2>
+            <h2 class="fm-heading-italiana fm-heading-split fm-best-product-title mb-0">Mais <span class="fm-accent-word">Vendido</span></h2>
             <a href="{{ route('shop.index') }}" class="fm-btn fm-btn-primary fm-cta-label d-none d-lg-inline-flex">Ver Todos</a>
         </div>
         <div class="row g-4">

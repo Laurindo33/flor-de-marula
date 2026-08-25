@@ -17,6 +17,7 @@ class Product extends Model
         'slug',
         'sku',
         'description',
+        'tagline',
         'benefits',
         'ingredients_list',
         'how_to_use',

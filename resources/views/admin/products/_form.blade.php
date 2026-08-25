@@ -33,6 +33,11 @@
             </div>
 
             <div class="fm-admin-field">
+                <label for="tagline">Descrição curta (exibida no cartão do produto)</label>
+                <input type="text" name="tagline" id="tagline" value="{{ old('tagline', $product?->tagline) }}" maxlength="255" placeholder="Ex.: Nutrição e reparação da pele">
+            </div>
+
+            <div class="fm-admin-field">
                 <label for="benefits_text">Benefícios (um por linha)</label>
                 <textarea name="benefits_text" id="benefits_text" rows="3">{{ old('benefits_text', $product ? implode("\n", $product->benefits ?? []) : '') }}</textarea>
             </div>

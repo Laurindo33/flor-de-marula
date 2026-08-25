@@ -29,7 +29,7 @@
 }
 
 .fm-btn-primary {
-    background-color: var(--fm-primary);
+    background-color: #008000;
     color: var(--fm-white);
 }
 .fm-btn-primary:hover {
@@ -92,11 +92,11 @@
 
 .fm-btn-outline {
     background-color: transparent;
-    border-color: var(--fm-primary);
+    border-color: #008000;
     color: var(--fm-text);
 }
 .fm-btn-outline:hover {
-    background-color: var(--fm-primary);
+    background-color: #008000;
     color: var(--fm-white);
 }
 
@@ -280,6 +280,12 @@ main {
     text-transform: uppercase;
 }
 
+.fm-product-card__tagline {
+    font-family: var(--fm-font-base);
+    font-size: 13px;
+    color: var(--fm-muted);
+}
+
 /* Badge "Fora de Estoque" */
 .fm-stock-badge {
     background: rgba(0, 0, 0, 0.75);
@@ -320,13 +326,14 @@ main {
     align-items: center;
     gap: 20px;
     position: relative;
-    flex: 0 1 360px;
+    flex: 0 1 320px;
 }
 
 .fm-trend-card__image {
-    width: 66px;
-    height: 100px;
+    width: 82px;
+    height: 118px;
     object-fit: contain;
+    border-radius: var(--fm-radius-sm);
     flex-shrink: 0;
 }
 
@@ -350,7 +357,7 @@ main {
     width: 27px;
     height: 24px;
     border-radius: var(--fm-radius-sm);
-    background: var(--fm-primary);
+    background: #008000;
     color: var(--fm-white);
     border: none;
     display: inline-flex;
