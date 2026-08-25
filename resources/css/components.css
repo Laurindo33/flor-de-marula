@@ -333,7 +333,7 @@ main {
     width: 82px;
     height: 118px;
     object-fit: contain;
-    border-radius: var(--fm-radius-sm);
+    border-radius: var(--fm-radius-md);
     flex-shrink: 0;
 }
 
