@@ -43,6 +43,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::post('/produtos/{product}/ofertas', [ProductOfferController::class, 'store'])->name('products.offers.store');
         Route::put('/produtos/{product}/ofertas/{offer}', [ProductOfferController::class, 'update'])->name('products.offers.update');
         Route::delete('/produtos/{product}/ofertas/{offer}', [ProductOfferController::class, 'destroy'])->name('products.offers.destroy');
+        Route::patch('/produtos/{product}/ofertas/{offer}/mover', [ProductOfferController::class, 'move'])->name('products.offers.move');
 
         Route::get('/categorias', [CategoryController::class, 'index'])->name('categories.index');
         Route::post('/categorias', [CategoryController::class, 'store'])->name('categories.store');

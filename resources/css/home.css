@@ -537,7 +537,7 @@
 .fm-compare-card {
     background: var(--fm-white);
     border-radius: var(--fm-radius-md);
-    box-shadow: none;
+    box-shadow: var(--fm-shadow-md);
     height: 100%;
     overflow: hidden;
 }

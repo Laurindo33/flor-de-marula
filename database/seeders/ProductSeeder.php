@@ -158,7 +158,10 @@ class ProductSeeder extends Seeder
         ];
 
         foreach ($products as $product) {
-            Product::updateOrCreate(['slug' => $product['slug']], $product);
+            // firstOrCreate (nao updateOrCreate): produtos existentes nao sao
+            // sobrescritos, para nao apagar edicoes feitas no painel admin
+            // (imagem, preco, stock, etc.) sempre que o seeder for re-executado.
+            Product::firstOrCreate(['slug' => $product['slug']], $product);
         }
 
         // "Complete Sua Rotina" — sugestao de produto complementar (212:116 > Frame 72)

@@ -78,6 +78,18 @@
                                 </div>
                             </div>
                             <div class="d-flex align-items-center gap-2">
+                                <form action="{{ route('admin.products.offers.move', [$product, $offer]) }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('PATCH')
+                                    <input type="hidden" name="direction" value="up">
+                                    <button type="submit" class="fm-admin-btn fm-admin-btn--outline fm-admin-btn--sm" title="Mover para cima" {{ $loop->first ? 'disabled' : '' }}>&uarr;</button>
+                                </form>
+                                <form action="{{ route('admin.products.offers.move', [$product, $offer]) }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('PATCH')
+                                    <input type="hidden" name="direction" value="down">
+                                    <button type="submit" class="fm-admin-btn fm-admin-btn--outline fm-admin-btn--sm" title="Mover para baixo" {{ $loop->last ? 'disabled' : '' }}>&darr;</button>
+                                </form>
                                 <input type="file" id="offer_image_{{ $offer->id }}" accept="image/*" style="font-size:12px; max-width:160px;">
                                 <button
                                     type="button"
