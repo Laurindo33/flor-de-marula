@@ -2,7 +2,9 @@
 
 @if ($variant === 'trend')
     <div class="fm-trend-card {{ $product->is_out_of_stock ? 'fm-trend-card--out-of-stock' : '' }}">
-        <img src="{{ asset($product->image_path) }}" alt="{{ $product->name }}" class="fm-trend-card__image">
+        <div class="fm-trend-card__image-wrap">
+            <img src="{{ asset($product->image_path) }}" alt="{{ $product->name }}" class="fm-trend-card__image">
+        </div>
         <div class="flex-grow-1">
             <p class="fm-trend-card__name mb-1">{{ $product->name }}</p>
             <p class="fm-price mb-1">{{ $product->formatted_price }}</p>

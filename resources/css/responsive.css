@@ -43,6 +43,10 @@
         padding-block: 24px;
     }
 
+    .fm-trend-card {
+        flex: 0 1 360px;
+    }
+
     .fm-benefits-dark {
         background: var(--fm-black);
     }
