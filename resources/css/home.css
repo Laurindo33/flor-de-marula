@@ -570,6 +570,11 @@
    de layout proprias e mantem o empilhamento padrao do documento. */
 @media (min-width: 992px) {
     .fm-compare-card {
+        background: var(--fm-white);
+        box-shadow: none;
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
         grid-template-rows: auto 1fr;
         grid-template-columns: 60% 1fr;
         column-gap: 32px;
@@ -589,6 +594,9 @@
         aspect-ratio: auto;
     }
     .fm-compare-card__list {
+        margin: 0;
+        padding: 0px 20px 40px;
+        list-style: none;
         grid-column: 2;
         grid-row: 2;
     }
