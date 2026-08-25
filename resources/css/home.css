@@ -509,7 +509,7 @@
     justify-content: center;
 }
 .fm-compare-card__header--us {
-    background: linear-gradient(90deg, #eedace, #ffc05f);
+    background: none;
 }
 .fm-compare-card__header--them {
     background: linear-gradient(90deg, #eedace, var(--fm-primary));
@@ -530,6 +530,7 @@
     .fm-compare-card {
         display: flex;
         align-items: stretch;
+        gap: 32px;
     }
     .fm-compare-card__media {
         flex: 0 0 45%;
