@@ -556,6 +556,13 @@
     .fm-compare-card__header--us {
         background: none;
     }
+    .fm-compare-card__header {
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+    .fm-compare-card__list img {
+        filter: hue-rotate(85deg) saturate(1.4) brightness(0.95);
+    }
 }
 .fm-compare-card__list li {
     display: flex;
