@@ -537,9 +537,9 @@
 .fm-compare-card {
     background: var(--fm-white);
     border-radius: var(--fm-radius-md);
-    box-shadow: var(--fm-shadow-md);
-    overflow: hidden;
+    box-shadow: none;
     height: 100%;
+    overflow: hidden;
 }
 .fm-compare-card__header {
     height: 101px;
@@ -570,10 +570,10 @@
    de layout proprias e mantem o empilhamento padrao do documento. */
 @media (min-width: 992px) {
     .fm-compare-card {
-        display: grid;
-        grid-template-columns: 45% 1fr;
         grid-template-rows: auto 1fr;
+        grid-template-columns: 60% 1fr;
         column-gap: 32px;
+        display: grid;
     }
     .fm-compare-card__header {
         grid-column: 2;
