@@ -572,13 +572,13 @@
     .fm-compare-card {
         background: var(--fm-white);
         box-shadow: none;
-        height: 100%;
-        border-radius: 20px;
-        overflow: hidden;
+        border-radius: 10px;
         grid-template-rows: auto 1fr;
         grid-template-columns: 60% 1fr;
         column-gap: 32px;
+        height: 100%;
         display: grid;
+        overflow: hidden;
     }
     .fm-compare-card__header {
         grid-column: 2;
