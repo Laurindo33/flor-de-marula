@@ -509,7 +509,7 @@
     justify-content: center;
 }
 .fm-compare-card__header--us {
-    background: none;
+    background: linear-gradient(90deg, #eedace, #ffc05f);
 }
 .fm-compare-card__header--them {
     background: linear-gradient(90deg, #eedace, var(--fm-primary));
@@ -525,29 +525,36 @@
     padding: 20px 20px 40px;
 }
 
-/* Desktop/web — imagem e texto lado a lado, em vez de empilhados */
+/* Desktop/web — imagem e texto lado a lado, em vez de empilhados.
+   Usa grid (em vez de reordenar a marcacao) para nao alterar a ordem
+   original cabecalho > imagem > lista no mobile, que fica sem regras
+   de layout proprias e mantem o empilhamento padrao do documento. */
 @media (min-width: 992px) {
     .fm-compare-card {
-        display: flex;
-        align-items: stretch;
-        gap: 32px;
+        display: grid;
+        grid-template-columns: 45% 1fr;
+        grid-template-rows: auto 1fr;
+        column-gap: 32px;
+    }
+    .fm-compare-card__header {
+        grid-column: 2;
+        grid-row: 1;
     }
     .fm-compare-card__media {
-        flex: 0 0 45%;
+        grid-column: 1;
+        grid-row: 1 / -1;
     }
     .fm-compare-card__image {
         width: 100%;
         height: 100%;
         aspect-ratio: auto;
     }
-    .fm-compare-card__content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-    }
     .fm-compare-card__list {
-        flex: 1;
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .fm-compare-card__header--us {
+        background: none;
     }
 }
 .fm-compare-card__list li {

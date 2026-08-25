@@ -138,22 +138,20 @@
         <div class="row g-4 justify-content-center">
             <div class="col-12 col-lg-10">
                 <div class="fm-compare-card">
+                    <div class="fm-compare-card__header fm-compare-card__header--us">
+                        <p class="fm-heading-katibeh mb-0">Flor de Marula</p>
+                    </div>
                     <div class="fm-compare-card__media">
                         <img src="{{ asset('images/home/compare-flor-de-marula.jpg') }}" alt="Flor de Marula" class="fm-compare-card__image" loading="lazy">
                     </div>
-                    <div class="fm-compare-card__content">
-                        <div class="fm-compare-card__header fm-compare-card__header--us">
-                            <p class="fm-heading-katibeh mb-0">Flor de Marula</p>
-                        </div>
-                        <ul class="fm-compare-card__list">
-                            @foreach (['Feito Por Nós', 'Ingredientes Naturais', 'Seguro durante a gravidez', 'Livre de químicos, parabenos', 'Pequeno Lote Fresco', 'Feito para Pele de Melanina', '3-5 minutos por dia'] as $item)
-                                <li>
-                                    <img src="{{ asset('images/home/icon-check.png') }}" alt="">
-                                    <span>{{ $item }}</span>
-                                </li>
-                            @endforeach
-                        </ul>
-                    </div>
+                    <ul class="fm-compare-card__list">
+                        @foreach (['Feito Por Nós', 'Ingredientes Naturais', 'Seguro durante a gravidez', 'Livre de químicos, parabenos', 'Pequeno Lote Fresco', 'Feito para Pele de Melanina', '3-5 minutos por dia'] as $item)
+                            <li>
+                                <img src="{{ asset('images/home/icon-check.png') }}" alt="">
+                                <span>{{ $item }}</span>
+                            </li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
