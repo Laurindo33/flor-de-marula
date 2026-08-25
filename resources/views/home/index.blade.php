@@ -35,14 +35,66 @@
     </div>
 </section>
 
-{{-- Faixa de beneficios (Section 1 / 214:60) --}}
-@include('partials.benefits-strip')
+{{-- Faixa de beneficios (Section 1 / 214:60) + Garantia de 30 dias (Section 2 / 214:72)
+     No mobile ficam empilhadas como sempre estiveram; no desktop (>=992px) o Figma
+     "SEC.fig" mostra-as combinadas lado a lado dentro do mesmo cartao, por isso
+     escondemos o par original no desktop e mostramos a versao combinada abaixo. --}}
+<div class="d-lg-none">
+    @include('partials.benefits-strip')
 
-{{-- Garantia de 30 dias (Section 2 / 214:72) — lado a lado tambem no mobile --}}
-<section class="fm-guarantee fm-guarantee--compact">
+    <section class="fm-guarantee fm-guarantee--compact">
+        <div class="fm-container">
+            <div class="row align-items-center justify-content-center g-5 flex-nowrap">
+                <div class="col-auto">
+                    <div class="fm-guarantee__seal">
+                        <img src="{{ asset('images/home/guarantee-seal.png') }}" alt="Selo de garantia de 30 dias" loading="lazy">
+                        <div class="fm-guarantee__seal-text">
+                            <span class="fm-guarantee__seal-days">30 DIAS</span>
+                            <span class="fm-guarantee__seal-label">Garantia de devolução{{ "\n" }}do dinheiro</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col text-start">
+                    <p class="fm-guarantee__promise-title mb-2">Nossa promessa</p>
+                    <p class="fm-guarantee__promise-heading mb-2">Pele melhor em 30 dias</p>
+                    <p class="fm-guarantee__promise-text mb-0">Não ficou satisfeito? Devolvemos o seu dinheiro em 30 dias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<section class="fm-featured-strip d-none d-lg-block">
     <div class="fm-container">
-        <div class="row align-items-center justify-content-center g-5 flex-nowrap">
-            <div class="col-auto">
+        <div class="fm-benefits-card fm-featured-strip__card">
+            <div class="fm-featured-strip__icons">
+                <div class="fm-featured-strip__icon-grid">
+                    <div class="fm-benefits-card__item">
+                        <img src="{{ asset('images/home/benefits/badge-leaf.png') }}" alt="" class="fm-benefits-card__icon">
+                        <span>Sem Parabenhos</span>
+                    </div>
+                    <div class="fm-benefits-card__item">
+                        <img src="{{ asset('images/home/benefits/badge-flask.png') }}" alt="" class="fm-benefits-card__icon">
+                        <span>Sem Corantes</span>
+                    </div>
+                    <div class="fm-benefits-card__item">
+                        <img src="{{ asset('images/home/benefits/badge-rabbit.png') }}" alt="" class="fm-benefits-card__icon">
+                        <span>Não Testado em Animais</span>
+                    </div>
+                    <div class="fm-benefits-card__item">
+                        <img src="{{ asset('images/home/benefits/badge-mortar.png') }}" alt="" class="fm-benefits-card__icon">
+                        <span>Ingredientes de Origem Natural</span>
+                    </div>
+                </div>
+                <div class="fm-benefits-card__africa">
+                    <span class="fm-benefits-card__africa-ornament">✦</span>
+                    <img src="{{ asset('images/home/benefits/badge-heart-africa-v2.png') }}" alt="" class="fm-benefits-card__africa-icon">
+                    <span class="fm-benefits-card__africa-text">Orgulhosamente<strong>Africano</strong></span>
+                    <span class="fm-benefits-card__africa-ornament">✦</span>
+                </div>
+            </div>
+            <div class="fm-featured-strip__divider"></div>
+            <div class="fm-featured-strip__guarantee">
                 <div class="fm-guarantee__seal">
                     <img src="{{ asset('images/home/guarantee-seal.png') }}" alt="Selo de garantia de 30 dias" loading="lazy">
                     <div class="fm-guarantee__seal-text">
@@ -50,11 +102,11 @@
                         <span class="fm-guarantee__seal-label">Garantia de devolução{{ "\n" }}do dinheiro</span>
                     </div>
                 </div>
-            </div>
-            <div class="col text-start">
-                <p class="fm-guarantee__promise-title mb-2">Nossa promessa</p>
-                <p class="fm-guarantee__promise-heading mb-2">Pele melhor em 30 dias</p>
-                <p class="fm-guarantee__promise-text mb-0">Não ficou satisfeito? Devolvemos o seu dinheiro em 30 dias.</p>
+                <div class="text-start">
+                    <p class="fm-guarantee__promise-title mb-2">Nossa promessa</p>
+                    <p class="fm-guarantee__promise-heading mb-2">Pele melhor em 30 dias</p>
+                    <p class="fm-guarantee__promise-text mb-0">Não ficou satisfeito? Devolvemos o seu dinheiro em 30 dias.</p>
+                </div>
             </div>
         </div>
     </div>

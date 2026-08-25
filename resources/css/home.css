@@ -273,6 +273,41 @@
     }
 }
 
+/* Faixa de beneficios + Garantia combinadas (so desktop, >=992px, conforme SEC.fig).
+   Reutiliza o visual do .fm-benefits-card (fundo, raio, sombra) mas com uma grelha
+   de icones 2x2 propria e a garantia de 30 dias encostada ao lado, dentro do
+   mesmo cartao. No mobile este bloco fica escondido (ver home/index.blade.php). */
+.fm-featured-strip {
+    padding-block: 40px;
+}
+.fm-benefits-card.fm-featured-strip__card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 32px 40px;
+}
+.fm-featured-strip__icons {
+    flex: 1 1 55%;
+}
+.fm-featured-strip__icon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 24px;
+    margin-bottom: 20px;
+}
+.fm-featured-strip__divider {
+    align-self: stretch;
+    width: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+.fm-featured-strip__guarantee {
+    flex: 1 1 45%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
 /* Garantia 30 dias */
 .fm-guarantee {
     background: var(--fm-cream);
@@ -559,9 +594,6 @@
     .fm-compare-card__header {
         justify-content: flex-start;
         padding-left: 20px;
-    }
-    .fm-compare-card__list img {
-        filter: hue-rotate(85deg) saturate(1.4) brightness(0.95);
     }
 }
 .fm-compare-card__list li {
