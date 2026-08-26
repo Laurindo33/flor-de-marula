@@ -667,7 +667,7 @@
 
 /* Depoimentos das redes sociais (grid tipo mosaico) */
 .fm-social-proof {
-    background: #faf6f1;
+    background: linear-gradient(to bottom, #faf6f1, var(--fm-white));
     padding-block: 40px;
 }
 
