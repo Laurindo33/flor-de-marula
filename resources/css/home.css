@@ -661,9 +661,13 @@
     border-radius: 0 0 var(--fm-radius-md) var(--fm-radius-md);
 }
 
+.fm-best-product-section {
+    background: var(--fm-white);
+}
+
 /* Depoimentos das redes sociais (grid tipo mosaico) */
 .fm-social-proof {
-    background: #fffefd;
+    background: #faf6f1;
     padding-block: 40px;
 }
 
