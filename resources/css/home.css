@@ -511,7 +511,7 @@
 /* Beneficios (seccao escura) */
 .fm-benefits-dark {
     background: var(--fm-black);
-    padding-block: 80px;
+    padding-block: 48px;
 }
 .fm-benefits-dark__image {
     width: 100%;
@@ -532,7 +532,7 @@
 
 /* Por que somos diferentes */
 .fm-compare {
-    padding-block: 60px;
+    padding-block: 40px;
 }
 .fm-compare-card {
     background: var(--fm-white);
@@ -626,7 +626,7 @@
 /* Clientes adoram */
 .fm-testimonials {
     background: var(--fm-cream);
-    padding-block: 60px;
+    padding-block: 40px;
 }
 .fm-testimonials__subtitle {
     font-size: 18px;

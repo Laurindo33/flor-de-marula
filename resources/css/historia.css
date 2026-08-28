@@ -49,7 +49,7 @@
 
 /* Nossa Historia — corpo */
 .fm-historia-body {
-    padding-block: 60px;
+    padding-block: 40px;
 }
 
 .fm-historia-body__grid {
@@ -96,7 +96,7 @@
 /* Nossa Filosofia */
 .fm-historia-filosofia {
     background: var(--fm-dark);
-    padding-block: 60px;
+    padding-block: 40px;
 }
 
 .fm-filosofia-card {
@@ -125,7 +125,7 @@
 /* Nossos Valores */
 .fm-historia-valores {
     background: var(--fm-cream);
-    padding-block: 60px;
+    padding-block: 40px;
 }
 
 .fm-historia-valores__grid {

@@ -5,7 +5,7 @@
  */
 
 .fm-auth {
-    padding-block: 60px 100px;
+    padding-block: 40px 48px;
 }
 
 .fm-auth-card {
@@ -36,7 +36,7 @@
 
 /* Minha Conta */
 .fm-account {
-    padding-block: 40px 80px;
+    padding-block: 40px 48px;
 }
 
 .fm-account__grid {

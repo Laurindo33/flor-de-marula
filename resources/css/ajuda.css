@@ -49,7 +49,7 @@
 /* Corpo: canais + formulario */
 .fm-ajuda-body {
     background: #fffefd;
-    padding-block: 60px;
+    padding-block: 40px;
 }
 
 .fm-ajuda-body__grid {
@@ -220,7 +220,7 @@ a.fm-channel-card__value:hover {
 /* Mapa */
 .fm-ajuda-map {
     background: #fff2ed;
-    padding-block: 50px;
+    padding-block: 40px;
 }
 
 .fm-ajuda-map__image {

@@ -5,7 +5,7 @@
  */
 
 .fm-pdp {
-    padding-block: 40px 60px;
+    padding-block: 40px 48px;
 }
 
 .fm-pdp__body {
@@ -667,7 +667,7 @@
 
 /* Ingredientes */
 .fm-pdp-ingredients {
-    padding-block: 60px;
+    padding-block: 40px;
     background: #ffffff;
 }
 

@@ -5,7 +5,7 @@
  */
 
 .fm-checkout {
-    padding-block: 40px 80px;
+    padding-block: 40px 48px;
 }
 
 .fm-checkout__grid {
@@ -165,7 +165,7 @@
 
 /* Confirmacao do pedido */
 .fm-order-confirmation {
-    padding-block: 60px 80px;
+    padding-block: 40px 48px;
     max-width: 640px;
     margin-inline: auto;
 }

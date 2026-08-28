@@ -5,11 +5,11 @@
 
 .fm-quiz-hero {
     background: radial-gradient(circle, var(--fm-peach-soft), var(--fm-peach));
-    padding-block: 60px 40px;
+    padding-block: 40px 32px;
 }
 
 .fm-quiz {
-    padding-block: 40px 80px;
+    padding-block: 40px 48px;
 }
 
 .fm-quiz-form {

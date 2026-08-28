@@ -107,7 +107,7 @@
 /* Formulario de avaliacao */
 .fm-review-form-section {
     background: var(--fm-cream);
-    padding-block: 60px;
+    padding-block: 40px;
 }
 
 .fm-review-form {

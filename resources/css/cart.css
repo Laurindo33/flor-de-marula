@@ -4,7 +4,7 @@
  */
 
 .fm-cart {
-    padding-block: 40px 80px;
+    padding-block: 40px 48px;
 }
 
 .fm-alert {
@@ -25,7 +25,7 @@
 
 .fm-cart-empty {
     text-align: center;
-    padding-block: 60px;
+    padding-block: 40px;
 }
 
 .fm-cart__grid {
