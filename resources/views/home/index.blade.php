@@ -188,7 +188,7 @@
     <div class="fm-container">
         <h2 class="fm-heading-italiana fm-heading-split text-center mb-3">Por que somos <span class="fm-accent-word">Diferentes</span></h2>
         <div class="row g-4 justify-content-center">
-            <div class="col-12 col-lg-10">
+            <div class="col-12">
                 <div class="fm-compare-card">
                     <div class="fm-compare-card__header fm-compare-card__header--us">
                         <p class="fm-heading-katibeh mb-0">Flor de Marula</p>
