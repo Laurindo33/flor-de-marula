@@ -11,7 +11,7 @@
             @if ($product->is_out_of_stock)
                 <span class="fm-stock-badge">Fora de Estoque</span>
             @else
-                <a href="{{ route('product.show', $product) }}" class="fm-stock-badge fm-stock-badge--link">Ver Detalhes</a>
+                <a href="{{ route('product.show', $product) }}" class="fm-stock-badge fm-stock-badge--link">Comprar Agora</a>
             @endif
         </div>
         @if ($product->is_out_of_stock)
@@ -40,7 +40,7 @@
             @if ($product->tagline)
                 <p class="fm-product-card__tagline mb-3">{{ $product->tagline }}</p>
             @endif
-            <a href="{{ route('product.show', $product) }}" class="fm-btn fm-btn-outline fm-cta-label w-100 text-uppercase">Ver Detalhes</a>
+            <a href="{{ route('product.show', $product) }}" class="fm-btn fm-btn-outline fm-cta-label w-100 text-uppercase">Comprar Agora</a>
         </div>
     </article>
 @endif
