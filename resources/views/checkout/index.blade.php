@@ -136,7 +136,7 @@
 @endsection
 
 @push('scripts')
-<script>
+<script nonce="{{ $cspNonce }}">
     document.querySelectorAll('input[name="shipping_method"]').forEach((input) => {
         input.addEventListener('change', () => {
             document.querySelectorAll('.fm-checkout-option').forEach((el) => el.classList.remove('active'));

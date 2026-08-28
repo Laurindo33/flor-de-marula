@@ -280,7 +280,7 @@
 @push('scripts')
     @vite(['resources/js/product.js'])
 
-    <script type="application/ld+json">
+    <script type="application/ld+json" nonce="{{ $cspNonce }}">
         {!! json_encode([
             '@context' => 'https://schema.org/',
             '@type' => 'Product',

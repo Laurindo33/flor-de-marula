@@ -66,7 +66,7 @@
 @endsection
 
 @push('scripts')
-<script>
+<script nonce="{{ $cspNonce }}">
     const steps = document.querySelectorAll('[data-fm-quiz-step]');
     const dots = document.querySelectorAll('[data-fm-quiz-dot]');
 
