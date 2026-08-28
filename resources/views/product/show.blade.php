@@ -7,9 +7,6 @@
 
 @section('content')
 
-{{-- Faixa de beneficios (Secçã 2 / 213:1689) --}}
-@include('partials.benefits-strip', ['sectionClass' => 'fm-benefits-strip--pdp'])
-
 @php
     $mainImage = $product->image_path;
     $thumbnails = $product->images;
