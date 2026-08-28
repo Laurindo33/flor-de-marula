@@ -41,10 +41,10 @@
         gap: 40px;
     }
     .fm-cart__items {
-        flex: 0 0 40%;
+        flex: 0 0 calc(50% - 20px);
     }
     .fm-cart__summary {
-        flex: 1 1 auto;
+        flex: 0 0 calc(50% - 20px);
         position: sticky;
         top: 24px;
     }
