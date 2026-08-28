@@ -316,6 +316,11 @@ main {
         justify-content: center;
     }
 }
+@media (min-width: 992px) {
+    .fm-trend__cards {
+        gap: 14px;
+    }
+}
 
 .fm-trend-card {
     background: var(--fm-rose-bg);
@@ -342,6 +347,23 @@ main {
     display: flex;
     overflow: hidden;
     box-shadow: 0 1px 4px #00000014;
+}
+
+@media (min-width: 992px) {
+    .fm-trend-card {
+        flex-basis: 260px;
+        padding: 12px 16px;
+        gap: 12px;
+    }
+    .fm-trend-card__image-wrap {
+        height: 72px;
+    }
+    .fm-trend-card__name {
+        font-size: 14px;
+    }
+    .fm-trend-card .fm-price {
+        font-size: 18px;
+    }
 }
 
 .fm-trend-card .fm-stock-badge {

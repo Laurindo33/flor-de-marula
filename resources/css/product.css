@@ -23,46 +23,39 @@
 @media (min-width: 992px) {
     .fm-pdp__body {
         display: grid;
-        grid-template-columns: 105px 1fr 443px;
+        grid-template-columns: 1fr 443px;
         column-gap: 40px;
         row-gap: 24px;
         align-items: start;
     }
 
-    .fm-pdp__thumbs {
-        grid-column: 1;
-        grid-row: 1 / span 2;
-    }
-
     .fm-pdp__visual {
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 1;
     }
 
-    .fm-pdp__routine-block {
-        grid-column: 2;
+    .fm-pdp__thumbs {
+        grid-column: 1;
         grid-row: 2;
     }
 
+    .fm-pdp__routine-block {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
     .fm-pdp__info {
-        grid-column: 3;
-        grid-row: 1 / span 2;
+        grid-column: 2;
+        grid-row: 1 / span 3;
     }
 }
 
-/* Coluna A — miniaturas */
+/* Miniaturas — sempre em linha horizontal, abaixo da imagem principal */
 .fm-pdp__thumbs {
     display: flex;
     flex-direction: row;
     gap: 12px;
     overflow-x: auto;
-}
-
-@media (min-width: 992px) {
-    .fm-pdp__thumbs {
-        flex-direction: column;
-        overflow: visible;
-    }
 }
 
 .fm-pdp__thumb {
