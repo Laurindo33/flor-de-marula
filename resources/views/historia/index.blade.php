@@ -38,7 +38,7 @@
 {{-- Nossa Filosofia (Secção Nosso melhor / 212:542) --}}
 <section class="fm-historia-filosofia">
     <div class="fm-container">
-        <h2 class="fm-heading-lg text-center mb-5 text-white">Nossa Filosofia</h2>
+        <h2 class="fm-heading-lg text-center mb-3 text-white">Nossa Filosofia</h2>
         <div class="row g-4">
             @php
                 $filosofia = [

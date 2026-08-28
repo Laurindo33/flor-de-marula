@@ -16,7 +16,7 @@
 @media (min-width: 992px) {
     .fm-ajuda-hero__grid {
         flex-direction: row;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         gap: 40px;
     }
@@ -40,7 +40,7 @@
 
 .fm-ajuda-hero__image {
     width: 100%;
-    max-width: 563px;
+    max-width: 360px;
     aspect-ratio: 563 / 626;
     object-fit: cover;
     border-radius: var(--fm-radius-md);
