@@ -275,17 +275,24 @@ main {
 
 .fm-product-card__name {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 15px;
+    font-size: 20px;
     color: var(--fm-black);
     text-transform: uppercase;
+}
+
+/* Loja: colunas mais estreitas (4 por linha) precisam de titulo/preco
+   menores para caberem na mesma linha; a seccao "Mais Vendido" na Home
+   mantem o tamanho original. */
+.fm-shop-grid .fm-product-card__name {
+    font-size: 17px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     min-width: 0;
 }
 
-.fm-product-card .fm-price {
-    font-size: 16px;
+.fm-shop-grid .fm-price {
+    font-size: 17px;
     white-space: nowrap;
     flex-shrink: 0;
 }
