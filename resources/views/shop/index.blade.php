@@ -31,7 +31,7 @@
 
         <div class="row g-4">
             @forelse ($products as $product)
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-3">
                     <x-product-card :product="$product" variant="best" />
                 </div>
             @empty
