@@ -14,6 +14,11 @@
     }
 }
 
+/* "Orgulhosamente Africano" so faz sentido na Home; escondido nos Detalhes do Produto */
+.fm-benefits-strip--pdp .fm-benefits-card__africa {
+    display: none;
+}
+
 .fm-pdp__body {
     display: flex;
     flex-direction: column;
