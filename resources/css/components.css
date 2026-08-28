@@ -298,6 +298,16 @@ main {
     display: inline-block;
 }
 
+/* "Ver Detalhes" nos cartoes de Produtos em Alta (mesmo estilo do badge, quando em estoque) */
+.fm-stock-badge--link {
+    background: #008000;
+    text-decoration: none;
+}
+.fm-stock-badge--link:hover {
+    opacity: 0.9;
+    color: var(--fm-white);
+}
+
 .fm-stock-badge--overlay {
     position: absolute;
     top: 12px;

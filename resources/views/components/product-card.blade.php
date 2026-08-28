@@ -10,6 +10,8 @@
             <p class="fm-price mb-1">{{ $product->formatted_price }}</p>
             @if ($product->is_out_of_stock)
                 <span class="fm-stock-badge">Fora de Estoque</span>
+            @else
+                <a href="{{ route('product.show', $product) }}" class="fm-stock-badge fm-stock-badge--link">Ver Detalhes</a>
             @endif
         </div>
         @if ($product->is_out_of_stock)
