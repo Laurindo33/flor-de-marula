@@ -194,7 +194,9 @@
                         <p class="fm-heading-katibeh mb-0">Flor de Marula</p>
                     </div>
                     <div class="fm-compare-card__media">
-                        <img src="{{ asset('images/home/compare-flor-de-marula.jpg') }}" alt="Flor de Marula" class="fm-compare-card__image" loading="lazy">
+                        <span class="fm-compare-card__image-frame">
+                            <img src="{{ asset('images/home/compare-flor-de-marula.jpg') }}" alt="Flor de Marula" class="fm-compare-card__image" loading="lazy">
+                        </span>
                     </div>
                     <ul class="fm-compare-card__list">
                         @foreach (['Feito Por Nós', 'Ingredientes Naturais', 'Seguro durante a gravidez', 'Livre de químicos, parabenos', 'Pequeno Lote Fresco', 'Feito para Pele de Melanina', '3-5 minutos por dia'] as $item)

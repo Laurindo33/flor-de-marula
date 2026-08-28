@@ -558,11 +558,17 @@
 .fm-compare-card__header--them {
     background: linear-gradient(90deg, #eedace, var(--fm-primary));
 }
+.fm-compare-card__image-frame {
+    display: block;
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+}
 .fm-compare-card__image {
     width: 100%;
     aspect-ratio: 459 / 167;
     object-fit: cover;
-    border-radius: 14px;
+    display: block;
 }
 .fm-compare-card__list {
     list-style: none;
@@ -594,17 +600,15 @@
         grid-column: 1;
         grid-row: 1 / -1;
     }
+    .fm-compare-card__image-frame {
+        height: 100%;
+    }
     .fm-compare-card__image {
         width: 100%;
         height: 100%;
         aspect-ratio: auto;
         object-fit: contain;
         background: var(--fm-white);
-        /* Artificio para arredondar so a imagem, sem depender do overflow
-           do div pai: clip-path recorta o proprio elemento com cantos
-           arredondados, funciona mesmo com object-fit + tamanho dinamico. */
-        clip-path: inset(0 round 14px);
-        border-radius: 14px;
     }
     .fm-compare-card__list {
         margin: 0;
