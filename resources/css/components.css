@@ -329,6 +329,7 @@ main {
 @media (min-width: 992px) {
     .fm-trend__cards {
         gap: 14px;
+        flex-wrap: nowrap;
     }
 }
 
@@ -361,9 +362,19 @@ main {
 
 @media (min-width: 992px) {
     .fm-trend-card {
-        flex-basis: 260px;
+        flex: 1 1 0%;
+        min-width: 0;
         padding: 12px 16px;
         gap: 12px;
+    }
+    .fm-trend-card > .flex-grow-1 {
+        min-width: 0;
+    }
+    .fm-trend-card__name,
+    .fm-trend-card .fm-price {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     .fm-trend-card__image-wrap {
         height: 72px;
