@@ -561,8 +561,8 @@
 .fm-compare-card__image {
     width: 100%;
     aspect-ratio: 459 / 167;
-    object-fit: cover;
-    border-radius: var(--fm-radius-md);
+    object-fit: contain;
+    background: var(--fm-white);
 }
 .fm-compare-card__list {
     list-style: none;
