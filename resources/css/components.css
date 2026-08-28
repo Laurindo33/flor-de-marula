@@ -275,9 +275,19 @@ main {
 
 .fm-product-card__name {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 20px;
+    font-size: 15px;
     color: var(--fm-black);
     text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.fm-product-card .fm-price {
+    font-size: 16px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .fm-product-card__tagline {
