@@ -54,7 +54,7 @@
                 </div>
 
                 <div class="fm-cart__summary">
-                    <h2 class="fm-heading-sm mb-3" style="font-size: 22px;">Resumo</h2>
+                    <h2 class="fm-heading-sm fm-cart__summary-title mb-3">Resumo</h2>
 
                     <form action="{{ route('cart.coupon.apply') }}" method="POST" class="fm-cart-coupon">
                         @csrf
@@ -84,7 +84,7 @@
                                 <span>-{{ number_format($discount, 0, ',', '.') }}kz</span>
                             </div>
                         @endif
-                        <div class="fm-cart-totals__row fm-cart-totals__row--note">
+                        <div class="fm-cart-totals__row fm-cart-totals__row--note d-lg-none">
                             <span>Entrega</span>
                             <span>Calculada no checkout</span>
                         </div>

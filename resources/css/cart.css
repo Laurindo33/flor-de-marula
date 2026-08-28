@@ -41,12 +41,15 @@
         gap: 40px;
     }
     .fm-cart__items {
-        flex: 1 1 auto;
+        flex: 0 0 40%;
     }
     .fm-cart__summary {
-        flex: 0 0 360px;
+        flex: 1 1 auto;
         position: sticky;
         top: 24px;
+    }
+    .fm-cart__summary-title {
+        font-size: 28px;
     }
 }
 
@@ -150,6 +153,10 @@
     background: var(--fm-cream);
     border-radius: var(--fm-radius-md);
     padding: 28px;
+}
+
+.fm-cart__summary-title {
+    font-size: 22px;
 }
 
 .fm-cart-coupon {

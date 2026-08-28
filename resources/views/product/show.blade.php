@@ -43,13 +43,8 @@
                 </div>
             </div>
 
-            {{-- Garantia (texto) + Complete Sua Rotina --}}
+            {{-- Complete Sua Rotina --}}
             <div class="fm-pdp__routine-block order-4">
-                <div class="fm-pdp__guarantee-card">
-                    <p class="fm-pdp__guarantee-card__title mb-3">Pele melhor em 30 dias ou é GRÁTIS</p>
-                    <p class="fm-pdp__guarantee-card__text mb-0">Se você não estiver satisfeito com algum de nossos produtos, oferecemos garantia de devolução de dinheiro por 30 dias.</p>
-                </div>
-
                 @if ($product->routineProduct)
                     <div class="fm-pdp__routine">
                         <h2 class="fm-pdp__routine-title">Complete Sua Rotina</h2>

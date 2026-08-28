@@ -42,6 +42,15 @@
         grid-column: 2;
         grid-row: 1 / span 3;
     }
+
+    .fm-pdp__main-image {
+        width: 40%;
+        margin-inline: auto;
+    }
+
+    .fm-pdp__thumbs {
+        justify-content: center;
+    }
 }
 
 /* Miniaturas — sempre em linha horizontal, abaixo da imagem principal */
