@@ -206,7 +206,7 @@
                         <p class="fm-heading-katibeh mb-0">Flor de Marula</p>
                     </div>
                     <div class="fm-compare-card__media">
-                        <img src="{{ asset('images/home/compare-flor-de-marula-mobile.png') }}" alt="Flor de Marula" class="fm-compare-card__image d-lg-none" loading="lazy">
+                        <img src="{{ asset('images/home/compare-flor-de-marula-mobile-v2.png') }}" alt="Flor de Marula" class="fm-compare-card__image d-lg-none" loading="lazy">
                         <img src="{{ asset('images/home/compare-flor-de-marula.jpg') }}" alt="Flor de Marula" class="fm-compare-card__image d-none d-lg-block" loading="lazy">
                     </div>
                     <ul class="fm-compare-card__list">
