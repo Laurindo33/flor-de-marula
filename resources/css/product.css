@@ -257,20 +257,21 @@
         margin-bottom: 0;
     }
 
-    .fm-pdp__avatars {
+    .fm-pdp__title-row .fm-pdp__avatars {
         justify-content: flex-end;
         align-items: center;
+        gap: 2px;
         margin-bottom: 0;
         flex-shrink: 0;
     }
 
-    .fm-pdp__avatars img {
-        width: 4px;
-        height: 4px;
+    .fm-pdp__title-row .fm-pdp__avatars img {
+        width: 13px;
+        height: 13px;
     }
 
-    .fm-pdp__rating-value {
-        font-size: 10px;
+    .fm-pdp__title-row .fm-pdp__rating-value {
+        font-size: 11px;
     }
 
     .fm-pdp__price {
