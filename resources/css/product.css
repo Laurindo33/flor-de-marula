@@ -262,11 +262,11 @@
         flex-wrap: nowrap;
         column-gap: 8px;
         order: 1;
-        margin-bottom: 4px;
+        margin-bottom: 2px;
     }
 
     .fm-pdp__name {
-        font-size: 20px;
+        font-size: 23px;
         text-align: left;
         margin-bottom: 0;
     }
@@ -282,8 +282,8 @@
     }
 
     .fm-pdp__avatars img {
-        width: 13px;
-        height: 13px;
+        width: 6px;
+        height: 6px;
     }
 
     .fm-pdp__rating-value {
@@ -297,7 +297,7 @@
 
     .fm-pdp__price-current {
         color: var(--fm-primary);
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .fm-pdp__add-form {
