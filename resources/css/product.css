@@ -300,8 +300,8 @@
     }
 
     .fm-pdp__avatars img {
-        width: 10px;
-        height: 10px;
+        width: 12px;
+        height: 12px;
     }
 
     .fm-pdp__rating-value {
@@ -315,7 +315,7 @@
 
     .fm-pdp__price-current {
         color: var(--fm-primary);
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .fm-pdp__add-form {
