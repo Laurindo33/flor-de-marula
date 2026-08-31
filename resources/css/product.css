@@ -229,6 +229,20 @@
 @media (min-width: 992px) {
     .fm-pdp__name {
         font-size: 50px;
+        order: 1;
+    }
+
+    /* O <img> de "Ver Detalhes"/preco/estrelas foi movido no HTML para
+       o preco ficar dentro do title-row (junto ao nome) no mobile; no
+       desktop, onde title-row e display:contents, isto reordenaria os
+       elementos — usa "order" para manter a sequencia original
+       (nome, estrelas, preco). */
+    .fm-pdp__avatars {
+        order: 2;
+    }
+
+    .fm-pdp__price {
+        order: 3;
     }
 }
 
@@ -248,39 +262,42 @@
         flex-wrap: nowrap;
         column-gap: 8px;
         order: 1;
-        margin-bottom: 10px;
+        margin-bottom: 4px;
     }
 
     .fm-pdp__name {
-        font-size: 24px;
+        font-size: 20px;
         text-align: left;
         margin-bottom: 0;
     }
 
-    .fm-pdp__title-row .fm-pdp__avatars {
-        justify-content: flex-end;
+    /* Estrelas ficam onde antes estava a pequena descricao: uma linha
+       discreta, alinhada a esquerda, logo abaixo do nome + preco. */
+    .fm-pdp__avatars {
+        order: 2;
+        justify-content: flex-start;
         align-items: center;
         gap: 2px;
-        margin-bottom: 0;
-        flex-shrink: 0;
+        margin-bottom: 10px;
     }
 
-    .fm-pdp__title-row .fm-pdp__avatars img {
+    .fm-pdp__avatars img {
         width: 13px;
         height: 13px;
     }
 
-    .fm-pdp__title-row .fm-pdp__rating-value {
+    .fm-pdp__rating-value {
         font-size: 11px;
+        color: var(--fm-muted);
     }
 
     .fm-pdp__price {
-        align-items: center;
-        order: 3;
+        flex-shrink: 0;
     }
 
     .fm-pdp__price-current {
-        color: var(--fm-black);
+        color: var(--fm-primary);
+        font-size: 20px;
     }
 
     .fm-pdp__add-form {

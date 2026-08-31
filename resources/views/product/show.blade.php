@@ -71,16 +71,16 @@
                 <div class="fm-pdp__title-row">
                     <h1 class="fm-pdp__name">{{ $product->name }}</h1>
 
-                    <div class="fm-pdp__avatars" aria-label="Avaliações de clientes">
-                        @for ($i = 0; $i < 5; $i++)
-                            <img src="{{ asset('images/product/icon-avatar.png') }}" alt="">
-                        @endfor
-                        <span class="fm-pdp__rating-value">({{ number_format($product->average_rating, 1) }}/5)</span>
+                    <div class="fm-pdp__price">
+                        <span class="fm-pdp__price-current">{{ $product->formatted_price }}</span>
                     </div>
                 </div>
 
-                <div class="fm-pdp__price">
-                    <span class="fm-pdp__price-current">{{ $product->formatted_price }}</span>
+                <div class="fm-pdp__avatars" aria-label="Avaliações de clientes">
+                    @for ($i = 0; $i < 5; $i++)
+                        <img src="{{ asset('images/product/icon-avatar.png') }}" alt="">
+                    @endfor
+                    <span class="fm-pdp__rating-value">({{ number_format($product->average_rating, 1) }}/5)</span>
                 </div>
 
                 @if (!empty($product->benefits))
