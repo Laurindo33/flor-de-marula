@@ -244,6 +244,19 @@
     margin-left: 4px;
 }
 
+.fm-pdp__price {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.fm-pdp__price-current {
+    color: var(--fm-primary);
+    font-family: 'Inria Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
 @media (min-width: 992px) {
     .fm-pdp__name {
         font-size: 50px;
@@ -329,19 +342,6 @@
     .fm-pdp__accordion {
         order: 6;
     }
-}
-
-.fm-pdp__price {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 12px;
-}
-
-.fm-pdp__price-current {
-    color: var(--fm-primary);
-    font-family: 'Inria Sans', sans-serif;
-    font-size: 32px;
-    font-weight: 700;
 }
 
 .fm-pdp__benefits {
