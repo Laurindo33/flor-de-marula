@@ -263,17 +263,31 @@
         order: 1;
     }
 
-    /* O <img> de "Ver Detalhes"/preco/estrelas foi movido no HTML para
-       o preco ficar dentro do title-row (junto ao nome) no mobile; no
-       desktop, onde title-row e display:contents, isto reordenaria os
-       elementos — usa "order" para manter a sequencia original
-       (nome, estrelas, preco). */
+    /* O preco foi movido no HTML para dentro do title-row (junto ao
+       nome) para efeitos do layout mobile; no desktop, onde title-row
+       e display:contents, isso reordenaria os elementos dentro de
+       .fm-pdp__info — da "order" explicito a TODOS os irmaos (nao so
+       nome/estrelas/preco) para manter a sequencia original completa,
+       porque qualquer irmao sem "order" cai por defeito em 0, o que o
+       colocaria antes do nome (order:1). */
     .fm-pdp__avatars {
         order: 2;
     }
 
     .fm-pdp__price {
         order: 3;
+    }
+
+    .fm-pdp__benefits {
+        order: 4;
+    }
+
+    .fm-pdp__add-form {
+        order: 5;
+    }
+
+    .fm-pdp__accordion {
+        order: 6;
     }
 }
 
@@ -309,7 +323,7 @@
         justify-content: flex-start;
         align-items: center;
         gap: 2px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     .fm-pdp__avatars img {
