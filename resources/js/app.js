@@ -56,3 +56,16 @@ document.querySelectorAll('[data-carousel-dots]').forEach((dotsContainer) => {
     });
 });
 
+document.querySelectorAll('[data-fm-testimonials-toggle]').forEach((button) => {
+    const grid = document.querySelector('[data-fm-testimonials-grid]');
+    if (!grid) return;
+
+    button.addEventListener('click', () => {
+        const expanded = grid.classList.toggle('is-expanded');
+        button.textContent = expanded ? button.dataset.lessLabel : button.dataset.moreLabel;
+        if (!expanded) {
+            grid.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    });
+});
+

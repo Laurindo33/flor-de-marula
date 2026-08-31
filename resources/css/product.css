@@ -212,6 +212,12 @@
     flex-direction: column;
 }
 
+/* No desktop o wrapper "desaparece" (nome e estrelas mantem o empilhamento
+   original); no mobile vira uma linha para caberem lado a lado. */
+.fm-pdp__title-row {
+    display: contents;
+}
+
 .fm-pdp__name {
     font-family: 'Iosevka Charon Mono', 'JetBrains Mono', monospace;
     font-weight: 400;
@@ -235,22 +241,36 @@
         justify-content: center;
     }
 
-    .fm-pdp__name {
-        font-size: 26px;
-        text-align: center;
+    .fm-pdp__title-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 8px;
+        row-gap: 4px;
         order: 1;
+        margin-bottom: 10px;
+    }
+
+    .fm-pdp__name {
+        font-size: 19px;
+        text-align: center;
+        margin-bottom: 0;
     }
 
     .fm-pdp__avatars {
         justify-content: center;
         align-items: center;
-        order: 2;
-        margin-bottom: 10px;
+        margin-bottom: 0;
     }
 
     .fm-pdp__avatars img {
-        width: 32px;
-        height: 32px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .fm-pdp__rating-value {
+        font-size: 12px;
     }
 
     .fm-pdp__price {

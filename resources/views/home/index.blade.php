@@ -136,7 +136,7 @@
         <div class="fm-container">
             <h2 class="fm-heading-italiana fm-heading-split text-center mb-2">Mais de 17.000 clientes confiam na <span class="fm-accent-word">Flor de Marula</span></h2>
             <p class="fm-body-lg fm-social-proof__subtitle text-center mb-5">Depoimentos reais partilhados pelos nossos clientes nas redes sociais</p>
-            <div class="fm-social-proof__grid">
+            <div class="fm-social-proof__grid" data-fm-testimonials-grid>
                 @foreach ($testimonials as $testimonial)
                     <div class="fm-social-proof__item">
                         <img
@@ -147,6 +147,18 @@
                     </div>
                 @endforeach
             </div>
+
+            @if ($testimonials->count() > 6)
+                <div class="text-center d-lg-none mt-4">
+                    <button
+                        type="button"
+                        class="fm-btn fm-btn-outline"
+                        data-fm-testimonials-toggle
+                        data-more-label="Ver mais"
+                        data-less-label="Ver menos"
+                    >Ver mais</button>
+                </div>
+            @endif
         </div>
     </section>
 @endif

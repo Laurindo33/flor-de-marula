@@ -59,4 +59,8 @@
     .fm-testimonial-card__caption {
         padding: 28px;
     }
+
+    .fm-social-proof__grid:not(.is-expanded) .fm-social-proof__item:nth-child(n+7) {
+        display: none;
+    }
 }
