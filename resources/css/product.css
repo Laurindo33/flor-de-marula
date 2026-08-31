@@ -315,7 +315,7 @@
 
     .fm-pdp__price-current {
         color: var(--fm-primary);
-        font-size: 12px;
+        font-size: 25px;
     }
 
     .fm-pdp__add-form {
@@ -340,7 +340,7 @@
 .fm-pdp__price-current {
     color: var(--fm-primary);
     font-family: 'Inria Sans', sans-serif;
-    font-size: 25px;
+    font-size: 32px;
     font-weight: 700;
 }
 
